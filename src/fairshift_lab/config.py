@@ -38,6 +38,8 @@ class ExperimentConfig:
     decision_threshold: float = 0.5
     learning_rate: float = 0.2
     iterations: int = 800
+    bootstrap_samples: int = 200
+    confidence_level: float = 0.95
     target_shift: ShiftConfig = ShiftConfig()
 
     def __post_init__(self) -> None:
@@ -49,3 +51,7 @@ class ExperimentConfig:
             raise ValueError("learning rate must be positive")
         if self.iterations < 1:
             raise ValueError("iterations must be positive")
+        if self.bootstrap_samples < 20:
+            raise ValueError("bootstrap samples must be at least 20")
+        if not 0.5 <= self.confidence_level < 1.0:
+            raise ValueError("confidence level must be between 0.5 and 1")

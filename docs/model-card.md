@@ -14,9 +14,8 @@ The same fitted parameters and threshold are evaluated on independently sampled 
 
 ## Limitations
 
-No calibration analysis, confidence intervals, hyperparameter selection, regularization, threshold optimization, or mitigation is included in v0.1.0. The protected attribute is used directly. Gradient descent has no convergence diagnostic.
+No calibration analysis, hyperparameter selection, regularization, threshold optimization, or mitigation is included in v0.2.0. Percentile-bootstrap intervals cover selected test-sample metrics only and do not quantify model-selection or structural uncertainty. The protected attribute is used directly. Gradient descent has no convergence diagnostic.
 
 ## Ethical considerations
 
 Fairness metrics can conflict and depend on construct validity, base rates, thresholds, and social context. A small metric gap is not proof of fairness; a large gap is not by itself a causal explanation. Human and domain review remain necessary.
-

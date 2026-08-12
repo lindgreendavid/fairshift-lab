@@ -34,7 +34,12 @@ Target labels and target metrics never influence model fitting. The target seed 
 
 Single-run output is diagnostic. Confirmatory claims require a preregistered seed grid, uncertainty intervals, multiplicity handling where appropriate, effect sizes, and publication of all planned runs—including null or adverse findings.
 
+## Uncertainty in version 0.2.0
+
+The package reports two-sided percentile-bootstrap intervals for accuracy, demographic-parity difference, equal-opportunity difference, and equalized-odds difference. Resampling is stratified by the protected attribute, so each bootstrap sample preserves the observed group sizes. This isolates conditional-rate sampling variability from group-composition variability.
+
+The intervals do not quantify uncertainty from dataset construction, label validity, model choice, threshold selection, structural misspecification, unobserved groups, or future distribution shift. They are descriptive intervals for one declared data-generating process, not fairness certificates. The interactive browser release uses fewer resamples for immediate feedback; the Python CLI is the authoritative reproducible implementation.
+
 ## Ethics
 
 Protected attributes and labels are synthetic abstractions. They do not encode the lived meaning of demographic categories. The laboratory is intended for education, method development, and reproducibility—not compliance certification or automated decision-making.
-

@@ -34,3 +34,17 @@ Undefined conditional rates caused by an empty subgroup condition are reported a
 
 Randomness is isolated in NumPy's generator and controlled by recorded seeds. CI tests supported Python versions, formatting, lint, typing, coverage, and package construction. Generated reports are excluded from version control so that every published result must declare how it was produced.
 
+## Bootstrap uncertainty
+
+Version 0.2.0 adds a group-stratified nonparametric percentile bootstrap. Within each protected group, observations are sampled with replacement to the original group size. Metrics are recomputed for every resample, and the configured lower and upper quantiles form the interval. Stratification is intentional: prevalence shift is an experimental mechanism in this project and should not be reintroduced accidentally as bootstrap composition noise.
+
+The method is transparent and distribution-light, but percentile intervals can have imperfect coverage, especially for bounded, non-smooth fairness gaps and small conditional subgroups. The intervals should therefore be read as a stability diagnostic. Research on subgroup evaluation shows that smaller subpopulations produce higher-variance metric estimates, while uncertainty-aware fairness research warns against ranking methods from point estimates alone.
+
+## Scientific references
+
+- Hardt, Price, and Srebro (2016), *Equality of Opportunity in Supervised Learning*: definitions of equal opportunity and equalized odds. https://proceedings.neurips.cc/paper_files/paper/2016/hash/6a9659feb1216f14f7384ba499518b38-Abstract.html
+- Chen, Raab, Wang, and Liu (2022), *Fairness Transferability Subject to Bounded Distribution Shift*: transfer bounds for demographic parity and equalized odds under shift. https://arxiv.org/abs/2206.00129
+- Miller et al. (2021), *Model-based metrics*: subgroup performance estimation and confidence intervals under small subgroup samples. https://proceedings.mlr.press/v149/miller21a.html
+- Barrainkua et al. (2024), *Uncertainty Matters*: uncertainty-aware joint comparison of performance and fairness. https://proceedings.mlr.press/v238/barrainkua24a.html
+- Agarwal et al. (2025), *Optimal Fair Learning Robust to Adversarial Distribution Shift*: robustness of fairness-constrained learning under malicious distribution noise. https://proceedings.mlr.press/v267/agarwal25b.html
+- NIST AI RMF 1.0, *AI Risks and Trustworthiness*: fairness is one socio-technical trustworthiness characteristic that must be balanced with validity, transparency, explainability, privacy, safety, and security. https://airc.nist.gov/airmf-resources/airmf/3-sec-characteristics/

@@ -9,7 +9,7 @@ A reproducible research laboratory for answering a narrow question:
 
 > How do model performance and group-fairness measurements change when the deployment population differs from the training population?
 
-Version `0.1.0` provides an inspectable synthetic structural process, controlled covariate, concept, and protected-group prevalence shifts, a logistic-regression baseline, and source-versus-target evaluation. It is a research scaffold—not evidence that fairness has been “solved.”
+Version `0.2.0` provides an inspectable synthetic structural process, controlled covariate, concept, and protected-group prevalence shifts, a logistic-regression baseline, group-stratified bootstrap intervals, and an interactive source-versus-target laboratory. It is a research scaffold—not evidence that fairness has been “solved.”
 
 ## Why this project matters
 
@@ -28,7 +28,7 @@ mypy src
 python -m build
 ```
 
-The CLI emits stable JSON containing the full configuration plus source and target metrics.
+The CLI emits stable JSON containing the full configuration, source and target metrics, and reproducible percentile-bootstrap intervals. The interactive web laboratory lives in `site/`; its browser simulation favors immediate explanation, while the Python package remains the authoritative numerical implementation.
 
 ## Scientific scope
 
@@ -51,6 +51,7 @@ configuration -> structural generator -> source population -> baseline training
 
 - `src/fairshift_lab/`: typed production code
 - `tests/`: deterministic unit and integration tests
+- `site/`: accessible interactive research laboratory
 - `docs/`: research protocol, methodology, cards, and decisions
 - `reports/`: reproducible output location; generated results are not committed
 - `.github/`: continuous integration, security analysis, and dependency maintenance
@@ -63,8 +64,8 @@ This release uses synthetic data, one binary protected attribute, one baseline, 
 
 ## Roadmap
 
-- `v0.2.0`: bootstrap confidence intervals and uncertainty-aware comparisons
-- `v0.3.0`: calibrated baselines and threshold sensitivity
+- `v0.2.0`: bootstrap confidence intervals and interactive uncertainty-aware comparisons
+- `v0.3.0`: calibrated baselines and formal threshold sensitivity analysis
 - `v0.4.0`: mitigation methods and fairness–utility Pareto analysis
 - `v0.5.0`: experiment registry and reproducible result tables
 - `v1.0.0`: reviewed research report and accessible interactive laboratory
@@ -74,4 +75,3 @@ See [CHANGELOG.md](CHANGELOG.md) for released changes and [CONTRIBUTING.md](CONT
 ## Citation and license
 
 Citation metadata is available in [CITATION.cff](CITATION.cff). Code and documentation are released under the [MIT License](LICENSE).
-

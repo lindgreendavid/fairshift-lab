@@ -17,11 +17,29 @@ def test_experiment_serializes_shift_kind() -> None:
     )
     result = run_experiment(config).as_dict()
     assert result["config"]["target_shift"] == {"kind": "concept", "magnitude": 0.5}  # type: ignore[index]
+    assert result["target_uncertainty"]["accuracy"]["resamples"] == 200  # type: ignore[index]
 
 
 def test_cli_prints_machine_readable_result(capsys: object) -> None:
     assert (
-        main(["--samples", "200", "--seed", "2", "--shift", "covariate", "--magnitude", "0.4"]) == 0
+        main(
+            [
+                "--samples",
+                "200",
+                "--seed",
+                "2",
+                "--shift",
+                "covariate",
+                "--magnitude",
+                "0.4",
+                "--bootstrap-samples",
+                "20",
+                "--confidence-level",
+                "0.9",
+            ]
+        )
+        == 0
     )
     output = json.loads(capsys.readouterr().out)  # type: ignore[attr-defined]
     assert output["config"]["target_shift"]["kind"] == "covariate"
+    assert output["target_uncertainty"]["accuracy"]["confidence_level"] == 0.9
