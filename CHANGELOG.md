@@ -2,6 +2,12 @@
 
 All notable changes follow [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) and [Semantic Versioning](https://semver.org/).
 
+## [1.0.1] - 2026-08-12
+
+### Fixed
+
+- Raised all normal-text brand palette combinations above the WCAG 2.2 AA contrast threshold and added automated contrast regression coverage.
+
 ## [1.0.0] - 2026-08-12
 
 ### Added
@@ -70,3 +76,4 @@ All notable changes follow [Keep a Changelog](https://keepachangelog.com/en/1.1.
 [0.3.0]: https://github.com/lindgreendavid/fairshift-lab/releases/tag/v0.3.0
 [0.3.1]: https://github.com/lindgreendavid/fairshift-lab/releases/tag/v0.3.1
 [1.0.0]: https://github.com/lindgreendavid/fairshift-lab/releases/tag/v1.0.0
+[1.0.1]: https://github.com/lindgreendavid/fairshift-lab/releases/tag/v1.0.1

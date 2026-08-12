@@ -50,6 +50,7 @@ test("keeps equivalent text and data for every scientific visual", async () => {
   ]);
   assert.match(page, /role="img" aria-label=\{`Feature X1 histogram/);
   assert.equal((page.match(/<title id=/g) ?? []).length, 2);
+  assert.match(page, /<title id="threshold-title">\{`\$\{metricCopy\[metric\]\.label\} threshold sensitivity`\}<\/title>/);
   assert.equal((page.match(/<desc id=/g) ?? []).length, 2);
   assert.equal((page.match(/<caption>/g) ?? []).length, 2);
   assert.match(page, /Read reliability data/);
