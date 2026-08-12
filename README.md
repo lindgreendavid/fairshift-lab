@@ -9,7 +9,7 @@ A reproducible research laboratory for answering a narrow question:
 
 > How do model performance and group-fairness measurements change when the deployment population differs from the training population?
 
-Version `1.0.0` adds a frozen 300-experiment replication registry, an internally verified research report, WCAG 2.2 AA-oriented accessibility, and failure-tolerant public presentation to the inspectable synthetic process, source-only calibration, threshold sensitivity, and uncertainty laboratory. It remains a research instrument—not evidence that fairness has been “solved.”
+Version `1.0.1` adds a frozen 300-experiment replication registry, an internally verified research report, WCAG 2.2 AA-oriented accessibility with measured palette contrast, and failure-tolerant public presentation to the inspectable synthetic process, source-only calibration, threshold sensitivity, and uncertainty laboratory. It remains a research instrument—not evidence that fairness has been “solved.”
 
 **[Open the public interactive laboratory](https://fairshift-lab.lindgreendavid.chatgpt.site)**
 

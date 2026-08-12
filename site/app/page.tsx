@@ -552,7 +552,7 @@ function ThresholdChart({
         <div className="chart-legend"><span><i className="source-dot" />Source</span><span><i className="target-dot" />Target</span></div>
       </div>
       <svg viewBox="0 0 600 260" role="img" aria-labelledby="threshold-title threshold-description">
-        <title id="threshold-title">{metricCopy[metric].label} threshold sensitivity</title>
+        <title id="threshold-title">{`${metricCopy[metric].label} threshold sensitivity`}</title>
         <desc id="threshold-description">Source and target measurements across 19 decision thresholds. The active threshold is {threshold.toFixed(2)}. Complete values follow in a table.</desc>
         <line className="chart-grid" x1="36" y1="224" x2="564" y2="224" />
         <line className="chart-grid" x1="36" y1="224" x2="36" y2="40" />
@@ -666,7 +666,7 @@ export default function Home() {
       </nav>
 
       <section className="hero" id="top">
-        <div className="eyebrow"><span>Verified interactive research release</span><span>v1.0.0</span></div>
+        <div className="eyebrow"><span>Verified interactive research release</span><span>v1.0.1</span></div>
         <h1>Move the population.<br /><em>Trace every decision.</em></h1>
         <p className="hero__lead">
           A model can keep the same code and still behave differently after deployment.
