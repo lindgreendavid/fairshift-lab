@@ -62,3 +62,5 @@ jobs:
       - run: python scripts/fetch_adult.py --output /tmp/adult
       - run: python scripts/generate_external_study.py --data /tmp/adult --output /tmp/v1.2-external-study.json
       - run: cmp reports/v1.2-external-study.json /tmp/v1.2-external-study.json
+      - run: python scripts/generate_robustness_study.py --output /tmp/v1.3-robustness-study.json
+      - run: cmp reports/v1.3-robustness-study.json /tmp/v1.3-robustness-study.json

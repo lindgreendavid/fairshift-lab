@@ -106,7 +106,7 @@ control across every stressor family, mirroring `StudyConfig.magnitudes`).
 | `group_conditional_label_noise` | Flip `sensitive == 0` training/tuning labels with probability `0.05`; flip `sensitive == 1` labels with probability `0.05 + 0.40 × magnitude`. |
 | `protected_field_measurement_error` | Flip the *observed* `sensitive` field with probability `0.35 × magnitude` on every split, including test; it is used for model input and threshold selection, while the true field is retained separately for evaluation-only comparison. |
 | `unobserved_subgroup` | Add `-1.5 × magnitude` to the true logit for records with `subgroup == 1`. |
-| `sample_size_stress` | Training/tuning sample size shrinks from `2,000` at magnitude `0.00` to `60` at magnitude `1.00` (`2000, 800, 300, 120, 60` at magnitudes `0.00, 0.25, 0.50, 0.75, 1.00`); the test sample size is fixed at `2,000` throughout so degradation is attributable to training data, not evaluation noise. |
+| `sample_size_stress` | Every split's sample size — training, tuning, adaptation, **and test** — shrinks together from `2,000` at magnitude `0.00` to `60` at magnitude `1.00` (`2000, 800, 300, 120, 60` at magnitudes `0.00, 0.25, 0.50, 0.75, 1.00`), because this stressor's estimand is what happens when the whole available population (not just training) is small — the realistic case of auditing a rare event or a small deployment. This is the one stressor where the test split is not fixed at `2,000`; every other stressor keeps test at `2,000` so degradation is attributable to what was corrupted, not to evaluation noise. |
 | `structural_misspecification` | Add interaction coefficient `1.5 × magnitude` on `feature_one × sensitive` to the true logit; this term is never given to either model as an engineered feature. |
 
 **Label noise is applied only to the training and tuning splits**, never to the test split, so
@@ -135,7 +135,7 @@ the v1.1 policy-study split design:
 | Training | `+0` | Fit the logistic and tree models under the active stressor. |
 | Tuning | `+1` | Select one global cost threshold per model under the active stressor. |
 | Adaptation | `+2` | Diagnostic only: estimate the realized flip rate, subgroup effect, or interaction magnitude actually present in this replication. Never used for fitting, calibration, or threshold selection. |
-| Test | `+3` | Evaluate once. Labels are always the clean, true labels. The protected attribute carries the same measurement-error process as training (see above) plus a separately retained true value; every other stressor leaves the test split unmodified. |
+| Test | `+3` | Evaluate once. Labels are always the clean, true labels. The protected attribute carries the same measurement-error process as training (see above) plus a separately retained true value. Every stressor except `sample_size_stress` leaves the test *sample size* fixed at `2,000`; `sample_size_stress` shrinks the test split together with training (see the mechanism table above). |
 
 ## Estimands and registry
 
