@@ -14,6 +14,9 @@ interactive laboratory at https://fairshift-lab.lindgreendavid.chatgpt.site.
 - Text and pattern cues in addition to color, plus high-contrast and forced-color modes.
 - Text summaries and data tables for charts so that visual plots are not the only way to
   obtain the result.
+- The Policy Studio pairs color with numbered labels and circle/diamond shapes, exposes
+  every plotted value and replication range in a semantic table, and keeps policy selection
+  in native buttons rather than making chart marks the only controls.
 - Polite announcements for updated result interpretation without moving focus.
 - Reflow down to a 320 CSS-pixel viewport and support for 200% text zoom without hiding
   navigation destinations.
@@ -32,6 +35,8 @@ assistive-technology combination.
 
 - Browser-generated random samples can create dense tables; summaries are provided before
   detail, but the full threshold table is intentionally long.
+- The policy comparison table is wide and therefore uses a labeled, keyboard-focusable
+  horizontal scroll region at narrow widths.
 - Mathematical notation is expressed as Unicode and plain text rather than MathML.
 - The interface and documentation are currently in English.
 

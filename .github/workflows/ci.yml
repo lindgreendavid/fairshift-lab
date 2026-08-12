@@ -57,3 +57,5 @@ jobs:
       - run: python -m pip install -e .
       - run: python scripts/generate_study.py --output /tmp/v1-study.json
       - run: cmp reports/v1-study.json /tmp/v1-study.json
+      - run: python scripts/generate_policy_study.py --output /tmp/v1.1-policy-study.json
+      - run: cmp reports/v1.1-policy-study.json /tmp/v1.1-policy-study.json

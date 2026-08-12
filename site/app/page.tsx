@@ -2,6 +2,8 @@
 
 import { useMemo, useState } from "react";
 
+import PolicyStudio from "./policy-studio";
+
 type ShiftKind = "covariate" | "concept" | "prevalence";
 type MetricKey = "accuracy" | "auc" | "dp" | "eo" | "eodds";
 
@@ -659,6 +661,7 @@ export default function Home() {
           <a href="#experiment">Experiment</a>
           <a href="#decision">Decision curves</a>
           <a href="#report">Report</a>
+          <a href="#policy">Policy Studio</a>
           <a href="#method">Method</a>
           <a href="#evidence">Evidence</a>
           <a href="https://github.com/lindgreendavid/fairshift-lab">GitHub</a>
@@ -666,17 +669,19 @@ export default function Home() {
       </nav>
 
       <section className="hero" id="top">
-        <div className="eyebrow"><span>Verified interactive research release</span><span>v1.0.1</span></div>
+        <div className="eyebrow"><span>Verified interactive research release</span><span>v1.1.0</span></div>
         <h1>Move the population.<br /><em>Trace every decision.</em></h1>
         <p className="hero__lead">
           A model can keep the same code and still behave differently after deployment.
           Change one data-generating mechanism, then inspect performance, group gaps, and
           uncertainty, calibration, and the full decision curve together—then compare the
-          live run with a frozen 300-experiment report.
+          live run with a frozen 300-experiment report—then compare eight transparent
+          decision policies without hiding their costs or data requirements.
         </p>
         <div className="hero__actions">
           <a className="button button--primary" href="#experiment">Run the experiment</a>
           <a className="button button--ghost" href="#report">Read the findings</a>
+          <a className="button button--ghost" href="#policy">Open Policy Studio</a>
         </div>
         <div className="hero__principles" aria-label="Research principles">
           <span>One controlled intervention</span>
@@ -684,6 +689,7 @@ export default function Home() {
           <span>Whole threshold curve</span>
           <span>20-seed replication grid</span>
           <span>Claims bounded</span>
+          <span>No automatic best policy</span>
         </div>
       </section>
 
@@ -837,9 +843,11 @@ export default function Home() {
 
       <StudyReport />
 
+      <PolicyStudio />
+
       <section className="method" id="method">
         <header className="section-heading section-heading--light">
-          <div><span className="section-index">04</span><p>Scientific method</p></div>
+          <div><span className="section-index">05</span><p>Scientific method</p></div>
           <h2>See exactly what<br />the experiment knows.</h2>
         </header>
         <div className="causal-chain" aria-label="Experimental causal chain">
@@ -870,7 +878,7 @@ export default function Home() {
 
       <section className="evidence" id="evidence">
         <header className="section-heading">
-          <div><span className="section-index">05</span><p>Research trail</p></div>
+          <div><span className="section-index">06</span><p>Research trail</p></div>
           <h2>Built on arguments<br />you can inspect.</h2>
         </header>
         <div className="source-list">
@@ -885,6 +893,15 @@ export default function Home() {
           </a>
           <a href="https://proceedings.neurips.cc/paper_files/paper/2016/hash/6a9659feb1216f14f7384ba499518b38-Abstract.html" target="_blank" rel="noreferrer">
             <span>NeurIPS · 2016</span><strong>Equality of Opportunity in Supervised Learning</strong><p>Hardt, Price & Srebro formalize equal opportunity and equalized odds.</p><b>↗</b>
+          </a>
+          <a href="https://doi.org/10.1007/s10115-011-0463-8" target="_blank" rel="noreferrer">
+            <span>KAIS · 2012</span><strong>Data preprocessing without discrimination</strong><p>Kamiran & Calders develop reweighing and related preprocessing approaches for discrimination-aware classification.</p><b>↗</b>
+          </a>
+          <a href="https://jmlr.org/papers/v24/22-1511.html" target="_blank" rel="noreferrer">
+            <span>JMLR · 2023</span><strong>The Measure and Mismeasure of Fairness</strong><p>Corbett-Davies et al. connect decision policy, utility, fairness criteria, and Pareto-dominated rules.</p><b>↗</b>
+          </a>
+          <a href="https://arxiv.org/abs/2104.01634" target="_blank" rel="noreferrer">
+            <span>Research · 2021</span><strong>Pareto Efficient Fairness</strong><p>Kamani et al. frame model loss and fairness criteria as a multi-objective frontier rather than one scalar answer.</p><b>↗</b>
           </a>
           <a href="https://arxiv.org/abs/2206.00129" target="_blank" rel="noreferrer">
             <span>FAccT · 2022</span><strong>Fairness Transferability Subject to Bounded Distribution Shift</strong><p>Chen et al. study when statistical fairness can transfer across shifted distributions.</p><b>↗</b>

@@ -24,6 +24,10 @@ test("server-renders the finished research laboratory", async () => {
   assert.match(html, /Shift microscope/);
   assert.match(html, /Decision landscape/);
   assert.match(html, /Verified report/);
+  assert.match(html, /Policy Studio/);
+  assert.match(html, /Declare the stakes/);
+  assert.match(html, /No automatic best policy/);
+  assert.match(html, /Export this scenario/);
   assert.match(html, /One grid/);
   assert.match(html, /300 complete experiments/);
   assert.match(html, /Target reliability/);
@@ -64,12 +68,24 @@ test("ships accessible controls, research boundaries, and primary sources", asyn
   assert.match(page, /proceedings\.mlr\.press/);
   assert.match(page, /proceedings\.neurips\.cc/);
   assert.match(page, /airc\.nist\.gov/);
-  assert.match(layout, /Fairshift Lab — Verified fairness-under-shift research/);
-  assert.match(layout, /og-v1\.png/);
+  assert.match(layout, /Fairshift Lab — Transparent policy trade-offs under shift/);
+  assert.match(layout, /og-v1-1\.png/);
   assert.doesNotMatch(packageJson, /react-loading-skeleton|drizzle/);
   try {
     assert.deepEqual(await readdir(new URL("app/_sites-preview", root)), []);
   } catch (error) {
     assert.equal(error.code, "ENOENT");
   }
+});
+
+test("ships the complete frozen policy registry into the interactive release", async () => {
+  const registry = JSON.parse(
+    await readFile(new URL("../reports/v1.1-policy-study.json", root), "utf8"),
+  );
+  assert.equal(registry.schema_version, "1.1");
+  assert.equal(registry.cells.length, 72);
+  assert.equal(registry.policies.length, 8);
+  assert.deepEqual(registry.config.seeds, Array.from({ length: 20 }, (_, index) => index + 100));
+  assert.ok(registry.cells.some((cell) => cell.pareto_efficient));
+  assert.ok(registry.cells.every((cell) => cell.replications === 20));
 });

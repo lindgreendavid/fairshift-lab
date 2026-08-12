@@ -9,7 +9,7 @@ A reproducible research laboratory for answering a narrow question:
 
 > How do model performance and group-fairness measurements change when the deployment population differs from the training population?
 
-Version `1.0.1` adds a frozen 300-experiment replication registry, an internally verified research report, WCAG 2.2 AA-oriented accessibility with measured palette contrast, and failure-tolerant public presentation to the inspectable synthetic process, source-only calibration, threshold sensitivity, and uncertainty laboratory. It remains a research instrument—not evidence that fairness has been “solved.”
+Version `1.1.0` adds Fairshift Policy Studio: a frozen 20-seed mitigation benchmark, explicit error-cost declarations, a fairness–utility Pareto explorer, uncertainty-aware policy comparisons, and reproducible scenario exports. It builds on the 300-experiment shift report and WCAG 2.2 AA-oriented public laboratory. It remains a research instrument—not evidence that fairness has been “solved.”
 
 **[Open the public interactive laboratory](https://fairshift-lab.lindgreendavid.chatgpt.site)**
 
@@ -58,10 +58,10 @@ configuration -> structural generator -> source population -> baseline training
 - `tests/`: deterministic unit and integration tests
 - `site/`: accessible interactive research laboratory
 - `docs/`: research protocol, methodology, cards, and decisions
-- `reports/`: frozen v1 registry; transient `reports/generated/` outputs remain uncommitted
+- `reports/`: frozen shift and policy registries; transient `reports/generated/` outputs remain uncommitted
 - `.github/`: continuous integration, security analysis, and dependency maintenance
 
-Read [the v1 research report](docs/research-report.md), [research protocol](docs/research-protocol.md), [methodology](docs/methodology.md), [Data Card](docs/data-card.md), [Model Card](docs/model-card.md), [accessibility statement](ACCESSIBILITY.md), and [architecture decision](docs/adr/0001-synthetic-first.md) before interpreting results.
+Read [the v1 shift report](docs/research-report.md), [policy report](docs/policy-study-report.md), [policy protocol](docs/policy-study-protocol.md), [research protocol](docs/research-protocol.md), [methodology](docs/methodology.md), [Data Card](docs/data-card.md), [Model Card](docs/model-card.md), [accessibility statement](ACCESSIBILITY.md), and [architecture decision](docs/adr/0001-synthetic-first.md) before interpreting results.
 
 ## Limitations and responsible use
 
@@ -72,8 +72,9 @@ This release uses synthetic data, one binary protected attribute, one baseline, 
 - `v0.2.0`: bootstrap confidence intervals and interactive uncertainty-aware comparisons
 - `v0.3.0`: source-calibrated baseline and formal threshold sensitivity analysis
 - `v1.0.0`: frozen experiment registry, internally verified research report, comprehensive accessibility work, and stable public laboratory
+- `v1.1.0`: declared error costs, mitigation benchmark, fairness–utility Pareto analysis, and reproducible Policy Studio exports
 
-Next: a policy studio for explicitly declared error costs, mitigation methods, and fairness–utility Pareto analysis. It will expose trade-offs without presenting an automatic “best” policy.
+Next: external validation on carefully governed reference datasets with dataset-specific construct, consent, provenance, and use-limit documentation. Synthetic results will remain visually and analytically separate from external evidence.
 
 See [CHANGELOG.md](CHANGELOG.md) for released changes and [CONTRIBUTING.md](CONTRIBUTING.md) for the quality contract.
 

@@ -1,0 +1,4769 @@
+{
+  "cells": [
+    {
+      "false_negative_cost": 0.5,
+      "false_positive_cost": 1.0,
+      "magnitude": 1.0,
+      "metrics": {
+        "accuracy": {
+          "mean": 0.46555,
+          "replication_lower": 0.4338,
+          "replication_upper": 0.498525,
+          "standard_deviation": 0.019845389
+        },
+        "brier_score": {
+          "mean": 0.333031514,
+          "replication_lower": 0.313858979,
+          "replication_upper": 0.356117351,
+          "standard_deviation": 0.011471721
+        },
+        "demographic_parity_difference": {
+          "mean": 0.045947784,
+          "replication_lower": 0.001349052,
+          "replication_upper": 0.106829718,
+          "standard_deviation": 0.034048887
+        },
+        "equal_opportunity_difference": {
+          "mean": 0.05248078,
+          "replication_lower": 0.005327381,
+          "replication_upper": 0.103857323,
+          "standard_deviation": 0.034517296
+        },
+        "equalized_odds_difference": {
+          "mean": 0.061659959,
+          "replication_lower": 0.02000017,
+          "replication_upper": 0.110928495,
+          "standard_deviation": 0.03064994
+        },
+        "expected_calibration_error": {
+          "mean": 0.247254967,
+          "replication_lower": 0.215723657,
+          "replication_upper": 0.285061311,
+          "standard_deviation": 0.022185625
+        },
+        "expected_cost": {
+          "mean": 0.38455,
+          "replication_lower": 0.3552875,
+          "replication_upper": 0.408025,
+          "standard_deviation": 0.016799828
+        }
+      },
+      "pareto_efficient": false,
+      "policy": "baseline",
+      "replications": 20,
+      "shift": "concept",
+      "threshold_group_one": {
+        "mean": 0.5,
+        "replication_lower": 0.5,
+        "replication_upper": 0.5,
+        "standard_deviation": 0.0
+      },
+      "threshold_group_zero": {
+        "mean": 0.5,
+        "replication_lower": 0.5,
+        "replication_upper": 0.5,
+        "standard_deviation": 0.0
+      }
+    },
+    {
+      "false_negative_cost": 0.5,
+      "false_positive_cost": 1.0,
+      "magnitude": 1.0,
+      "metrics": {
+        "accuracy": {
+          "mean": 0.46015,
+          "replication_lower": 0.433975,
+          "replication_upper": 0.481725,
+          "standard_deviation": 0.014532269
+        },
+        "brier_score": {
+          "mean": 0.333031514,
+          "replication_lower": 0.313858979,
+          "replication_upper": 0.356117351,
+          "standard_deviation": 0.011471721
+        },
+        "demographic_parity_difference": {
+          "mean": 0.044145361,
+          "replication_lower": 0.000968708,
+          "replication_upper": 0.098351373,
+          "standard_deviation": 0.031722566
+        },
+        "equal_opportunity_difference": {
+          "mean": 0.035372134,
+          "replication_lower": 0.00092937,
+          "replication_upper": 0.077302003,
+          "standard_deviation": 0.025907909
+        },
+        "equalized_odds_difference": {
+          "mean": 0.064615051,
+          "replication_lower": 0.008228536,
+          "replication_upper": 0.129122811,
+          "standard_deviation": 0.036026759
+        },
+        "expected_calibration_error": {
+          "mean": 0.247254967,
+          "replication_lower": 0.215723657,
+          "replication_upper": 0.285061311,
+          "standard_deviation": 0.022185625
+        },
+        "expected_cost": {
+          "mean": 0.338725,
+          "replication_lower": 0.309275,
+          "replication_upper": 0.3766625,
+          "standard_deviation": 0.020831072
+        }
+      },
+      "pareto_efficient": false,
+      "policy": "group_threshold_0_1",
+      "replications": 20,
+      "shift": "concept",
+      "threshold_group_one": {
+        "mean": 0.665,
+        "replication_lower": 0.6,
+        "replication_upper": 0.75,
+        "standard_deviation": 0.051554774
+      },
+      "threshold_group_zero": {
+        "mean": 0.67,
+        "replication_lower": 0.57375,
+        "replication_upper": 0.75,
+        "standard_deviation": 0.057124057
+      }
+    },
+    {
+      "false_negative_cost": 0.5,
+      "false_positive_cost": 1.0,
+      "magnitude": 1.0,
+      "metrics": {
+        "accuracy": {
+          "mean": 0.46205,
+          "replication_lower": 0.433975,
+          "replication_upper": 0.4841,
+          "standard_deviation": 0.01518474
+        },
+        "brier_score": {
+          "mean": 0.333031514,
+          "replication_lower": 0.313858979,
+          "replication_upper": 0.356117351,
+          "standard_deviation": 0.011471721
+        },
+        "demographic_parity_difference": {
+          "mean": 0.04251972,
+          "replication_lower": 0.000968708,
+          "replication_upper": 0.08355933,
+          "standard_deviation": 0.026818673
+        },
+        "equal_opportunity_difference": {
+          "mean": 0.037764579,
+          "replication_lower": 0.002605383,
+          "replication_upper": 0.085398484,
+          "standard_deviation": 0.026964688
+        },
+        "equalized_odds_difference": {
+          "mean": 0.062724427,
+          "replication_lower": 0.01655631,
+          "replication_upper": 0.105222154,
+          "standard_deviation": 0.027321477
+        },
+        "expected_calibration_error": {
+          "mean": 0.247254967,
+          "replication_lower": 0.215723657,
+          "replication_upper": 0.285061311,
+          "standard_deviation": 0.022185625
+        },
+        "expected_cost": {
+          "mean": 0.3328,
+          "replication_lower": 0.3008,
+          "replication_upper": 0.3766625,
+          "standard_deviation": 0.024176653
+        }
+      },
+      "pareto_efficient": false,
+      "policy": "group_threshold_0_3",
+      "replications": 20,
+      "shift": "concept",
+      "threshold_group_one": {
+        "mean": 0.6775,
+        "replication_lower": 0.6,
+        "replication_upper": 0.75,
+        "standard_deviation": 0.054952132
+      },
+      "threshold_group_zero": {
+        "mean": 0.6875,
+        "replication_lower": 0.57375,
+        "replication_upper": 0.8,
+        "standard_deviation": 0.0646346
+      }
+    },
+    {
+      "false_negative_cost": 0.5,
+      "false_positive_cost": 1.0,
+      "magnitude": 1.0,
+      "metrics": {
+        "accuracy": {
+          "mean": 0.4656,
+          "replication_lower": 0.435025,
+          "replication_upper": 0.486525,
+          "standard_deviation": 0.016187715
+        },
+        "brier_score": {
+          "mean": 0.333031514,
+          "replication_lower": 0.313858979,
+          "replication_upper": 0.356117351,
+          "standard_deviation": 0.011471721
+        },
+        "demographic_parity_difference": {
+          "mean": 0.042235243,
+          "replication_lower": 0.002612964,
+          "replication_upper": 0.082452148,
+          "standard_deviation": 0.024712195
+        },
+        "equal_opportunity_difference": {
+          "mean": 0.035851058,
+          "replication_lower": 0.005340909,
+          "replication_upper": 0.082718798,
+          "standard_deviation": 0.024790859
+        },
+        "equalized_odds_difference": {
+          "mean": 0.062807504,
+          "replication_lower": 0.018278694,
+          "replication_upper": 0.107165757,
+          "standard_deviation": 0.028748642
+        },
+        "expected_calibration_error": {
+          "mean": 0.247254967,
+          "replication_lower": 0.215723657,
+          "replication_upper": 0.285061311,
+          "standard_deviation": 0.022185625
+        },
+        "expected_cost": {
+          "mean": 0.31965,
+          "replication_lower": 0.2816875,
+          "replication_upper": 0.36905,
+          "standard_deviation": 0.028032922
+        }
+      },
+      "pareto_efficient": false,
+      "policy": "group_threshold_1_0",
+      "replications": 20,
+      "shift": "concept",
+      "threshold_group_one": {
+        "mean": 0.7175,
+        "replication_lower": 0.6,
+        "replication_upper": 0.85,
+        "standard_deviation": 0.078262379
+      },
+      "threshold_group_zero": {
+        "mean": 0.7325,
+        "replication_lower": 0.57375,
+        "replication_upper": 0.85,
+        "standard_deviation": 0.090720798
+      }
+    },
+    {
+      "false_negative_cost": 0.5,
+      "false_positive_cost": 1.0,
+      "magnitude": 1.0,
+      "metrics": {
+        "accuracy": {
+          "mean": 0.46835,
+          "replication_lower": 0.435025,
+          "replication_upper": 0.497675,
+          "standard_deviation": 0.01849687
+        },
+        "brier_score": {
+          "mean": 0.333031514,
+          "replication_lower": 0.313858979,
+          "replication_upper": 0.356117351,
+          "standard_deviation": 0.011471721
+        },
+        "demographic_parity_difference": {
+          "mean": 0.028993651,
+          "replication_lower": 0.001512505,
+          "replication_upper": 0.072119558,
+          "standard_deviation": 0.025636724
+        },
+        "equal_opportunity_difference": {
+          "mean": 0.027386386,
+          "replication_lower": 0.004304438,
+          "replication_upper": 0.082718798,
+          "standard_deviation": 0.026412259
+        },
+        "equalized_odds_difference": {
+          "mean": 0.043368794,
+          "replication_lower": 0.010924891,
+          "replication_upper": 0.100502409,
+          "standard_deviation": 0.031042392
+        },
+        "expected_calibration_error": {
+          "mean": 0.247254967,
+          "replication_lower": 0.215723657,
+          "replication_upper": 0.285061311,
+          "standard_deviation": 0.022185625
+        },
+        "expected_cost": {
+          "mean": 0.30735,
+          "replication_lower": 0.2555125,
+          "replication_upper": 0.3865375,
+          "standard_deviation": 0.039186497
+        }
+      },
+      "pareto_efficient": false,
+      "policy": "group_threshold_3_0",
+      "replications": 20,
+      "shift": "concept",
+      "threshold_group_one": {
+        "mean": 0.7675,
+        "replication_lower": 0.57375,
+        "replication_upper": 0.95,
+        "standard_deviation": 0.1216931
+      },
+      "threshold_group_zero": {
+        "mean": 0.78,
+        "replication_lower": 0.55,
+        "replication_upper": 0.95,
+        "standard_deviation": 0.129167374
+      }
+    },
+    {
+      "false_negative_cost": 0.5,
+      "false_positive_cost": 1.0,
+      "magnitude": 1.0,
+      "metrics": {
+        "accuracy": {
+          "mean": 0.46115,
+          "replication_lower": 0.438075,
+          "replication_upper": 0.4841,
+          "standard_deviation": 0.013554083
+        },
+        "brier_score": {
+          "mean": 0.332668605,
+          "replication_lower": 0.313188926,
+          "replication_upper": 0.353411536,
+          "standard_deviation": 0.010978185
+        },
+        "demographic_parity_difference": {
+          "mean": 0.035489438,
+          "replication_lower": 0.003211236,
+          "replication_upper": 0.076030017,
+          "standard_deviation": 0.024122421
+        },
+        "equal_opportunity_difference": {
+          "mean": 0.03414078,
+          "replication_lower": 0.006874885,
+          "replication_upper": 0.085657026,
+          "standard_deviation": 0.02605717
+        },
+        "equalized_odds_difference": {
+          "mean": 0.055007822,
+          "replication_lower": 0.010058492,
+          "replication_upper": 0.101404058,
+          "standard_deviation": 0.030918267
+        },
+        "expected_calibration_error": {
+          "mean": 0.246247709,
+          "replication_lower": 0.211477517,
+          "replication_upper": 0.279378119,
+          "standard_deviation": 0.021172401
+        },
+        "expected_cost": {
+          "mean": 0.341625,
+          "replication_lower": 0.3078375,
+          "replication_upper": 0.3742625,
+          "standard_deviation": 0.019085593
+        }
+      },
+      "pareto_efficient": false,
+      "policy": "reweighed_training",
+      "replications": 20,
+      "shift": "concept",
+      "threshold_group_one": {
+        "mean": 0.655,
+        "replication_lower": 0.6,
+        "replication_upper": 0.75,
+        "standard_deviation": 0.05826437
+      },
+      "threshold_group_zero": {
+        "mean": 0.655,
+        "replication_lower": 0.6,
+        "replication_upper": 0.75,
+        "standard_deviation": 0.05826437
+      }
+    },
+    {
+      "false_negative_cost": 0.5,
+      "false_positive_cost": 1.0,
+      "magnitude": 1.0,
+      "metrics": {
+        "accuracy": {
+          "mean": 0.46105,
+          "replication_lower": 0.43255,
+          "replication_upper": 0.484675,
+          "standard_deviation": 0.014862439
+        },
+        "brier_score": {
+          "mean": 0.333031514,
+          "replication_lower": 0.313858979,
+          "replication_upper": 0.356117351,
+          "standard_deviation": 0.011471721
+        },
+        "demographic_parity_difference": {
+          "mean": 0.044891218,
+          "replication_lower": 0.004246935,
+          "replication_upper": 0.098351373,
+          "standard_deviation": 0.030433921
+        },
+        "equal_opportunity_difference": {
+          "mean": 0.044633442,
+          "replication_lower": 0.00873888,
+          "replication_upper": 0.075398694,
+          "standard_deviation": 0.020411193
+        },
+        "equalized_odds_difference": {
+          "mean": 0.064713129,
+          "replication_lower": 0.01399903,
+          "replication_upper": 0.128269964,
+          "standard_deviation": 0.033903217
+        },
+        "expected_calibration_error": {
+          "mean": 0.247254967,
+          "replication_lower": 0.215723657,
+          "replication_upper": 0.285061311,
+          "standard_deviation": 0.022185625
+        },
+        "expected_cost": {
+          "mean": 0.33955,
+          "replication_lower": 0.3055,
+          "replication_upper": 0.3813875,
+          "standard_deviation": 0.020592474
+        }
+      },
+      "pareto_efficient": false,
+      "policy": "source_cost_threshold",
+      "replications": 20,
+      "shift": "concept",
+      "threshold_group_one": {
+        "mean": 0.6625,
+        "replication_lower": 0.57375,
+        "replication_upper": 0.75,
+        "standard_deviation": 0.058207885
+      },
+      "threshold_group_zero": {
+        "mean": 0.6625,
+        "replication_lower": 0.57375,
+        "replication_upper": 0.75,
+        "standard_deviation": 0.058207885
+      }
+    },
+    {
+      "false_negative_cost": 0.5,
+      "false_positive_cost": 1.0,
+      "magnitude": 1.0,
+      "metrics": {
+        "accuracy": {
+          "mean": 0.47915,
+          "replication_lower": 0.45995,
+          "replication_upper": 0.501,
+          "standard_deviation": 0.013452744
+        },
+        "brier_score": {
+          "mean": 0.263401223,
+          "replication_lower": 0.25926671,
+          "replication_upper": 0.268232205,
+          "standard_deviation": 0.002531445
+        },
+        "demographic_parity_difference": {
+          "mean": 0.001140026,
+          "replication_lower": 0.0,
+          "replication_upper": 0.006564778,
+          "standard_deviation": 0.002133197
+        },
+        "equal_opportunity_difference": {
+          "mean": 0.001633909,
+          "replication_lower": 0.0,
+          "replication_upper": 0.010240927,
+          "standard_deviation": 0.003455775
+        },
+        "equalized_odds_difference": {
+          "mean": 0.002541466,
+          "replication_lower": 0.0,
+          "replication_upper": 0.015882889,
+          "standard_deviation": 0.004998785
+        },
+        "expected_calibration_error": {
+          "mean": 0.098327652,
+          "replication_lower": 0.065813605,
+          "replication_upper": 0.128231864,
+          "standard_deviation": 0.019743186
+        },
+        "expected_cost": {
+          "mean": 0.260625,
+          "replication_lower": 0.2502125,
+          "replication_upper": 0.270025,
+          "standard_deviation": 0.006707959
+        }
+      },
+      "pareto_efficient": true,
+      "policy": "target_recalibration",
+      "replications": 20,
+      "shift": "concept",
+      "threshold_group_one": {
+        "mean": 0.745,
+        "replication_lower": 0.7,
+        "replication_upper": 0.8,
+        "standard_deviation": 0.027625313
+      },
+      "threshold_group_zero": {
+        "mean": 0.745,
+        "replication_lower": 0.7,
+        "replication_upper": 0.8,
+        "standard_deviation": 0.027625313
+      }
+    },
+    {
+      "false_negative_cost": 1.0,
+      "false_positive_cost": 1.0,
+      "magnitude": 1.0,
+      "metrics": {
+        "accuracy": {
+          "mean": 0.46555,
+          "replication_lower": 0.4338,
+          "replication_upper": 0.498525,
+          "standard_deviation": 0.019845389
+        },
+        "brier_score": {
+          "mean": 0.333031514,
+          "replication_lower": 0.313858979,
+          "replication_upper": 0.356117351,
+          "standard_deviation": 0.011471721
+        },
+        "demographic_parity_difference": {
+          "mean": 0.045947784,
+          "replication_lower": 0.001349052,
+          "replication_upper": 0.106829718,
+          "standard_deviation": 0.034048887
+        },
+        "equal_opportunity_difference": {
+          "mean": 0.05248078,
+          "replication_lower": 0.005327381,
+          "replication_upper": 0.103857323,
+          "standard_deviation": 0.034517296
+        },
+        "equalized_odds_difference": {
+          "mean": 0.061659959,
+          "replication_lower": 0.02000017,
+          "replication_upper": 0.110928495,
+          "standard_deviation": 0.03064994
+        },
+        "expected_calibration_error": {
+          "mean": 0.247254967,
+          "replication_lower": 0.215723657,
+          "replication_upper": 0.285061311,
+          "standard_deviation": 0.022185625
+        },
+        "expected_cost": {
+          "mean": 0.53445,
+          "replication_lower": 0.501475,
+          "replication_upper": 0.5662,
+          "standard_deviation": 0.019845389
+        }
+      },
+      "pareto_efficient": false,
+      "policy": "baseline",
+      "replications": 20,
+      "shift": "concept",
+      "threshold_group_one": {
+        "mean": 0.5,
+        "replication_lower": 0.5,
+        "replication_upper": 0.5,
+        "standard_deviation": 0.0
+      },
+      "threshold_group_zero": {
+        "mean": 0.5,
+        "replication_lower": 0.5,
+        "replication_upper": 0.5,
+        "standard_deviation": 0.0
+      }
+    },
+    {
+      "false_negative_cost": 1.0,
+      "false_positive_cost": 1.0,
+      "magnitude": 1.0,
+      "metrics": {
+        "accuracy": {
+          "mean": 0.46295,
+          "replication_lower": 0.43555,
+          "replication_upper": 0.489725,
+          "standard_deviation": 0.016715814
+        },
+        "brier_score": {
+          "mean": 0.333031514,
+          "replication_lower": 0.313858979,
+          "replication_upper": 0.356117351,
+          "standard_deviation": 0.011471721
+        },
+        "demographic_parity_difference": {
+          "mean": 0.032799085,
+          "replication_lower": 0.006499394,
+          "replication_upper": 0.084835553,
+          "standard_deviation": 0.023009936
+        },
+        "equal_opportunity_difference": {
+          "mean": 0.040535085,
+          "replication_lower": 0.005008822,
+          "replication_upper": 0.089204793,
+          "standard_deviation": 0.027089416
+        },
+        "equalized_odds_difference": {
+          "mean": 0.046932358,
+          "replication_lower": 0.006209709,
+          "replication_upper": 0.090111015,
+          "standard_deviation": 0.027295367
+        },
+        "expected_calibration_error": {
+          "mean": 0.247254967,
+          "replication_lower": 0.215723657,
+          "replication_upper": 0.285061311,
+          "standard_deviation": 0.022185625
+        },
+        "expected_cost": {
+          "mean": 0.53705,
+          "replication_lower": 0.510275,
+          "replication_upper": 0.56445,
+          "standard_deviation": 0.016715814
+        }
+      },
+      "pareto_efficient": false,
+      "policy": "group_threshold_0_1",
+      "replications": 20,
+      "shift": "concept",
+      "threshold_group_one": {
+        "mean": 0.4975,
+        "replication_lower": 0.42375,
+        "replication_upper": 0.55,
+        "standard_deviation": 0.047225662
+      },
+      "threshold_group_zero": {
+        "mean": 0.4975,
+        "replication_lower": 0.42375,
+        "replication_upper": 0.6,
+        "standard_deviation": 0.054952132
+      }
+    },
+    {
+      "false_negative_cost": 1.0,
+      "false_positive_cost": 1.0,
+      "magnitude": 1.0,
+      "metrics": {
+        "accuracy": {
+          "mean": 0.4642,
+          "replication_lower": 0.43555,
+          "replication_upper": 0.4961,
+          "standard_deviation": 0.017599641
+        },
+        "brier_score": {
+          "mean": 0.333031514,
+          "replication_lower": 0.313858979,
+          "replication_upper": 0.356117351,
+          "standard_deviation": 0.011471721
+        },
+        "demographic_parity_difference": {
+          "mean": 0.037998759,
+          "replication_lower": 0.001292418,
+          "replication_upper": 0.089733862,
+          "standard_deviation": 0.025787292
+        },
+        "equal_opportunity_difference": {
+          "mean": 0.03816981,
+          "replication_lower": 0.005381242,
+          "replication_upper": 0.073925258,
+          "standard_deviation": 0.024833747
+        },
+        "equalized_odds_difference": {
+          "mean": 0.053500822,
+          "replication_lower": 0.009894965,
+          "replication_upper": 0.105184213,
+          "standard_deviation": 0.030715036
+        },
+        "expected_calibration_error": {
+          "mean": 0.247254967,
+          "replication_lower": 0.215723657,
+          "replication_upper": 0.285061311,
+          "standard_deviation": 0.022185625
+        },
+        "expected_cost": {
+          "mean": 0.5358,
+          "replication_lower": 0.5039,
+          "replication_upper": 0.56445,
+          "standard_deviation": 0.017599641
+        }
+      },
+      "pareto_efficient": false,
+      "policy": "group_threshold_0_3",
+      "replications": 20,
+      "shift": "concept",
+      "threshold_group_one": {
+        "mean": 0.485,
+        "replication_lower": 0.35,
+        "replication_upper": 0.55,
+        "standard_deviation": 0.069015635
+      },
+      "threshold_group_zero": {
+        "mean": 0.4975,
+        "replication_lower": 0.4,
+        "replication_upper": 0.6,
+        "standard_deviation": 0.063815111
+      }
+    },
+    {
+      "false_negative_cost": 1.0,
+      "false_positive_cost": 1.0,
+      "magnitude": 1.0,
+      "metrics": {
+        "accuracy": {
+          "mean": 0.46465,
+          "replication_lower": 0.436175,
+          "replication_upper": 0.4942,
+          "standard_deviation": 0.017177939
+        },
+        "brier_score": {
+          "mean": 0.333031514,
+          "replication_lower": 0.313858979,
+          "replication_upper": 0.356117351,
+          "standard_deviation": 0.011471721
+        },
+        "demographic_parity_difference": {
+          "mean": 0.037551572,
+          "replication_lower": 0.012910949,
+          "replication_upper": 0.089733862,
+          "standard_deviation": 0.022762128
+        },
+        "equal_opportunity_difference": {
+          "mean": 0.035267054,
+          "replication_lower": 0.003887257,
+          "replication_upper": 0.071535041,
+          "standard_deviation": 0.024999355
+        },
+        "equalized_odds_difference": {
+          "mean": 0.055301988,
+          "replication_lower": 0.012982862,
+          "replication_upper": 0.105184213,
+          "standard_deviation": 0.025027542
+        },
+        "expected_calibration_error": {
+          "mean": 0.247254967,
+          "replication_lower": 0.215723657,
+          "replication_upper": 0.285061311,
+          "standard_deviation": 0.022185625
+        },
+        "expected_cost": {
+          "mean": 0.53535,
+          "replication_lower": 0.5058,
+          "replication_upper": 0.563825,
+          "standard_deviation": 0.017177939
+        }
+      },
+      "pareto_efficient": false,
+      "policy": "group_threshold_1_0",
+      "replications": 20,
+      "shift": "concept",
+      "threshold_group_one": {
+        "mean": 0.49,
+        "replication_lower": 0.37375,
+        "replication_upper": 0.62625,
+        "standard_deviation": 0.085224163
+      },
+      "threshold_group_zero": {
+        "mean": 0.5,
+        "replication_lower": 0.37375,
+        "replication_upper": 0.67625,
+        "standard_deviation": 0.1
+      }
+    },
+    {
+      "false_negative_cost": 1.0,
+      "false_positive_cost": 1.0,
+      "magnitude": 1.0,
+      "metrics": {
+        "accuracy": {
+          "mean": 0.4671,
+          "replication_lower": 0.436175,
+          "replication_upper": 0.497525,
+          "standard_deviation": 0.018578142
+        },
+        "brier_score": {
+          "mean": 0.333031514,
+          "replication_lower": 0.313858979,
+          "replication_upper": 0.356117351,
+          "standard_deviation": 0.011471721
+        },
+        "demographic_parity_difference": {
+          "mean": 0.038369898,
+          "replication_lower": 0.001512505,
+          "replication_upper": 0.084065878,
+          "standard_deviation": 0.023663901
+        },
+        "equal_opportunity_difference": {
+          "mean": 0.039320799,
+          "replication_lower": 0.005381242,
+          "replication_upper": 0.086099792,
+          "standard_deviation": 0.024444562
+        },
+        "equalized_odds_difference": {
+          "mean": 0.053011216,
+          "replication_lower": 0.012982862,
+          "replication_upper": 0.102650529,
+          "standard_deviation": 0.027248633
+        },
+        "expected_calibration_error": {
+          "mean": 0.247254967,
+          "replication_lower": 0.215723657,
+          "replication_upper": 0.285061311,
+          "standard_deviation": 0.022185625
+        },
+        "expected_cost": {
+          "mean": 0.5329,
+          "replication_lower": 0.502475,
+          "replication_upper": 0.563825,
+          "standard_deviation": 0.018578142
+        }
+      },
+      "pareto_efficient": false,
+      "policy": "group_threshold_3_0",
+      "replications": 20,
+      "shift": "concept",
+      "threshold_group_one": {
+        "mean": 0.52,
+        "replication_lower": 0.2975,
+        "replication_upper": 0.77625,
+        "standard_deviation": 0.149031964
+      },
+      "threshold_group_zero": {
+        "mean": 0.535,
+        "replication_lower": 0.2475,
+        "replication_upper": 0.8,
+        "standard_deviation": 0.167095938
+      }
+    },
+    {
+      "false_negative_cost": 1.0,
+      "false_positive_cost": 1.0,
+      "magnitude": 1.0,
+      "metrics": {
+        "accuracy": {
+          "mean": 0.4633,
+          "replication_lower": 0.436125,
+          "replication_upper": 0.493575,
+          "standard_deviation": 0.017514205
+        },
+        "brier_score": {
+          "mean": 0.332668605,
+          "replication_lower": 0.313188926,
+          "replication_upper": 0.353411536,
+          "standard_deviation": 0.010978185
+        },
+        "demographic_parity_difference": {
+          "mean": 0.037795464,
+          "replication_lower": 0.002162559,
+          "replication_upper": 0.081295498,
+          "standard_deviation": 0.028235627
+        },
+        "equal_opportunity_difference": {
+          "mean": 0.04860932,
+          "replication_lower": 0.001121887,
+          "replication_upper": 0.10786113,
+          "standard_deviation": 0.036763906
+        },
+        "equalized_odds_difference": {
+          "mean": 0.053480362,
+          "replication_lower": 0.003545325,
+          "replication_upper": 0.10786113,
+          "standard_deviation": 0.034396018
+        },
+        "expected_calibration_error": {
+          "mean": 0.246247709,
+          "replication_lower": 0.211477517,
+          "replication_upper": 0.279378119,
+          "standard_deviation": 0.021172401
+        },
+        "expected_cost": {
+          "mean": 0.5367,
+          "replication_lower": 0.506425,
+          "replication_upper": 0.563875,
+          "standard_deviation": 0.017514205
+        }
+      },
+      "pareto_efficient": false,
+      "policy": "reweighed_training",
+      "replications": 20,
+      "shift": "concept",
+      "threshold_group_one": {
+        "mean": 0.5075,
+        "replication_lower": 0.42375,
+        "replication_upper": 0.6,
+        "standard_deviation": 0.051999494
+      },
+      "threshold_group_zero": {
+        "mean": 0.5075,
+        "replication_lower": 0.42375,
+        "replication_upper": 0.6,
+        "standard_deviation": 0.051999494
+      }
+    },
+    {
+      "false_negative_cost": 1.0,
+      "false_positive_cost": 1.0,
+      "magnitude": 1.0,
+      "metrics": {
+        "accuracy": {
+          "mean": 0.4633,
+          "replication_lower": 0.436175,
+          "replication_upper": 0.490775,
+          "standard_deviation": 0.017183529
+        },
+        "brier_score": {
+          "mean": 0.333031514,
+          "replication_lower": 0.313858979,
+          "replication_upper": 0.356117351,
+          "standard_deviation": 0.011471721
+        },
+        "demographic_parity_difference": {
+          "mean": 0.047112662,
+          "replication_lower": 0.012790229,
+          "replication_upper": 0.107928847,
+          "standard_deviation": 0.032054719
+        },
+        "equal_opportunity_difference": {
+          "mean": 0.053052998,
+          "replication_lower": 0.009610397,
+          "replication_upper": 0.11687019,
+          "standard_deviation": 0.034680083
+        },
+        "equalized_odds_difference": {
+          "mean": 0.061931007,
+          "replication_lower": 0.018220214,
+          "replication_upper": 0.12106979,
+          "standard_deviation": 0.031360178
+        },
+        "expected_calibration_error": {
+          "mean": 0.247254967,
+          "replication_lower": 0.215723657,
+          "replication_upper": 0.285061311,
+          "standard_deviation": 0.022185625
+        },
+        "expected_cost": {
+          "mean": 0.5367,
+          "replication_lower": 0.509225,
+          "replication_upper": 0.563825,
+          "standard_deviation": 0.017183529
+        }
+      },
+      "pareto_efficient": false,
+      "policy": "source_cost_threshold",
+      "replications": 20,
+      "shift": "concept",
+      "threshold_group_one": {
+        "mean": 0.4975,
+        "replication_lower": 0.45,
+        "replication_upper": 0.55,
+        "standard_deviation": 0.037957733
+      },
+      "threshold_group_zero": {
+        "mean": 0.4975,
+        "replication_lower": 0.45,
+        "replication_upper": 0.55,
+        "standard_deviation": 0.037957733
+      }
+    },
+    {
+      "false_negative_cost": 1.0,
+      "false_positive_cost": 1.0,
+      "magnitude": 1.0,
+      "metrics": {
+        "accuracy": {
+          "mean": 0.51385,
+          "replication_lower": 0.46965,
+          "replication_upper": 0.53805,
+          "standard_deviation": 0.020034904
+        },
+        "brier_score": {
+          "mean": 0.263401223,
+          "replication_lower": 0.25926671,
+          "replication_upper": 0.268232205,
+          "standard_deviation": 0.002531445
+        },
+        "demographic_parity_difference": {
+          "mean": 0.004073669,
+          "replication_lower": 0.0,
+          "replication_upper": 0.015926237,
+          "standard_deviation": 0.005217289
+        },
+        "equal_opportunity_difference": {
+          "mean": 0.005340947,
+          "replication_lower": 0.0,
+          "replication_upper": 0.015450501,
+          "standard_deviation": 0.005710081
+        },
+        "equalized_odds_difference": {
+          "mean": 0.005969613,
+          "replication_lower": 0.0,
+          "replication_upper": 0.018372031,
+          "standard_deviation": 0.006273245
+        },
+        "expected_calibration_error": {
+          "mean": 0.098327652,
+          "replication_lower": 0.065813605,
+          "replication_upper": 0.128231864,
+          "standard_deviation": 0.019743186
+        },
+        "expected_cost": {
+          "mean": 0.48615,
+          "replication_lower": 0.46195,
+          "replication_upper": 0.53035,
+          "standard_deviation": 0.020034904
+        }
+      },
+      "pareto_efficient": true,
+      "policy": "target_recalibration",
+      "replications": 20,
+      "shift": "concept",
+      "threshold_group_one": {
+        "mean": 0.325,
+        "replication_lower": 0.2,
+        "replication_upper": 0.72625,
+        "standard_deviation": 0.143728545
+      },
+      "threshold_group_zero": {
+        "mean": 0.325,
+        "replication_lower": 0.2,
+        "replication_upper": 0.72625,
+        "standard_deviation": 0.143728545
+      }
+    },
+    {
+      "false_negative_cost": 2.0,
+      "false_positive_cost": 1.0,
+      "magnitude": 1.0,
+      "metrics": {
+        "accuracy": {
+          "mean": 0.46555,
+          "replication_lower": 0.4338,
+          "replication_upper": 0.498525,
+          "standard_deviation": 0.019845389
+        },
+        "brier_score": {
+          "mean": 0.333031514,
+          "replication_lower": 0.313858979,
+          "replication_upper": 0.356117351,
+          "standard_deviation": 0.011471721
+        },
+        "demographic_parity_difference": {
+          "mean": 0.045947784,
+          "replication_lower": 0.001349052,
+          "replication_upper": 0.106829718,
+          "standard_deviation": 0.034048887
+        },
+        "equal_opportunity_difference": {
+          "mean": 0.05248078,
+          "replication_lower": 0.005327381,
+          "replication_upper": 0.103857323,
+          "standard_deviation": 0.034517296
+        },
+        "equalized_odds_difference": {
+          "mean": 0.061659959,
+          "replication_lower": 0.02000017,
+          "replication_upper": 0.110928495,
+          "standard_deviation": 0.03064994
+        },
+        "expected_calibration_error": {
+          "mean": 0.247254967,
+          "replication_lower": 0.215723657,
+          "replication_upper": 0.285061311,
+          "standard_deviation": 0.022185625
+        },
+        "expected_cost": {
+          "mean": 0.417125,
+          "replication_lower": 0.389875,
+          "replication_upper": 0.448675,
+          "standard_deviation": 0.017839839
+        }
+      },
+      "pareto_efficient": false,
+      "policy": "baseline",
+      "replications": 20,
+      "shift": "concept",
+      "threshold_group_one": {
+        "mean": 0.5,
+        "replication_lower": 0.5,
+        "replication_upper": 0.5,
+        "standard_deviation": 0.0
+      },
+      "threshold_group_zero": {
+        "mean": 0.5,
+        "replication_lower": 0.5,
+        "replication_upper": 0.5,
+        "standard_deviation": 0.0
+      }
+    },
+    {
+      "false_negative_cost": 2.0,
+      "false_positive_cost": 1.0,
+      "magnitude": 1.0,
+      "metrics": {
+        "accuracy": {
+          "mean": 0.47785,
+          "replication_lower": 0.45185,
+          "replication_upper": 0.502525,
+          "standard_deviation": 0.017290932
+        },
+        "brier_score": {
+          "mean": 0.333031514,
+          "replication_lower": 0.313858979,
+          "replication_upper": 0.356117351,
+          "standard_deviation": 0.011471721
+        },
+        "demographic_parity_difference": {
+          "mean": 0.053986417,
+          "replication_lower": 0.005546855,
+          "replication_upper": 0.129899997,
+          "standard_deviation": 0.039108887
+        },
+        "equal_opportunity_difference": {
+          "mean": 0.062341988,
+          "replication_lower": 0.007106706,
+          "replication_upper": 0.154382147,
+          "standard_deviation": 0.044436213
+        },
+        "equalized_odds_difference": {
+          "mean": 0.072108461,
+          "replication_lower": 0.019033959,
+          "replication_upper": 0.154382147,
+          "standard_deviation": 0.041509064
+        },
+        "expected_calibration_error": {
+          "mean": 0.247254967,
+          "replication_lower": 0.215723657,
+          "replication_upper": 0.285061311,
+          "standard_deviation": 0.022185625
+        },
+        "expected_cost": {
+          "mean": 0.34985,
+          "replication_lower": 0.3033,
+          "replication_upper": 0.3857125,
+          "standard_deviation": 0.023739319
+        }
+      },
+      "pareto_efficient": false,
+      "policy": "group_threshold_0_1",
+      "replications": 20,
+      "shift": "concept",
+      "threshold_group_one": {
+        "mean": 0.315,
+        "replication_lower": 0.25,
+        "replication_upper": 0.4,
+        "standard_deviation": 0.046169026
+      },
+      "threshold_group_zero": {
+        "mean": 0.3175,
+        "replication_lower": 0.25,
+        "replication_upper": 0.42625,
+        "standard_deviation": 0.059105169
+      }
+    },
+    {
+      "false_negative_cost": 2.0,
+      "false_positive_cost": 1.0,
+      "magnitude": 1.0,
+      "metrics": {
+        "accuracy": {
+          "mean": 0.48,
+          "replication_lower": 0.452325,
+          "replication_upper": 0.502525,
+          "standard_deviation": 0.016306279
+        },
+        "brier_score": {
+          "mean": 0.333031514,
+          "replication_lower": 0.313858979,
+          "replication_upper": 0.356117351,
+          "standard_deviation": 0.011471721
+        },
+        "demographic_parity_difference": {
+          "mean": 0.04080038,
+          "replication_lower": 0.005546855,
+          "replication_upper": 0.080309672,
+          "standard_deviation": 0.025315227
+        },
+        "equal_opportunity_difference": {
+          "mean": 0.046614744,
+          "replication_lower": 0.007106706,
+          "replication_upper": 0.116041667,
+          "standard_deviation": 0.031539689
+        },
+        "equalized_odds_difference": {
+          "mean": 0.059292348,
+          "replication_lower": 0.019033959,
+          "replication_upper": 0.116041667,
+          "standard_deviation": 0.028320443
+        },
+        "expected_calibration_error": {
+          "mean": 0.247254967,
+          "replication_lower": 0.215723657,
+          "replication_upper": 0.285061311,
+          "standard_deviation": 0.022185625
+        },
+        "expected_cost": {
+          "mean": 0.346625,
+          "replication_lower": 0.3033,
+          "replication_upper": 0.3857125,
+          "standard_deviation": 0.024880173
+        }
+      },
+      "pareto_efficient": false,
+      "policy": "group_threshold_0_3",
+      "replications": 20,
+      "shift": "concept",
+      "threshold_group_one": {
+        "mean": 0.31,
+        "replication_lower": 0.22375,
+        "replication_upper": 0.4,
+        "standard_deviation": 0.052815468
+      },
+      "threshold_group_zero": {
+        "mean": 0.3125,
+        "replication_lower": 0.22375,
+        "replication_upper": 0.42625,
+        "standard_deviation": 0.0646346
+      }
+    },
+    {
+      "false_negative_cost": 2.0,
+      "false_positive_cost": 1.0,
+      "magnitude": 1.0,
+      "metrics": {
+        "accuracy": {
+          "mean": 0.4834,
+          "replication_lower": 0.4579,
+          "replication_upper": 0.502525,
+          "standard_deviation": 0.015069663
+        },
+        "brier_score": {
+          "mean": 0.333031514,
+          "replication_lower": 0.313858979,
+          "replication_upper": 0.356117351,
+          "standard_deviation": 0.011471721
+        },
+        "demographic_parity_difference": {
+          "mean": 0.039715592,
+          "replication_lower": 0.005546855,
+          "replication_upper": 0.078819609,
+          "standard_deviation": 0.023993728
+        },
+        "equal_opportunity_difference": {
+          "mean": 0.0442373,
+          "replication_lower": 0.007106706,
+          "replication_upper": 0.101707702,
+          "standard_deviation": 0.027479799
+        },
+        "equalized_odds_difference": {
+          "mean": 0.057678681,
+          "replication_lower": 0.019033959,
+          "replication_upper": 0.106012371,
+          "standard_deviation": 0.024513182
+        },
+        "expected_calibration_error": {
+          "mean": 0.247254967,
+          "replication_lower": 0.215723657,
+          "replication_upper": 0.285061311,
+          "standard_deviation": 0.022185625
+        },
+        "expected_cost": {
+          "mean": 0.34335,
+          "replication_lower": 0.295825,
+          "replication_upper": 0.4003125,
+          "standard_deviation": 0.032102263
+        }
+      },
+      "pareto_efficient": false,
+      "policy": "group_threshold_1_0",
+      "replications": 20,
+      "shift": "concept",
+      "threshold_group_one": {
+        "mean": 0.305,
+        "replication_lower": 0.17375,
+        "replication_upper": 0.4,
+        "standard_deviation": 0.074161985
+      },
+      "threshold_group_zero": {
+        "mean": 0.3125,
+        "replication_lower": 0.2,
+        "replication_upper": 0.47625,
+        "standard_deviation": 0.090138782
+      }
+    },
+    {
+      "false_negative_cost": 2.0,
+      "false_positive_cost": 1.0,
+      "magnitude": 1.0,
+      "metrics": {
+        "accuracy": {
+          "mean": 0.4891,
+          "replication_lower": 0.447575,
+          "replication_upper": 0.526825,
+          "standard_deviation": 0.021535528
+        },
+        "brier_score": {
+          "mean": 0.333031514,
+          "replication_lower": 0.313858979,
+          "replication_upper": 0.356117351,
+          "standard_deviation": 0.011471721
+        },
+        "demographic_parity_difference": {
+          "mean": 0.028168774,
+          "replication_lower": 0.000804583,
+          "replication_upper": 0.080926207,
+          "standard_deviation": 0.022778445
+        },
+        "equal_opportunity_difference": {
+          "mean": 0.029790048,
+          "replication_lower": 0.003931289,
+          "replication_upper": 0.071535041,
+          "standard_deviation": 0.022387663
+        },
+        "equalized_odds_difference": {
+          "mean": 0.041617867,
+          "replication_lower": 0.007347666,
+          "replication_upper": 0.097948888,
+          "standard_deviation": 0.027915084
+        },
+        "expected_calibration_error": {
+          "mean": 0.247254967,
+          "replication_lower": 0.215723657,
+          "replication_upper": 0.285061311,
+          "standard_deviation": 0.022185625
+        },
+        "expected_cost": {
+          "mean": 0.32605,
+          "replication_lower": 0.2442125,
+          "replication_upper": 0.430575,
+          "standard_deviation": 0.057671461
+        }
+      },
+      "pareto_efficient": false,
+      "policy": "group_threshold_3_0",
+      "replications": 20,
+      "shift": "concept",
+      "threshold_group_one": {
+        "mean": 0.255,
+        "replication_lower": 0.05,
+        "replication_upper": 0.52625,
+        "standard_deviation": 0.152090693
+      },
+      "threshold_group_zero": {
+        "mean": 0.2625,
+        "replication_lower": 0.05,
+        "replication_upper": 0.47625,
+        "standard_deviation": 0.147679418
+      }
+    },
+    {
+      "false_negative_cost": 2.0,
+      "false_positive_cost": 1.0,
+      "magnitude": 1.0,
+      "metrics": {
+        "accuracy": {
+          "mean": 0.4752,
+          "replication_lower": 0.4509,
+          "replication_upper": 0.505775,
+          "standard_deviation": 0.016327568
+        },
+        "brier_score": {
+          "mean": 0.332668605,
+          "replication_lower": 0.313188926,
+          "replication_upper": 0.353411536,
+          "standard_deviation": 0.010978185
+        },
+        "demographic_parity_difference": {
+          "mean": 0.041329809,
+          "replication_lower": 0.002059149,
+          "replication_upper": 0.100885958,
+          "standard_deviation": 0.030944252
+        },
+        "equal_opportunity_difference": {
+          "mean": 0.055336685,
+          "replication_lower": 0.002538021,
+          "replication_upper": 0.14148588,
+          "standard_deviation": 0.043995034
+        },
+        "equalized_odds_difference": {
+          "mean": 0.057313726,
+          "replication_lower": 0.003966797,
+          "replication_upper": 0.14148588,
+          "standard_deviation": 0.043248736
+        },
+        "expected_calibration_error": {
+          "mean": 0.246247709,
+          "replication_lower": 0.211477517,
+          "replication_upper": 0.279378119,
+          "standard_deviation": 0.021172401
+        },
+        "expected_cost": {
+          "mean": 0.359025,
+          "replication_lower": 0.3206375,
+          "replication_upper": 0.3949125,
+          "standard_deviation": 0.020986509
+        }
+      },
+      "pareto_efficient": false,
+      "policy": "reweighed_training",
+      "replications": 20,
+      "shift": "concept",
+      "threshold_group_one": {
+        "mean": 0.3375,
+        "replication_lower": 0.27375,
+        "replication_upper": 0.4,
+        "standard_deviation": 0.03581752
+      },
+      "threshold_group_zero": {
+        "mean": 0.3375,
+        "replication_lower": 0.27375,
+        "replication_upper": 0.4,
+        "standard_deviation": 0.03581752
+      }
+    },
+    {
+      "false_negative_cost": 2.0,
+      "false_positive_cost": 1.0,
+      "magnitude": 1.0,
+      "metrics": {
+        "accuracy": {
+          "mean": 0.4774,
+          "replication_lower": 0.454425,
+          "replication_upper": 0.50215,
+          "standard_deviation": 0.015387623
+        },
+        "brier_score": {
+          "mean": 0.333031514,
+          "replication_lower": 0.313858979,
+          "replication_upper": 0.356117351,
+          "standard_deviation": 0.011471721
+        },
+        "demographic_parity_difference": {
+          "mean": 0.049738636,
+          "replication_lower": 0.007900256,
+          "replication_upper": 0.115097317,
+          "standard_deviation": 0.034157543
+        },
+        "equal_opportunity_difference": {
+          "mean": 0.056065522,
+          "replication_lower": 0.001450687,
+          "replication_upper": 0.149905303,
+          "standard_deviation": 0.047994102
+        },
+        "equalized_odds_difference": {
+          "mean": 0.067897271,
+          "replication_lower": 0.024930967,
+          "replication_upper": 0.149905303,
+          "standard_deviation": 0.040752385
+        },
+        "expected_calibration_error": {
+          "mean": 0.247254967,
+          "replication_lower": 0.215723657,
+          "replication_upper": 0.285061311,
+          "standard_deviation": 0.022185625
+        },
+        "expected_cost": {
+          "mean": 0.352975,
+          "replication_lower": 0.3110625,
+          "replication_upper": 0.3829875,
+          "standard_deviation": 0.020162808
+        }
+      },
+      "pareto_efficient": false,
+      "policy": "source_cost_threshold",
+      "replications": 20,
+      "shift": "concept",
+      "threshold_group_one": {
+        "mean": 0.325,
+        "replication_lower": 0.25,
+        "replication_upper": 0.4,
+        "standard_deviation": 0.047295265
+      },
+      "threshold_group_zero": {
+        "mean": 0.325,
+        "replication_lower": 0.25,
+        "replication_upper": 0.4,
+        "standard_deviation": 0.047295265
+      }
+    },
+    {
+      "false_negative_cost": 2.0,
+      "false_positive_cost": 1.0,
+      "magnitude": 1.0,
+      "metrics": {
+        "accuracy": {
+          "mean": 0.52095,
+          "replication_lower": 0.500475,
+          "replication_upper": 0.54005,
+          "standard_deviation": 0.013212733
+        },
+        "brier_score": {
+          "mean": 0.263401223,
+          "replication_lower": 0.25926671,
+          "replication_upper": 0.268232205,
+          "standard_deviation": 0.002531445
+        },
+        "demographic_parity_difference": {
+          "mean": 0.000413611,
+          "replication_lower": 0.0,
+          "replication_upper": 0.002081276,
+          "standard_deviation": 0.000808279
+        },
+        "equal_opportunity_difference": {
+          "mean": 0.000830887,
+          "replication_lower": 0.0,
+          "replication_upper": 0.004687414,
+          "standard_deviation": 0.001716667
+        },
+        "equalized_odds_difference": {
+          "mean": 0.001273755,
+          "replication_lower": 0.0,
+          "replication_upper": 0.005000114,
+          "standard_deviation": 0.002007217
+        },
+        "expected_calibration_error": {
+          "mean": 0.098327652,
+          "replication_lower": 0.065813605,
+          "replication_upper": 0.128231864,
+          "standard_deviation": 0.019743186
+        },
+        "expected_cost": {
+          "mean": 0.239725,
+          "replication_lower": 0.230475,
+          "replication_upper": 0.250525,
+          "standard_deviation": 0.006628239
+        }
+      },
+      "pareto_efficient": true,
+      "policy": "target_recalibration",
+      "replications": 20,
+      "shift": "concept",
+      "threshold_group_one": {
+        "mean": 0.2475,
+        "replication_lower": 0.2,
+        "replication_upper": 0.3,
+        "standard_deviation": 0.030240266
+      },
+      "threshold_group_zero": {
+        "mean": 0.2475,
+        "replication_lower": 0.2,
+        "replication_upper": 0.3,
+        "standard_deviation": 0.030240266
+      }
+    },
+    {
+      "false_negative_cost": 0.5,
+      "false_positive_cost": 1.0,
+      "magnitude": 1.0,
+      "metrics": {
+        "accuracy": {
+          "mean": 0.79045,
+          "replication_lower": 0.774325,
+          "replication_upper": 0.805,
+          "standard_deviation": 0.010282714
+        },
+        "brier_score": {
+          "mean": 0.145029531,
+          "replication_lower": 0.134340893,
+          "replication_upper": 0.153380333,
+          "standard_deviation": 0.005914597
+        },
+        "demographic_parity_difference": {
+          "mean": 0.176400839,
+          "replication_lower": 0.124098473,
+          "replication_upper": 0.26379833,
+          "standard_deviation": 0.04192245
+        },
+        "equal_opportunity_difference": {
+          "mean": 0.094102814,
+          "replication_lower": 0.054902456,
+          "replication_upper": 0.150323398,
+          "standard_deviation": 0.032423135
+        },
+        "equalized_odds_difference": {
+          "mean": 0.257120826,
+          "replication_lower": 0.125603054,
+          "replication_upper": 0.395821212,
+          "standard_deviation": 0.074843557
+        },
+        "expected_calibration_error": {
+          "mean": 0.030711672,
+          "replication_lower": 0.0185992,
+          "replication_upper": 0.042307203,
+          "standard_deviation": 0.007497832
+        },
+        "expected_cost": {
+          "mean": 0.18345,
+          "replication_lower": 0.1646375,
+          "replication_upper": 0.20055,
+          "standard_deviation": 0.010623831
+        }
+      },
+      "pareto_efficient": true,
+      "policy": "baseline",
+      "replications": 20,
+      "shift": "covariate",
+      "threshold_group_one": {
+        "mean": 0.5,
+        "replication_lower": 0.5,
+        "replication_upper": 0.5,
+        "standard_deviation": 0.0
+      },
+      "threshold_group_zero": {
+        "mean": 0.5,
+        "replication_lower": 0.5,
+        "replication_upper": 0.5,
+        "standard_deviation": 0.0
+      }
+    },
+    {
+      "false_negative_cost": 0.5,
+      "false_positive_cost": 1.0,
+      "magnitude": 1.0,
+      "metrics": {
+        "accuracy": {
+          "mean": 0.76305,
+          "replication_lower": 0.725375,
+          "replication_upper": 0.7942,
+          "standard_deviation": 0.019906294
+        },
+        "brier_score": {
+          "mean": 0.145029531,
+          "replication_lower": 0.134340893,
+          "replication_upper": 0.153380333,
+          "standard_deviation": 0.005914597
+        },
+        "demographic_parity_difference": {
+          "mean": 0.265527251,
+          "replication_lower": 0.19872914,
+          "replication_upper": 0.34488985,
+          "standard_deviation": 0.048880399
+        },
+        "equal_opportunity_difference": {
+          "mean": 0.187633128,
+          "replication_lower": 0.101053737,
+          "replication_upper": 0.28577351,
+          "standard_deviation": 0.054560052
+        },
+        "equalized_odds_difference": {
+          "mean": 0.269215338,
+          "replication_lower": 0.164477771,
+          "replication_upper": 0.379998941,
+          "standard_deviation": 0.066831772
+        },
+        "expected_calibration_error": {
+          "mean": 0.030711672,
+          "replication_lower": 0.0185992,
+          "replication_upper": 0.042307203,
+          "standard_deviation": 0.007497832
+        },
+        "expected_cost": {
+          "mean": 0.165875,
+          "replication_lower": 0.1452,
+          "replication_upper": 0.180525,
+          "standard_deviation": 0.010898907
+        }
+      },
+      "pareto_efficient": true,
+      "policy": "group_threshold_0_1",
+      "replications": 20,
+      "shift": "covariate",
+      "threshold_group_one": {
+        "mean": 0.665,
+        "replication_lower": 0.6,
+        "replication_upper": 0.75,
+        "standard_deviation": 0.051554774
+      },
+      "threshold_group_zero": {
+        "mean": 0.67,
+        "replication_lower": 0.57375,
+        "replication_upper": 0.75,
+        "standard_deviation": 0.057124057
+      }
+    },
+    {
+      "false_negative_cost": 0.5,
+      "false_positive_cost": 1.0,
+      "magnitude": 1.0,
+      "metrics": {
+        "accuracy": {
+          "mean": 0.75365,
+          "replication_lower": 0.69915,
+          "replication_upper": 0.7942,
+          "standard_deviation": 0.028614084
+        },
+        "brier_score": {
+          "mean": 0.145029531,
+          "replication_lower": 0.134340893,
+          "replication_upper": 0.153380333,
+          "standard_deviation": 0.005914597
+        },
+        "demographic_parity_difference": {
+          "mean": 0.276407942,
+          "replication_lower": 0.186952742,
+          "replication_upper": 0.359667196,
+          "standard_deviation": 0.057934398
+        },
+        "equal_opportunity_difference": {
+          "mean": 0.201233312,
+          "replication_lower": 0.093145899,
+          "replication_upper": 0.306081254,
+          "standard_deviation": 0.06549884
+        },
+        "equalized_odds_difference": {
+          "mean": 0.274043568,
+          "replication_lower": 0.164477771,
+          "replication_upper": 0.403899633,
+          "standard_deviation": 0.072921669
+        },
+        "expected_calibration_error": {
+          "mean": 0.030711672,
+          "replication_lower": 0.0185992,
+          "replication_upper": 0.042307203,
+          "standard_deviation": 0.007497832
+        },
+        "expected_cost": {
+          "mean": 0.167625,
+          "replication_lower": 0.1452,
+          "replication_upper": 0.183625,
+          "standard_deviation": 0.011767344
+        }
+      },
+      "pareto_efficient": false,
+      "policy": "group_threshold_0_3",
+      "replications": 20,
+      "shift": "covariate",
+      "threshold_group_one": {
+        "mean": 0.6775,
+        "replication_lower": 0.6,
+        "replication_upper": 0.75,
+        "standard_deviation": 0.054952132
+      },
+      "threshold_group_zero": {
+        "mean": 0.6875,
+        "replication_lower": 0.57375,
+        "replication_upper": 0.8,
+        "standard_deviation": 0.0646346
+      }
+    },
+    {
+      "false_negative_cost": 0.5,
+      "false_positive_cost": 1.0,
+      "magnitude": 1.0,
+      "metrics": {
+        "accuracy": {
+          "mean": 0.7195,
+          "replication_lower": 0.61265,
+          "replication_upper": 0.790875,
+          "standard_deviation": 0.061636028
+        },
+        "brier_score": {
+          "mean": 0.145029531,
+          "replication_lower": 0.134340893,
+          "replication_upper": 0.153380333,
+          "standard_deviation": 0.005914597
+        },
+        "demographic_parity_difference": {
+          "mean": 0.300810529,
+          "replication_lower": 0.177677449,
+          "replication_upper": 0.402997982,
+          "standard_deviation": 0.064973346
+        },
+        "equal_opportunity_difference": {
+          "mean": 0.240063247,
+          "replication_lower": 0.093145899,
+          "replication_upper": 0.425344251,
+          "standard_deviation": 0.090653969
+        },
+        "equalized_odds_difference": {
+          "mean": 0.291631048,
+          "replication_lower": 0.19159251,
+          "replication_upper": 0.425344251,
+          "standard_deviation": 0.068877131
+        },
+        "expected_calibration_error": {
+          "mean": 0.030711672,
+          "replication_lower": 0.0185992,
+          "replication_upper": 0.042307203,
+          "standard_deviation": 0.007497832
+        },
+        "expected_cost": {
+          "mean": 0.17645,
+          "replication_lower": 0.1515,
+          "replication_upper": 0.2124375,
+          "standard_deviation": 0.020152641
+        }
+      },
+      "pareto_efficient": false,
+      "policy": "group_threshold_1_0",
+      "replications": 20,
+      "shift": "covariate",
+      "threshold_group_one": {
+        "mean": 0.7175,
+        "replication_lower": 0.6,
+        "replication_upper": 0.85,
+        "standard_deviation": 0.078262379
+      },
+      "threshold_group_zero": {
+        "mean": 0.7325,
+        "replication_lower": 0.57375,
+        "replication_upper": 0.85,
+        "standard_deviation": 0.090720798
+      }
+    },
+    {
+      "false_negative_cost": 0.5,
+      "false_positive_cost": 1.0,
+      "magnitude": 1.0,
+      "metrics": {
+        "accuracy": {
+          "mean": 0.6475,
+          "replication_lower": 0.374025,
+          "replication_upper": 0.786675,
+          "standard_deviation": 0.129047727
+        },
+        "brier_score": {
+          "mean": 0.145029531,
+          "replication_lower": 0.134340893,
+          "replication_upper": 0.153380333,
+          "standard_deviation": 0.005914597
+        },
+        "demographic_parity_difference": {
+          "mean": 0.273643753,
+          "replication_lower": 0.118771763,
+          "replication_upper": 0.402997982,
+          "standard_deviation": 0.09042381
+        },
+        "equal_opportunity_difference": {
+          "mean": 0.23570774,
+          "replication_lower": 0.090244468,
+          "replication_upper": 0.425344251,
+          "standard_deviation": 0.103564873
+        },
+        "equalized_odds_difference": {
+          "mean": 0.274466602,
+          "replication_lower": 0.117631614,
+          "replication_upper": 0.425344251,
+          "standard_deviation": 0.090257354
+        },
+        "expected_calibration_error": {
+          "mean": 0.030711672,
+          "replication_lower": 0.0185992,
+          "replication_upper": 0.042307203,
+          "standard_deviation": 0.007497832
+        },
+        "expected_cost": {
+          "mean": 0.205225,
+          "replication_lower": 0.1541125,
+          "replication_upper": 0.3142,
+          "standard_deviation": 0.047255597
+        }
+      },
+      "pareto_efficient": false,
+      "policy": "group_threshold_3_0",
+      "replications": 20,
+      "shift": "covariate",
+      "threshold_group_one": {
+        "mean": 0.7675,
+        "replication_lower": 0.57375,
+        "replication_upper": 0.95,
+        "standard_deviation": 0.1216931
+      },
+      "threshold_group_zero": {
+        "mean": 0.78,
+        "replication_lower": 0.55,
+        "replication_upper": 0.95,
+        "standard_deviation": 0.129167374
+      }
+    },
+    {
+      "false_negative_cost": 0.5,
+      "false_positive_cost": 1.0,
+      "magnitude": 1.0,
+      "metrics": {
+        "accuracy": {
+          "mean": 0.7669,
+          "replication_lower": 0.72145,
+          "replication_upper": 0.796575,
+          "standard_deviation": 0.022794044
+        },
+        "brier_score": {
+          "mean": 0.144912236,
+          "replication_lower": 0.134443981,
+          "replication_upper": 0.153298207,
+          "standard_deviation": 0.006021631
+        },
+        "demographic_parity_difference": {
+          "mean": 0.266554942,
+          "replication_lower": 0.200309169,
+          "replication_upper": 0.329235182,
+          "standard_deviation": 0.039967765
+        },
+        "equal_opportunity_difference": {
+          "mean": 0.183116776,
+          "replication_lower": 0.094226432,
+          "replication_upper": 0.252852006,
+          "standard_deviation": 0.047003602
+        },
+        "equalized_odds_difference": {
+          "mean": 0.291183454,
+          "replication_lower": 0.19115025,
+          "replication_upper": 0.396738198,
+          "standard_deviation": 0.058294589
+        },
+        "expected_calibration_error": {
+          "mean": 0.032329488,
+          "replication_lower": 0.020068515,
+          "replication_upper": 0.044087341,
+          "standard_deviation": 0.007452513
+        },
+        "expected_cost": {
+          "mean": 0.166525,
+          "replication_lower": 0.1463375,
+          "replication_upper": 0.181075,
+          "standard_deviation": 0.009951825
+        }
+      },
+      "pareto_efficient": false,
+      "policy": "reweighed_training",
+      "replications": 20,
+      "shift": "covariate",
+      "threshold_group_one": {
+        "mean": 0.655,
+        "replication_lower": 0.6,
+        "replication_upper": 0.75,
+        "standard_deviation": 0.05826437
+      },
+      "threshold_group_zero": {
+        "mean": 0.655,
+        "replication_lower": 0.6,
+        "replication_upper": 0.75,
+        "standard_deviation": 0.05826437
+      }
+    },
+    {
+      "false_negative_cost": 0.5,
+      "false_positive_cost": 1.0,
+      "magnitude": 1.0,
+      "metrics": {
+        "accuracy": {
+          "mean": 0.76305,
+          "replication_lower": 0.719825,
+          "replication_upper": 0.796575,
+          "standard_deviation": 0.023374469
+        },
+        "brier_score": {
+          "mean": 0.145029531,
+          "replication_lower": 0.134340893,
+          "replication_upper": 0.153380333,
+          "standard_deviation": 0.005914597
+        },
+        "demographic_parity_difference": {
+          "mean": 0.255578445,
+          "replication_lower": 0.197521126,
+          "replication_upper": 0.340483065,
+          "standard_deviation": 0.046335969
+        },
+        "equal_opportunity_difference": {
+          "mean": 0.176893284,
+          "replication_lower": 0.101053737,
+          "replication_upper": 0.254586608,
+          "standard_deviation": 0.053338235
+        },
+        "equalized_odds_difference": {
+          "mean": 0.264066977,
+          "replication_lower": 0.170229855,
+          "replication_upper": 0.394060678,
+          "standard_deviation": 0.063466904
+        },
+        "expected_calibration_error": {
+          "mean": 0.030711672,
+          "replication_lower": 0.0185992,
+          "replication_upper": 0.042307203,
+          "standard_deviation": 0.007497832
+        },
+        "expected_cost": {
+          "mean": 0.167075,
+          "replication_lower": 0.1468625,
+          "replication_upper": 0.1831,
+          "standard_deviation": 0.010409099
+        }
+      },
+      "pareto_efficient": true,
+      "policy": "source_cost_threshold",
+      "replications": 20,
+      "shift": "covariate",
+      "threshold_group_one": {
+        "mean": 0.6625,
+        "replication_lower": 0.57375,
+        "replication_upper": 0.75,
+        "standard_deviation": 0.058207885
+      },
+      "threshold_group_zero": {
+        "mean": 0.6625,
+        "replication_lower": 0.57375,
+        "replication_upper": 0.75,
+        "standard_deviation": 0.058207885
+      }
+    },
+    {
+      "false_negative_cost": 0.5,
+      "false_positive_cost": 1.0,
+      "magnitude": 1.0,
+      "metrics": {
+        "accuracy": {
+          "mean": 0.7642,
+          "replication_lower": 0.727275,
+          "replication_upper": 0.7981,
+          "standard_deviation": 0.022108822
+        },
+        "brier_score": {
+          "mean": 0.145105286,
+          "replication_lower": 0.134541413,
+          "replication_upper": 0.15415555,
+          "standard_deviation": 0.006096923
+        },
+        "demographic_parity_difference": {
+          "mean": 0.258518115,
+          "replication_lower": 0.181788784,
+          "replication_upper": 0.373213095,
+          "standard_deviation": 0.059530993
+        },
+        "equal_opportunity_difference": {
+          "mean": 0.178148172,
+          "replication_lower": 0.103853719,
+          "replication_upper": 0.295783371,
+          "standard_deviation": 0.066510306
+        },
+        "equalized_odds_difference": {
+          "mean": 0.273561318,
+          "replication_lower": 0.158228923,
+          "replication_upper": 0.372123654,
+          "standard_deviation": 0.067403883
+        },
+        "expected_calibration_error": {
+          "mean": 0.032547901,
+          "replication_lower": 0.016266474,
+          "replication_upper": 0.049350549,
+          "standard_deviation": 0.00996398
+        },
+        "expected_cost": {
+          "mean": 0.1658,
+          "replication_lower": 0.1475875,
+          "replication_upper": 0.1854875,
+          "standard_deviation": 0.010869319
+        }
+      },
+      "pareto_efficient": true,
+      "policy": "target_recalibration",
+      "replications": 20,
+      "shift": "covariate",
+      "threshold_group_one": {
+        "mean": 0.67,
+        "replication_lower": 0.5475,
+        "replication_upper": 0.75,
+        "standard_deviation": 0.05938279
+      },
+      "threshold_group_zero": {
+        "mean": 0.67,
+        "replication_lower": 0.5475,
+        "replication_upper": 0.75,
+        "standard_deviation": 0.05938279
+      }
+    },
+    {
+      "false_negative_cost": 1.0,
+      "false_positive_cost": 1.0,
+      "magnitude": 1.0,
+      "metrics": {
+        "accuracy": {
+          "mean": 0.79045,
+          "replication_lower": 0.774325,
+          "replication_upper": 0.805,
+          "standard_deviation": 0.010282714
+        },
+        "brier_score": {
+          "mean": 0.145029531,
+          "replication_lower": 0.134340893,
+          "replication_upper": 0.153380333,
+          "standard_deviation": 0.005914597
+        },
+        "demographic_parity_difference": {
+          "mean": 0.176400839,
+          "replication_lower": 0.124098473,
+          "replication_upper": 0.26379833,
+          "standard_deviation": 0.04192245
+        },
+        "equal_opportunity_difference": {
+          "mean": 0.094102814,
+          "replication_lower": 0.054902456,
+          "replication_upper": 0.150323398,
+          "standard_deviation": 0.032423135
+        },
+        "equalized_odds_difference": {
+          "mean": 0.257120826,
+          "replication_lower": 0.125603054,
+          "replication_upper": 0.395821212,
+          "standard_deviation": 0.074843557
+        },
+        "expected_calibration_error": {
+          "mean": 0.030711672,
+          "replication_lower": 0.0185992,
+          "replication_upper": 0.042307203,
+          "standard_deviation": 0.007497832
+        },
+        "expected_cost": {
+          "mean": 0.20955,
+          "replication_lower": 0.195,
+          "replication_upper": 0.225675,
+          "standard_deviation": 0.010282714
+        }
+      },
+      "pareto_efficient": true,
+      "policy": "baseline",
+      "replications": 20,
+      "shift": "covariate",
+      "threshold_group_one": {
+        "mean": 0.5,
+        "replication_lower": 0.5,
+        "replication_upper": 0.5,
+        "standard_deviation": 0.0
+      },
+      "threshold_group_zero": {
+        "mean": 0.5,
+        "replication_lower": 0.5,
+        "replication_upper": 0.5,
+        "standard_deviation": 0.0
+      }
+    },
+    {
+      "false_negative_cost": 1.0,
+      "false_positive_cost": 1.0,
+      "magnitude": 1.0,
+      "metrics": {
+        "accuracy": {
+          "mean": 0.78895,
+          "replication_lower": 0.7729,
+          "replication_upper": 0.80405,
+          "standard_deviation": 0.009859406
+        },
+        "brier_score": {
+          "mean": 0.145029531,
+          "replication_lower": 0.134340893,
+          "replication_upper": 0.153380333,
+          "standard_deviation": 0.005914597
+        },
+        "demographic_parity_difference": {
+          "mean": 0.173785763,
+          "replication_lower": 0.132698264,
+          "replication_upper": 0.22457151,
+          "standard_deviation": 0.030336631
+        },
+        "equal_opportunity_difference": {
+          "mean": 0.090453157,
+          "replication_lower": 0.055475166,
+          "replication_upper": 0.140351851,
+          "standard_deviation": 0.027123479
+        },
+        "equalized_odds_difference": {
+          "mean": 0.262340888,
+          "replication_lower": 0.148048746,
+          "replication_upper": 0.386327203,
+          "standard_deviation": 0.062918704
+        },
+        "expected_calibration_error": {
+          "mean": 0.030711672,
+          "replication_lower": 0.0185992,
+          "replication_upper": 0.042307203,
+          "standard_deviation": 0.007497832
+        },
+        "expected_cost": {
+          "mean": 0.21105,
+          "replication_lower": 0.19595,
+          "replication_upper": 0.2271,
+          "standard_deviation": 0.009859406
+        }
+      },
+      "pareto_efficient": false,
+      "policy": "group_threshold_0_1",
+      "replications": 20,
+      "shift": "covariate",
+      "threshold_group_one": {
+        "mean": 0.4975,
+        "replication_lower": 0.42375,
+        "replication_upper": 0.55,
+        "standard_deviation": 0.047225662
+      },
+      "threshold_group_zero": {
+        "mean": 0.4975,
+        "replication_lower": 0.42375,
+        "replication_upper": 0.6,
+        "standard_deviation": 0.054952132
+      }
+    },
+    {
+      "false_negative_cost": 1.0,
+      "false_positive_cost": 1.0,
+      "magnitude": 1.0,
+      "metrics": {
+        "accuracy": {
+          "mean": 0.78735,
+          "replication_lower": 0.772425,
+          "replication_upper": 0.803525,
+          "standard_deviation": 0.010839863
+        },
+        "brier_score": {
+          "mean": 0.145029531,
+          "replication_lower": 0.134340893,
+          "replication_upper": 0.153380333,
+          "standard_deviation": 0.005914597
+        },
+        "demographic_parity_difference": {
+          "mean": 0.176846354,
+          "replication_lower": 0.112820095,
+          "replication_upper": 0.221377881,
+          "standard_deviation": 0.033569341
+        },
+        "equal_opportunity_difference": {
+          "mean": 0.095518364,
+          "replication_lower": 0.048020562,
+          "replication_upper": 0.14474939,
+          "standard_deviation": 0.027761224
+        },
+        "equalized_odds_difference": {
+          "mean": 0.260661268,
+          "replication_lower": 0.169536767,
+          "replication_upper": 0.360509431,
+          "standard_deviation": 0.05634102
+        },
+        "expected_calibration_error": {
+          "mean": 0.030711672,
+          "replication_lower": 0.0185992,
+          "replication_upper": 0.042307203,
+          "standard_deviation": 0.007497832
+        },
+        "expected_cost": {
+          "mean": 0.21265,
+          "replication_lower": 0.196475,
+          "replication_upper": 0.227575,
+          "standard_deviation": 0.010839863
+        }
+      },
+      "pareto_efficient": false,
+      "policy": "group_threshold_0_3",
+      "replications": 20,
+      "shift": "covariate",
+      "threshold_group_one": {
+        "mean": 0.485,
+        "replication_lower": 0.35,
+        "replication_upper": 0.55,
+        "standard_deviation": 0.069015635
+      },
+      "threshold_group_zero": {
+        "mean": 0.4975,
+        "replication_lower": 0.4,
+        "replication_upper": 0.6,
+        "standard_deviation": 0.063815111
+      }
+    },
+    {
+      "false_negative_cost": 1.0,
+      "false_positive_cost": 1.0,
+      "magnitude": 1.0,
+      "metrics": {
+        "accuracy": {
+          "mean": 0.78355,
+          "replication_lower": 0.763175,
+          "replication_upper": 0.8051,
+          "standard_deviation": 0.013430033
+        },
+        "brier_score": {
+          "mean": 0.145029531,
+          "replication_lower": 0.134340893,
+          "replication_upper": 0.153380333,
+          "standard_deviation": 0.005914597
+        },
+        "demographic_parity_difference": {
+          "mean": 0.177205087,
+          "replication_lower": 0.093324187,
+          "replication_upper": 0.287462638,
+          "standard_deviation": 0.059246602
+        },
+        "equal_opportunity_difference": {
+          "mean": 0.099729508,
+          "replication_lower": 0.040723043,
+          "replication_upper": 0.219831082,
+          "standard_deviation": 0.053334806
+        },
+        "equalized_odds_difference": {
+          "mean": 0.250656361,
+          "replication_lower": 0.156413829,
+          "replication_upper": 0.365931132,
+          "standard_deviation": 0.062830112
+        },
+        "expected_calibration_error": {
+          "mean": 0.030711672,
+          "replication_lower": 0.0185992,
+          "replication_upper": 0.042307203,
+          "standard_deviation": 0.007497832
+        },
+        "expected_cost": {
+          "mean": 0.21645,
+          "replication_lower": 0.1949,
+          "replication_upper": 0.236825,
+          "standard_deviation": 0.013430033
+        }
+      },
+      "pareto_efficient": true,
+      "policy": "group_threshold_1_0",
+      "replications": 20,
+      "shift": "covariate",
+      "threshold_group_one": {
+        "mean": 0.49,
+        "replication_lower": 0.37375,
+        "replication_upper": 0.62625,
+        "standard_deviation": 0.085224163
+      },
+      "threshold_group_zero": {
+        "mean": 0.5,
+        "replication_lower": 0.37375,
+        "replication_upper": 0.67625,
+        "standard_deviation": 0.1
+      }
+    },
+    {
+      "false_negative_cost": 1.0,
+      "false_positive_cost": 1.0,
+      "magnitude": 1.0,
+      "metrics": {
+        "accuracy": {
+          "mean": 0.7666,
+          "replication_lower": 0.6608,
+          "replication_upper": 0.8051,
+          "standard_deviation": 0.040927921
+        },
+        "brier_score": {
+          "mean": 0.145029531,
+          "replication_lower": 0.134340893,
+          "replication_upper": 0.153380333,
+          "standard_deviation": 0.005914597
+        },
+        "demographic_parity_difference": {
+          "mean": 0.201640882,
+          "replication_lower": 0.060078245,
+          "replication_upper": 0.387466898,
+          "standard_deviation": 0.09790046
+        },
+        "equal_opportunity_difference": {
+          "mean": 0.130633107,
+          "replication_lower": 0.025441051,
+          "replication_upper": 0.34749766,
+          "standard_deviation": 0.102427601
+        },
+        "equalized_odds_difference": {
+          "mean": 0.258281648,
+          "replication_lower": 0.102698244,
+          "replication_upper": 0.403965826,
+          "standard_deviation": 0.089152895
+        },
+        "expected_calibration_error": {
+          "mean": 0.030711672,
+          "replication_lower": 0.0185992,
+          "replication_upper": 0.042307203,
+          "standard_deviation": 0.007497832
+        },
+        "expected_cost": {
+          "mean": 0.2334,
+          "replication_lower": 0.1949,
+          "replication_upper": 0.3392,
+          "standard_deviation": 0.040927921
+        }
+      },
+      "pareto_efficient": false,
+      "policy": "group_threshold_3_0",
+      "replications": 20,
+      "shift": "covariate",
+      "threshold_group_one": {
+        "mean": 0.52,
+        "replication_lower": 0.2975,
+        "replication_upper": 0.77625,
+        "standard_deviation": 0.149031964
+      },
+      "threshold_group_zero": {
+        "mean": 0.535,
+        "replication_lower": 0.2475,
+        "replication_upper": 0.8,
+        "standard_deviation": 0.167095938
+      }
+    },
+    {
+      "false_negative_cost": 1.0,
+      "false_positive_cost": 1.0,
+      "magnitude": 1.0,
+      "metrics": {
+        "accuracy": {
+          "mean": 0.7891,
+          "replication_lower": 0.774425,
+          "replication_upper": 0.810575,
+          "standard_deviation": 0.011396675
+        },
+        "brier_score": {
+          "mean": 0.144912236,
+          "replication_lower": 0.134443981,
+          "replication_upper": 0.153298207,
+          "standard_deviation": 0.006021631
+        },
+        "demographic_parity_difference": {
+          "mean": 0.187479341,
+          "replication_lower": 0.12288484,
+          "replication_upper": 0.238745325,
+          "standard_deviation": 0.031093963
+        },
+        "equal_opportunity_difference": {
+          "mean": 0.101896814,
+          "replication_lower": 0.057093681,
+          "replication_upper": 0.168055606,
+          "standard_deviation": 0.03368911
+        },
+        "equalized_odds_difference": {
+          "mean": 0.27616057,
+          "replication_lower": 0.170986554,
+          "replication_upper": 0.363901298,
+          "standard_deviation": 0.058394818
+        },
+        "expected_calibration_error": {
+          "mean": 0.032329488,
+          "replication_lower": 0.020068515,
+          "replication_upper": 0.044087341,
+          "standard_deviation": 0.007452513
+        },
+        "expected_cost": {
+          "mean": 0.2109,
+          "replication_lower": 0.189425,
+          "replication_upper": 0.225575,
+          "standard_deviation": 0.011396675
+        }
+      },
+      "pareto_efficient": false,
+      "policy": "reweighed_training",
+      "replications": 20,
+      "shift": "covariate",
+      "threshold_group_one": {
+        "mean": 0.5075,
+        "replication_lower": 0.42375,
+        "replication_upper": 0.6,
+        "standard_deviation": 0.051999494
+      },
+      "threshold_group_zero": {
+        "mean": 0.5075,
+        "replication_lower": 0.42375,
+        "replication_upper": 0.6,
+        "standard_deviation": 0.051999494
+      }
+    },
+    {
+      "false_negative_cost": 1.0,
+      "false_positive_cost": 1.0,
+      "magnitude": 1.0,
+      "metrics": {
+        "accuracy": {
+          "mean": 0.7888,
+          "replication_lower": 0.774325,
+          "replication_upper": 0.805,
+          "standard_deviation": 0.009892049
+        },
+        "brier_score": {
+          "mean": 0.145029531,
+          "replication_lower": 0.134340893,
+          "replication_upper": 0.153380333,
+          "standard_deviation": 0.005914597
+        },
+        "demographic_parity_difference": {
+          "mean": 0.174689332,
+          "replication_lower": 0.132019501,
+          "replication_upper": 0.239638583,
+          "standard_deviation": 0.037189791
+        },
+        "equal_opportunity_difference": {
+          "mean": 0.092498422,
+          "replication_lower": 0.052297547,
+          "replication_upper": 0.146923504,
+          "standard_deviation": 0.030768352
+        },
+        "equalized_odds_difference": {
+          "mean": 0.260495625,
+          "replication_lower": 0.130513534,
+          "replication_upper": 0.402479961,
+          "standard_deviation": 0.073496763
+        },
+        "expected_calibration_error": {
+          "mean": 0.030711672,
+          "replication_lower": 0.0185992,
+          "replication_upper": 0.042307203,
+          "standard_deviation": 0.007497832
+        },
+        "expected_cost": {
+          "mean": 0.2112,
+          "replication_lower": 0.195,
+          "replication_upper": 0.225675,
+          "standard_deviation": 0.009892049
+        }
+      },
+      "pareto_efficient": false,
+      "policy": "source_cost_threshold",
+      "replications": 20,
+      "shift": "covariate",
+      "threshold_group_one": {
+        "mean": 0.4975,
+        "replication_lower": 0.45,
+        "replication_upper": 0.55,
+        "standard_deviation": 0.037957733
+      },
+      "threshold_group_zero": {
+        "mean": 0.4975,
+        "replication_lower": 0.45,
+        "replication_upper": 0.55,
+        "standard_deviation": 0.037957733
+      }
+    },
+    {
+      "false_negative_cost": 1.0,
+      "false_positive_cost": 1.0,
+      "magnitude": 1.0,
+      "metrics": {
+        "accuracy": {
+          "mean": 0.79,
+          "replication_lower": 0.777475,
+          "replication_upper": 0.805675,
+          "standard_deviation": 0.009608111
+        },
+        "brier_score": {
+          "mean": 0.145105286,
+          "replication_lower": 0.134541413,
+          "replication_upper": 0.15415555,
+          "standard_deviation": 0.006096923
+        },
+        "demographic_parity_difference": {
+          "mean": 0.197626128,
+          "replication_lower": 0.1509737,
+          "replication_upper": 0.282612035,
+          "standard_deviation": 0.039919484
+        },
+        "equal_opportunity_difference": {
+          "mean": 0.11012762,
+          "replication_lower": 0.067180102,
+          "replication_upper": 0.177862883,
+          "standard_deviation": 0.034455431
+        },
+        "equalized_odds_difference": {
+          "mean": 0.272691506,
+          "replication_lower": 0.146670538,
+          "replication_upper": 0.399816139,
+          "standard_deviation": 0.0680306
+        },
+        "expected_calibration_error": {
+          "mean": 0.032547901,
+          "replication_lower": 0.016266474,
+          "replication_upper": 0.049350549,
+          "standard_deviation": 0.00996398
+        },
+        "expected_cost": {
+          "mean": 0.21,
+          "replication_lower": 0.194325,
+          "replication_upper": 0.222525,
+          "standard_deviation": 0.009608111
+        }
+      },
+      "pareto_efficient": false,
+      "policy": "target_recalibration",
+      "replications": 20,
+      "shift": "covariate",
+      "threshold_group_one": {
+        "mean": 0.54,
+        "replication_lower": 0.45,
+        "replication_upper": 0.6,
+        "standard_deviation": 0.047572659
+      },
+      "threshold_group_zero": {
+        "mean": 0.54,
+        "replication_lower": 0.45,
+        "replication_upper": 0.6,
+        "standard_deviation": 0.047572659
+      }
+    },
+    {
+      "false_negative_cost": 2.0,
+      "false_positive_cost": 1.0,
+      "magnitude": 1.0,
+      "metrics": {
+        "accuracy": {
+          "mean": 0.79045,
+          "replication_lower": 0.774325,
+          "replication_upper": 0.805,
+          "standard_deviation": 0.010282714
+        },
+        "brier_score": {
+          "mean": 0.145029531,
+          "replication_lower": 0.134340893,
+          "replication_upper": 0.153380333,
+          "standard_deviation": 0.005914597
+        },
+        "demographic_parity_difference": {
+          "mean": 0.176400839,
+          "replication_lower": 0.124098473,
+          "replication_upper": 0.26379833,
+          "standard_deviation": 0.04192245
+        },
+        "equal_opportunity_difference": {
+          "mean": 0.094102814,
+          "replication_lower": 0.054902456,
+          "replication_upper": 0.150323398,
+          "standard_deviation": 0.032423135
+        },
+        "equalized_odds_difference": {
+          "mean": 0.257120826,
+          "replication_lower": 0.125603054,
+          "replication_upper": 0.395821212,
+          "standard_deviation": 0.074843557
+        },
+        "expected_calibration_error": {
+          "mean": 0.030711672,
+          "replication_lower": 0.0185992,
+          "replication_upper": 0.042307203,
+          "standard_deviation": 0.007497832
+        },
+        "expected_cost": {
+          "mean": 0.130875,
+          "replication_lower": 0.1195,
+          "replication_upper": 0.1453125,
+          "standard_deviation": 0.007449611
+        }
+      },
+      "pareto_efficient": false,
+      "policy": "baseline",
+      "replications": 20,
+      "shift": "covariate",
+      "threshold_group_one": {
+        "mean": 0.5,
+        "replication_lower": 0.5,
+        "replication_upper": 0.5,
+        "standard_deviation": 0.0
+      },
+      "threshold_group_zero": {
+        "mean": 0.5,
+        "replication_lower": 0.5,
+        "replication_upper": 0.5,
+        "standard_deviation": 0.0
+      }
+    },
+    {
+      "false_negative_cost": 2.0,
+      "false_positive_cost": 1.0,
+      "magnitude": 1.0,
+      "metrics": {
+        "accuracy": {
+          "mean": 0.77175,
+          "replication_lower": 0.747375,
+          "replication_upper": 0.79625,
+          "standard_deviation": 0.013587436
+        },
+        "brier_score": {
+          "mean": 0.145029531,
+          "replication_lower": 0.134340893,
+          "replication_upper": 0.153380333,
+          "standard_deviation": 0.005914597
+        },
+        "demographic_parity_difference": {
+          "mean": 0.076247841,
+          "replication_lower": 0.027381129,
+          "replication_upper": 0.127962858,
+          "standard_deviation": 0.033808168
+        },
+        "equal_opportunity_difference": {
+          "mean": 0.027716971,
+          "replication_lower": 0.004859403,
+          "replication_upper": 0.049893494,
+          "standard_deviation": 0.014630767
+        },
+        "equalized_odds_difference": {
+          "mean": 0.147721731,
+          "replication_lower": 0.051937432,
+          "replication_upper": 0.270052478,
+          "standard_deviation": 0.066945613
+        },
+        "expected_calibration_error": {
+          "mean": 0.030711672,
+          "replication_lower": 0.0185992,
+          "replication_upper": 0.042307203,
+          "standard_deviation": 0.007497832
+        },
+        "expected_cost": {
+          "mean": 0.12075,
+          "replication_lower": 0.1081375,
+          "replication_upper": 0.1288125,
+          "standard_deviation": 0.006195287
+        }
+      },
+      "pareto_efficient": true,
+      "policy": "group_threshold_0_1",
+      "replications": 20,
+      "shift": "covariate",
+      "threshold_group_one": {
+        "mean": 0.315,
+        "replication_lower": 0.25,
+        "replication_upper": 0.4,
+        "standard_deviation": 0.046169026
+      },
+      "threshold_group_zero": {
+        "mean": 0.3175,
+        "replication_lower": 0.25,
+        "replication_upper": 0.42625,
+        "standard_deviation": 0.059105169
+      }
+    },
+    {
+      "false_negative_cost": 2.0,
+      "false_positive_cost": 1.0,
+      "magnitude": 1.0,
+      "metrics": {
+        "accuracy": {
+          "mean": 0.77035,
+          "replication_lower": 0.7387,
+          "replication_upper": 0.7891,
+          "standard_deviation": 0.013658523
+        },
+        "brier_score": {
+          "mean": 0.145029531,
+          "replication_lower": 0.134340893,
+          "replication_upper": 0.153380333,
+          "standard_deviation": 0.005914597
+        },
+        "demographic_parity_difference": {
+          "mean": 0.073895415,
+          "replication_lower": 0.025646807,
+          "replication_upper": 0.127519304,
+          "standard_deviation": 0.032496505
+        },
+        "equal_opportunity_difference": {
+          "mean": 0.027482731,
+          "replication_lower": 0.005762243,
+          "replication_upper": 0.049893494,
+          "standard_deviation": 0.014824091
+        },
+        "equalized_odds_difference": {
+          "mean": 0.141906401,
+          "replication_lower": 0.051937432,
+          "replication_upper": 0.236725324,
+          "standard_deviation": 0.058637163
+        },
+        "expected_calibration_error": {
+          "mean": 0.030711672,
+          "replication_lower": 0.0185992,
+          "replication_upper": 0.042307203,
+          "standard_deviation": 0.007497832
+        },
+        "expected_cost": {
+          "mean": 0.121425,
+          "replication_lower": 0.1097125,
+          "replication_upper": 0.1329875,
+          "standard_deviation": 0.006495494
+        }
+      },
+      "pareto_efficient": true,
+      "policy": "group_threshold_0_3",
+      "replications": 20,
+      "shift": "covariate",
+      "threshold_group_one": {
+        "mean": 0.31,
+        "replication_lower": 0.22375,
+        "replication_upper": 0.4,
+        "standard_deviation": 0.052815468
+      },
+      "threshold_group_zero": {
+        "mean": 0.3125,
+        "replication_lower": 0.22375,
+        "replication_upper": 0.42625,
+        "standard_deviation": 0.0646346
+      }
+    },
+    {
+      "false_negative_cost": 2.0,
+      "false_positive_cost": 1.0,
+      "magnitude": 1.0,
+      "metrics": {
+        "accuracy": {
+          "mean": 0.77045,
+          "replication_lower": 0.7387,
+          "replication_upper": 0.7992,
+          "standard_deviation": 0.01651626
+        },
+        "brier_score": {
+          "mean": 0.145029531,
+          "replication_lower": 0.134340893,
+          "replication_upper": 0.153380333,
+          "standard_deviation": 0.005914597
+        },
+        "demographic_parity_difference": {
+          "mean": 0.07652063,
+          "replication_lower": 0.019783882,
+          "replication_upper": 0.151472537,
+          "standard_deviation": 0.042063946
+        },
+        "equal_opportunity_difference": {
+          "mean": 0.029176971,
+          "replication_lower": 0.001353276,
+          "replication_upper": 0.067510527,
+          "standard_deviation": 0.020990844
+        },
+        "equalized_odds_difference": {
+          "mean": 0.146249563,
+          "replication_lower": 0.056398959,
+          "replication_upper": 0.291295872,
+          "standard_deviation": 0.0706612
+        },
+        "expected_calibration_error": {
+          "mean": 0.030711672,
+          "replication_lower": 0.0185992,
+          "replication_upper": 0.042307203,
+          "standard_deviation": 0.007497832
+        },
+        "expected_cost": {
+          "mean": 0.12155,
+          "replication_lower": 0.1109,
+          "replication_upper": 0.1329875,
+          "standard_deviation": 0.00631602
+        }
+      },
+      "pareto_efficient": false,
+      "policy": "group_threshold_1_0",
+      "replications": 20,
+      "shift": "covariate",
+      "threshold_group_one": {
+        "mean": 0.305,
+        "replication_lower": 0.17375,
+        "replication_upper": 0.4,
+        "standard_deviation": 0.074161985
+      },
+      "threshold_group_zero": {
+        "mean": 0.3125,
+        "replication_lower": 0.2,
+        "replication_upper": 0.47625,
+        "standard_deviation": 0.090138782
+      }
+    },
+    {
+      "false_negative_cost": 2.0,
+      "false_positive_cost": 1.0,
+      "magnitude": 1.0,
+      "metrics": {
+        "accuracy": {
+          "mean": 0.76645,
+          "replication_lower": 0.732475,
+          "replication_upper": 0.8051,
+          "standard_deviation": 0.020984894
+        },
+        "brier_score": {
+          "mean": 0.145029531,
+          "replication_lower": 0.134340893,
+          "replication_upper": 0.153380333,
+          "standard_deviation": 0.005914597
+        },
+        "demographic_parity_difference": {
+          "mean": 0.067340877,
+          "replication_lower": 0.00092955,
+          "replication_upper": 0.157191988,
+          "standard_deviation": 0.054488705
+        },
+        "equal_opportunity_difference": {
+          "mean": 0.027955414,
+          "replication_lower": 0.0,
+          "replication_upper": 0.081078269,
+          "standard_deviation": 0.028497093
+        },
+        "equalized_odds_difference": {
+          "mean": 0.120321767,
+          "replication_lower": 0.003084416,
+          "replication_upper": 0.247286535,
+          "standard_deviation": 0.085620025
+        },
+        "expected_calibration_error": {
+          "mean": 0.030711672,
+          "replication_lower": 0.0185992,
+          "replication_upper": 0.042307203,
+          "standard_deviation": 0.007497832
+        },
+        "expected_cost": {
+          "mean": 0.123725,
+          "replication_lower": 0.1127375,
+          "replication_upper": 0.1388125,
+          "standard_deviation": 0.007485908
+        }
+      },
+      "pareto_efficient": true,
+      "policy": "group_threshold_3_0",
+      "replications": 20,
+      "shift": "covariate",
+      "threshold_group_one": {
+        "mean": 0.255,
+        "replication_lower": 0.05,
+        "replication_upper": 0.52625,
+        "standard_deviation": 0.152090693
+      },
+      "threshold_group_zero": {
+        "mean": 0.2625,
+        "replication_lower": 0.05,
+        "replication_upper": 0.47625,
+        "standard_deviation": 0.147679418
+      }
+    },
+    {
+      "false_negative_cost": 2.0,
+      "false_positive_cost": 1.0,
+      "magnitude": 1.0,
+      "metrics": {
+        "accuracy": {
+          "mean": 0.77655,
+          "replication_lower": 0.755375,
+          "replication_upper": 0.7992,
+          "standard_deviation": 0.012692621
+        },
+        "brier_score": {
+          "mean": 0.144912236,
+          "replication_lower": 0.134443981,
+          "replication_upper": 0.153298207,
+          "standard_deviation": 0.006021631
+        },
+        "demographic_parity_difference": {
+          "mean": 0.088401798,
+          "replication_lower": 0.051466331,
+          "replication_upper": 0.124886372,
+          "standard_deviation": 0.022263174
+        },
+        "equal_opportunity_difference": {
+          "mean": 0.033317584,
+          "replication_lower": 0.01719033,
+          "replication_upper": 0.05346871,
+          "standard_deviation": 0.010977311
+        },
+        "equalized_odds_difference": {
+          "mean": 0.167884112,
+          "replication_lower": 0.090528784,
+          "replication_upper": 0.23784423,
+          "standard_deviation": 0.044950679
+        },
+        "expected_calibration_error": {
+          "mean": 0.032329488,
+          "replication_lower": 0.020068515,
+          "replication_upper": 0.044087341,
+          "standard_deviation": 0.007452513
+        },
+        "expected_cost": {
+          "mean": 0.1193,
+          "replication_lower": 0.108975,
+          "replication_upper": 0.1278375,
+          "standard_deviation": 0.006184446
+        }
+      },
+      "pareto_efficient": true,
+      "policy": "reweighed_training",
+      "replications": 20,
+      "shift": "covariate",
+      "threshold_group_one": {
+        "mean": 0.3375,
+        "replication_lower": 0.27375,
+        "replication_upper": 0.4,
+        "standard_deviation": 0.03581752
+      },
+      "threshold_group_zero": {
+        "mean": 0.3375,
+        "replication_lower": 0.27375,
+        "replication_upper": 0.4,
+        "standard_deviation": 0.03581752
+      }
+    },
+    {
+      "false_negative_cost": 2.0,
+      "false_positive_cost": 1.0,
+      "magnitude": 1.0,
+      "metrics": {
+        "accuracy": {
+          "mean": 0.77355,
+          "replication_lower": 0.753125,
+          "replication_upper": 0.79405,
+          "standard_deviation": 0.011789715
+        },
+        "brier_score": {
+          "mean": 0.145029531,
+          "replication_lower": 0.134340893,
+          "replication_upper": 0.153380333,
+          "standard_deviation": 0.005914597
+        },
+        "demographic_parity_difference": {
+          "mean": 0.079054477,
+          "replication_lower": 0.048106454,
+          "replication_upper": 0.120973248,
+          "standard_deviation": 0.021345699
+        },
+        "equal_opportunity_difference": {
+          "mean": 0.028521173,
+          "replication_lower": 0.014664547,
+          "replication_upper": 0.046341983,
+          "standard_deviation": 0.010636358
+        },
+        "equalized_odds_difference": {
+          "mean": 0.15355794,
+          "replication_lower": 0.07671665,
+          "replication_upper": 0.253833265,
+          "standard_deviation": 0.048662862
+        },
+        "expected_calibration_error": {
+          "mean": 0.030711672,
+          "replication_lower": 0.0185992,
+          "replication_upper": 0.042307203,
+          "standard_deviation": 0.007497832
+        },
+        "expected_cost": {
+          "mean": 0.12,
+          "replication_lower": 0.10895,
+          "replication_upper": 0.1288875,
+          "standard_deviation": 0.006324555
+        }
+      },
+      "pareto_efficient": true,
+      "policy": "source_cost_threshold",
+      "replications": 20,
+      "shift": "covariate",
+      "threshold_group_one": {
+        "mean": 0.325,
+        "replication_lower": 0.25,
+        "replication_upper": 0.4,
+        "standard_deviation": 0.047295265
+      },
+      "threshold_group_zero": {
+        "mean": 0.325,
+        "replication_lower": 0.25,
+        "replication_upper": 0.4,
+        "standard_deviation": 0.047295265
+      }
+    },
+    {
+      "false_negative_cost": 2.0,
+      "false_positive_cost": 1.0,
+      "magnitude": 1.0,
+      "metrics": {
+        "accuracy": {
+          "mean": 0.77405,
+          "replication_lower": 0.75495,
+          "replication_upper": 0.800625,
+          "standard_deviation": 0.014125285
+        },
+        "brier_score": {
+          "mean": 0.145105286,
+          "replication_lower": 0.134541413,
+          "replication_upper": 0.15415555,
+          "standard_deviation": 0.006096923
+        },
+        "demographic_parity_difference": {
+          "mean": 0.081657925,
+          "replication_lower": 0.038072363,
+          "replication_upper": 0.11157768,
+          "standard_deviation": 0.021658831
+        },
+        "equal_opportunity_difference": {
+          "mean": 0.031152343,
+          "replication_lower": 0.008750989,
+          "replication_upper": 0.049345688,
+          "standard_deviation": 0.011516423
+        },
+        "equalized_odds_difference": {
+          "mean": 0.152974472,
+          "replication_lower": 0.059044764,
+          "replication_upper": 0.244541669,
+          "standard_deviation": 0.05201012
+        },
+        "expected_calibration_error": {
+          "mean": 0.032547901,
+          "replication_lower": 0.016266474,
+          "replication_upper": 0.049350549,
+          "standard_deviation": 0.00996398
+        },
+        "expected_cost": {
+          "mean": 0.1203,
+          "replication_lower": 0.1097375,
+          "replication_upper": 0.128025,
+          "standard_deviation": 0.006158862
+        }
+      },
+      "pareto_efficient": true,
+      "policy": "target_recalibration",
+      "replications": 20,
+      "shift": "covariate",
+      "threshold_group_one": {
+        "mean": 0.3275,
+        "replication_lower": 0.22375,
+        "replication_upper": 0.42625,
+        "standard_deviation": 0.061718802
+      },
+      "threshold_group_zero": {
+        "mean": 0.3275,
+        "replication_lower": 0.22375,
+        "replication_upper": 0.42625,
+        "standard_deviation": 0.061718802
+      }
+    },
+    {
+      "false_negative_cost": 0.5,
+      "false_positive_cost": 1.0,
+      "magnitude": 1.0,
+      "metrics": {
+        "accuracy": {
+          "mean": 0.7131,
+          "replication_lower": 0.690475,
+          "replication_upper": 0.73105,
+          "standard_deviation": 0.012594485
+        },
+        "brier_score": {
+          "mean": 0.189181084,
+          "replication_lower": 0.182563481,
+          "replication_upper": 0.199140707,
+          "standard_deviation": 0.005175408
+        },
+        "demographic_parity_difference": {
+          "mean": 0.051125743,
+          "replication_lower": 0.002239037,
+          "replication_upper": 0.12778164,
+          "standard_deviation": 0.03763657
+        },
+        "equal_opportunity_difference": {
+          "mean": 0.051295937,
+          "replication_lower": 0.001222545,
+          "replication_upper": 0.121724551,
+          "standard_deviation": 0.038772373
+        },
+        "equalized_odds_difference": {
+          "mean": 0.087366434,
+          "replication_lower": 0.02483452,
+          "replication_upper": 0.204492506,
+          "standard_deviation": 0.056776694
+        },
+        "expected_calibration_error": {
+          "mean": 0.032738926,
+          "replication_lower": 0.020252325,
+          "replication_upper": 0.042544131,
+          "standard_deviation": 0.006840548
+        },
+        "expected_cost": {
+          "mean": 0.21095,
+          "replication_lower": 0.1892375,
+          "replication_upper": 0.2278125,
+          "standard_deviation": 0.011463787
+        }
+      },
+      "pareto_efficient": false,
+      "policy": "baseline",
+      "replications": 20,
+      "shift": "prevalence",
+      "threshold_group_one": {
+        "mean": 0.5,
+        "replication_lower": 0.5,
+        "replication_upper": 0.5,
+        "standard_deviation": 0.0
+      },
+      "threshold_group_zero": {
+        "mean": 0.5,
+        "replication_lower": 0.5,
+        "replication_upper": 0.5,
+        "standard_deviation": 0.0
+      }
+    },
+    {
+      "false_negative_cost": 0.5,
+      "false_positive_cost": 1.0,
+      "magnitude": 1.0,
+      "metrics": {
+        "accuracy": {
+          "mean": 0.67785,
+          "replication_lower": 0.642425,
+          "replication_upper": 0.717625,
+          "standard_deviation": 0.022262253
+        },
+        "brier_score": {
+          "mean": 0.189181084,
+          "replication_lower": 0.182563481,
+          "replication_upper": 0.199140707,
+          "standard_deviation": 0.005175408
+        },
+        "demographic_parity_difference": {
+          "mean": 0.046193135,
+          "replication_lower": 0.003453263,
+          "replication_upper": 0.106611904,
+          "standard_deviation": 0.033786705
+        },
+        "equal_opportunity_difference": {
+          "mean": 0.075673784,
+          "replication_lower": 0.002274178,
+          "replication_upper": 0.174636277,
+          "standard_deviation": 0.051807621
+        },
+        "equalized_odds_difference": {
+          "mean": 0.081476253,
+          "replication_lower": 0.020652914,
+          "replication_upper": 0.174636277,
+          "standard_deviation": 0.046839683
+        },
+        "expected_calibration_error": {
+          "mean": 0.032738926,
+          "replication_lower": 0.020252325,
+          "replication_upper": 0.042544131,
+          "standard_deviation": 0.006840548
+        },
+        "expected_cost": {
+          "mean": 0.1883,
+          "replication_lower": 0.172375,
+          "replication_upper": 0.2003875,
+          "standard_deviation": 0.00872896
+        }
+      },
+      "pareto_efficient": true,
+      "policy": "group_threshold_0_1",
+      "replications": 20,
+      "shift": "prevalence",
+      "threshold_group_one": {
+        "mean": 0.665,
+        "replication_lower": 0.6,
+        "replication_upper": 0.75,
+        "standard_deviation": 0.051554774
+      },
+      "threshold_group_zero": {
+        "mean": 0.67,
+        "replication_lower": 0.57375,
+        "replication_upper": 0.75,
+        "standard_deviation": 0.057124057
+      }
+    },
+    {
+      "false_negative_cost": 0.5,
+      "false_positive_cost": 1.0,
+      "magnitude": 1.0,
+      "metrics": {
+        "accuracy": {
+          "mean": 0.6712,
+          "replication_lower": 0.626325,
+          "replication_upper": 0.717625,
+          "standard_deviation": 0.028117423
+        },
+        "brier_score": {
+          "mean": 0.189181084,
+          "replication_lower": 0.182563481,
+          "replication_upper": 0.199140707,
+          "standard_deviation": 0.005175408
+        },
+        "demographic_parity_difference": {
+          "mean": 0.051952369,
+          "replication_lower": 0.003453263,
+          "replication_upper": 0.106611904,
+          "standard_deviation": 0.033356381
+        },
+        "equal_opportunity_difference": {
+          "mean": 0.090201418,
+          "replication_lower": 0.002274178,
+          "replication_upper": 0.185426014,
+          "standard_deviation": 0.052584947
+        },
+        "equalized_odds_difference": {
+          "mean": 0.09410273,
+          "replication_lower": 0.022681287,
+          "replication_upper": 0.185426014,
+          "standard_deviation": 0.048523232
+        },
+        "expected_calibration_error": {
+          "mean": 0.032738926,
+          "replication_lower": 0.020252325,
+          "replication_upper": 0.042544131,
+          "standard_deviation": 0.006840548
+        },
+        "expected_cost": {
+          "mean": 0.189575,
+          "replication_lower": 0.172375,
+          "replication_upper": 0.2032875,
+          "standard_deviation": 0.009425993
+        }
+      },
+      "pareto_efficient": false,
+      "policy": "group_threshold_0_3",
+      "replications": 20,
+      "shift": "prevalence",
+      "threshold_group_one": {
+        "mean": 0.6775,
+        "replication_lower": 0.6,
+        "replication_upper": 0.75,
+        "standard_deviation": 0.054952132
+      },
+      "threshold_group_zero": {
+        "mean": 0.6875,
+        "replication_lower": 0.57375,
+        "replication_upper": 0.8,
+        "standard_deviation": 0.0646346
+      }
+    },
+    {
+      "false_negative_cost": 0.5,
+      "false_positive_cost": 1.0,
+      "magnitude": 1.0,
+      "metrics": {
+        "accuracy": {
+          "mean": 0.6549,
+          "replication_lower": 0.599325,
+          "replication_upper": 0.7072,
+          "standard_deviation": 0.034474857
+        },
+        "brier_score": {
+          "mean": 0.189181084,
+          "replication_lower": 0.182563481,
+          "replication_upper": 0.199140707,
+          "standard_deviation": 0.005175408
+        },
+        "demographic_parity_difference": {
+          "mean": 0.04070071,
+          "replication_lower": 0.002291607,
+          "replication_upper": 0.091243385,
+          "standard_deviation": 0.029717712
+        },
+        "equal_opportunity_difference": {
+          "mean": 0.077936096,
+          "replication_lower": 0.011104062,
+          "replication_upper": 0.185426014,
+          "standard_deviation": 0.054782628
+        },
+        "equalized_odds_difference": {
+          "mean": 0.081006717,
+          "replication_lower": 0.021979167,
+          "replication_upper": 0.185426014,
+          "standard_deviation": 0.051932189
+        },
+        "expected_calibration_error": {
+          "mean": 0.032738926,
+          "replication_lower": 0.020252325,
+          "replication_upper": 0.042544131,
+          "standard_deviation": 0.006840548
+        },
+        "expected_cost": {
+          "mean": 0.1915,
+          "replication_lower": 0.17,
+          "replication_upper": 0.2061,
+          "standard_deviation": 0.010380904
+        }
+      },
+      "pareto_efficient": false,
+      "policy": "group_threshold_1_0",
+      "replications": 20,
+      "shift": "prevalence",
+      "threshold_group_one": {
+        "mean": 0.7175,
+        "replication_lower": 0.6,
+        "replication_upper": 0.85,
+        "standard_deviation": 0.078262379
+      },
+      "threshold_group_zero": {
+        "mean": 0.7325,
+        "replication_lower": 0.57375,
+        "replication_upper": 0.85,
+        "standard_deviation": 0.090720798
+      }
+    },
+    {
+      "false_negative_cost": 0.5,
+      "false_positive_cost": 1.0,
+      "magnitude": 1.0,
+      "metrics": {
+        "accuracy": {
+          "mean": 0.6301,
+          "replication_lower": 0.5379,
+          "replication_upper": 0.707675,
+          "standard_deviation": 0.054505335
+        },
+        "brier_score": {
+          "mean": 0.189181084,
+          "replication_lower": 0.182563481,
+          "replication_upper": 0.199140707,
+          "standard_deviation": 0.005175408
+        },
+        "demographic_parity_difference": {
+          "mean": 0.03169783,
+          "replication_lower": 0.002291607,
+          "replication_upper": 0.081512883,
+          "standard_deviation": 0.027352806
+        },
+        "equal_opportunity_difference": {
+          "mean": 0.060529327,
+          "replication_lower": 0.013458746,
+          "replication_upper": 0.158809803,
+          "standard_deviation": 0.047491897
+        },
+        "equalized_odds_difference": {
+          "mean": 0.062439687,
+          "replication_lower": 0.013458746,
+          "replication_upper": 0.158809803,
+          "standard_deviation": 0.046879989
+        },
+        "expected_calibration_error": {
+          "mean": 0.032738926,
+          "replication_lower": 0.020252325,
+          "replication_upper": 0.042544131,
+          "standard_deviation": 0.006840548
+        },
+        "expected_cost": {
+          "mean": 0.19985,
+          "replication_lower": 0.17,
+          "replication_upper": 0.23105,
+          "standard_deviation": 0.016767057
+        }
+      },
+      "pareto_efficient": false,
+      "policy": "group_threshold_3_0",
+      "replications": 20,
+      "shift": "prevalence",
+      "threshold_group_one": {
+        "mean": 0.7675,
+        "replication_lower": 0.57375,
+        "replication_upper": 0.95,
+        "standard_deviation": 0.1216931
+      },
+      "threshold_group_zero": {
+        "mean": 0.78,
+        "replication_lower": 0.55,
+        "replication_upper": 0.95,
+        "standard_deviation": 0.129167374
+      }
+    },
+    {
+      "false_negative_cost": 0.5,
+      "false_positive_cost": 1.0,
+      "magnitude": 1.0,
+      "metrics": {
+        "accuracy": {
+          "mean": 0.68165,
+          "replication_lower": 0.643375,
+          "replication_upper": 0.718,
+          "standard_deviation": 0.02480296
+        },
+        "brier_score": {
+          "mean": 0.189183168,
+          "replication_lower": 0.182337963,
+          "replication_upper": 0.199200878,
+          "standard_deviation": 0.005031227
+        },
+        "demographic_parity_difference": {
+          "mean": 0.030622201,
+          "replication_lower": 0.002718118,
+          "replication_upper": 0.06834877,
+          "standard_deviation": 0.02377569
+        },
+        "equal_opportunity_difference": {
+          "mean": 0.052872284,
+          "replication_lower": 0.00152149,
+          "replication_upper": 0.131916223,
+          "standard_deviation": 0.044334476
+        },
+        "equalized_odds_difference": {
+          "mean": 0.061635983,
+          "replication_lower": 0.013823759,
+          "replication_upper": 0.131916223,
+          "standard_deviation": 0.038220204
+        },
+        "expected_calibration_error": {
+          "mean": 0.031287235,
+          "replication_lower": 0.020902813,
+          "replication_upper": 0.042873674,
+          "standard_deviation": 0.006297085
+        },
+        "expected_cost": {
+          "mean": 0.18995,
+          "replication_lower": 0.1716375,
+          "replication_upper": 0.2033875,
+          "standard_deviation": 0.008675282
+        }
+      },
+      "pareto_efficient": true,
+      "policy": "reweighed_training",
+      "replications": 20,
+      "shift": "prevalence",
+      "threshold_group_one": {
+        "mean": 0.655,
+        "replication_lower": 0.6,
+        "replication_upper": 0.75,
+        "standard_deviation": 0.05826437
+      },
+      "threshold_group_zero": {
+        "mean": 0.655,
+        "replication_lower": 0.6,
+        "replication_upper": 0.75,
+        "standard_deviation": 0.05826437
+      }
+    },
+    {
+      "false_negative_cost": 0.5,
+      "false_positive_cost": 1.0,
+      "magnitude": 1.0,
+      "metrics": {
+        "accuracy": {
+          "mean": 0.67745,
+          "replication_lower": 0.6377,
+          "replication_upper": 0.7171,
+          "standard_deviation": 0.024470121
+        },
+        "brier_score": {
+          "mean": 0.189181084,
+          "replication_lower": 0.182563481,
+          "replication_upper": 0.199140707,
+          "standard_deviation": 0.005175408
+        },
+        "demographic_parity_difference": {
+          "mean": 0.043940432,
+          "replication_lower": 0.002653544,
+          "replication_upper": 0.129400346,
+          "standard_deviation": 0.03535639
+        },
+        "equal_opportunity_difference": {
+          "mean": 0.067181985,
+          "replication_lower": 0.002274178,
+          "replication_upper": 0.161623368,
+          "standard_deviation": 0.055878381
+        },
+        "equalized_odds_difference": {
+          "mean": 0.07835854,
+          "replication_lower": 0.010254435,
+          "replication_upper": 0.163242959,
+          "standard_deviation": 0.047037671
+        },
+        "expected_calibration_error": {
+          "mean": 0.032738926,
+          "replication_lower": 0.020252325,
+          "replication_upper": 0.042544131,
+          "standard_deviation": 0.006840548
+        },
+        "expected_cost": {
+          "mean": 0.189475,
+          "replication_lower": 0.1757125,
+          "replication_upper": 0.2022875,
+          "standard_deviation": 0.007861423
+        }
+      },
+      "pareto_efficient": true,
+      "policy": "source_cost_threshold",
+      "replications": 20,
+      "shift": "prevalence",
+      "threshold_group_one": {
+        "mean": 0.6625,
+        "replication_lower": 0.57375,
+        "replication_upper": 0.75,
+        "standard_deviation": 0.058207885
+      },
+      "threshold_group_zero": {
+        "mean": 0.6625,
+        "replication_lower": 0.57375,
+        "replication_upper": 0.75,
+        "standard_deviation": 0.058207885
+      }
+    },
+    {
+      "false_negative_cost": 0.5,
+      "false_positive_cost": 1.0,
+      "magnitude": 1.0,
+      "metrics": {
+        "accuracy": {
+          "mean": 0.67515,
+          "replication_lower": 0.618125,
+          "replication_upper": 0.720625,
+          "standard_deviation": 0.026907786
+        },
+        "brier_score": {
+          "mean": 0.189219102,
+          "replication_lower": 0.182490633,
+          "replication_upper": 0.199752993,
+          "standard_deviation": 0.005270569
+        },
+        "demographic_parity_difference": {
+          "mean": 0.044128602,
+          "replication_lower": 0.006816432,
+          "replication_upper": 0.115580836,
+          "standard_deviation": 0.034124205
+        },
+        "equal_opportunity_difference": {
+          "mean": 0.072689497,
+          "replication_lower": 0.007691279,
+          "replication_upper": 0.194859193,
+          "standard_deviation": 0.059485213
+        },
+        "equalized_odds_difference": {
+          "mean": 0.08152287,
+          "replication_lower": 0.01018759,
+          "replication_upper": 0.194859193,
+          "standard_deviation": 0.057912682
+        },
+        "expected_calibration_error": {
+          "mean": 0.031837734,
+          "replication_lower": 0.020511603,
+          "replication_upper": 0.041063314,
+          "standard_deviation": 0.005512568
+        },
+        "expected_cost": {
+          "mean": 0.18875,
+          "replication_lower": 0.1786875,
+          "replication_upper": 0.2043875,
+          "standard_deviation": 0.007760392
+        }
+      },
+      "pareto_efficient": false,
+      "policy": "target_recalibration",
+      "replications": 20,
+      "shift": "prevalence",
+      "threshold_group_one": {
+        "mean": 0.67,
+        "replication_lower": 0.57375,
+        "replication_upper": 0.77625,
+        "standard_deviation": 0.057124057
+      },
+      "threshold_group_zero": {
+        "mean": 0.67,
+        "replication_lower": 0.57375,
+        "replication_upper": 0.77625,
+        "standard_deviation": 0.057124057
+      }
+    },
+    {
+      "false_negative_cost": 1.0,
+      "false_positive_cost": 1.0,
+      "magnitude": 1.0,
+      "metrics": {
+        "accuracy": {
+          "mean": 0.7131,
+          "replication_lower": 0.690475,
+          "replication_upper": 0.73105,
+          "standard_deviation": 0.012594485
+        },
+        "brier_score": {
+          "mean": 0.189181084,
+          "replication_lower": 0.182563481,
+          "replication_upper": 0.199140707,
+          "standard_deviation": 0.005175408
+        },
+        "demographic_parity_difference": {
+          "mean": 0.051125743,
+          "replication_lower": 0.002239037,
+          "replication_upper": 0.12778164,
+          "standard_deviation": 0.03763657
+        },
+        "equal_opportunity_difference": {
+          "mean": 0.051295937,
+          "replication_lower": 0.001222545,
+          "replication_upper": 0.121724551,
+          "standard_deviation": 0.038772373
+        },
+        "equalized_odds_difference": {
+          "mean": 0.087366434,
+          "replication_lower": 0.02483452,
+          "replication_upper": 0.204492506,
+          "standard_deviation": 0.056776694
+        },
+        "expected_calibration_error": {
+          "mean": 0.032738926,
+          "replication_lower": 0.020252325,
+          "replication_upper": 0.042544131,
+          "standard_deviation": 0.006840548
+        },
+        "expected_cost": {
+          "mean": 0.2869,
+          "replication_lower": 0.26895,
+          "replication_upper": 0.309525,
+          "standard_deviation": 0.012594485
+        }
+      },
+      "pareto_efficient": true,
+      "policy": "baseline",
+      "replications": 20,
+      "shift": "prevalence",
+      "threshold_group_one": {
+        "mean": 0.5,
+        "replication_lower": 0.5,
+        "replication_upper": 0.5,
+        "standard_deviation": 0.0
+      },
+      "threshold_group_zero": {
+        "mean": 0.5,
+        "replication_lower": 0.5,
+        "replication_upper": 0.5,
+        "standard_deviation": 0.0
+      }
+    },
+    {
+      "false_negative_cost": 1.0,
+      "false_positive_cost": 1.0,
+      "magnitude": 1.0,
+      "metrics": {
+        "accuracy": {
+          "mean": 0.70855,
+          "replication_lower": 0.689475,
+          "replication_upper": 0.730575,
+          "standard_deviation": 0.013032247
+        },
+        "brier_score": {
+          "mean": 0.189181084,
+          "replication_lower": 0.182563481,
+          "replication_upper": 0.199140707,
+          "standard_deviation": 0.005175408
+        },
+        "demographic_parity_difference": {
+          "mean": 0.046603602,
+          "replication_lower": 0.005264211,
+          "replication_upper": 0.12646449,
+          "standard_deviation": 0.040415595
+        },
+        "equal_opportunity_difference": {
+          "mean": 0.050467268,
+          "replication_lower": 0.0023317,
+          "replication_upper": 0.15871082,
+          "standard_deviation": 0.046464572
+        },
+        "equalized_odds_difference": {
+          "mean": 0.082305405,
+          "replication_lower": 0.016685606,
+          "replication_upper": 0.228739762,
+          "standard_deviation": 0.067407484
+        },
+        "expected_calibration_error": {
+          "mean": 0.032738926,
+          "replication_lower": 0.020252325,
+          "replication_upper": 0.042544131,
+          "standard_deviation": 0.006840548
+        },
+        "expected_cost": {
+          "mean": 0.29145,
+          "replication_lower": 0.269425,
+          "replication_upper": 0.310525,
+          "standard_deviation": 0.013032247
+        }
+      },
+      "pareto_efficient": true,
+      "policy": "group_threshold_0_1",
+      "replications": 20,
+      "shift": "prevalence",
+      "threshold_group_one": {
+        "mean": 0.4975,
+        "replication_lower": 0.42375,
+        "replication_upper": 0.55,
+        "standard_deviation": 0.047225662
+      },
+      "threshold_group_zero": {
+        "mean": 0.4975,
+        "replication_lower": 0.42375,
+        "replication_upper": 0.6,
+        "standard_deviation": 0.054952132
+      }
+    },
+    {
+      "false_negative_cost": 1.0,
+      "false_positive_cost": 1.0,
+      "magnitude": 1.0,
+      "metrics": {
+        "accuracy": {
+          "mean": 0.704,
+          "replication_lower": 0.687425,
+          "replication_upper": 0.719,
+          "standard_deviation": 0.009968371
+        },
+        "brier_score": {
+          "mean": 0.189181084,
+          "replication_lower": 0.182563481,
+          "replication_upper": 0.199140707,
+          "standard_deviation": 0.005175408
+        },
+        "demographic_parity_difference": {
+          "mean": 0.048615894,
+          "replication_lower": 0.0055105,
+          "replication_upper": 0.092905527,
+          "standard_deviation": 0.030017309
+        },
+        "equal_opportunity_difference": {
+          "mean": 0.058092853,
+          "replication_lower": 0.001021665,
+          "replication_upper": 0.146073521,
+          "standard_deviation": 0.044966778
+        },
+        "equalized_odds_difference": {
+          "mean": 0.090567605,
+          "replication_lower": 0.023125403,
+          "replication_upper": 0.193274728,
+          "standard_deviation": 0.054493441
+        },
+        "expected_calibration_error": {
+          "mean": 0.032738926,
+          "replication_lower": 0.020252325,
+          "replication_upper": 0.042544131,
+          "standard_deviation": 0.006840548
+        },
+        "expected_cost": {
+          "mean": 0.296,
+          "replication_lower": 0.281,
+          "replication_upper": 0.312575,
+          "standard_deviation": 0.009968371
+        }
+      },
+      "pareto_efficient": false,
+      "policy": "group_threshold_0_3",
+      "replications": 20,
+      "shift": "prevalence",
+      "threshold_group_one": {
+        "mean": 0.485,
+        "replication_lower": 0.35,
+        "replication_upper": 0.55,
+        "standard_deviation": 0.069015635
+      },
+      "threshold_group_zero": {
+        "mean": 0.4975,
+        "replication_lower": 0.4,
+        "replication_upper": 0.6,
+        "standard_deviation": 0.063815111
+      }
+    },
+    {
+      "false_negative_cost": 1.0,
+      "false_positive_cost": 1.0,
+      "magnitude": 1.0,
+      "metrics": {
+        "accuracy": {
+          "mean": 0.7002,
+          "replication_lower": 0.674975,
+          "replication_upper": 0.724775,
+          "standard_deviation": 0.014591274
+        },
+        "brier_score": {
+          "mean": 0.189181084,
+          "replication_lower": 0.182563481,
+          "replication_upper": 0.199140707,
+          "standard_deviation": 0.005175408
+        },
+        "demographic_parity_difference": {
+          "mean": 0.041430833,
+          "replication_lower": 0.001755465,
+          "replication_upper": 0.102236314,
+          "standard_deviation": 0.031406349
+        },
+        "equal_opportunity_difference": {
+          "mean": 0.051946388,
+          "replication_lower": 0.0023317,
+          "replication_upper": 0.140029393,
+          "standard_deviation": 0.04257643
+        },
+        "equalized_odds_difference": {
+          "mean": 0.071425398,
+          "replication_lower": 0.014491342,
+          "replication_upper": 0.168889507,
+          "standard_deviation": 0.049958115
+        },
+        "expected_calibration_error": {
+          "mean": 0.032738926,
+          "replication_lower": 0.020252325,
+          "replication_upper": 0.042544131,
+          "standard_deviation": 0.006840548
+        },
+        "expected_cost": {
+          "mean": 0.2998,
+          "replication_lower": 0.275225,
+          "replication_upper": 0.325025,
+          "standard_deviation": 0.014591274
+        }
+      },
+      "pareto_efficient": true,
+      "policy": "group_threshold_1_0",
+      "replications": 20,
+      "shift": "prevalence",
+      "threshold_group_one": {
+        "mean": 0.49,
+        "replication_lower": 0.37375,
+        "replication_upper": 0.62625,
+        "standard_deviation": 0.085224163
+      },
+      "threshold_group_zero": {
+        "mean": 0.5,
+        "replication_lower": 0.37375,
+        "replication_upper": 0.67625,
+        "standard_deviation": 0.1
+      }
+    },
+    {
+      "false_negative_cost": 1.0,
+      "false_positive_cost": 1.0,
+      "magnitude": 1.0,
+      "metrics": {
+        "accuracy": {
+          "mean": 0.6834,
+          "replication_lower": 0.607875,
+          "replication_upper": 0.7243,
+          "standard_deviation": 0.034901968
+        },
+        "brier_score": {
+          "mean": 0.189181084,
+          "replication_lower": 0.182563481,
+          "replication_upper": 0.199140707,
+          "standard_deviation": 0.005175408
+        },
+        "demographic_parity_difference": {
+          "mean": 0.036434518,
+          "replication_lower": 0.000456739,
+          "replication_upper": 0.089718743,
+          "standard_deviation": 0.027290674
+        },
+        "equal_opportunity_difference": {
+          "mean": 0.061831891,
+          "replication_lower": 0.00364486,
+          "replication_upper": 0.140029393,
+          "standard_deviation": 0.038081782
+        },
+        "equalized_odds_difference": {
+          "mean": 0.073823454,
+          "replication_lower": 0.023069468,
+          "replication_upper": 0.14441376,
+          "standard_deviation": 0.036234889
+        },
+        "expected_calibration_error": {
+          "mean": 0.032738926,
+          "replication_lower": 0.020252325,
+          "replication_upper": 0.042544131,
+          "standard_deviation": 0.006840548
+        },
+        "expected_cost": {
+          "mean": 0.3166,
+          "replication_lower": 0.2757,
+          "replication_upper": 0.392125,
+          "standard_deviation": 0.034901968
+        }
+      },
+      "pareto_efficient": false,
+      "policy": "group_threshold_3_0",
+      "replications": 20,
+      "shift": "prevalence",
+      "threshold_group_one": {
+        "mean": 0.52,
+        "replication_lower": 0.2975,
+        "replication_upper": 0.77625,
+        "standard_deviation": 0.149031964
+      },
+      "threshold_group_zero": {
+        "mean": 0.535,
+        "replication_lower": 0.2475,
+        "replication_upper": 0.8,
+        "standard_deviation": 0.167095938
+      }
+    },
+    {
+      "false_negative_cost": 1.0,
+      "false_positive_cost": 1.0,
+      "magnitude": 1.0,
+      "metrics": {
+        "accuracy": {
+          "mean": 0.7079,
+          "replication_lower": 0.68085,
+          "replication_upper": 0.726525,
+          "standard_deviation": 0.013733938
+        },
+        "brier_score": {
+          "mean": 0.189183168,
+          "replication_lower": 0.182337963,
+          "replication_upper": 0.199200878,
+          "standard_deviation": 0.005031227
+        },
+        "demographic_parity_difference": {
+          "mean": 0.038698956,
+          "replication_lower": 0.000574713,
+          "replication_upper": 0.088963783,
+          "standard_deviation": 0.028991781
+        },
+        "equal_opportunity_difference": {
+          "mean": 0.050684796,
+          "replication_lower": 0.011346328,
+          "replication_upper": 0.103316662,
+          "standard_deviation": 0.027679743
+        },
+        "equalized_odds_difference": {
+          "mean": 0.078941648,
+          "replication_lower": 0.028863111,
+          "replication_upper": 0.174374161,
+          "standard_deviation": 0.045853168
+        },
+        "expected_calibration_error": {
+          "mean": 0.031287235,
+          "replication_lower": 0.020902813,
+          "replication_upper": 0.042873674,
+          "standard_deviation": 0.006297085
+        },
+        "expected_cost": {
+          "mean": 0.2921,
+          "replication_lower": 0.273475,
+          "replication_upper": 0.31915,
+          "standard_deviation": 0.013733938
+        }
+      },
+      "pareto_efficient": true,
+      "policy": "reweighed_training",
+      "replications": 20,
+      "shift": "prevalence",
+      "threshold_group_one": {
+        "mean": 0.5075,
+        "replication_lower": 0.42375,
+        "replication_upper": 0.6,
+        "standard_deviation": 0.051999494
+      },
+      "threshold_group_zero": {
+        "mean": 0.5075,
+        "replication_lower": 0.42375,
+        "replication_upper": 0.6,
+        "standard_deviation": 0.051999494
+      }
+    },
+    {
+      "false_negative_cost": 1.0,
+      "false_positive_cost": 1.0,
+      "magnitude": 1.0,
+      "metrics": {
+        "accuracy": {
+          "mean": 0.71025,
+          "replication_lower": 0.690475,
+          "replication_upper": 0.73105,
+          "standard_deviation": 0.013591309
+        },
+        "brier_score": {
+          "mean": 0.189181084,
+          "replication_lower": 0.182563481,
+          "replication_upper": 0.199140707,
+          "standard_deviation": 0.005175408
+        },
+        "demographic_parity_difference": {
+          "mean": 0.048353057,
+          "replication_lower": 0.004502138,
+          "replication_upper": 0.13543568,
+          "standard_deviation": 0.041936573
+        },
+        "equal_opportunity_difference": {
+          "mean": 0.046258581,
+          "replication_lower": 0.013386138,
+          "replication_upper": 0.119033353,
+          "standard_deviation": 0.034734056
+        },
+        "equalized_odds_difference": {
+          "mean": 0.09027345,
+          "replication_lower": 0.019439394,
+          "replication_upper": 0.228739762,
+          "standard_deviation": 0.063270712
+        },
+        "expected_calibration_error": {
+          "mean": 0.032738926,
+          "replication_lower": 0.020252325,
+          "replication_upper": 0.042544131,
+          "standard_deviation": 0.006840548
+        },
+        "expected_cost": {
+          "mean": 0.28975,
+          "replication_lower": 0.26895,
+          "replication_upper": 0.309525,
+          "standard_deviation": 0.013591309
+        }
+      },
+      "pareto_efficient": false,
+      "policy": "source_cost_threshold",
+      "replications": 20,
+      "shift": "prevalence",
+      "threshold_group_one": {
+        "mean": 0.4975,
+        "replication_lower": 0.45,
+        "replication_upper": 0.55,
+        "standard_deviation": 0.037957733
+      },
+      "threshold_group_zero": {
+        "mean": 0.4975,
+        "replication_lower": 0.45,
+        "replication_upper": 0.55,
+        "standard_deviation": 0.037957733
+      }
+    },
+    {
+      "false_negative_cost": 1.0,
+      "false_positive_cost": 1.0,
+      "magnitude": 1.0,
+      "metrics": {
+        "accuracy": {
+          "mean": 0.70645,
+          "replication_lower": 0.686325,
+          "replication_upper": 0.728575,
+          "standard_deviation": 0.013052425
+        },
+        "brier_score": {
+          "mean": 0.189219102,
+          "replication_lower": 0.182490633,
+          "replication_upper": 0.199752993,
+          "standard_deviation": 0.005270569
+        },
+        "demographic_parity_difference": {
+          "mean": 0.051448733,
+          "replication_lower": 0.003451278,
+          "replication_upper": 0.127263567,
+          "standard_deviation": 0.038420187
+        },
+        "equal_opportunity_difference": {
+          "mean": 0.061325023,
+          "replication_lower": 0.012751848,
+          "replication_upper": 0.131586595,
+          "standard_deviation": 0.04216555
+        },
+        "equalized_odds_difference": {
+          "mean": 0.096808639,
+          "replication_lower": 0.023861918,
+          "replication_upper": 0.214599979,
+          "standard_deviation": 0.059186398
+        },
+        "expected_calibration_error": {
+          "mean": 0.031837734,
+          "replication_lower": 0.020511603,
+          "replication_upper": 0.041063314,
+          "standard_deviation": 0.005512568
+        },
+        "expected_cost": {
+          "mean": 0.29355,
+          "replication_lower": 0.271425,
+          "replication_upper": 0.313675,
+          "standard_deviation": 0.013052425
+        }
+      },
+      "pareto_efficient": false,
+      "policy": "target_recalibration",
+      "replications": 20,
+      "shift": "prevalence",
+      "threshold_group_one": {
+        "mean": 0.5175,
+        "replication_lower": 0.45,
+        "replication_upper": 0.6,
+        "standard_deviation": 0.0466651
+      },
+      "threshold_group_zero": {
+        "mean": 0.5175,
+        "replication_lower": 0.45,
+        "replication_upper": 0.6,
+        "standard_deviation": 0.0466651
+      }
+    },
+    {
+      "false_negative_cost": 2.0,
+      "false_positive_cost": 1.0,
+      "magnitude": 1.0,
+      "metrics": {
+        "accuracy": {
+          "mean": 0.7131,
+          "replication_lower": 0.690475,
+          "replication_upper": 0.73105,
+          "standard_deviation": 0.012594485
+        },
+        "brier_score": {
+          "mean": 0.189181084,
+          "replication_lower": 0.182563481,
+          "replication_upper": 0.199140707,
+          "standard_deviation": 0.005175408
+        },
+        "demographic_parity_difference": {
+          "mean": 0.051125743,
+          "replication_lower": 0.002239037,
+          "replication_upper": 0.12778164,
+          "standard_deviation": 0.03763657
+        },
+        "equal_opportunity_difference": {
+          "mean": 0.051295937,
+          "replication_lower": 0.001222545,
+          "replication_upper": 0.121724551,
+          "standard_deviation": 0.038772373
+        },
+        "equalized_odds_difference": {
+          "mean": 0.087366434,
+          "replication_lower": 0.02483452,
+          "replication_upper": 0.204492506,
+          "standard_deviation": 0.056776694
+        },
+        "expected_calibration_error": {
+          "mean": 0.032738926,
+          "replication_lower": 0.020252325,
+          "replication_upper": 0.042544131,
+          "standard_deviation": 0.006840548
+        },
+        "expected_cost": {
+          "mean": 0.2194,
+          "replication_lower": 0.2016375,
+          "replication_upper": 0.2366,
+          "standard_deviation": 0.009987624
+        }
+      },
+      "pareto_efficient": false,
+      "policy": "baseline",
+      "replications": 20,
+      "shift": "prevalence",
+      "threshold_group_one": {
+        "mean": 0.5,
+        "replication_lower": 0.5,
+        "replication_upper": 0.5,
+        "standard_deviation": 0.0
+      },
+      "threshold_group_zero": {
+        "mean": 0.5,
+        "replication_lower": 0.5,
+        "replication_upper": 0.5,
+        "standard_deviation": 0.0
+      }
+    },
+    {
+      "false_negative_cost": 2.0,
+      "false_positive_cost": 1.0,
+      "magnitude": 1.0,
+      "metrics": {
+        "accuracy": {
+          "mean": 0.66445,
+          "replication_lower": 0.621925,
+          "replication_upper": 0.700525,
+          "standard_deviation": 0.022908227
+        },
+        "brier_score": {
+          "mean": 0.189181084,
+          "replication_lower": 0.182563481,
+          "replication_upper": 0.199140707,
+          "standard_deviation": 0.005175408
+        },
+        "demographic_parity_difference": {
+          "mean": 0.050196863,
+          "replication_lower": 0.001053813,
+          "replication_upper": 0.143502567,
+          "standard_deviation": 0.040820659
+        },
+        "equal_opportunity_difference": {
+          "mean": 0.040740539,
+          "replication_lower": 0.007135885,
+          "replication_upper": 0.101261679,
+          "standard_deviation": 0.030768361
+        },
+        "equalized_odds_difference": {
+          "mean": 0.088456215,
+          "replication_lower": 0.017973648,
+          "replication_upper": 0.254573183,
+          "standard_deviation": 0.069305781
+        },
+        "expected_calibration_error": {
+          "mean": 0.032738926,
+          "replication_lower": 0.020252325,
+          "replication_upper": 0.042544131,
+          "standard_deviation": 0.006840548
+        },
+        "expected_cost": {
+          "mean": 0.19795,
+          "replication_lower": 0.1812375,
+          "replication_upper": 0.210025,
+          "standard_deviation": 0.008948537
+        }
+      },
+      "pareto_efficient": false,
+      "policy": "group_threshold_0_1",
+      "replications": 20,
+      "shift": "prevalence",
+      "threshold_group_one": {
+        "mean": 0.315,
+        "replication_lower": 0.25,
+        "replication_upper": 0.4,
+        "standard_deviation": 0.046169026
+      },
+      "threshold_group_zero": {
+        "mean": 0.3175,
+        "replication_lower": 0.25,
+        "replication_upper": 0.42625,
+        "standard_deviation": 0.059105169
+      }
+    },
+    {
+      "false_negative_cost": 2.0,
+      "false_positive_cost": 1.0,
+      "magnitude": 1.0,
+      "metrics": {
+        "accuracy": {
+          "mean": 0.66065,
+          "replication_lower": 0.603125,
+          "replication_upper": 0.700525,
+          "standard_deviation": 0.03049465
+        },
+        "brier_score": {
+          "mean": 0.189181084,
+          "replication_lower": 0.182563481,
+          "replication_upper": 0.199140707,
+          "standard_deviation": 0.005175408
+        },
+        "demographic_parity_difference": {
+          "mean": 0.041652596,
+          "replication_lower": 0.001053813,
+          "replication_upper": 0.119283525,
+          "standard_deviation": 0.037075756
+        },
+        "equal_opportunity_difference": {
+          "mean": 0.039862819,
+          "replication_lower": 0.007135885,
+          "replication_upper": 0.101261679,
+          "standard_deviation": 0.03036464
+        },
+        "equalized_odds_difference": {
+          "mean": 0.082155085,
+          "replication_lower": 0.017973648,
+          "replication_upper": 0.239994,
+          "standard_deviation": 0.064367627
+        },
+        "expected_calibration_error": {
+          "mean": 0.032738926,
+          "replication_lower": 0.020252325,
+          "replication_upper": 0.042544131,
+          "standard_deviation": 0.006840548
+        },
+        "expected_cost": {
+          "mean": 0.19895,
+          "replication_lower": 0.1812375,
+          "replication_upper": 0.2154125,
+          "standard_deviation": 0.010251957
+        }
+      },
+      "pareto_efficient": true,
+      "policy": "group_threshold_0_3",
+      "replications": 20,
+      "shift": "prevalence",
+      "threshold_group_one": {
+        "mean": 0.31,
+        "replication_lower": 0.22375,
+        "replication_upper": 0.4,
+        "standard_deviation": 0.052815468
+      },
+      "threshold_group_zero": {
+        "mean": 0.3125,
+        "replication_lower": 0.22375,
+        "replication_upper": 0.42625,
+        "standard_deviation": 0.0646346
+      }
+    },
+    {
+      "false_negative_cost": 2.0,
+      "false_positive_cost": 1.0,
+      "magnitude": 1.0,
+      "metrics": {
+        "accuracy": {
+          "mean": 0.65635,
+          "replication_lower": 0.5779,
+          "replication_upper": 0.706675,
+          "standard_deviation": 0.042362191
+        },
+        "brier_score": {
+          "mean": 0.189181084,
+          "replication_lower": 0.182563481,
+          "replication_upper": 0.199140707,
+          "standard_deviation": 0.005175408
+        },
+        "demographic_parity_difference": {
+          "mean": 0.049079804,
+          "replication_lower": 0.002820463,
+          "replication_upper": 0.141271044,
+          "standard_deviation": 0.041991518
+        },
+        "equal_opportunity_difference": {
+          "mean": 0.047342552,
+          "replication_lower": 0.00575276,
+          "replication_upper": 0.13079983,
+          "standard_deviation": 0.038807654
+        },
+        "equalized_odds_difference": {
+          "mean": 0.0911013,
+          "replication_lower": 0.028403325,
+          "replication_upper": 0.240777257,
+          "standard_deviation": 0.062343427
+        },
+        "expected_calibration_error": {
+          "mean": 0.032738926,
+          "replication_lower": 0.020252325,
+          "replication_upper": 0.042544131,
+          "standard_deviation": 0.006840548
+        },
+        "expected_cost": {
+          "mean": 0.200625,
+          "replication_lower": 0.1845875,
+          "replication_upper": 0.221525,
+          "standard_deviation": 0.011496996
+        }
+      },
+      "pareto_efficient": false,
+      "policy": "group_threshold_1_0",
+      "replications": 20,
+      "shift": "prevalence",
+      "threshold_group_one": {
+        "mean": 0.305,
+        "replication_lower": 0.17375,
+        "replication_upper": 0.4,
+        "standard_deviation": 0.074161985
+      },
+      "threshold_group_zero": {
+        "mean": 0.3125,
+        "replication_lower": 0.2,
+        "replication_upper": 0.47625,
+        "standard_deviation": 0.090138782
+      }
+    },
+    {
+      "false_negative_cost": 2.0,
+      "false_positive_cost": 1.0,
+      "magnitude": 1.0,
+      "metrics": {
+        "accuracy": {
+          "mean": 0.61525,
+          "replication_lower": 0.48245,
+          "replication_upper": 0.7205,
+          "standard_deviation": 0.086419342
+        },
+        "brier_score": {
+          "mean": 0.189181084,
+          "replication_lower": 0.182563481,
+          "replication_upper": 0.199140707,
+          "standard_deviation": 0.005175408
+        },
+        "demographic_parity_difference": {
+          "mean": 0.031914773,
+          "replication_lower": 0.001338941,
+          "replication_upper": 0.076290024,
+          "standard_deviation": 0.027176925
+        },
+        "equal_opportunity_difference": {
+          "mean": 0.035827844,
+          "replication_lower": 0.0,
+          "replication_upper": 0.079084911,
+          "standard_deviation": 0.027043914
+        },
+        "equalized_odds_difference": {
+          "mean": 0.061878508,
+          "replication_lower": 0.00906799,
+          "replication_upper": 0.120913604,
+          "standard_deviation": 0.033949489
+        },
+        "expected_calibration_error": {
+          "mean": 0.032738926,
+          "replication_lower": 0.020252325,
+          "replication_upper": 0.042544131,
+          "standard_deviation": 0.006840548
+        },
+        "expected_cost": {
+          "mean": 0.21755,
+          "replication_lower": 0.18895,
+          "replication_upper": 0.258775,
+          "standard_deviation": 0.024672006
+        }
+      },
+      "pareto_efficient": true,
+      "policy": "group_threshold_3_0",
+      "replications": 20,
+      "shift": "prevalence",
+      "threshold_group_one": {
+        "mean": 0.255,
+        "replication_lower": 0.05,
+        "replication_upper": 0.52625,
+        "standard_deviation": 0.152090693
+      },
+      "threshold_group_zero": {
+        "mean": 0.2625,
+        "replication_lower": 0.05,
+        "replication_upper": 0.47625,
+        "standard_deviation": 0.147679418
+      }
+    },
+    {
+      "false_negative_cost": 2.0,
+      "false_positive_cost": 1.0,
+      "magnitude": 1.0,
+      "metrics": {
+        "accuracy": {
+          "mean": 0.6734,
+          "replication_lower": 0.622725,
+          "replication_upper": 0.70105,
+          "standard_deviation": 0.023075163
+        },
+        "brier_score": {
+          "mean": 0.189183168,
+          "replication_lower": 0.182337963,
+          "replication_upper": 0.199200878,
+          "standard_deviation": 0.005031227
+        },
+        "demographic_parity_difference": {
+          "mean": 0.04218552,
+          "replication_lower": 0.003434656,
+          "replication_upper": 0.133235207,
+          "standard_deviation": 0.04008075
+        },
+        "equal_opportunity_difference": {
+          "mean": 0.039828719,
+          "replication_lower": 0.003983422,
+          "replication_upper": 0.088432487,
+          "standard_deviation": 0.028940185
+        },
+        "equalized_odds_difference": {
+          "mean": 0.08443429,
+          "replication_lower": 0.014822604,
+          "replication_upper": 0.211692211,
+          "standard_deviation": 0.055684221
+        },
+        "expected_calibration_error": {
+          "mean": 0.031287235,
+          "replication_lower": 0.020902813,
+          "replication_upper": 0.042873674,
+          "standard_deviation": 0.006297085
+        },
+        "expected_cost": {
+          "mean": 0.19665,
+          "replication_lower": 0.1830875,
+          "replication_upper": 0.2138125,
+          "standard_deviation": 0.008625391
+        }
+      },
+      "pareto_efficient": true,
+      "policy": "reweighed_training",
+      "replications": 20,
+      "shift": "prevalence",
+      "threshold_group_one": {
+        "mean": 0.3375,
+        "replication_lower": 0.27375,
+        "replication_upper": 0.4,
+        "standard_deviation": 0.03581752
+      },
+      "threshold_group_zero": {
+        "mean": 0.3375,
+        "replication_lower": 0.27375,
+        "replication_upper": 0.4,
+        "standard_deviation": 0.03581752
+      }
+    },
+    {
+      "false_negative_cost": 2.0,
+      "false_positive_cost": 1.0,
+      "magnitude": 1.0,
+      "metrics": {
+        "accuracy": {
+          "mean": 0.6676,
+          "replication_lower": 0.617525,
+          "replication_upper": 0.70005,
+          "standard_deviation": 0.025161374
+        },
+        "brier_score": {
+          "mean": 0.189181084,
+          "replication_lower": 0.182563481,
+          "replication_upper": 0.199140707,
+          "standard_deviation": 0.005175408
+        },
+        "demographic_parity_difference": {
+          "mean": 0.056899403,
+          "replication_lower": 0.000386239,
+          "replication_upper": 0.160565536,
+          "standard_deviation": 0.047480695
+        },
+        "equal_opportunity_difference": {
+          "mean": 0.042787526,
+          "replication_lower": 0.00549859,
+          "replication_upper": 0.097070735,
+          "standard_deviation": 0.032000687
+        },
+        "equalized_odds_difference": {
+          "mean": 0.104656284,
+          "replication_lower": 0.036027972,
+          "replication_upper": 0.287494,
+          "standard_deviation": 0.070450814
+        },
+        "expected_calibration_error": {
+          "mean": 0.032738926,
+          "replication_lower": 0.020252325,
+          "replication_upper": 0.042544131,
+          "standard_deviation": 0.006840548
+        },
+        "expected_cost": {
+          "mean": 0.19815,
+          "replication_lower": 0.1815,
+          "replication_upper": 0.2134625,
+          "standard_deviation": 0.009101908
+        }
+      },
+      "pareto_efficient": false,
+      "policy": "source_cost_threshold",
+      "replications": 20,
+      "shift": "prevalence",
+      "threshold_group_one": {
+        "mean": 0.325,
+        "replication_lower": 0.25,
+        "replication_upper": 0.4,
+        "standard_deviation": 0.047295265
+      },
+      "threshold_group_zero": {
+        "mean": 0.325,
+        "replication_lower": 0.25,
+        "replication_upper": 0.4,
+        "standard_deviation": 0.047295265
+      }
+    },
+    {
+      "false_negative_cost": 2.0,
+      "false_positive_cost": 1.0,
+      "magnitude": 1.0,
+      "metrics": {
+        "accuracy": {
+          "mean": 0.67815,
+          "replication_lower": 0.6448,
+          "replication_upper": 0.703525,
+          "standard_deviation": 0.018310983
+        },
+        "brier_score": {
+          "mean": 0.189219102,
+          "replication_lower": 0.182490633,
+          "replication_upper": 0.199752993,
+          "standard_deviation": 0.005270569
+        },
+        "demographic_parity_difference": {
+          "mean": 0.06139648,
+          "replication_lower": 0.002634345,
+          "replication_upper": 0.137655484,
+          "standard_deviation": 0.046627957
+        },
+        "equal_opportunity_difference": {
+          "mean": 0.05323871,
+          "replication_lower": 0.006931913,
+          "replication_upper": 0.118945286,
+          "standard_deviation": 0.036483711
+        },
+        "equalized_odds_difference": {
+          "mean": 0.100778426,
+          "replication_lower": 0.006931913,
+          "replication_upper": 0.262324614,
+          "standard_deviation": 0.072981305
+        },
+        "expected_calibration_error": {
+          "mean": 0.031837734,
+          "replication_lower": 0.020511603,
+          "replication_upper": 0.041063314,
+          "standard_deviation": 0.005512568
+        },
+        "expected_cost": {
+          "mean": 0.19815,
+          "replication_lower": 0.18235,
+          "replication_upper": 0.218125,
+          "standard_deviation": 0.00951052
+        }
+      },
+      "pareto_efficient": false,
+      "policy": "target_recalibration",
+      "replications": 20,
+      "shift": "prevalence",
+      "threshold_group_one": {
+        "mean": 0.345,
+        "replication_lower": 0.27375,
+        "replication_upper": 0.4,
+        "standard_deviation": 0.042612081
+      },
+      "threshold_group_zero": {
+        "mean": 0.345,
+        "replication_lower": 0.27375,
+        "replication_upper": 0.4,
+        "standard_deviation": 0.042612081
+      }
+    }
+  ],
+  "config": {
+    "false_negative_costs": [
+      0.5,
+      1.0,
+      2.0
+    ],
+    "magnitude": 1.0,
+    "samples": 1000,
+    "seeds": [
+      100,
+      101,
+      102,
+      103,
+      104,
+      105,
+      106,
+      107,
+      108,
+      109,
+      110,
+      111,
+      112,
+      113,
+      114,
+      115,
+      116,
+      117,
+      118,
+      119
+    ]
+  },
+  "generator": "fairshift_lab.policy_study.run_policy_study",
+  "interval_definition": "Empirical 2.5th to 97.5th percentile range across independent seeded replications; descriptive, not a population confidence interval.",
+  "pareto_definition": "A policy is efficient within one shift and cost declaration when no benchmarked policy has both lower mean normalized expected cost and lower mean equalized-odds gap, with at least one strict improvement. This is benchmark-relative, not globally optimal.",
+  "policies": [
+    {
+      "access": "Source labels only",
+      "key": "baseline",
+      "label": "Fixed baseline",
+      "selection": "Source-calibrated score at threshold 0.50."
+    },
+    {
+      "access": "Source labels only",
+      "key": "source_cost_threshold",
+      "label": "Cost-sensitive threshold",
+      "selection": "One global threshold minimizes declared error cost on source tuning data."
+    },
+    {
+      "access": "Requires recent labeled target data",
+      "key": "target_recalibration",
+      "label": "Target recalibration",
+      "selection": "Temperature and global cost threshold are selected on an independent target adaptation sample."
+    },
+    {
+      "access": "Source labels and protected attribute",
+      "key": "reweighed_training",
+      "label": "Reweighed training",
+      "selection": "Training weights balance group-label cells; a source cost threshold is then selected."
+    },
+    {
+      "access": "Source labels and protected attribute",
+      "key": "group_threshold_0_1",
+      "label": "Group thresholds \u00b7 \u03bb=0.1",
+      "selection": "Two source-tuned thresholds minimize normalized error cost plus \u03bb times the equalized-odds gap."
+    },
+    {
+      "access": "Source labels and protected attribute",
+      "key": "group_threshold_0_3",
+      "label": "Group thresholds \u00b7 \u03bb=0.3",
+      "selection": "Two source-tuned thresholds minimize normalized error cost plus \u03bb times the equalized-odds gap."
+    },
+    {
+      "access": "Source labels and protected attribute",
+      "key": "group_threshold_1_0",
+      "label": "Group thresholds \u00b7 \u03bb=1",
+      "selection": "Two source-tuned thresholds minimize normalized error cost plus \u03bb times the equalized-odds gap."
+    },
+    {
+      "access": "Source labels and protected attribute",
+      "key": "group_threshold_3_0",
+      "label": "Group thresholds \u00b7 \u03bb=3",
+      "selection": "Two source-tuned thresholds minimize normalized error cost plus \u03bb times the equalized-odds gap."
+    }
+  ],
+  "schema_version": "1.1"
+}

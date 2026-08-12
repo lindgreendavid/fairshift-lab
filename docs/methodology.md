@@ -40,7 +40,11 @@ Undefined conditional rates caused by an empty subgroup condition are reported a
 
 Randomness is isolated in NumPy's generator and controlled by recorded seeds. CI tests supported Python versions, formatting, lint, typing, coverage, and package construction. Generated reports are excluded from version control so that every published result must declare how it was produced.
 
-The reviewed v1 registry is the explicit exception: `reports/v1-study.json` is committed as an immutable release artifact. `scripts/generate_study.py` regenerates it from the public package API. The registry contains 20 independent seeds for every intervention–magnitude cell and retains descriptive variation rather than only a grand mean.
+The reviewed registries are explicit exceptions. `reports/v1-study.json` and `reports/v1.1-policy-study.json` are committed as immutable release artifacts and regenerated from the public package API by their matching scripts. Both retain 20-seed descriptive variation rather than only a grand mean, and CI rejects any byte-level divergence from regenerated output.
+
+## Decision policies in version 1.1.0
+
+Policy selection is separated from target testing. Normalized error cost makes the declared false-positive and false-negative ratio visible without pretending it captures every consequence. Reweighing changes source training weights; global and group-specific thresholds change decisions without retraining; supervised target recalibration is isolated because it requires recent labeled target data. The complete selection rules, tie handling, and finite-set Pareto definition are fixed in [`policy-study-protocol.md`](policy-study-protocol.md).
 
 ## Bootstrap uncertainty
 
@@ -59,3 +63,6 @@ The method is transparent and distribution-light, but percentile intervals can h
 - Guo et al. (2017), *On Calibration of Modern Neural Networks*: held-out post-hoc calibration and temperature scaling. https://proceedings.mlr.press/v70/guo17a.html
 - Ovadia et al. (2019), *Can You Trust Your Model’s Uncertainty?*: empirical evaluation of predictive uncertainty and calibration under dataset shift. https://proceedings.neurips.cc/paper_files/paper/2019/hash/8558cb408c1d76621371888657d2eb1d-Abstract.html
 - Kleinberg, Mullainathan, and Raghavan (2017), *Inherent Trade-Offs in the Fair Determination of Risk Scores*: incompatibilities among statistical fairness conditions. https://arxiv.org/abs/1609.05807
+- Kamiran and Calders (2012), *Data preprocessing techniques for classification without discrimination*: reweighing and related preprocessing methods. https://doi.org/10.1007/s10115-011-0463-8
+- Corbett-Davies et al. (2023), *The Measure and Mismeasure of Fairness*: decision-policy utility and Pareto-dominance critiques of formal fairness constraints. https://jmlr.org/papers/v24/22-1511.html
+- Kamani et al. (2021), *Pareto Efficient Fairness in Supervised Learning*: multi-objective loss and fairness frontier analysis. https://arxiv.org/abs/2104.01634
