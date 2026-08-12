@@ -414,7 +414,12 @@ function MetricCard({
 }
 
 function chartPoints(points: { x: number; y: number }[]) {
-  return points.map((point) => `${36 + point.x * 528},${224 - point.y * 184}`).join(" ");
+  return points
+    .map(
+      (point) =>
+        `${(36 + point.x * 528).toFixed(3)},${(224 - point.y * 184).toFixed(3)}`,
+    )
+    .join(" ");
 }
 
 function ReliabilityChart({
@@ -437,7 +442,7 @@ function ReliabilityChart({
         <polyline className="chart-line chart-line--raw" points={chartPoints(raw.bins.map((bin) => ({ x: bin.meanProbability, y: bin.observedRate })))} />
         <polyline className="chart-line chart-line--calibrated" points={chartPoints(calibrated.bins.map((bin) => ({ x: bin.meanProbability, y: bin.observedRate })))} />
         {calibrated.bins.map((bin, index) => (
-          <circle key={index} className="chart-point" cx={36 + bin.meanProbability * 528} cy={224 - bin.observedRate * 184} r="4" />
+          <circle key={index} className="chart-point" cx={(36 + bin.meanProbability * 528).toFixed(3)} cy={(224 - bin.observedRate * 184).toFixed(3)} r="4" />
         ))}
         <text x="36" y="244">0</text><text x="550" y="244">1</text>
         <text x="18" y="228">0</text><text x="18" y="44">1</text>
@@ -469,7 +474,7 @@ function ThresholdChart({
       <svg viewBox="0 0 600 260" role="img" aria-label={`${metricCopy[metric].label} across source and target decision thresholds`}>
         <line className="chart-grid" x1="36" y1="224" x2="564" y2="224" />
         <line className="chart-grid" x1="36" y1="224" x2="36" y2="40" />
-        <line className="chart-threshold" x1={36 + threshold * 528} y1="40" x2={36 + threshold * 528} y2="224" />
+        <line className="chart-threshold" x1={(36 + threshold * 528).toFixed(3)} y1="40" x2={(36 + threshold * 528).toFixed(3)} y2="224" />
         <polyline className="chart-line chart-line--source" points={metricPoints(source)} />
         <polyline className="chart-line chart-line--target" points={metricPoints(target)} />
         <text x="36" y="244">0</text><text x="550" y="244">1</text>

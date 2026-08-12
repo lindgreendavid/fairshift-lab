@@ -16,4 +16,4 @@ __all__ = [
     "run_experiment",
     "threshold_sweep",
 ]
-__version__ = "0.3.0"
+__version__ = "0.3.1"
