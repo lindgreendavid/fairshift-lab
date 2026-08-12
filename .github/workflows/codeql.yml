@@ -17,8 +17,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
-      # Dependabot maintains the CodeQL major line; permissions are minimized above.
-      - uses: github/codeql-action/init@v3
+      - uses: github/codeql-action/init@c4dd10e44af883a891fe31ced449bcb4a6728b9b
         with:
           languages: python
-      - uses: github/codeql-action/analyze@v3
+      - uses: github/codeql-action/analyze@c4dd10e44af883a891fe31ced449bcb4a6728b9b
