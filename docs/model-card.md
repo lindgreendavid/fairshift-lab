@@ -2,7 +2,7 @@
 
 ## Model details
 
-Version 0.3.0 uses binary logistic regression with an intercept and three inputs. Full-batch gradient descent starts from zero weights and runs for a configured number of iterations. A source-only scalar temperature is fitted on an independent holdout; the decision threshold defaults to `0.5`.
+Version 1.0.0 uses binary logistic regression with an intercept and three inputs. Full-batch gradient descent starts from zero weights and runs for a configured number of iterations. A source-only scalar temperature is fitted on an independent holdout; the decision threshold defaults to `0.5`.
 
 ## Intended purpose
 
@@ -14,7 +14,7 @@ The same fitted parameters and temperature are evaluated on independently sample
 
 ## Limitations
 
-Temperature scaling is limited to a fixed scalar search and may fail under shift. Expected calibration error depends on binning. No hyperparameter selection, regularization, threshold optimization, decision-cost model, or mitigation is included in v0.3.0. Percentile-bootstrap intervals cover selected test-sample metrics only and do not quantify model-selection or structural uncertainty. The protected attribute is used directly. Gradient descent has no convergence diagnostic.
+Temperature scaling is limited to a fixed scalar search and may fail under shift. Expected calibration error depends on binning. No hyperparameter selection, regularization, threshold optimization, decision-cost model, or mitigation is included in v1.0.0. Percentile-bootstrap intervals cover selected test-sample metrics only and do not quantify model-selection or structural uncertainty. The protected attribute is used directly. Gradient descent has no convergence diagnostic.
 
 ## Ethical considerations
 

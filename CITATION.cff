@@ -2,7 +2,7 @@ cff-version: 1.2.0
 message: "If you use this software, please cite it as below."
 title: "Fairshift Lab"
 type: software
-version: 0.3.1
+version: 1.0.0
 date-released: 2026-08-12
 authors:
   - family-names: Lindgreen

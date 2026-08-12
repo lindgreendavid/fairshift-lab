@@ -14,6 +14,8 @@ How do controlled target-domain interventions affect predictive performance and 
 
 These hypotheses are prospective for subsequent result releases. Version 0.1.0 supplies the apparatus; it does not report confirmatory findings.
 
+Version 1.0.0 freezes the first descriptive replication grid and records each hypothesis disposition in [`research-report.md`](research-report.md). The study remains synthetic and does not convert these hypotheses into external population claims.
+
 ## Experimental unit and estimands
 
 The unit is one independently sampled synthetic person. The primary estimands are source-to-target changes in AUROC, demographic-parity difference, and equalized-odds difference. Accuracy and group-specific rates are secondary measurements.
@@ -27,7 +29,7 @@ The unit is one independently sampled synthetic person. The primary estimands ar
 5. Independently sample a target population under exactly one intervention.
 6. Apply the unchanged model and source-fitted temperature to both evaluation populations.
 7. Record reliability, the declared threshold metric, uncertainty, and the full threshold grid as JSON.
-8. Repeat across seeds and magnitudes in a later statistical-analysis release.
+8. Repeat across the frozen seed–magnitude grid and publish the complete registry.
 
 ## Leakage prevention
 
@@ -48,6 +50,10 @@ The intervals do not quantify uncertainty from dataset construction, label valid
 Temperature scaling divides the baseline logit by one positive scalar selected on the independent source-calibration population. Candidate temperatures are searched deterministically on a log-spaced grid from `0.25` to `4.0` by negative log likelihood. This preserves ranking but can change thresholded decisions. Raw and calibrated Brier score, expected calibration error, and reliability bins are reported separately for source and target evaluation populations.
 
 Expected calibration error is bin-dependent and can hide local miscalibration. Source calibration does not guarantee target calibration under shift. The threshold sweep reports all existing performance and group measurements at 19 preregistered cutoffs from `0.05` to `0.95`; it is a sensitivity analysis, not automatic threshold selection. Selecting a cutoff requires an externally justified decision policy, error costs, and domain review.
+
+## Frozen replication grid in version 1.0.0
+
+The report grid crosses three target interventions with magnitudes `0.00`, `0.25`, `0.50`, `0.75`, and `1.00`, using seeds `100` through `119` and 1,000 observations per independently generated population. The grid is generated without target-informed model, calibration, or threshold selection. Means, sample standard deviations, and empirical 2.5th–97.5th percentile replication ranges are recorded for every cell. These ranges are descriptive across the declared seeds and are not population confidence intervals.
 
 ## Ethics
 

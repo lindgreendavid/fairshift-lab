@@ -2,6 +2,21 @@
 
 All notable changes follow [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) and [Semantic Versioning](https://semver.org/).
 
+## [1.0.0] - 2026-08-12
+
+### Added
+
+- Deterministic 20-seed replication studies across three interventions and five magnitudes.
+- A machine-readable 300-experiment registry and internally verified research report with bounded hypothesis dispositions.
+- A public report explorer that connects frozen multi-seed findings to the live single-run laboratory.
+- WCAG 2.2 AA-oriented skip navigation, chart descriptions and data tables, color-independent line patterns, high-contrast and forced-color support, accessible reflow, and a public accessibility statement.
+- Human-readable error and missing-page recovery surfaces.
+
+### Changed
+
+- Replaced platform-sensitive matrix multiplication in the baseline with deterministic Einstein summation to eliminate spurious numerical runtime warnings.
+- Updated package, site, citation, and social metadata for the stable v1 release.
+
 ## [0.3.1] - 2026-08-12
 
 ### Fixed
@@ -54,3 +69,4 @@ All notable changes follow [Keep a Changelog](https://keepachangelog.com/en/1.1.
 [0.2.0]: https://github.com/lindgreendavid/fairshift-lab/releases/tag/v0.2.0
 [0.3.0]: https://github.com/lindgreendavid/fairshift-lab/releases/tag/v0.3.0
 [0.3.1]: https://github.com/lindgreendavid/fairshift-lab/releases/tag/v0.3.1
+[1.0.0]: https://github.com/lindgreendavid/fairshift-lab/releases/tag/v1.0.0
