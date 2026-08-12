@@ -19,6 +19,11 @@ interactive laboratory at https://fairshift-lab.lindgreendavid.chatgpt.site.
   in native buttons rather than making chart marks the only controls.
 - External Evidence uses a separately labeled observational region, puts limitations before
   metrics, and provides every estimate and uncertainty range in a semantic table.
+- The Robustness Lab is a separately labeled synthetic-stress region that states uncertainty
+  and undefined-replication counts before any model-family comparison, pairs its plotted
+  model-family distinction with non-color square/triangle marks and dash patterns (not color
+  alone), and exposes the complete stressor-by-magnitude comparison and disaggregated
+  group/subgroup rates — including explicitly undefined ones — in semantic tables.
 - Polite announcements for updated result interpretation without moving focus.
 - Reflow down to a 320 CSS-pixel viewport and support for 200% text zoom without hiding
   navigation destinations.
@@ -40,6 +45,8 @@ assistive-technology combination.
 - The policy comparison table is wide and therefore uses a labeled, keyboard-focusable
   horizontal scroll region at narrow widths.
 - The external registry table is also wide and uses the same labeled scroll pattern.
+- The Robustness Lab's per-stressor comparison table and disaggregated-rate table are also
+  wide and use the same labeled scroll pattern.
 - Mathematical notation is expressed as Unicode and plain text rather than MathML.
 - The interface and documentation are currently in English.
 

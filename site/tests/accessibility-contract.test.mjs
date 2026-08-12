@@ -116,3 +116,28 @@ test("keeps the Policy Studio operable and equivalent beyond the plot", async ()
   assert.match(styles, /\.shape-circle/);
   assert.match(styles, /\.policy-controls button \{ min-height: 48px/);
 });
+
+test("keeps the Robustness Lab uncertainty-first, non-color-coded, and boundary-separated", async () => {
+  const [lab, styles, page] = await Promise.all([
+    source("app/robustness-lab.tsx"),
+    source("app/globals.css"),
+    source("app/page.tsx"),
+  ]);
+  assert.match(page, /<RobustnessLab \/>/);
+  assert.match(lab, /<section className="robustness" id="robustness" aria-labelledby="robustness-heading">/);
+  assert.match(lab, /Synthetic stress-test boundary/);
+  assert.match(lab, /visually and analytically separate/);
+  assert.match(lab, /Uncertainty and limitations come before the ranking/);
+  const uncertaintyIndex = lab.indexOf("Uncertainty and limitations come before the ranking");
+  const plotIndex = lab.indexOf("<RobustnessPlot");
+  assert.ok(uncertaintyIndex > 0 && plotIndex > uncertaintyIndex, "uncertainty reading must precede the plot");
+  assert.match(lab, /aria-labelledby="robustness-plot-title robustness-plot-description"/);
+  assert.match(lab, /aria-pressed=/);
+  assert.match(lab, /aria-live="polite"/);
+  assert.match(lab, /<caption>/);
+  assert.match(lab, /undefined-replication counts/);
+  assert.match(lab, /formatOptional/);
+  assert.match(styles, /\.shape-square/);
+  assert.match(styles, /\.shape-triangle/);
+  assert.match(styles, /\.robustness-mark--shallow_decision_tree \.robustness-line \{ stroke-dasharray/);
+});

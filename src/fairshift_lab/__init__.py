@@ -5,6 +5,7 @@ from fairshift_lab.config import ExperimentConfig, ShiftConfig, ShiftKind
 from fairshift_lab.experiment import ExperimentResult, run_experiment
 from fairshift_lab.external_study import ExternalStudyConfig, run_external_study
 from fairshift_lab.policy_study import PolicyStudyConfig, PolicyStudyResult, run_policy_study
+from fairshift_lab.robustness import RobustnessStudyConfig, run_robustness_study
 from fairshift_lab.sensitivity import threshold_sweep
 from fairshift_lab.study import StudyConfig, StudyResult, run_study
 
@@ -14,6 +15,7 @@ __all__ = [
     "ExternalStudyConfig",
     "PolicyStudyConfig",
     "PolicyStudyResult",
+    "RobustnessStudyConfig",
     "ShiftConfig",
     "ShiftKind",
     "StudyConfig",
@@ -24,7 +26,8 @@ __all__ = [
     "run_experiment",
     "run_external_study",
     "run_policy_study",
+    "run_robustness_study",
     "run_study",
     "threshold_sweep",
 ]
-__version__ = "1.2.0"
+__version__ = "1.3.0"
