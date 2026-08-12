@@ -7,6 +7,11 @@ __pycache__/
 .ruff_cache/
 .venv/
 .venv-codex/
+.uv-cache/
 build/
 dist/
 reports/generated/
+site/.next/
+site/.wrangler/
+site/dist/
+site/node_modules/
