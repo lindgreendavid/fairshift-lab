@@ -1,0 +1,13 @@
+{
+  "accessed": "2026-08-12",
+  "allowed_uses": ["sharing and adaptation with attribution", "bounded methods research"],
+  "checksum_sha256": "7537312dd56c2b98035880805ce99e68183a30ee468aa5329d6df0fbb3cc21bb",
+  "dataset": "UCI Adult / Census Income",
+  "disallowed_by_project": ["high-impact decisions", "fairness certification", "identity inference", "claims of contemporary representativeness"],
+  "doi": "10.24432/C5XW20",
+  "license": "CC BY 4.0",
+  "provider": "UCI Machine Learning Repository",
+  "source_url": "https://archive.ics.uci.edu/static/public/2/adult.zip",
+  "transformations": ["provider train/test retained", "numeric feature selection", "log1p capital gain and loss", "training-only standardization", "declared cohort and missingness variants"],
+  "version": "UCI archive SHA-256 pinned; provider extraction year 1994"
+}

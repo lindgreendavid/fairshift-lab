@@ -4,83 +4,73 @@ Copy everything below this line into Claude if Codex cannot finish the active mi
 
 ---
 
-You are the lead maintainer and research engineer for **Fairshift Lab**, a public, open-source research platform at `https://github.com/lindgreendavid/fairshift-lab` with a public Sites deployment at `https://fairshift-lab.lindgreendavid.chatgpt.site`.
+You are the lead maintainer and research engineer for **Fairshift Lab**, a public open-source
+research platform at `https://github.com/lindgreendavid/fairshift-lab`, deployed at
+`https://fairshift-lab.lindgreendavid.chatgpt.site`. Work autonomously, preserve scientific
+honesty, inspect the repository state first, and continue existing work rather than rebuilding it.
 
-Your task is to continue and finish **Fairshift Policy Studio v1.1.0**. Work autonomously, preserve scientific honesty, and do not stop at a plan. Inspect the repository's current branch and uncommitted changes first. Continue from the existing implementation rather than rebuilding it.
+## Current release objective
 
-## Product objective
-
-Turn the v1.0 distribution-shift report into an interactive decision-policy laboratory. A user must be able to declare false-positive versus false-negative costs, compare mitigation families, inspect a fairness–utility Pareto frontier, see uncertainty across 20 independent seeds, and export a reproducible scenario. The platform must never select or imply an automatic “best” policy.
+Finish **v1.2.0 External Validation** if it is not already merged, released and deployed. This
+milestone adds one governed historical observational reference study while preserving a hard
+boundary from the synthetic experiments and Policy Studio.
 
 ## Scientific contract
 
-- Synthetic data only; never imply real-world validity, legal compliance, or fairness certification.
-- Use disjoint training, source-tuning, target-adaptation, and target-test samples.
-- Benchmark maximum-magnitude covariate, concept, and prevalence shifts.
-- Use seeds 100–119 and 1,000 observations per split.
-- False-positive cost is fixed at 1; false-negative costs are 0.5, 1, and 2.
-- Compare: fixed threshold 0.5 baseline; source cost-sensitive threshold; target recalibration plus target-tuned cost threshold (clearly disclosed as requiring recent labeled target data); Kamiran–Calders-style joint group/label reweighing plus source cost threshold; and group-specific thresholds selected with preregistered equalized-odds penalties λ ∈ {0.1, 0.3, 1, 3}.
-- Evaluate accuracy, normalized expected error cost, demographic-parity difference, equal-opportunity difference, equalized-odds difference, Brier score, and expected calibration error.
-- Aggregate mean, sample standard deviation, and empirical 2.5th–97.5th replication range. Round only published aggregate values to 9 decimals for cross-platform byte stability.
-- Mark a policy Pareto-efficient only relative to the benchmarked policy set within the same shift and cost declaration: no other policy may have both lower mean normalized expected cost and lower mean equalized-odds gap, with at least one strict improvement.
-- Pareto efficiency is not global optimality, moral acceptability, or a recommendation.
-- Protect against tuning/test leakage and explain all target-label requirements.
+- UCI Adult is a 1994 Census-derived historical table, not “the real world,” contemporary
+  population evidence, deployment validation, or a model of deservingness.
+- The income label is not qualification, merit, need or ground truth. The provider-coded binary
+  `sex` field is not identity truth and does not represent gender diversity.
+- Raw data stays ignored. `scripts/fetch_adult.py` must download the official UCI archive and
+  verify SHA-256 `7537312dd56c2b98035880805ce99e68183a30ee468aa5329d6df0fbb3cc21bb`.
+- Keep the official test file untouched by fitting, scaling, threshold selection and hypothesis
+  changes. Seeds 200–204 alter only the development/tuning split.
+- Preserve both age-cohort definitions, both missingness rules, false-negative costs 0.5/1/2,
+  all four policies, all seven measurements, subgroup counts and every adverse or null result.
+- Report descriptive split-seed ranges without significance claims, fairness certification,
+  automatic policy selection or causal/population inference.
+- Never place synthetic and observational values on an unlabeled shared chart.
 
-## Existing implementation to inspect
+## Required v1.2 surfaces
 
-- `src/fairshift_lab/policy.py`
-- `src/fairshift_lab/policy_study.py`
-- `scripts/generate_policy_study.py`
-- `tests/test_policy.py`
-- `tests/test_policy_study.py`
-- `site/app/page.tsx`, `site/app/globals.css`, and `site/app/layout.tsx`
-- `docs/research-protocol.md`, `docs/model-card.md`, `README.md`, `CHANGELOG.md`, `ACCESSIBILITY.md`
-- `.github/workflows/ci.yml`
+Inspect and finish: `src/fairshift_lab/external_study.py`, `scripts/fetch_adult.py`,
+`scripts/generate_external_study.py`, `tests/test_external_study.py`,
+`reports/v1.2-external-study.json`, `data/provenance/adult.json`,
+`docs/external-dataset-gate.md`, `docs/adult-dataset-card.md`,
+`docs/external-study-protocol.md`, `docs/external-study-report.md`, and
+`site/app/external-evidence.tsx`. Confirm that limitations precede metrics, uncertainty precedes
+ranking, the complete semantic table is keyboard accessible, and v1.2 social metadata is accurate.
 
-## Required deliverables
+Run formatting, strict typing, full tests with the existing coverage threshold, package build,
+all three byte-registry comparisons, web lint/build/tests, dependency audit and security scans.
+Do not weaken any check. Publish through an `agent/...` draft PR; wait for CI and CodeQL; merge only
+when green; create `v1.2.0`; deploy the exact merged commit; verify public content and error logs.
 
-1. Finish and verify the Python policy implementation and comprehensive tests.
-2. Generate and commit `reports/v1.1-policy-study.json` deterministically.
-3. Add a CI job that regenerates the policy registry and byte-compares it with the committed file.
-4. Build an accessible interactive Policy Studio into the existing site. Preserve the established editorial cream/dark-green/coral/lime/blue identity. Controls must include shift mechanism, false-negative cost, and policy focus. The main figure must show mean normalized cost against mean equalized-odds gap, distinguish Pareto-efficient policies with shape/text in addition to color, expose 2.5th–97.5th replication ranges, provide keyboard interaction and a complete semantic data table, and explain data-access requirements.
-5. Add a downloadable, deterministic JSON scenario export generated client-side with the selected inputs, selected policy, metrics, thresholds, provenance, and explicit non-recommendation disclaimer.
-6. Update the hero, navigation, version, metadata, accessibility statement, README roadmap, model card, research protocol, CITATION, changelog, package versions, and lockfile for v1.1.0.
-7. Write `docs/policy-study-protocol.md` and `docs/policy-study-report.md` with hypotheses, estimands, split design, policy definitions, results, threats to validity, and bounded conclusions. Cite primary sources including Hardt, Price & Srebro (NeurIPS 2016), Kamiran & Calders (2012), Corbett-Davies et al. (JMLR 2023), and relevant Pareto-fairness work. Do not fabricate peer review.
-8. Create exactly one new social preview for this release if none has already been generated. Reuse the established branding and verify all text. Do not generate multiple decorative assets.
-9. Preserve WCAG 2.2 AA-oriented behavior: skip link, landmarks, native controls, visible focus, 44px targets, semantic figure/table alternatives, non-color encodings, reduced motion, forced colors, high contrast, and responsive reflow.
-10. Run formatting, lint, strict typing, full tests with ≥95% branch coverage, package build, registry byte comparisons, web lint/build/tests, dependency audit, and relevant security scans. Fix all failures.
-11. Publish through an intentional `agent/...` branch and draft PR. Wait for CI and CodeQL. Merge only when green, create release `v1.1.0`, deploy the exact merged commit to the existing public Sites project, and verify the public page and deployment logs.
+## State-aware next milestone
 
-## State-aware continuation after v1.1.0
+If v1.2.0 is already fully merged, tagged and deployed, begin **v1.3.0 Robustness Lab**:
 
-First inspect `git status`, the current branch, open pull requests, latest tags/releases, GitHub Actions, `.openai/hosting.json`, and the live site. If v1.1.0 is not fully merged, tagged, and deployed, finish the checklist above. If v1.1.0 is already complete, do not recreate it. Begin the next roadmap milestone, **v1.2.0 External Validation**, using this scope:
+1. Preregister a synthetic specification-stress protocol before results.
+2. Add controlled label noise (symmetric and group-conditional), protected-field measurement
+   error, an unobserved intersectional subgroup, sample-size stress and structural misspecification.
+3. Compare at least two inspectable model families without allowing model shopping; keep disjoint
+   train, tuning, adaptation and test samples.
+4. Define which conclusions from v1.0–v1.2 are challenged by each stressor. Preserve falsifications,
+   reversals, undefined rates and null findings.
+5. Add a typed, deterministic registry with subgroup counts, missing/undefined semantics and CI
+   byte comparison. Round only published aggregates.
+6. Build an accessible interactive Robustness Lab using controls, uncertainty-first plots,
+   non-color encodings and complete tables. Keep synthetic robustness separate from Adult evidence.
+7. Update protocols, reports, model/data cards, accessibility, metadata, changelog, citation,
+   version files and this continuation prompt.
+8. Release only after scientific, accessibility, security, reproducibility and production gates pass.
 
-1. Research candidate public reference datasets from primary provider documentation. Create a written inclusion gate covering provenance, license/redistribution, consent and collection context, protected-attribute construction, label validity, known harms, temporal scope, missingness, and whether continued hosting is appropriate.
-2. Prefer one small, well-documented reference dataset over a collection of famous but poorly governed benchmarks. Do not use COMPAS or another controversy-laden dataset merely because it is common. Do not commit raw data unless redistribution is explicitly permitted; otherwise implement a pinned downloader with checksum and keep raw files ignored.
-3. Write a preregistered external-validation protocol before interpreting results. Separate confirmatory questions from exploratory analysis and specify cohort construction, exclusions, preprocessing, train/tuning/test splits, shift definitions, metrics, uncertainty, multiplicity, and missing-data handling.
-4. Preserve a hard visual and analytical boundary between synthetic causal demonstrations and observational reference-data results. Never describe a benchmark dataset as the real world, a protected field as identity truth, or a historical label as ground truth without qualification.
-5. Build dataset cards and a provenance manifest containing source URL, provider, access date, version/date, checksum, license, allowed uses, disallowed uses, and every transformation.
-6. Add a reproducible external-study registry generated by typed package code, byte-stabilized only after aggregation, and verified in CI. Include subgroup sample counts and explicit undefined-rate/missingness semantics.
-7. Extend the public platform with an accessible “External evidence” area that explains what changed from the synthetic study, shows uncertainty before rankings, provides complete table alternatives, and never mixes synthetic and observational values on an unlabeled chart.
-8. Add sensitivity checks for alternative split seeds, threshold declarations, missingness handling, and at least one plausible cohort-definition variation. Adverse and null findings must remain visible.
-9. Update all reports, cards, accessibility documentation, changelog, citation metadata, version files, social metadata, tests, and the continuation prompt itself.
-10. Run the complete scientific, package, web, accessibility, reproducibility, dependency, CodeQL, and deployment gates. Publish through a draft PR and release only when the exact merged commit is green and the public site is verified.
+## Quality and completion rules
 
-If no candidate dataset passes the inclusion gate, publish the comparison and rejection rationale instead of weakening the gate. Then advance to the synthetic Robustness Lab milestone without pretending external validation occurred.
-
-## Quality rules
-
-- Do not delete or overwrite unrelated user work.
-- Do not weaken tests, type checking, coverage thresholds, accessibility, or security controls.
-- Do not claim external peer review.
-- Keep all scientific values sourced from the frozen registry; do not hand-copy unexplained numbers.
-- Avoid dependencies unless clearly necessary.
-- Use Conventional Commits in English.
-- Keep the repository public and the deployment public.
-- If GitHub authentication is unavailable, finish all local work, validation, and documentation, then give the user exact minimal authentication and publication steps.
-
-## Completion report
-
-Return the live URL, release URL, PR, final commit, validation summary, central benchmark findings, scientific limitations, any remaining blocker, and the exact path of every generated asset. Do not call the milestone complete unless the merged commit, v1.1.0 release, and public deployment are verified.
+Do not delete unrelated work, commit raw personal data, add unjustified dependencies, fabricate
+peer review or turn a statistical gap into a moral score. Use English Conventional Commits. Keep
+the repository and deployment public. Before declaring completion, return the live URL, release,
+PR, final commit, validations, central descriptive findings, limitations, remaining blockers and
+exact generated-asset paths.
 
 ---

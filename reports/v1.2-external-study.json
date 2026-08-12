@@ -1,0 +1,3383 @@
+{
+  "cells": [
+    {
+      "cohort": "age_25_plus",
+      "estimates": {
+        "accuracy": {
+          "mean": 0.765993186,
+          "replication_lower": 0.765795103,
+          "replication_upper": 0.766246732,
+          "standard_deviation": 0.000190818
+        },
+        "brier_score": {
+          "mean": 0.161758601,
+          "replication_lower": 0.161739274,
+          "replication_upper": 0.161774902,
+          "standard_deviation": 1.638e-05
+        },
+        "demographic_parity_difference": {
+          "mean": 0.078750592,
+          "replication_lower": 0.077646725,
+          "replication_upper": 0.079651637,
+          "standard_deviation": 0.00086888
+        },
+        "equal_opportunity_difference": {
+          "mean": 0.028769926,
+          "replication_lower": 0.026431564,
+          "replication_upper": 0.031365469,
+          "standard_deviation": 0.00209711
+        },
+        "equalized_odds_difference": {
+          "mean": 0.028769926,
+          "replication_lower": 0.026431564,
+          "replication_upper": 0.031365469,
+          "standard_deviation": 0.00209711
+        },
+        "expected_calibration_error": {
+          "mean": 0.014752292,
+          "replication_lower": 0.014238919,
+          "replication_upper": 0.015325146,
+          "standard_deviation": 0.000460453
+        },
+        "expected_cost": {
+          "mean": 0.146668251,
+          "replication_lower": 0.146355281,
+          "replication_upper": 0.147365502,
+          "standard_deviation": 0.000446807
+        },
+        "threshold_group_female": {
+          "mean": 0.5,
+          "replication_lower": 0.5,
+          "replication_upper": 0.5,
+          "standard_deviation": 0.0
+        },
+        "threshold_group_male": {
+          "mean": 0.5,
+          "replication_lower": 0.5,
+          "replication_upper": 0.5,
+          "standard_deviation": 0.0
+        }
+      },
+      "false_negative_cost": 0.5,
+      "false_positive_cost": 1.0,
+      "missingness": "complete_case",
+      "policy": "baseline",
+      "replications": 5,
+      "subgroup_counts": {
+        "test_group_female": 3802,
+        "test_group_male": 8819,
+        "test_label_above_50k": 3670,
+        "test_total": 12621
+      }
+    },
+    {
+      "cohort": "age_25_plus",
+      "estimates": {
+        "accuracy": {
+          "mean": 0.746248316,
+          "replication_lower": 0.740963474,
+          "replication_upper": 0.751398463,
+          "standard_deviation": 0.00482561
+        },
+        "brier_score": {
+          "mean": 0.161758601,
+          "replication_lower": 0.161739274,
+          "replication_upper": 0.161774902,
+          "standard_deviation": 1.638e-05
+        },
+        "demographic_parity_difference": {
+          "mean": 0.034198,
+          "replication_lower": 0.027997028,
+          "replication_upper": 0.044636497,
+          "standard_deviation": 0.007658398
+        },
+        "equal_opportunity_difference": {
+          "mean": 0.014981273,
+          "replication_lower": 0.005960174,
+          "replication_upper": 0.024163343,
+          "standard_deviation": 0.008008836
+        },
+        "equalized_odds_difference": {
+          "mean": 0.014981273,
+          "replication_lower": 0.005960174,
+          "replication_upper": 0.024163343,
+          "standard_deviation": 0.008008836
+        },
+        "expected_calibration_error": {
+          "mean": 0.014752292,
+          "replication_lower": 0.014238919,
+          "replication_upper": 0.015325146,
+          "standard_deviation": 0.000460453
+        },
+        "expected_cost": {
+          "mean": 0.132152761,
+          "replication_lower": 0.130623564,
+          "replication_upper": 0.134323746,
+          "standard_deviation": 0.001487968
+        },
+        "threshold_group_female": {
+          "mean": 0.74,
+          "replication_lower": 0.655,
+          "replication_upper": 0.8,
+          "standard_deviation": 0.065192024
+        },
+        "threshold_group_male": {
+          "mean": 0.75,
+          "replication_lower": 0.7,
+          "replication_upper": 0.8,
+          "standard_deviation": 0.05
+        }
+      },
+      "false_negative_cost": 0.5,
+      "false_positive_cost": 1.0,
+      "missingness": "complete_case",
+      "policy": "group_threshold",
+      "replications": 5,
+      "subgroup_counts": {
+        "test_group_female": 3802,
+        "test_group_male": 8819,
+        "test_label_above_50k": 3670,
+        "test_total": 12621
+      }
+    },
+    {
+      "cohort": "age_25_plus",
+      "estimates": {
+        "accuracy": {
+          "mean": 0.752190793,
+          "replication_lower": 0.750495206,
+          "replication_upper": 0.754805483,
+          "standard_deviation": 0.002221777
+        },
+        "brier_score": {
+          "mean": 0.161996187,
+          "replication_lower": 0.161935136,
+          "replication_upper": 0.162091751,
+          "standard_deviation": 6.5933e-05
+        },
+        "demographic_parity_difference": {
+          "mean": 0.044200154,
+          "replication_lower": 0.041407525,
+          "replication_upper": 0.048305235,
+          "standard_deviation": 0.00343634
+        },
+        "equal_opportunity_difference": {
+          "mean": 0.021946207,
+          "replication_lower": 0.014952047,
+          "replication_upper": 0.030779563,
+          "standard_deviation": 0.007560601
+        },
+        "equalized_odds_difference": {
+          "mean": 0.021946207,
+          "replication_lower": 0.014952047,
+          "replication_upper": 0.030779563,
+          "standard_deviation": 0.007560601
+        },
+        "expected_calibration_error": {
+          "mean": 0.013844903,
+          "replication_lower": 0.012124503,
+          "replication_upper": 0.014784021,
+          "standard_deviation": 0.001161839
+        },
+        "expected_cost": {
+          "mean": 0.132033912,
+          "replication_lower": 0.131301006,
+          "replication_upper": 0.133032248,
+          "standard_deviation": 0.000912643
+        },
+        "threshold_group_female": {
+          "mean": 0.68,
+          "replication_lower": 0.65,
+          "replication_upper": 0.7,
+          "standard_deviation": 0.027386128
+        },
+        "threshold_group_male": {
+          "mean": 0.68,
+          "replication_lower": 0.65,
+          "replication_upper": 0.7,
+          "standard_deviation": 0.027386128
+        }
+      },
+      "false_negative_cost": 0.5,
+      "false_positive_cost": 1.0,
+      "missingness": "complete_case",
+      "policy": "reweighed_training",
+      "replications": 5,
+      "subgroup_counts": {
+        "test_group_female": 3802,
+        "test_group_male": 8819,
+        "test_label_above_50k": 3670,
+        "test_total": 12621
+      }
+    },
+    {
+      "cohort": "age_25_plus",
+      "estimates": {
+        "accuracy": {
+          "mean": 0.750938911,
+          "replication_lower": 0.748054829,
+          "replication_upper": 0.75472625,
+          "standard_deviation": 0.00265673
+        },
+        "brier_score": {
+          "mean": 0.161758601,
+          "replication_lower": 0.161739274,
+          "replication_upper": 0.161774902,
+          "standard_deviation": 1.638e-05
+        },
+        "demographic_parity_difference": {
+          "mean": 0.045079436,
+          "replication_lower": 0.04009725,
+          "replication_upper": 0.048420153,
+          "standard_deviation": 0.003379888
+        },
+        "equal_opportunity_difference": {
+          "mean": 0.02447196,
+          "replication_lower": 0.02147802,
+          "replication_upper": 0.027218889,
+          "standard_deviation": 0.002258797
+        },
+        "equalized_odds_difference": {
+          "mean": 0.02447196,
+          "replication_lower": 0.02147802,
+          "replication_upper": 0.027218889,
+          "standard_deviation": 0.002258797
+        },
+        "expected_calibration_error": {
+          "mean": 0.014752292,
+          "replication_lower": 0.014238919,
+          "replication_upper": 0.015325146,
+          "standard_deviation": 0.000460453
+        },
+        "expected_cost": {
+          "mean": 0.132271611,
+          "replication_lower": 0.1308058,
+          "replication_upper": 0.133341257,
+          "standard_deviation": 0.001015605
+        },
+        "threshold_group_female": {
+          "mean": 0.7,
+          "replication_lower": 0.655,
+          "replication_upper": 0.745,
+          "standard_deviation": 0.035355339
+        },
+        "threshold_group_male": {
+          "mean": 0.7,
+          "replication_lower": 0.655,
+          "replication_upper": 0.745,
+          "standard_deviation": 0.035355339
+        }
+      },
+      "false_negative_cost": 0.5,
+      "false_positive_cost": 1.0,
+      "missingness": "complete_case",
+      "policy": "source_cost_threshold",
+      "replications": 5,
+      "subgroup_counts": {
+        "test_group_female": 3802,
+        "test_group_male": 8819,
+        "test_label_above_50k": 3670,
+        "test_total": 12621
+      }
+    },
+    {
+      "cohort": "age_25_plus",
+      "estimates": {
+        "accuracy": {
+          "mean": 0.765993186,
+          "replication_lower": 0.765795103,
+          "replication_upper": 0.766246732,
+          "standard_deviation": 0.000190818
+        },
+        "brier_score": {
+          "mean": 0.161758601,
+          "replication_lower": 0.161739274,
+          "replication_upper": 0.161774902,
+          "standard_deviation": 1.638e-05
+        },
+        "demographic_parity_difference": {
+          "mean": 0.078750592,
+          "replication_lower": 0.077646725,
+          "replication_upper": 0.079651637,
+          "standard_deviation": 0.00086888
+        },
+        "equal_opportunity_difference": {
+          "mean": 0.028769926,
+          "replication_lower": 0.026431564,
+          "replication_upper": 0.031365469,
+          "standard_deviation": 0.00209711
+        },
+        "equalized_odds_difference": {
+          "mean": 0.028769926,
+          "replication_lower": 0.026431564,
+          "replication_upper": 0.031365469,
+          "standard_deviation": 0.00209711
+        },
+        "expected_calibration_error": {
+          "mean": 0.014752292,
+          "replication_lower": 0.014238919,
+          "replication_upper": 0.015325146,
+          "standard_deviation": 0.000460453
+        },
+        "expected_cost": {
+          "mean": 0.234006814,
+          "replication_lower": 0.233753268,
+          "replication_upper": 0.234204897,
+          "standard_deviation": 0.000190818
+        },
+        "threshold_group_female": {
+          "mean": 0.5,
+          "replication_lower": 0.5,
+          "replication_upper": 0.5,
+          "standard_deviation": 0.0
+        },
+        "threshold_group_male": {
+          "mean": 0.5,
+          "replication_lower": 0.5,
+          "replication_upper": 0.5,
+          "standard_deviation": 0.0
+        }
+      },
+      "false_negative_cost": 1.0,
+      "false_positive_cost": 1.0,
+      "missingness": "complete_case",
+      "policy": "baseline",
+      "replications": 5,
+      "subgroup_counts": {
+        "test_group_female": 3802,
+        "test_group_male": 8819,
+        "test_label_above_50k": 3670,
+        "test_total": 12621
+      }
+    },
+    {
+      "cohort": "age_25_plus",
+      "estimates": {
+        "accuracy": {
+          "mean": 0.759004833,
+          "replication_lower": 0.753989383,
+          "replication_upper": 0.765050313,
+          "standard_deviation": 0.004953363
+        },
+        "brier_score": {
+          "mean": 0.161758601,
+          "replication_lower": 0.161739274,
+          "replication_upper": 0.161774902,
+          "standard_deviation": 1.638e-05
+        },
+        "demographic_parity_difference": {
+          "mean": 0.051315088,
+          "replication_lower": 0.031988827,
+          "replication_upper": 0.084929337,
+          "standard_deviation": 0.023234013
+        },
+        "equal_opportunity_difference": {
+          "mean": 0.029222798,
+          "replication_lower": 0.025127889,
+          "replication_upper": 0.041030221,
+          "standard_deviation": 0.007503258
+        },
+        "equalized_odds_difference": {
+          "mean": 0.029222798,
+          "replication_lower": 0.025127889,
+          "replication_upper": 0.041030221,
+          "standard_deviation": 0.007503258
+        },
+        "expected_calibration_error": {
+          "mean": 0.014752292,
+          "replication_lower": 0.014238919,
+          "replication_upper": 0.015325146,
+          "standard_deviation": 0.000460453
+        },
+        "expected_cost": {
+          "mean": 0.240995167,
+          "replication_lower": 0.234949687,
+          "replication_upper": 0.246010617,
+          "standard_deviation": 0.004953363
+        },
+        "threshold_group_female": {
+          "mean": 0.54,
+          "replication_lower": 0.45,
+          "replication_upper": 0.6,
+          "standard_deviation": 0.082158384
+        },
+        "threshold_group_male": {
+          "mean": 0.57,
+          "replication_lower": 0.455,
+          "replication_upper": 0.65,
+          "standard_deviation": 0.090829511
+        }
+      },
+      "false_negative_cost": 1.0,
+      "false_positive_cost": 1.0,
+      "missingness": "complete_case",
+      "policy": "group_threshold",
+      "replications": 5,
+      "subgroup_counts": {
+        "test_group_female": 3802,
+        "test_group_male": 8819,
+        "test_label_above_50k": 3670,
+        "test_total": 12621
+      }
+    },
+    {
+      "cohort": "age_25_plus",
+      "estimates": {
+        "accuracy": {
+          "mean": 0.765818873,
+          "replication_lower": 0.765486095,
+          "replication_upper": 0.766175422,
+          "standard_deviation": 0.000309922
+        },
+        "brier_score": {
+          "mean": 0.161996187,
+          "replication_lower": 0.161935136,
+          "replication_upper": 0.162091751,
+          "standard_deviation": 6.5933e-05
+        },
+        "demographic_parity_difference": {
+          "mean": 0.071622845,
+          "replication_lower": 0.067075982,
+          "replication_upper": 0.080683059,
+          "standard_deviation": 0.005856019
+        },
+        "equal_opportunity_difference": {
+          "mean": 0.023773129,
+          "replication_lower": 0.012399173,
+          "replication_upper": 0.03359219,
+          "standard_deviation": 0.009226185
+        },
+        "equalized_odds_difference": {
+          "mean": 0.023773129,
+          "replication_lower": 0.012399173,
+          "replication_upper": 0.03359219,
+          "standard_deviation": 0.009226185
+        },
+        "expected_calibration_error": {
+          "mean": 0.013844903,
+          "replication_lower": 0.012124503,
+          "replication_upper": 0.014784021,
+          "standard_deviation": 0.001161839
+        },
+        "expected_cost": {
+          "mean": 0.234181127,
+          "replication_lower": 0.233824578,
+          "replication_upper": 0.234513905,
+          "standard_deviation": 0.000309922
+        },
+        "threshold_group_female": {
+          "mean": 0.5,
+          "replication_lower": 0.455,
+          "replication_upper": 0.545,
+          "standard_deviation": 0.035355339
+        },
+        "threshold_group_male": {
+          "mean": 0.5,
+          "replication_lower": 0.455,
+          "replication_upper": 0.545,
+          "standard_deviation": 0.035355339
+        }
+      },
+      "false_negative_cost": 1.0,
+      "false_positive_cost": 1.0,
+      "missingness": "complete_case",
+      "policy": "reweighed_training",
+      "replications": 5,
+      "subgroup_counts": {
+        "test_group_female": 3802,
+        "test_group_male": 8819,
+        "test_label_above_50k": 3670,
+        "test_total": 12621
+      }
+    },
+    {
+      "cohort": "age_25_plus",
+      "estimates": {
+        "accuracy": {
+          "mean": 0.765913953,
+          "replication_lower": 0.765470248,
+          "replication_upper": 0.766468584,
+          "standard_deviation": 0.000450306
+        },
+        "brier_score": {
+          "mean": 0.161758601,
+          "replication_lower": 0.161739274,
+          "replication_upper": 0.161774902,
+          "standard_deviation": 1.638e-05
+        },
+        "demographic_parity_difference": {
+          "mean": 0.080275658,
+          "replication_lower": 0.073387757,
+          "replication_upper": 0.087805107,
+          "standard_deviation": 0.007165361
+        },
+        "equal_opportunity_difference": {
+          "mean": 0.038255002,
+          "replication_lower": 0.030341537,
+          "replication_upper": 0.042518833,
+          "standard_deviation": 0.005457171
+        },
+        "equalized_odds_difference": {
+          "mean": 0.038255002,
+          "replication_lower": 0.030341537,
+          "replication_upper": 0.042518833,
+          "standard_deviation": 0.005457171
+        },
+        "expected_calibration_error": {
+          "mean": 0.014752292,
+          "replication_lower": 0.014238919,
+          "replication_upper": 0.015325146,
+          "standard_deviation": 0.000460453
+        },
+        "expected_cost": {
+          "mean": 0.234086047,
+          "replication_lower": 0.233531416,
+          "replication_upper": 0.234529752,
+          "standard_deviation": 0.000450306
+        },
+        "threshold_group_female": {
+          "mean": 0.5,
+          "replication_lower": 0.45,
+          "replication_upper": 0.55,
+          "standard_deviation": 0.05
+        },
+        "threshold_group_male": {
+          "mean": 0.5,
+          "replication_lower": 0.45,
+          "replication_upper": 0.55,
+          "standard_deviation": 0.05
+        }
+      },
+      "false_negative_cost": 1.0,
+      "false_positive_cost": 1.0,
+      "missingness": "complete_case",
+      "policy": "source_cost_threshold",
+      "replications": 5,
+      "subgroup_counts": {
+        "test_group_female": 3802,
+        "test_group_male": 8819,
+        "test_label_above_50k": 3670,
+        "test_total": 12621
+      }
+    },
+    {
+      "cohort": "age_25_plus",
+      "estimates": {
+        "accuracy": {
+          "mean": 0.765993186,
+          "replication_lower": 0.765795103,
+          "replication_upper": 0.766246732,
+          "standard_deviation": 0.000190818
+        },
+        "brier_score": {
+          "mean": 0.161758601,
+          "replication_lower": 0.161739274,
+          "replication_upper": 0.161774902,
+          "standard_deviation": 1.638e-05
+        },
+        "demographic_parity_difference": {
+          "mean": 0.078750592,
+          "replication_lower": 0.077646725,
+          "replication_upper": 0.079651637,
+          "standard_deviation": 0.00086888
+        },
+        "equal_opportunity_difference": {
+          "mean": 0.028769926,
+          "replication_lower": 0.026431564,
+          "replication_upper": 0.031365469,
+          "standard_deviation": 0.00209711
+        },
+        "equalized_odds_difference": {
+          "mean": 0.028769926,
+          "replication_lower": 0.026431564,
+          "replication_upper": 0.031365469,
+          "standard_deviation": 0.00209711
+        },
+        "expected_calibration_error": {
+          "mean": 0.014752292,
+          "replication_lower": 0.014238919,
+          "replication_upper": 0.015325146,
+          "standard_deviation": 0.000460453
+        },
+        "expected_cost": {
+          "mean": 0.20434197,
+          "replication_lower": 0.203799224,
+          "replication_upper": 0.20472625,
+          "standard_deviation": 0.000385117
+        },
+        "threshold_group_female": {
+          "mean": 0.5,
+          "replication_lower": 0.5,
+          "replication_upper": 0.5,
+          "standard_deviation": 0.0
+        },
+        "threshold_group_male": {
+          "mean": 0.5,
+          "replication_lower": 0.5,
+          "replication_upper": 0.5,
+          "standard_deviation": 0.0
+        }
+      },
+      "false_negative_cost": 2.0,
+      "false_positive_cost": 1.0,
+      "missingness": "complete_case",
+      "policy": "baseline",
+      "replications": 5,
+      "subgroup_counts": {
+        "test_group_female": 3802,
+        "test_group_male": 8819,
+        "test_label_above_50k": 3670,
+        "test_total": 12621
+      }
+    },
+    {
+      "cohort": "age_25_plus",
+      "estimates": {
+        "accuracy": {
+          "mean": 0.749797956,
+          "replication_lower": 0.744624039,
+          "replication_upper": 0.757919341,
+          "standard_deviation": 0.005439853
+        },
+        "brier_score": {
+          "mean": 0.161758601,
+          "replication_lower": 0.161739274,
+          "replication_upper": 0.161774902,
+          "standard_deviation": 1.638e-05
+        },
+        "demographic_parity_difference": {
+          "mean": 0.06509404,
+          "replication_lower": 0.043423127,
+          "replication_upper": 0.097254141,
+          "standard_deviation": 0.0289052
+        },
+        "equal_opportunity_difference": {
+          "mean": 0.039751797,
+          "replication_lower": 0.015225712,
+          "replication_upper": 0.055404312,
+          "standard_deviation": 0.018991296
+        },
+        "equalized_odds_difference": {
+          "mean": 0.039751797,
+          "replication_lower": 0.015225712,
+          "replication_upper": 0.055404312,
+          "standard_deviation": 0.018991296
+        },
+        "expected_calibration_error": {
+          "mean": 0.014752292,
+          "replication_lower": 0.014238919,
+          "replication_upper": 0.015325146,
+          "standard_deviation": 0.000460453
+        },
+        "expected_cost": {
+          "mean": 0.190389034,
+          "replication_lower": 0.186633389,
+          "replication_upper": 0.192286665,
+          "standard_deviation": 0.002609643
+        },
+        "threshold_group_female": {
+          "mean": 0.36,
+          "replication_lower": 0.35,
+          "replication_upper": 0.395,
+          "standard_deviation": 0.02236068
+        },
+        "threshold_group_male": {
+          "mean": 0.39,
+          "replication_lower": 0.355,
+          "replication_upper": 0.4,
+          "standard_deviation": 0.02236068
+        }
+      },
+      "false_negative_cost": 2.0,
+      "false_positive_cost": 1.0,
+      "missingness": "complete_case",
+      "policy": "group_threshold",
+      "replications": 5,
+      "subgroup_counts": {
+        "test_group_female": 3802,
+        "test_group_male": 8819,
+        "test_label_above_50k": 3670,
+        "test_total": 12621
+      }
+    },
+    {
+      "cohort": "age_25_plus",
+      "estimates": {
+        "accuracy": {
+          "mean": 0.736470961,
+          "replication_lower": 0.717494652,
+          "replication_upper": 0.742627367,
+          "standard_deviation": 0.012052929
+        },
+        "brier_score": {
+          "mean": 0.161996187,
+          "replication_lower": 0.161935136,
+          "replication_upper": 0.162091751,
+          "standard_deviation": 6.5933e-05
+        },
+        "demographic_parity_difference": {
+          "mean": 0.080211929,
+          "replication_lower": 0.072756883,
+          "replication_upper": 0.084290622,
+          "standard_deviation": 0.005005461
+        },
+        "equal_opportunity_difference": {
+          "mean": 0.01807376,
+          "replication_lower": 0.007917674,
+          "replication_upper": 0.039107441,
+          "standard_deviation": 0.013677928
+        },
+        "equalized_odds_difference": {
+          "mean": 0.01807376,
+          "replication_lower": 0.007917674,
+          "replication_upper": 0.039107441,
+          "standard_deviation": 0.013677928
+        },
+        "expected_calibration_error": {
+          "mean": 0.013844903,
+          "replication_lower": 0.012124503,
+          "replication_upper": 0.014784021,
+          "standard_deviation": 0.001161839
+        },
+        "expected_cost": {
+          "mean": 0.187275176,
+          "replication_lower": 0.18591633,
+          "replication_upper": 0.190927819,
+          "standard_deviation": 0.002331222
+        },
+        "threshold_group_female": {
+          "mean": 0.34,
+          "replication_lower": 0.305,
+          "replication_upper": 0.35,
+          "standard_deviation": 0.02236068
+        },
+        "threshold_group_male": {
+          "mean": 0.34,
+          "replication_lower": 0.305,
+          "replication_upper": 0.35,
+          "standard_deviation": 0.02236068
+        }
+      },
+      "false_negative_cost": 2.0,
+      "false_positive_cost": 1.0,
+      "missingness": "complete_case",
+      "policy": "reweighed_training",
+      "replications": 5,
+      "subgroup_counts": {
+        "test_group_female": 3802,
+        "test_group_male": 8819,
+        "test_label_above_50k": 3670,
+        "test_total": 12621
+      }
+    },
+    {
+      "cohort": "age_25_plus",
+      "estimates": {
+        "accuracy": {
+          "mean": 0.739465969,
+          "replication_lower": 0.722470486,
+          "replication_upper": 0.745036051,
+          "standard_deviation": 0.010816309
+        },
+        "brier_score": {
+          "mean": 0.161758601,
+          "replication_lower": 0.161739274,
+          "replication_upper": 0.161774902,
+          "standard_deviation": 1.638e-05
+        },
+        "demographic_parity_difference": {
+          "mean": 0.097057552,
+          "replication_lower": 0.09585783,
+          "replication_upper": 0.09758819,
+          "standard_deviation": 0.000774967
+        },
+        "equal_opportunity_difference": {
+          "mean": 0.011135011,
+          "replication_lower": 0.003599017,
+          "replication_upper": 0.015034345,
+          "standard_deviation": 0.004928499
+        },
+        "equalized_odds_difference": {
+          "mean": 0.013949822,
+          "replication_lower": 0.012804063,
+          "replication_upper": 0.015034345,
+          "standard_deviation": 0.000875403
+        },
+        "expected_calibration_error": {
+          "mean": 0.014752292,
+          "replication_lower": 0.014238919,
+          "replication_upper": 0.015325146,
+          "standard_deviation": 0.000460453
+        },
+        "expected_cost": {
+          "mean": 0.186728468,
+          "replication_lower": 0.1859401,
+          "replication_upper": 0.188685524,
+          "standard_deviation": 0.001247323
+        },
+        "threshold_group_female": {
+          "mean": 0.34,
+          "replication_lower": 0.305,
+          "replication_upper": 0.35,
+          "standard_deviation": 0.02236068
+        },
+        "threshold_group_male": {
+          "mean": 0.34,
+          "replication_lower": 0.305,
+          "replication_upper": 0.35,
+          "standard_deviation": 0.02236068
+        }
+      },
+      "false_negative_cost": 2.0,
+      "false_positive_cost": 1.0,
+      "missingness": "complete_case",
+      "policy": "source_cost_threshold",
+      "replications": 5,
+      "subgroup_counts": {
+        "test_group_female": 3802,
+        "test_group_male": 8819,
+        "test_label_above_50k": 3670,
+        "test_total": 12621
+      }
+    },
+    {
+      "cohort": "age_25_plus",
+      "estimates": {
+        "accuracy": {
+          "mean": 0.770415083,
+          "replication_lower": 0.770198972,
+          "replication_upper": 0.770541769,
+          "standard_deviation": 0.000143344
+        },
+        "brier_score": {
+          "mean": 0.159508651,
+          "replication_lower": 0.159465793,
+          "replication_upper": 0.159564958,
+          "standard_deviation": 4.5601e-05
+        },
+        "demographic_parity_difference": {
+          "mean": 0.080953241,
+          "replication_lower": 0.08030476,
+          "replication_upper": 0.0818689,
+          "standard_deviation": 0.00065716
+        },
+        "equal_opportunity_difference": {
+          "mean": 0.036528741,
+          "replication_lower": 0.033361265,
+          "replication_upper": 0.039080577,
+          "standard_deviation": 0.002388294
+        },
+        "equalized_odds_difference": {
+          "mean": 0.036528741,
+          "replication_lower": 0.033361265,
+          "replication_upper": 0.039080577,
+          "standard_deviation": 0.002388294
+        },
+        "expected_calibration_error": {
+          "mean": 0.012017324,
+          "replication_lower": 0.011307989,
+          "replication_upper": 0.012765252,
+          "standard_deviation": 0.000608659
+        },
+        "expected_cost": {
+          "mean": 0.143043446,
+          "replication_lower": 0.142465907,
+          "replication_upper": 0.143978687,
+          "standard_deviation": 0.000654451
+        },
+        "threshold_group_female": {
+          "mean": 0.5,
+          "replication_lower": 0.5,
+          "replication_upper": 0.5,
+          "standard_deviation": 0.0
+        },
+        "threshold_group_male": {
+          "mean": 0.5,
+          "replication_lower": 0.5,
+          "replication_upper": 0.5,
+          "standard_deviation": 0.0
+        }
+      },
+      "false_negative_cost": 0.5,
+      "false_positive_cost": 1.0,
+      "missingness": "numeric_complete",
+      "policy": "baseline",
+      "replications": 5,
+      "subgroup_counts": {
+        "test_group_female": 4110,
+        "test_group_male": 9309,
+        "test_label_above_50k": 3814,
+        "test_total": 13419
+      }
+    },
+    {
+      "cohort": "age_25_plus",
+      "estimates": {
+        "accuracy": {
+          "mean": 0.754825248,
+          "replication_lower": 0.746300022,
+          "replication_upper": 0.762538192,
+          "standard_deviation": 0.006731909
+        },
+        "brier_score": {
+          "mean": 0.159508651,
+          "replication_lower": 0.159465793,
+          "replication_upper": 0.159564958,
+          "standard_deviation": 4.5601e-05
+        },
+        "demographic_parity_difference": {
+          "mean": 0.036990449,
+          "replication_lower": 0.027200425,
+          "replication_upper": 0.048536555,
+          "standard_deviation": 0.008704521
+        },
+        "equal_opportunity_difference": {
+          "mean": 0.015139272,
+          "replication_lower": 0.003543652,
+          "replication_upper": 0.022970518,
+          "standard_deviation": 0.008030467
+        },
+        "equalized_odds_difference": {
+          "mean": 0.015227673,
+          "replication_lower": 0.003941458,
+          "replication_upper": 0.022970518,
+          "standard_deviation": 0.007856391
+        },
+        "expected_calibration_error": {
+          "mean": 0.012017324,
+          "replication_lower": 0.011307989,
+          "replication_upper": 0.012765252,
+          "standard_deviation": 0.000608659
+        },
+        "expected_cost": {
+          "mean": 0.131052985,
+          "replication_lower": 0.128642224,
+          "replication_upper": 0.134421343,
+          "standard_deviation": 0.002339182
+        },
+        "threshold_group_female": {
+          "mean": 0.68,
+          "replication_lower": 0.56,
+          "replication_upper": 0.795,
+          "standard_deviation": 0.097467943
+        },
+        "threshold_group_male": {
+          "mean": 0.7,
+          "replication_lower": 0.605,
+          "replication_upper": 0.795,
+          "standard_deviation": 0.079056942
+        }
+      },
+      "false_negative_cost": 0.5,
+      "false_positive_cost": 1.0,
+      "missingness": "numeric_complete",
+      "policy": "group_threshold",
+      "replications": 5,
+      "subgroup_counts": {
+        "test_group_female": 4110,
+        "test_group_male": 9309,
+        "test_label_above_50k": 3814,
+        "test_total": 13419
+      }
+    },
+    {
+      "cohort": "age_25_plus",
+      "estimates": {
+        "accuracy": {
+          "mean": 0.760041732,
+          "replication_lower": 0.755637529,
+          "replication_upper": 0.76759073,
+          "standard_deviation": 0.004985964
+        },
+        "brier_score": {
+          "mean": 0.159664864,
+          "replication_lower": 0.15963386,
+          "replication_upper": 0.15970046,
+          "standard_deviation": 3.0041e-05
+        },
+        "demographic_parity_difference": {
+          "mean": 0.048429046,
+          "replication_lower": 0.041231294,
+          "replication_upper": 0.06032684,
+          "standard_deviation": 0.007915655
+        },
+        "equal_opportunity_difference": {
+          "mean": 0.017040918,
+          "replication_lower": 0.011652052,
+          "replication_upper": 0.0228765,
+          "standard_deviation": 0.004460551
+        },
+        "equalized_odds_difference": {
+          "mean": 0.017040918,
+          "replication_lower": 0.011652052,
+          "replication_upper": 0.0228765,
+          "standard_deviation": 0.004460551
+        },
+        "expected_calibration_error": {
+          "mean": 0.011849405,
+          "replication_lower": 0.010137361,
+          "replication_upper": 0.012718574,
+          "standard_deviation": 0.001110358
+        },
+        "expected_cost": {
+          "mean": 0.130620762,
+          "replication_lower": 0.128679484,
+          "replication_upper": 0.133858708,
+          "standard_deviation": 0.00214412
+        },
+        "threshold_group_female": {
+          "mean": 0.64,
+          "replication_lower": 0.56,
+          "replication_upper": 0.695,
+          "standard_deviation": 0.054772256
+        },
+        "threshold_group_male": {
+          "mean": 0.64,
+          "replication_lower": 0.56,
+          "replication_upper": 0.695,
+          "standard_deviation": 0.054772256
+        }
+      },
+      "false_negative_cost": 0.5,
+      "false_positive_cost": 1.0,
+      "missingness": "numeric_complete",
+      "policy": "reweighed_training",
+      "replications": 5,
+      "subgroup_counts": {
+        "test_group_female": 4110,
+        "test_group_male": 9309,
+        "test_label_above_50k": 3814,
+        "test_total": 13419
+      }
+    },
+    {
+      "cohort": "age_25_plus",
+      "estimates": {
+        "accuracy": {
+          "mean": 0.757955138,
+          "replication_lower": 0.752604516,
+          "replication_upper": 0.76341009,
+          "standard_deviation": 0.004363469
+        },
+        "brier_score": {
+          "mean": 0.159508651,
+          "replication_lower": 0.159465793,
+          "replication_upper": 0.159564958,
+          "standard_deviation": 4.5601e-05
+        },
+        "demographic_parity_difference": {
+          "mean": 0.047716949,
+          "replication_lower": 0.039190008,
+          "replication_upper": 0.05655955,
+          "standard_deviation": 0.00686887
+        },
+        "equal_opportunity_difference": {
+          "mean": 0.020685881,
+          "replication_lower": 0.019196933,
+          "replication_upper": 0.024050495,
+          "standard_deviation": 0.002153838
+        },
+        "equalized_odds_difference": {
+          "mean": 0.020685881,
+          "replication_lower": 0.019196933,
+          "replication_upper": 0.024050495,
+          "standard_deviation": 0.002153838
+        },
+        "expected_calibration_error": {
+          "mean": 0.012017324,
+          "replication_lower": 0.011307989,
+          "replication_upper": 0.012765252,
+          "standard_deviation": 0.000608659
+        },
+        "expected_cost": {
+          "mean": 0.130553693,
+          "replication_lower": 0.128422386,
+          "replication_upper": 0.132632834,
+          "standard_deviation": 0.001695542
+        },
+        "threshold_group_female": {
+          "mean": 0.67,
+          "replication_lower": 0.605,
+          "replication_upper": 0.745,
+          "standard_deviation": 0.057008771
+        },
+        "threshold_group_male": {
+          "mean": 0.67,
+          "replication_lower": 0.605,
+          "replication_upper": 0.745,
+          "standard_deviation": 0.057008771
+        }
+      },
+      "false_negative_cost": 0.5,
+      "false_positive_cost": 1.0,
+      "missingness": "numeric_complete",
+      "policy": "source_cost_threshold",
+      "replications": 5,
+      "subgroup_counts": {
+        "test_group_female": 4110,
+        "test_group_male": 9309,
+        "test_label_above_50k": 3814,
+        "test_total": 13419
+      }
+    },
+    {
+      "cohort": "age_25_plus",
+      "estimates": {
+        "accuracy": {
+          "mean": 0.770415083,
+          "replication_lower": 0.770198972,
+          "replication_upper": 0.770541769,
+          "standard_deviation": 0.000143344
+        },
+        "brier_score": {
+          "mean": 0.159508651,
+          "replication_lower": 0.159465793,
+          "replication_upper": 0.159564958,
+          "standard_deviation": 4.5601e-05
+        },
+        "demographic_parity_difference": {
+          "mean": 0.080953241,
+          "replication_lower": 0.08030476,
+          "replication_upper": 0.0818689,
+          "standard_deviation": 0.00065716
+        },
+        "equal_opportunity_difference": {
+          "mean": 0.036528741,
+          "replication_lower": 0.033361265,
+          "replication_upper": 0.039080577,
+          "standard_deviation": 0.002388294
+        },
+        "equalized_odds_difference": {
+          "mean": 0.036528741,
+          "replication_lower": 0.033361265,
+          "replication_upper": 0.039080577,
+          "standard_deviation": 0.002388294
+        },
+        "expected_calibration_error": {
+          "mean": 0.012017324,
+          "replication_lower": 0.011307989,
+          "replication_upper": 0.012765252,
+          "standard_deviation": 0.000608659
+        },
+        "expected_cost": {
+          "mean": 0.229584917,
+          "replication_lower": 0.229458231,
+          "replication_upper": 0.229801028,
+          "standard_deviation": 0.000143344
+        },
+        "threshold_group_female": {
+          "mean": 0.5,
+          "replication_lower": 0.5,
+          "replication_upper": 0.5,
+          "standard_deviation": 0.0
+        },
+        "threshold_group_male": {
+          "mean": 0.5,
+          "replication_lower": 0.5,
+          "replication_upper": 0.5,
+          "standard_deviation": 0.0
+        }
+      },
+      "false_negative_cost": 1.0,
+      "false_positive_cost": 1.0,
+      "missingness": "numeric_complete",
+      "policy": "baseline",
+      "replications": 5,
+      "subgroup_counts": {
+        "test_group_female": 4110,
+        "test_group_male": 9309,
+        "test_label_above_50k": 3814,
+        "test_total": 13419
+      }
+    },
+    {
+      "cohort": "age_25_plus",
+      "estimates": {
+        "accuracy": {
+          "mean": 0.763603845,
+          "replication_lower": 0.758133989,
+          "replication_upper": 0.766480364,
+          "standard_deviation": 0.003621148
+        },
+        "brier_score": {
+          "mean": 0.159508651,
+          "replication_lower": 0.159465793,
+          "replication_upper": 0.159564958,
+          "standard_deviation": 4.5601e-05
+        },
+        "demographic_parity_difference": {
+          "mean": 0.046085971,
+          "replication_lower": 0.034077476,
+          "replication_upper": 0.057924056,
+          "standard_deviation": 0.009338145
+        },
+        "equal_opportunity_difference": {
+          "mean": 0.027660534,
+          "replication_lower": 0.019209656,
+          "replication_upper": 0.042077106,
+          "standard_deviation": 0.009516236
+        },
+        "equalized_odds_difference": {
+          "mean": 0.027660534,
+          "replication_lower": 0.019209656,
+          "replication_upper": 0.042077106,
+          "standard_deviation": 0.009516236
+        },
+        "expected_calibration_error": {
+          "mean": 0.012017324,
+          "replication_lower": 0.011307989,
+          "replication_upper": 0.012765252,
+          "standard_deviation": 0.000608659
+        },
+        "expected_cost": {
+          "mean": 0.236396155,
+          "replication_lower": 0.233519636,
+          "replication_upper": 0.241866011,
+          "standard_deviation": 0.003621148
+        },
+        "threshold_group_female": {
+          "mean": 0.52,
+          "replication_lower": 0.41,
+          "replication_upper": 0.6,
+          "standard_deviation": 0.083666003
+        },
+        "threshold_group_male": {
+          "mean": 0.56,
+          "replication_lower": 0.46,
+          "replication_upper": 0.645,
+          "standard_deviation": 0.074161985
+        }
+      },
+      "false_negative_cost": 1.0,
+      "false_positive_cost": 1.0,
+      "missingness": "numeric_complete",
+      "policy": "group_threshold",
+      "replications": 5,
+      "subgroup_counts": {
+        "test_group_female": 4110,
+        "test_group_male": 9309,
+        "test_label_above_50k": 3814,
+        "test_total": 13419
+      }
+    },
+    {
+      "cohort": "age_25_plus",
+      "estimates": {
+        "accuracy": {
+          "mean": 0.769923243,
+          "replication_lower": 0.768544601,
+          "replication_upper": 0.771257173,
+          "standard_deviation": 0.001171904
+        },
+        "brier_score": {
+          "mean": 0.159664864,
+          "replication_lower": 0.15963386,
+          "replication_upper": 0.15970046,
+          "standard_deviation": 3.0041e-05
+        },
+        "demographic_parity_difference": {
+          "mean": 0.073290929,
+          "replication_lower": 0.063795111,
+          "replication_upper": 0.080312373,
+          "standard_deviation": 0.006925578
+        },
+        "equal_opportunity_difference": {
+          "mean": 0.016851499,
+          "replication_lower": 0.010685471,
+          "replication_upper": 0.023096158,
+          "standard_deviation": 0.004851762
+        },
+        "equalized_odds_difference": {
+          "mean": 0.016851499,
+          "replication_lower": 0.010685471,
+          "replication_upper": 0.023096158,
+          "standard_deviation": 0.004851762
+        },
+        "expected_calibration_error": {
+          "mean": 0.011849405,
+          "replication_lower": 0.010137361,
+          "replication_upper": 0.012718574,
+          "standard_deviation": 0.001110358
+        },
+        "expected_cost": {
+          "mean": 0.230076757,
+          "replication_lower": 0.228742827,
+          "replication_upper": 0.231455399,
+          "standard_deviation": 0.001171904
+        },
+        "threshold_group_female": {
+          "mean": 0.49,
+          "replication_lower": 0.45,
+          "replication_upper": 0.545,
+          "standard_deviation": 0.041833001
+        },
+        "threshold_group_male": {
+          "mean": 0.49,
+          "replication_lower": 0.45,
+          "replication_upper": 0.545,
+          "standard_deviation": 0.041833001
+        }
+      },
+      "false_negative_cost": 1.0,
+      "false_positive_cost": 1.0,
+      "missingness": "numeric_complete",
+      "policy": "reweighed_training",
+      "replications": 5,
+      "subgroup_counts": {
+        "test_group_female": 4110,
+        "test_group_male": 9309,
+        "test_label_above_50k": 3814,
+        "test_total": 13419
+      }
+    },
+    {
+      "cohort": "age_25_plus",
+      "estimates": {
+        "accuracy": {
+          "mean": 0.769729488,
+          "replication_lower": 0.76847008,
+          "replication_upper": 0.770467248,
+          "standard_deviation": 0.000905057
+        },
+        "brier_score": {
+          "mean": 0.159508651,
+          "replication_lower": 0.159465793,
+          "replication_upper": 0.159564958,
+          "standard_deviation": 4.5601e-05
+        },
+        "demographic_parity_difference": {
+          "mean": 0.080470293,
+          "replication_lower": 0.072706626,
+          "replication_upper": 0.086177218,
+          "standard_deviation": 0.0053806
+        },
+        "equal_opportunity_difference": {
+          "mean": 0.034393488,
+          "replication_lower": 0.030594669,
+          "replication_upper": 0.037801917,
+          "standard_deviation": 0.00288033
+        },
+        "equalized_odds_difference": {
+          "mean": 0.034393488,
+          "replication_lower": 0.030594669,
+          "replication_upper": 0.037801917,
+          "standard_deviation": 0.00288033
+        },
+        "expected_calibration_error": {
+          "mean": 0.012017324,
+          "replication_lower": 0.011307989,
+          "replication_upper": 0.012765252,
+          "standard_deviation": 0.000608659
+        },
+        "expected_cost": {
+          "mean": 0.230270512,
+          "replication_lower": 0.229532752,
+          "replication_upper": 0.23152992,
+          "standard_deviation": 0.000905057
+        },
+        "threshold_group_female": {
+          "mean": 0.5,
+          "replication_lower": 0.455,
+          "replication_upper": 0.545,
+          "standard_deviation": 0.035355339
+        },
+        "threshold_group_male": {
+          "mean": 0.5,
+          "replication_lower": 0.455,
+          "replication_upper": 0.545,
+          "standard_deviation": 0.035355339
+        }
+      },
+      "false_negative_cost": 1.0,
+      "false_positive_cost": 1.0,
+      "missingness": "numeric_complete",
+      "policy": "source_cost_threshold",
+      "replications": 5,
+      "subgroup_counts": {
+        "test_group_female": 4110,
+        "test_group_male": 9309,
+        "test_label_above_50k": 3814,
+        "test_total": 13419
+      }
+    },
+    {
+      "cohort": "age_25_plus",
+      "estimates": {
+        "accuracy": {
+          "mean": 0.770415083,
+          "replication_lower": 0.770198972,
+          "replication_upper": 0.770541769,
+          "standard_deviation": 0.000143344
+        },
+        "brier_score": {
+          "mean": 0.159508651,
+          "replication_lower": 0.159465793,
+          "replication_upper": 0.159564958,
+          "standard_deviation": 4.5601e-05
+        },
+        "demographic_parity_difference": {
+          "mean": 0.080953241,
+          "replication_lower": 0.08030476,
+          "replication_upper": 0.0818689,
+          "standard_deviation": 0.00065716
+        },
+        "equal_opportunity_difference": {
+          "mean": 0.036528741,
+          "replication_lower": 0.033361265,
+          "replication_upper": 0.039080577,
+          "standard_deviation": 0.002388294
+        },
+        "equalized_odds_difference": {
+          "mean": 0.036528741,
+          "replication_lower": 0.033361265,
+          "replication_upper": 0.039080577,
+          "standard_deviation": 0.002388294
+        },
+        "expected_calibration_error": {
+          "mean": 0.012017324,
+          "replication_lower": 0.011307989,
+          "replication_upper": 0.012765252,
+          "standard_deviation": 0.000608659
+        },
+        "expected_cost": {
+          "mean": 0.20133393,
+          "replication_lower": 0.200722856,
+          "replication_upper": 0.20172144,
+          "standard_deviation": 0.000446817
+        },
+        "threshold_group_female": {
+          "mean": 0.5,
+          "replication_lower": 0.5,
+          "replication_upper": 0.5,
+          "standard_deviation": 0.0
+        },
+        "threshold_group_male": {
+          "mean": 0.5,
+          "replication_lower": 0.5,
+          "replication_upper": 0.5,
+          "standard_deviation": 0.0
+        }
+      },
+      "false_negative_cost": 2.0,
+      "false_positive_cost": 1.0,
+      "missingness": "numeric_complete",
+      "policy": "baseline",
+      "replications": 5,
+      "subgroup_counts": {
+        "test_group_female": 4110,
+        "test_group_male": 9309,
+        "test_label_above_50k": 3814,
+        "test_total": 13419
+      }
+    },
+    {
+      "cohort": "age_25_plus",
+      "estimates": {
+        "accuracy": {
+          "mean": 0.746702437,
+          "replication_lower": 0.727818764,
+          "replication_upper": 0.76228482,
+          "standard_deviation": 0.014749834
+        },
+        "brier_score": {
+          "mean": 0.159508651,
+          "replication_lower": 0.159465793,
+          "replication_upper": 0.159564958,
+          "standard_deviation": 4.5601e-05
+        },
+        "demographic_parity_difference": {
+          "mean": 0.056056638,
+          "replication_lower": 0.038545392,
+          "replication_upper": 0.095652085,
+          "standard_deviation": 0.02541913
+        },
+        "equal_opportunity_difference": {
+          "mean": 0.044895556,
+          "replication_lower": 0.006293266,
+          "replication_upper": 0.063633847,
+          "standard_deviation": 0.025044314
+        },
+        "equalized_odds_difference": {
+          "mean": 0.048475225,
+          "replication_lower": 0.022401776,
+          "replication_upper": 0.063633847,
+          "standard_deviation": 0.017567975
+        },
+        "expected_calibration_error": {
+          "mean": 0.012017324,
+          "replication_lower": 0.011307989,
+          "replication_upper": 0.012765252,
+          "standard_deviation": 0.000608659
+        },
+        "expected_cost": {
+          "mean": 0.189239139,
+          "replication_lower": 0.185527983,
+          "replication_upper": 0.194116551,
+          "standard_deviation": 0.003413201
+        },
+        "threshold_group_female": {
+          "mean": 0.34,
+          "replication_lower": 0.3,
+          "replication_upper": 0.395,
+          "standard_deviation": 0.041833001
+        },
+        "threshold_group_male": {
+          "mean": 0.38,
+          "replication_lower": 0.305,
+          "replication_upper": 0.445,
+          "standard_deviation": 0.057008771
+        }
+      },
+      "false_negative_cost": 2.0,
+      "false_positive_cost": 1.0,
+      "missingness": "numeric_complete",
+      "policy": "group_threshold",
+      "replications": 5,
+      "subgroup_counts": {
+        "test_group_female": 4110,
+        "test_group_male": 9309,
+        "test_label_above_50k": 3814,
+        "test_total": 13419
+      }
+    },
+    {
+      "cohort": "age_25_plus",
+      "estimates": {
+        "accuracy": {
+          "mean": 0.746359639,
+          "replication_lower": 0.74492138,
+          "replication_upper": 0.747253894,
+          "standard_deviation": 0.000962449
+        },
+        "brier_score": {
+          "mean": 0.159664864,
+          "replication_lower": 0.15963386,
+          "replication_upper": 0.15970046,
+          "standard_deviation": 3.0041e-05
+        },
+        "demographic_parity_difference": {
+          "mean": 0.088752318,
+          "replication_lower": 0.088246238,
+          "replication_upper": 0.089686153,
+          "standard_deviation": 0.00067168
+        },
+        "equal_opportunity_difference": {
+          "mean": 0.005402974,
+          "replication_lower": 0.004063943,
+          "replication_upper": 0.007512778,
+          "standard_deviation": 0.001530467
+        },
+        "equalized_odds_difference": {
+          "mean": 0.008176977,
+          "replication_lower": 0.007550987,
+          "replication_upper": 0.009224873,
+          "standard_deviation": 0.000713724
+        },
+        "expected_calibration_error": {
+          "mean": 0.011849405,
+          "replication_lower": 0.010137361,
+          "replication_upper": 0.012718574,
+          "standard_deviation": 0.001110358
+        },
+        "expected_cost": {
+          "mean": 0.183679857,
+          "replication_lower": 0.183519636,
+          "replication_upper": 0.183925777,
+          "standard_deviation": 0.000165799
+        },
+        "threshold_group_female": {
+          "mean": 0.35,
+          "replication_lower": 0.35,
+          "replication_upper": 0.35,
+          "standard_deviation": 0.0
+        },
+        "threshold_group_male": {
+          "mean": 0.35,
+          "replication_lower": 0.35,
+          "replication_upper": 0.35,
+          "standard_deviation": 0.0
+        }
+      },
+      "false_negative_cost": 2.0,
+      "false_positive_cost": 1.0,
+      "missingness": "numeric_complete",
+      "policy": "reweighed_training",
+      "replications": 5,
+      "subgroup_counts": {
+        "test_group_female": 4110,
+        "test_group_male": 9309,
+        "test_label_above_50k": 3814,
+        "test_total": 13419
+      }
+    },
+    {
+      "cohort": "age_25_plus",
+      "estimates": {
+        "accuracy": {
+          "mean": 0.749191445,
+          "replication_lower": 0.747440197,
+          "replication_upper": 0.750026082,
+          "standard_deviation": 0.001128449
+        },
+        "brier_score": {
+          "mean": 0.159508651,
+          "replication_lower": 0.159465793,
+          "replication_upper": 0.159564958,
+          "standard_deviation": 4.5601e-05
+        },
+        "demographic_parity_difference": {
+          "mean": 0.101841433,
+          "replication_lower": 0.100701542,
+          "replication_upper": 0.102559426,
+          "standard_deviation": 0.00076846
+        },
+        "equal_opportunity_difference": {
+          "mean": 0.011272947,
+          "replication_lower": 0.009811204,
+          "replication_upper": 0.012501191,
+          "standard_deviation": 0.001264946
+        },
+        "equalized_odds_difference": {
+          "mean": 0.021372113,
+          "replication_lower": 0.019599795,
+          "replication_upper": 0.022375629,
+          "standard_deviation": 0.001162728
+        },
+        "expected_calibration_error": {
+          "mean": 0.012017324,
+          "replication_lower": 0.011307989,
+          "replication_upper": 0.012765252,
+          "standard_deviation": 0.000608659
+        },
+        "expected_cost": {
+          "mean": 0.183337059,
+          "replication_lower": 0.183106044,
+          "replication_upper": 0.183582979,
+          "standard_deviation": 0.000230595
+        },
+        "threshold_group_female": {
+          "mean": 0.35,
+          "replication_lower": 0.35,
+          "replication_upper": 0.35,
+          "standard_deviation": 0.0
+        },
+        "threshold_group_male": {
+          "mean": 0.35,
+          "replication_lower": 0.35,
+          "replication_upper": 0.35,
+          "standard_deviation": 0.0
+        }
+      },
+      "false_negative_cost": 2.0,
+      "false_positive_cost": 1.0,
+      "missingness": "numeric_complete",
+      "policy": "source_cost_threshold",
+      "replications": 5,
+      "subgroup_counts": {
+        "test_group_female": 4110,
+        "test_group_male": 9309,
+        "test_label_above_50k": 3814,
+        "test_total": 13419
+      }
+    },
+    {
+      "cohort": "provider_eligible",
+      "estimates": {
+        "accuracy": {
+          "mean": 0.799747676,
+          "replication_lower": 0.799196547,
+          "replication_upper": 0.800112882,
+          "standard_deviation": 0.000373856
+        },
+        "brier_score": {
+          "mean": 0.139132134,
+          "replication_lower": 0.139055023,
+          "replication_upper": 0.139185605,
+          "standard_deviation": 5.5057e-05
+        },
+        "demographic_parity_difference": {
+          "mean": 0.079805179,
+          "replication_lower": 0.079208523,
+          "replication_upper": 0.08058309,
+          "standard_deviation": 0.000556137
+        },
+        "equal_opportunity_difference": {
+          "mean": 0.037138413,
+          "replication_lower": 0.036286216,
+          "replication_upper": 0.03791561,
+          "standard_deviation": 0.000748964
+        },
+        "equalized_odds_difference": {
+          "mean": 0.037138413,
+          "replication_lower": 0.036286216,
+          "replication_upper": 0.03791561,
+          "standard_deviation": 0.000748964
+        },
+        "expected_calibration_error": {
+          "mean": 0.022239959,
+          "replication_lower": 0.021508643,
+          "replication_upper": 0.022577472,
+          "standard_deviation": 0.000480596
+        },
+        "expected_cost": {
+          "mean": 0.126055777,
+          "replication_lower": 0.12564077,
+          "replication_upper": 0.126786189,
+          "standard_deviation": 0.000488172
+        },
+        "threshold_group_female": {
+          "mean": 0.5,
+          "replication_lower": 0.5,
+          "replication_upper": 0.5,
+          "standard_deviation": 0.0
+        },
+        "threshold_group_male": {
+          "mean": 0.5,
+          "replication_lower": 0.5,
+          "replication_upper": 0.5,
+          "standard_deviation": 0.0
+        }
+      },
+      "false_negative_cost": 0.5,
+      "false_positive_cost": 1.0,
+      "missingness": "complete_case",
+      "policy": "baseline",
+      "replications": 5,
+      "subgroup_counts": {
+        "test_group_female": 4913,
+        "test_group_male": 10147,
+        "test_label_above_50k": 3700,
+        "test_total": 15060
+      }
+    },
+    {
+      "cohort": "provider_eligible",
+      "estimates": {
+        "accuracy": {
+          "mean": 0.785471448,
+          "replication_lower": 0.774747676,
+          "replication_upper": 0.792968127,
+          "standard_deviation": 0.007739271
+        },
+        "brier_score": {
+          "mean": 0.139132134,
+          "replication_lower": 0.139055023,
+          "replication_upper": 0.139185605,
+          "standard_deviation": 5.5057e-05
+        },
+        "demographic_parity_difference": {
+          "mean": 0.029783682,
+          "replication_lower": 0.017999055,
+          "replication_upper": 0.050105278,
+          "standard_deviation": 0.014918261
+        },
+        "equal_opportunity_difference": {
+          "mean": 0.031283106,
+          "replication_lower": 0.016200888,
+          "replication_upper": 0.047454233,
+          "standard_deviation": 0.014825823
+        },
+        "equalized_odds_difference": {
+          "mean": 0.031283106,
+          "replication_lower": 0.016200888,
+          "replication_upper": 0.047454233,
+          "standard_deviation": 0.014825823
+        },
+        "expected_calibration_error": {
+          "mean": 0.022239959,
+          "replication_lower": 0.021508643,
+          "replication_upper": 0.022577472,
+          "standard_deviation": 0.000480596
+        },
+        "expected_cost": {
+          "mean": 0.114760956,
+          "replication_lower": 0.113821381,
+          "replication_upper": 0.115796813,
+          "standard_deviation": 0.000775998
+        },
+        "threshold_group_female": {
+          "mean": 0.68,
+          "replication_lower": 0.605,
+          "replication_upper": 0.83,
+          "standard_deviation": 0.097467943
+        },
+        "threshold_group_male": {
+          "mean": 0.73,
+          "replication_lower": 0.65,
+          "replication_upper": 0.84,
+          "standard_deviation": 0.083666003
+        }
+      },
+      "false_negative_cost": 0.5,
+      "false_positive_cost": 1.0,
+      "missingness": "complete_case",
+      "policy": "group_threshold",
+      "replications": 5,
+      "subgroup_counts": {
+        "test_group_female": 4913,
+        "test_group_male": 10147,
+        "test_label_above_50k": 3700,
+        "test_total": 15060
+      }
+    },
+    {
+      "cohort": "provider_eligible",
+      "estimates": {
+        "accuracy": {
+          "mean": 0.791739708,
+          "replication_lower": 0.789110226,
+          "replication_upper": 0.792755644,
+          "standard_deviation": 0.001676939
+        },
+        "brier_score": {
+          "mean": 0.139076545,
+          "replication_lower": 0.139033337,
+          "replication_upper": 0.139160145,
+          "standard_deviation": 5.4201e-05
+        },
+        "demographic_parity_difference": {
+          "mean": 0.048116406,
+          "replication_lower": 0.041448922,
+          "replication_upper": 0.050346722,
+          "standard_deviation": 0.004244259
+        },
+        "equal_opportunity_difference": {
+          "mean": 0.031171261,
+          "replication_lower": 0.025243752,
+          "replication_upper": 0.0344076,
+          "standard_deviation": 0.003920123
+        },
+        "equalized_odds_difference": {
+          "mean": 0.031171261,
+          "replication_lower": 0.025243752,
+          "replication_upper": 0.0344076,
+          "standard_deviation": 0.003920123
+        },
+        "expected_calibration_error": {
+          "mean": 0.023266218,
+          "replication_lower": 0.022540256,
+          "replication_upper": 0.024069201,
+          "standard_deviation": 0.000616357
+        },
+        "expected_cost": {
+          "mean": 0.112974768,
+          "replication_lower": 0.112191235,
+          "replication_upper": 0.113549137,
+          "standard_deviation": 0.000550769
+        },
+        "threshold_group_female": {
+          "mean": 0.66,
+          "replication_lower": 0.65,
+          "replication_upper": 0.695,
+          "standard_deviation": 0.02236068
+        },
+        "threshold_group_male": {
+          "mean": 0.66,
+          "replication_lower": 0.65,
+          "replication_upper": 0.695,
+          "standard_deviation": 0.02236068
+        }
+      },
+      "false_negative_cost": 0.5,
+      "false_positive_cost": 1.0,
+      "missingness": "complete_case",
+      "policy": "reweighed_training",
+      "replications": 5,
+      "subgroup_counts": {
+        "test_group_female": 4913,
+        "test_group_male": 10147,
+        "test_label_above_50k": 3700,
+        "test_total": 15060
+      }
+    },
+    {
+      "cohort": "provider_eligible",
+      "estimates": {
+        "accuracy": {
+          "mean": 0.79188579,
+          "replication_lower": 0.788545817,
+          "replication_upper": 0.79315405,
+          "standard_deviation": 0.00213074
+        },
+        "brier_score": {
+          "mean": 0.139132134,
+          "replication_lower": 0.139055023,
+          "replication_upper": 0.139185605,
+          "standard_deviation": 5.5057e-05
+        },
+        "demographic_parity_difference": {
+          "mean": 0.05011941,
+          "replication_lower": 0.045161927,
+          "replication_upper": 0.05168582,
+          "standard_deviation": 0.003155859
+        },
+        "equal_opportunity_difference": {
+          "mean": 0.027339887,
+          "replication_lower": 0.024565262,
+          "replication_upper": 0.031107114,
+          "standard_deviation": 0.002722948
+        },
+        "equalized_odds_difference": {
+          "mean": 0.027339887,
+          "replication_lower": 0.024565262,
+          "replication_upper": 0.031107114,
+          "standard_deviation": 0.002722948
+        },
+        "expected_calibration_error": {
+          "mean": 0.022239959,
+          "replication_lower": 0.021508643,
+          "replication_upper": 0.022577472,
+          "standard_deviation": 0.000480596
+        },
+        "expected_cost": {
+          "mean": 0.113884462,
+          "replication_lower": 0.113326693,
+          "replication_upper": 0.114259628,
+          "standard_deviation": 0.000388886
+        },
+        "threshold_group_female": {
+          "mean": 0.66,
+          "replication_lower": 0.65,
+          "replication_upper": 0.695,
+          "standard_deviation": 0.02236068
+        },
+        "threshold_group_male": {
+          "mean": 0.66,
+          "replication_lower": 0.65,
+          "replication_upper": 0.695,
+          "standard_deviation": 0.02236068
+        }
+      },
+      "false_negative_cost": 0.5,
+      "false_positive_cost": 1.0,
+      "missingness": "complete_case",
+      "policy": "source_cost_threshold",
+      "replications": 5,
+      "subgroup_counts": {
+        "test_group_female": 4913,
+        "test_group_male": 10147,
+        "test_label_above_50k": 3700,
+        "test_total": 15060
+      }
+    },
+    {
+      "cohort": "provider_eligible",
+      "estimates": {
+        "accuracy": {
+          "mean": 0.799747676,
+          "replication_lower": 0.799196547,
+          "replication_upper": 0.800112882,
+          "standard_deviation": 0.000373856
+        },
+        "brier_score": {
+          "mean": 0.139132134,
+          "replication_lower": 0.139055023,
+          "replication_upper": 0.139185605,
+          "standard_deviation": 5.5057e-05
+        },
+        "demographic_parity_difference": {
+          "mean": 0.079805179,
+          "replication_lower": 0.079208523,
+          "replication_upper": 0.08058309,
+          "standard_deviation": 0.000556137
+        },
+        "equal_opportunity_difference": {
+          "mean": 0.037138413,
+          "replication_lower": 0.036286216,
+          "replication_upper": 0.03791561,
+          "standard_deviation": 0.000748964
+        },
+        "equalized_odds_difference": {
+          "mean": 0.037138413,
+          "replication_lower": 0.036286216,
+          "replication_upper": 0.03791561,
+          "standard_deviation": 0.000748964
+        },
+        "expected_calibration_error": {
+          "mean": 0.022239959,
+          "replication_lower": 0.021508643,
+          "replication_upper": 0.022577472,
+          "standard_deviation": 0.000480596
+        },
+        "expected_cost": {
+          "mean": 0.200252324,
+          "replication_lower": 0.199887118,
+          "replication_upper": 0.200803453,
+          "standard_deviation": 0.000373856
+        },
+        "threshold_group_female": {
+          "mean": 0.5,
+          "replication_lower": 0.5,
+          "replication_upper": 0.5,
+          "standard_deviation": 0.0
+        },
+        "threshold_group_male": {
+          "mean": 0.5,
+          "replication_lower": 0.5,
+          "replication_upper": 0.5,
+          "standard_deviation": 0.0
+        }
+      },
+      "false_negative_cost": 1.0,
+      "false_positive_cost": 1.0,
+      "missingness": "complete_case",
+      "policy": "baseline",
+      "replications": 5,
+      "subgroup_counts": {
+        "test_group_female": 4913,
+        "test_group_male": 10147,
+        "test_label_above_50k": 3700,
+        "test_total": 15060
+      }
+    },
+    {
+      "cohort": "provider_eligible",
+      "estimates": {
+        "accuracy": {
+          "mean": 0.79564409,
+          "replication_lower": 0.793306773,
+          "replication_upper": 0.797324037,
+          "standard_deviation": 0.001722976
+        },
+        "brier_score": {
+          "mean": 0.139132134,
+          "replication_lower": 0.139055023,
+          "replication_upper": 0.139185605,
+          "standard_deviation": 5.5057e-05
+        },
+        "demographic_parity_difference": {
+          "mean": 0.051023591,
+          "replication_lower": 0.045387391,
+          "replication_upper": 0.05589791,
+          "standard_deviation": 0.004127357
+        },
+        "equal_opportunity_difference": {
+          "mean": 0.01674817,
+          "replication_lower": 0.012557214,
+          "replication_upper": 0.023732029,
+          "standard_deviation": 0.004643326
+        },
+        "equalized_odds_difference": {
+          "mean": 0.01674817,
+          "replication_lower": 0.012557214,
+          "replication_upper": 0.023732029,
+          "standard_deviation": 0.004643326
+        },
+        "expected_calibration_error": {
+          "mean": 0.022239959,
+          "replication_lower": 0.021508643,
+          "replication_upper": 0.022577472,
+          "standard_deviation": 0.000480596
+        },
+        "expected_cost": {
+          "mean": 0.20435591,
+          "replication_lower": 0.202675963,
+          "replication_upper": 0.206693227,
+          "standard_deviation": 0.001722976
+        },
+        "threshold_group_female": {
+          "mean": 0.53,
+          "replication_lower": 0.455,
+          "replication_upper": 0.64,
+          "standard_deviation": 0.075828754
+        },
+        "threshold_group_male": {
+          "mean": 0.57,
+          "replication_lower": 0.505,
+          "replication_upper": 0.645,
+          "standard_deviation": 0.057008771
+        }
+      },
+      "false_negative_cost": 1.0,
+      "false_positive_cost": 1.0,
+      "missingness": "complete_case",
+      "policy": "group_threshold",
+      "replications": 5,
+      "subgroup_counts": {
+        "test_group_female": 4913,
+        "test_group_male": 10147,
+        "test_label_above_50k": 3700,
+        "test_total": 15060
+      }
+    },
+    {
+      "cohort": "provider_eligible",
+      "estimates": {
+        "accuracy": {
+          "mean": 0.800903054,
+          "replication_lower": 0.800292165,
+          "replication_upper": 0.801679947,
+          "standard_deviation": 0.000587565
+        },
+        "brier_score": {
+          "mean": 0.139076545,
+          "replication_lower": 0.139033337,
+          "replication_upper": 0.139160145,
+          "standard_deviation": 5.4201e-05
+        },
+        "demographic_parity_difference": {
+          "mean": 0.073711306,
+          "replication_lower": 0.070963819,
+          "replication_upper": 0.081948881,
+          "standard_deviation": 0.005234362
+        },
+        "equal_opportunity_difference": {
+          "mean": 0.020962373,
+          "replication_lower": 0.013642125,
+          "replication_upper": 0.032780777,
+          "standard_deviation": 0.008255451
+        },
+        "equalized_odds_difference": {
+          "mean": 0.020962373,
+          "replication_lower": 0.013642125,
+          "replication_upper": 0.032780777,
+          "standard_deviation": 0.008255451
+        },
+        "expected_calibration_error": {
+          "mean": 0.023266218,
+          "replication_lower": 0.022540256,
+          "replication_upper": 0.024069201,
+          "standard_deviation": 0.000616357
+        },
+        "expected_cost": {
+          "mean": 0.199096946,
+          "replication_lower": 0.198320053,
+          "replication_upper": 0.199707835,
+          "standard_deviation": 0.000587565
+        },
+        "threshold_group_female": {
+          "mean": 0.49,
+          "replication_lower": 0.455,
+          "replication_upper": 0.5,
+          "standard_deviation": 0.02236068
+        },
+        "threshold_group_male": {
+          "mean": 0.49,
+          "replication_lower": 0.455,
+          "replication_upper": 0.5,
+          "standard_deviation": 0.02236068
+        }
+      },
+      "false_negative_cost": 1.0,
+      "false_positive_cost": 1.0,
+      "missingness": "complete_case",
+      "policy": "reweighed_training",
+      "replications": 5,
+      "subgroup_counts": {
+        "test_group_female": 4913,
+        "test_group_male": 10147,
+        "test_label_above_50k": 3700,
+        "test_total": 15060
+      }
+    },
+    {
+      "cohort": "provider_eligible",
+      "estimates": {
+        "accuracy": {
+          "mean": 0.799800797,
+          "replication_lower": 0.799196547,
+          "replication_upper": 0.800192563,
+          "standard_deviation": 0.000422574
+        },
+        "brier_score": {
+          "mean": 0.139132134,
+          "replication_lower": 0.139055023,
+          "replication_upper": 0.139185605,
+          "standard_deviation": 5.5057e-05
+        },
+        "demographic_parity_difference": {
+          "mean": 0.081968332,
+          "replication_lower": 0.079208523,
+          "replication_upper": 0.089609895,
+          "standard_deviation": 0.004859798
+        },
+        "equal_opportunity_difference": {
+          "mean": 0.038902214,
+          "replication_lower": 0.036286216,
+          "replication_upper": 0.045852714,
+          "standard_deviation": 0.004420743
+        },
+        "equalized_odds_difference": {
+          "mean": 0.038902214,
+          "replication_lower": 0.036286216,
+          "replication_upper": 0.045852714,
+          "standard_deviation": 0.004420743
+        },
+        "expected_calibration_error": {
+          "mean": 0.022239959,
+          "replication_lower": 0.021508643,
+          "replication_upper": 0.022577472,
+          "standard_deviation": 0.000480596
+        },
+        "expected_cost": {
+          "mean": 0.200199203,
+          "replication_lower": 0.199807437,
+          "replication_upper": 0.200803453,
+          "standard_deviation": 0.000422574
+        },
+        "threshold_group_female": {
+          "mean": 0.49,
+          "replication_lower": 0.455,
+          "replication_upper": 0.5,
+          "standard_deviation": 0.02236068
+        },
+        "threshold_group_male": {
+          "mean": 0.49,
+          "replication_lower": 0.455,
+          "replication_upper": 0.5,
+          "standard_deviation": 0.02236068
+        }
+      },
+      "false_negative_cost": 1.0,
+      "false_positive_cost": 1.0,
+      "missingness": "complete_case",
+      "policy": "source_cost_threshold",
+      "replications": 5,
+      "subgroup_counts": {
+        "test_group_female": 4913,
+        "test_group_male": 10147,
+        "test_label_above_50k": 3700,
+        "test_total": 15060
+      }
+    },
+    {
+      "cohort": "provider_eligible",
+      "estimates": {
+        "accuracy": {
+          "mean": 0.799747676,
+          "replication_lower": 0.799196547,
+          "replication_upper": 0.800112882,
+          "standard_deviation": 0.000373856
+        },
+        "brier_score": {
+          "mean": 0.139132134,
+          "replication_lower": 0.139055023,
+          "replication_upper": 0.139185605,
+          "standard_deviation": 5.5057e-05
+        },
+        "demographic_parity_difference": {
+          "mean": 0.079805179,
+          "replication_lower": 0.079208523,
+          "replication_upper": 0.08058309,
+          "standard_deviation": 0.000556137
+        },
+        "equal_opportunity_difference": {
+          "mean": 0.037138413,
+          "replication_lower": 0.036286216,
+          "replication_upper": 0.03791561,
+          "standard_deviation": 0.000748964
+        },
+        "equalized_odds_difference": {
+          "mean": 0.037138413,
+          "replication_lower": 0.036286216,
+          "replication_upper": 0.03791561,
+          "standard_deviation": 0.000748964
+        },
+        "expected_calibration_error": {
+          "mean": 0.022239959,
+          "replication_lower": 0.021508643,
+          "replication_upper": 0.022577472,
+          "standard_deviation": 0.000480596
+        },
+        "expected_cost": {
+          "mean": 0.174322709,
+          "replication_lower": 0.174169987,
+          "replication_upper": 0.174465471,
+          "standard_deviation": 0.000143954
+        },
+        "threshold_group_female": {
+          "mean": 0.5,
+          "replication_lower": 0.5,
+          "replication_upper": 0.5,
+          "standard_deviation": 0.0
+        },
+        "threshold_group_male": {
+          "mean": 0.5,
+          "replication_lower": 0.5,
+          "replication_upper": 0.5,
+          "standard_deviation": 0.0
+        }
+      },
+      "false_negative_cost": 2.0,
+      "false_positive_cost": 1.0,
+      "missingness": "complete_case",
+      "policy": "baseline",
+      "replications": 5,
+      "subgroup_counts": {
+        "test_group_female": 4913,
+        "test_group_male": 10147,
+        "test_label_above_50k": 3700,
+        "test_total": 15060
+      }
+    },
+    {
+      "cohort": "provider_eligible",
+      "estimates": {
+        "accuracy": {
+          "mean": 0.784262948,
+          "replication_lower": 0.775371846,
+          "replication_upper": 0.794780876,
+          "standard_deviation": 0.008770346
+        },
+        "brier_score": {
+          "mean": 0.139132134,
+          "replication_lower": 0.139055023,
+          "replication_upper": 0.139185605,
+          "standard_deviation": 5.5057e-05
+        },
+        "demographic_parity_difference": {
+          "mean": 0.071030595,
+          "replication_lower": 0.056995578,
+          "replication_upper": 0.103194057,
+          "standard_deviation": 0.0206344
+        },
+        "equal_opportunity_difference": {
+          "mean": 0.032100059,
+          "replication_lower": 0.017003275,
+          "replication_upper": 0.044773687,
+          "standard_deviation": 0.013863067
+        },
+        "equalized_odds_difference": {
+          "mean": 0.033709836,
+          "replication_lower": 0.017808164,
+          "replication_upper": 0.044773687,
+          "standard_deviation": 0.012036519
+        },
+        "expected_calibration_error": {
+          "mean": 0.022239959,
+          "replication_lower": 0.021508643,
+          "replication_upper": 0.022577472,
+          "standard_deviation": 0.000480596
+        },
+        "expected_cost": {
+          "mean": 0.164800797,
+          "replication_lower": 0.15935923,
+          "replication_upper": 0.174169987,
+          "standard_deviation": 0.006169334
+        },
+        "threshold_group_female": {
+          "mean": 0.35,
+          "replication_lower": 0.3,
+          "replication_upper": 0.44,
+          "standard_deviation": 0.061237244
+        },
+        "threshold_group_male": {
+          "mean": 0.39,
+          "replication_lower": 0.35,
+          "replication_upper": 0.49,
+          "standard_deviation": 0.065192024
+        }
+      },
+      "false_negative_cost": 2.0,
+      "false_positive_cost": 1.0,
+      "missingness": "complete_case",
+      "policy": "group_threshold",
+      "replications": 5,
+      "subgroup_counts": {
+        "test_group_female": 4913,
+        "test_group_male": 10147,
+        "test_label_above_50k": 3700,
+        "test_total": 15060
+      }
+    },
+    {
+      "cohort": "provider_eligible",
+      "estimates": {
+        "accuracy": {
+          "mean": 0.786215139,
+          "replication_lower": 0.78563745,
+          "replication_upper": 0.786640106,
+          "standard_deviation": 0.000418906
+        },
+        "brier_score": {
+          "mean": 0.139076545,
+          "replication_lower": 0.139033337,
+          "replication_upper": 0.139160145,
+          "standard_deviation": 5.4201e-05
+        },
+        "demographic_parity_difference": {
+          "mean": 0.097601705,
+          "replication_lower": 0.09564978,
+          "replication_upper": 0.098594498,
+          "standard_deviation": 0.001267773
+        },
+        "equal_opportunity_difference": {
+          "mean": 0.001677662,
+          "replication_lower": 0.000234541,
+          "replication_upper": 0.004350153,
+          "standard_deviation": 0.00176284
+        },
+        "equalized_odds_difference": {
+          "mean": 0.016007565,
+          "replication_lower": 0.013768126,
+          "replication_upper": 0.016823903,
+          "standard_deviation": 0.001424155
+        },
+        "expected_calibration_error": {
+          "mean": 0.023266218,
+          "replication_lower": 0.022540256,
+          "replication_upper": 0.024069201,
+          "standard_deviation": 0.000616357
+        },
+        "expected_cost": {
+          "mean": 0.158718459,
+          "replication_lower": 0.158602258,
+          "replication_upper": 0.158824701,
+          "standard_deviation": 9.8489e-05
+        },
+        "threshold_group_female": {
+          "mean": 0.35,
+          "replication_lower": 0.35,
+          "replication_upper": 0.35,
+          "standard_deviation": 0.0
+        },
+        "threshold_group_male": {
+          "mean": 0.35,
+          "replication_lower": 0.35,
+          "replication_upper": 0.35,
+          "standard_deviation": 0.0
+        }
+      },
+      "false_negative_cost": 2.0,
+      "false_positive_cost": 1.0,
+      "missingness": "complete_case",
+      "policy": "reweighed_training",
+      "replications": 5,
+      "subgroup_counts": {
+        "test_group_female": 4913,
+        "test_group_male": 10147,
+        "test_label_above_50k": 3700,
+        "test_total": 15060
+      }
+    },
+    {
+      "cohort": "provider_eligible",
+      "estimates": {
+        "accuracy": {
+          "mean": 0.7824834,
+          "replication_lower": 0.771029216,
+          "replication_upper": 0.786354582,
+          "standard_deviation": 0.0072998
+        },
+        "brier_score": {
+          "mean": 0.139132134,
+          "replication_lower": 0.139055023,
+          "replication_upper": 0.139185605,
+          "standard_deviation": 5.5057e-05
+        },
+        "demographic_parity_difference": {
+          "mean": 0.10839291,
+          "replication_lower": 0.106022479,
+          "replication_upper": 0.113493646,
+          "standard_deviation": 0.00328431
+        },
+        "equal_opportunity_difference": {
+          "mean": 0.019448537,
+          "replication_lower": 0.015121175,
+          "replication_upper": 0.026115142,
+          "standard_deviation": 0.00450521
+        },
+        "equalized_odds_difference": {
+          "mean": 0.024953754,
+          "replication_lower": 0.023895135,
+          "replication_upper": 0.026665497,
+          "standard_deviation": 0.001151839
+        },
+        "expected_calibration_error": {
+          "mean": 0.022239959,
+          "replication_lower": 0.021508643,
+          "replication_upper": 0.022577472,
+          "standard_deviation": 0.000480596
+        },
+        "expected_cost": {
+          "mean": 0.158997344,
+          "replication_lower": 0.158608898,
+          "replication_upper": 0.159193227,
+          "standard_deviation": 0.000253935
+        },
+        "threshold_group_female": {
+          "mean": 0.34,
+          "replication_lower": 0.305,
+          "replication_upper": 0.35,
+          "standard_deviation": 0.02236068
+        },
+        "threshold_group_male": {
+          "mean": 0.34,
+          "replication_lower": 0.305,
+          "replication_upper": 0.35,
+          "standard_deviation": 0.02236068
+        }
+      },
+      "false_negative_cost": 2.0,
+      "false_positive_cost": 1.0,
+      "missingness": "complete_case",
+      "policy": "source_cost_threshold",
+      "replications": 5,
+      "subgroup_counts": {
+        "test_group_female": 4913,
+        "test_group_male": 10147,
+        "test_label_above_50k": 3700,
+        "test_total": 15060
+      }
+    },
+    {
+      "cohort": "provider_eligible",
+      "estimates": {
+        "accuracy": {
+          "mean": 0.806621215,
+          "replication_lower": 0.806350961,
+          "replication_upper": 0.806830047,
+          "standard_deviation": 0.000219747
+        },
+        "brier_score": {
+          "mean": 0.135116935,
+          "replication_lower": 0.135099327,
+          "replication_upper": 0.135131413,
+          "standard_deviation": 1.3868e-05
+        },
+        "demographic_parity_difference": {
+          "mean": 0.078821934,
+          "replication_lower": 0.078590844,
+          "replication_upper": 0.079117113,
+          "standard_deviation": 0.000221987
+        },
+        "equal_opportunity_difference": {
+          "mean": 0.029912547,
+          "replication_lower": 0.026598926,
+          "replication_upper": 0.032502707,
+          "standard_deviation": 0.002338705
+        },
+        "equalized_odds_difference": {
+          "mean": 0.029912547,
+          "replication_lower": 0.026598926,
+          "replication_upper": 0.032502707,
+          "standard_deviation": 0.002338705
+        },
+        "expected_calibration_error": {
+          "mean": 0.020043248,
+          "replication_lower": 0.019394476,
+          "replication_upper": 0.020880108,
+          "standard_deviation": 0.000635689
+        },
+        "expected_cost": {
+          "mean": 0.121257908,
+          "replication_lower": 0.120806462,
+          "replication_upper": 0.121586512,
+          "standard_deviation": 0.000312133
+        },
+        "threshold_group_female": {
+          "mean": 0.5,
+          "replication_lower": 0.5,
+          "replication_upper": 0.5,
+          "standard_deviation": 0.0
+        },
+        "threshold_group_male": {
+          "mean": 0.5,
+          "replication_lower": 0.5,
+          "replication_upper": 0.5,
+          "standard_deviation": 0.0
+        }
+      },
+      "false_negative_cost": 0.5,
+      "false_positive_cost": 1.0,
+      "missingness": "numeric_complete",
+      "policy": "baseline",
+      "replications": 5,
+      "subgroup_counts": {
+        "test_group_female": 5421,
+        "test_group_male": 10860,
+        "test_label_above_50k": 3846,
+        "test_total": 16281
+      }
+    },
+    {
+      "cohort": "provider_eligible",
+      "estimates": {
+        "accuracy": {
+          "mean": 0.791916958,
+          "replication_lower": 0.777200418,
+          "replication_upper": 0.799705178,
+          "standard_deviation": 0.009800825
+        },
+        "brier_score": {
+          "mean": 0.135116935,
+          "replication_lower": 0.135099327,
+          "replication_upper": 0.135131413,
+          "standard_deviation": 1.3868e-05
+        },
+        "demographic_parity_difference": {
+          "mean": 0.031454605,
+          "replication_lower": 0.010099434,
+          "replication_upper": 0.048067929,
+          "standard_deviation": 0.015365271
+        },
+        "equal_opportunity_difference": {
+          "mean": 0.012193812,
+          "replication_lower": 0.005810915,
+          "replication_upper": 0.019931183,
+          "standard_deviation": 0.006358181
+        },
+        "equalized_odds_difference": {
+          "mean": 0.012193812,
+          "replication_lower": 0.005810915,
+          "replication_upper": 0.019931183,
+          "standard_deviation": 0.006358181
+        },
+        "expected_calibration_error": {
+          "mean": 0.020043248,
+          "replication_lower": 0.019394476,
+          "replication_upper": 0.020880108,
+          "standard_deviation": 0.000635689
+        },
+        "expected_cost": {
+          "mean": 0.110625883,
+          "replication_lower": 0.109246975,
+          "replication_upper": 0.113002887,
+          "standard_deviation": 0.001688722
+        },
+        "threshold_group_female": {
+          "mean": 0.7,
+          "replication_lower": 0.605,
+          "replication_upper": 0.835,
+          "standard_deviation": 0.093541435
+        },
+        "threshold_group_male": {
+          "mean": 0.74,
+          "replication_lower": 0.65,
+          "replication_upper": 0.885,
+          "standard_deviation": 0.102469508
+        }
+      },
+      "false_negative_cost": 0.5,
+      "false_positive_cost": 1.0,
+      "missingness": "numeric_complete",
+      "policy": "group_threshold",
+      "replications": 5,
+      "subgroup_counts": {
+        "test_group_female": 5421,
+        "test_group_male": 10860,
+        "test_label_above_50k": 3846,
+        "test_total": 16281
+      }
+    },
+    {
+      "cohort": "provider_eligible",
+      "estimates": {
+        "accuracy": {
+          "mean": 0.795295129,
+          "replication_lower": 0.793427922,
+          "replication_upper": 0.797665991,
+          "standard_deviation": 0.002132301
+        },
+        "brier_score": {
+          "mean": 0.135063265,
+          "replication_lower": 0.135031093,
+          "replication_upper": 0.135088744,
+          "standard_deviation": 2.3382e-05
+        },
+        "demographic_parity_difference": {
+          "mean": 0.037195987,
+          "replication_lower": 0.034032803,
+          "replication_upper": 0.041655405,
+          "standard_deviation": 0.004045591
+        },
+        "equal_opportunity_difference": {
+          "mean": 0.012968392,
+          "replication_lower": 0.008468642,
+          "replication_upper": 0.017073252,
+          "standard_deviation": 0.003407577
+        },
+        "equalized_odds_difference": {
+          "mean": 0.012968392,
+          "replication_lower": 0.008468642,
+          "replication_upper": 0.017073252,
+          "standard_deviation": 0.003407577
+        },
+        "expected_calibration_error": {
+          "mean": 0.022957166,
+          "replication_lower": 0.022570072,
+          "replication_upper": 0.023182453,
+          "standard_deviation": 0.000262515
+        },
+        "expected_cost": {
+          "mean": 0.106946748,
+          "replication_lower": 0.106845403,
+          "replication_upper": 0.107081875,
+          "standard_deviation": 0.000105495
+        },
+        "threshold_group_female": {
+          "mean": 0.73,
+          "replication_lower": 0.7,
+          "replication_upper": 0.75,
+          "standard_deviation": 0.027386128
+        },
+        "threshold_group_male": {
+          "mean": 0.73,
+          "replication_lower": 0.7,
+          "replication_upper": 0.75,
+          "standard_deviation": 0.027386128
+        }
+      },
+      "false_negative_cost": 0.5,
+      "false_positive_cost": 1.0,
+      "missingness": "numeric_complete",
+      "policy": "reweighed_training",
+      "replications": 5,
+      "subgroup_counts": {
+        "test_group_female": 5421,
+        "test_group_male": 10860,
+        "test_label_above_50k": 3846,
+        "test_total": 16281
+      }
+    },
+    {
+      "cohort": "provider_eligible",
+      "estimates": {
+        "accuracy": {
+          "mean": 0.795368835,
+          "replication_lower": 0.793446349,
+          "replication_upper": 0.796124317,
+          "standard_deviation": 0.001225813
+        },
+        "brier_score": {
+          "mean": 0.135116935,
+          "replication_lower": 0.135099327,
+          "replication_upper": 0.135131413,
+          "standard_deviation": 1.3868e-05
+        },
+        "demographic_parity_difference": {
+          "mean": 0.041608294,
+          "replication_lower": 0.036635485,
+          "replication_upper": 0.043383226,
+          "standard_deviation": 0.003167285
+        },
+        "equal_opportunity_difference": {
+          "mean": 0.021538125,
+          "replication_lower": 0.015129826,
+          "replication_upper": 0.02410309,
+          "standard_deviation": 0.004096848
+        },
+        "equalized_odds_difference": {
+          "mean": 0.021538125,
+          "replication_lower": 0.015129826,
+          "replication_upper": 0.02410309,
+          "standard_deviation": 0.004096848
+        },
+        "expected_calibration_error": {
+          "mean": 0.020043248,
+          "replication_lower": 0.019394476,
+          "replication_upper": 0.020880108,
+          "standard_deviation": 0.000635689
+        },
+        "expected_cost": {
+          "mean": 0.10877096,
+          "replication_lower": 0.108027762,
+          "replication_upper": 0.109136417,
+          "standard_deviation": 0.000483339
+        },
+        "threshold_group_female": {
+          "mean": 0.71,
+          "replication_lower": 0.7,
+          "replication_upper": 0.745,
+          "standard_deviation": 0.02236068
+        },
+        "threshold_group_male": {
+          "mean": 0.71,
+          "replication_lower": 0.7,
+          "replication_upper": 0.745,
+          "standard_deviation": 0.02236068
+        }
+      },
+      "false_negative_cost": 0.5,
+      "false_positive_cost": 1.0,
+      "missingness": "numeric_complete",
+      "policy": "source_cost_threshold",
+      "replications": 5,
+      "subgroup_counts": {
+        "test_group_female": 5421,
+        "test_group_male": 10860,
+        "test_label_above_50k": 3846,
+        "test_total": 16281
+      }
+    },
+    {
+      "cohort": "provider_eligible",
+      "estimates": {
+        "accuracy": {
+          "mean": 0.806621215,
+          "replication_lower": 0.806350961,
+          "replication_upper": 0.806830047,
+          "standard_deviation": 0.000219747
+        },
+        "brier_score": {
+          "mean": 0.135116935,
+          "replication_lower": 0.135099327,
+          "replication_upper": 0.135131413,
+          "standard_deviation": 1.3868e-05
+        },
+        "demographic_parity_difference": {
+          "mean": 0.078821934,
+          "replication_lower": 0.078590844,
+          "replication_upper": 0.079117113,
+          "standard_deviation": 0.000221987
+        },
+        "equal_opportunity_difference": {
+          "mean": 0.029912547,
+          "replication_lower": 0.026598926,
+          "replication_upper": 0.032502707,
+          "standard_deviation": 0.002338705
+        },
+        "equalized_odds_difference": {
+          "mean": 0.029912547,
+          "replication_lower": 0.026598926,
+          "replication_upper": 0.032502707,
+          "standard_deviation": 0.002338705
+        },
+        "expected_calibration_error": {
+          "mean": 0.020043248,
+          "replication_lower": 0.019394476,
+          "replication_upper": 0.020880108,
+          "standard_deviation": 0.000635689
+        },
+        "expected_cost": {
+          "mean": 0.193378785,
+          "replication_lower": 0.193169953,
+          "replication_upper": 0.193649039,
+          "standard_deviation": 0.000219747
+        },
+        "threshold_group_female": {
+          "mean": 0.5,
+          "replication_lower": 0.5,
+          "replication_upper": 0.5,
+          "standard_deviation": 0.0
+        },
+        "threshold_group_male": {
+          "mean": 0.5,
+          "replication_lower": 0.5,
+          "replication_upper": 0.5,
+          "standard_deviation": 0.0
+        }
+      },
+      "false_negative_cost": 1.0,
+      "false_positive_cost": 1.0,
+      "missingness": "numeric_complete",
+      "policy": "baseline",
+      "replications": 5,
+      "subgroup_counts": {
+        "test_group_female": 5421,
+        "test_group_male": 10860,
+        "test_label_above_50k": 3846,
+        "test_total": 16281
+      }
+    },
+    {
+      "cohort": "provider_eligible",
+      "estimates": {
+        "accuracy": {
+          "mean": 0.80173208,
+          "replication_lower": 0.795448683,
+          "replication_upper": 0.806283398,
+          "standard_deviation": 0.004596964
+        },
+        "brier_score": {
+          "mean": 0.135116935,
+          "replication_lower": 0.135099327,
+          "replication_upper": 0.135131413,
+          "standard_deviation": 1.3868e-05
+        },
+        "demographic_parity_difference": {
+          "mean": 0.052083426,
+          "replication_lower": 0.033068479,
+          "replication_upper": 0.083560698,
+          "standard_deviation": 0.021034004
+        },
+        "equal_opportunity_difference": {
+          "mean": 0.021902719,
+          "replication_lower": 0.011190709,
+          "replication_upper": 0.034380127,
+          "standard_deviation": 0.009371479
+        },
+        "equalized_odds_difference": {
+          "mean": 0.021902719,
+          "replication_lower": 0.011190709,
+          "replication_upper": 0.034380127,
+          "standard_deviation": 0.009371479
+        },
+        "expected_calibration_error": {
+          "mean": 0.020043248,
+          "replication_lower": 0.019394476,
+          "replication_upper": 0.020880108,
+          "standard_deviation": 0.000635689
+        },
+        "expected_cost": {
+          "mean": 0.19826792,
+          "replication_lower": 0.193716602,
+          "replication_upper": 0.204551317,
+          "standard_deviation": 0.004596964
+        },
+        "threshold_group_female": {
+          "mean": 0.54,
+          "replication_lower": 0.455,
+          "replication_upper": 0.645,
+          "standard_deviation": 0.082158384
+        },
+        "threshold_group_male": {
+          "mean": 0.58,
+          "replication_lower": 0.46,
+          "replication_upper": 0.695,
+          "standard_deviation": 0.097467943
+        }
+      },
+      "false_negative_cost": 1.0,
+      "false_positive_cost": 1.0,
+      "missingness": "numeric_complete",
+      "policy": "group_threshold",
+      "replications": 5,
+      "subgroup_counts": {
+        "test_group_female": 5421,
+        "test_group_male": 10860,
+        "test_label_above_50k": 3846,
+        "test_total": 16281
+      }
+    },
+    {
+      "cohort": "provider_eligible",
+      "estimates": {
+        "accuracy": {
+          "mean": 0.807321418,
+          "replication_lower": 0.806805479,
+          "replication_upper": 0.80790492,
+          "standard_deviation": 0.000459635
+        },
+        "brier_score": {
+          "mean": 0.135063265,
+          "replication_lower": 0.135031093,
+          "replication_upper": 0.135088744,
+          "standard_deviation": 2.3382e-05
+        },
+        "demographic_parity_difference": {
+          "mean": 0.075158586,
+          "replication_lower": 0.069674771,
+          "replication_upper": 0.082833201,
+          "standard_deviation": 0.006572102
+        },
+        "equal_opportunity_difference": {
+          "mean": 0.019471953,
+          "replication_lower": 0.013966914,
+          "replication_upper": 0.022773394,
+          "standard_deviation": 0.003645137
+        },
+        "equalized_odds_difference": {
+          "mean": 0.019471953,
+          "replication_lower": 0.013966914,
+          "replication_upper": 0.022773394,
+          "standard_deviation": 0.003645137
+        },
+        "expected_calibration_error": {
+          "mean": 0.022957166,
+          "replication_lower": 0.022570072,
+          "replication_upper": 0.023182453,
+          "standard_deviation": 0.000262515
+        },
+        "expected_cost": {
+          "mean": 0.192678582,
+          "replication_lower": 0.19209508,
+          "replication_upper": 0.193194521,
+          "standard_deviation": 0.000459635
+        },
+        "threshold_group_female": {
+          "mean": 0.48,
+          "replication_lower": 0.45,
+          "replication_upper": 0.5,
+          "standard_deviation": 0.027386128
+        },
+        "threshold_group_male": {
+          "mean": 0.48,
+          "replication_lower": 0.45,
+          "replication_upper": 0.5,
+          "standard_deviation": 0.027386128
+        }
+      },
+      "false_negative_cost": 1.0,
+      "false_positive_cost": 1.0,
+      "missingness": "numeric_complete",
+      "policy": "reweighed_training",
+      "replications": 5,
+      "subgroup_counts": {
+        "test_group_female": 5421,
+        "test_group_male": 10860,
+        "test_label_above_50k": 3846,
+        "test_total": 16281
+      }
+    },
+    {
+      "cohort": "provider_eligible",
+      "estimates": {
+        "accuracy": {
+          "mean": 0.806559794,
+          "replication_lower": 0.806344819,
+          "replication_upper": 0.806830047,
+          "standard_deviation": 0.000247978
+        },
+        "brier_score": {
+          "mean": 0.135116935,
+          "replication_lower": 0.135099327,
+          "replication_upper": 0.135131413,
+          "standard_deviation": 1.3868e-05
+        },
+        "demographic_parity_difference": {
+          "mean": 0.082546114,
+          "replication_lower": 0.078590844,
+          "replication_upper": 0.088611238,
+          "standard_deviation": 0.005306714
+        },
+        "equal_opportunity_difference": {
+          "mean": 0.03312893,
+          "replication_lower": 0.026598926,
+          "replication_upper": 0.040939491,
+          "standard_deviation": 0.006188785
+        },
+        "equalized_odds_difference": {
+          "mean": 0.03312893,
+          "replication_lower": 0.026598926,
+          "replication_upper": 0.040939491,
+          "standard_deviation": 0.006188785
+        },
+        "expected_calibration_error": {
+          "mean": 0.020043248,
+          "replication_lower": 0.019394476,
+          "replication_upper": 0.020880108,
+          "standard_deviation": 0.000635689
+        },
+        "expected_cost": {
+          "mean": 0.193440206,
+          "replication_lower": 0.193169953,
+          "replication_upper": 0.193655181,
+          "standard_deviation": 0.000247978
+        },
+        "threshold_group_female": {
+          "mean": 0.48,
+          "replication_lower": 0.45,
+          "replication_upper": 0.5,
+          "standard_deviation": 0.027386128
+        },
+        "threshold_group_male": {
+          "mean": 0.48,
+          "replication_lower": 0.45,
+          "replication_upper": 0.5,
+          "standard_deviation": 0.027386128
+        }
+      },
+      "false_negative_cost": 1.0,
+      "false_positive_cost": 1.0,
+      "missingness": "numeric_complete",
+      "policy": "source_cost_threshold",
+      "replications": 5,
+      "subgroup_counts": {
+        "test_group_female": 5421,
+        "test_group_male": 10860,
+        "test_label_above_50k": 3846,
+        "test_total": 16281
+      }
+    },
+    {
+      "cohort": "provider_eligible",
+      "estimates": {
+        "accuracy": {
+          "mean": 0.806621215,
+          "replication_lower": 0.806350961,
+          "replication_upper": 0.806830047,
+          "standard_deviation": 0.000219747
+        },
+        "brier_score": {
+          "mean": 0.135116935,
+          "replication_lower": 0.135099327,
+          "replication_upper": 0.135131413,
+          "standard_deviation": 1.3868e-05
+        },
+        "demographic_parity_difference": {
+          "mean": 0.078821934,
+          "replication_lower": 0.078590844,
+          "replication_upper": 0.079117113,
+          "standard_deviation": 0.000221987
+        },
+        "equal_opportunity_difference": {
+          "mean": 0.029912547,
+          "replication_lower": 0.026598926,
+          "replication_upper": 0.032502707,
+          "standard_deviation": 0.002338705
+        },
+        "equalized_odds_difference": {
+          "mean": 0.029912547,
+          "replication_lower": 0.026598926,
+          "replication_upper": 0.032502707,
+          "standard_deviation": 0.002338705
+        },
+        "expected_calibration_error": {
+          "mean": 0.020043248,
+          "replication_lower": 0.019394476,
+          "replication_upper": 0.020880108,
+          "standard_deviation": 0.000635689
+        },
+        "expected_cost": {
+          "mean": 0.16881027,
+          "replication_lower": 0.168503163,
+          "replication_upper": 0.168997605,
+          "standard_deviation": 0.000214315
+        },
+        "threshold_group_female": {
+          "mean": 0.5,
+          "replication_lower": 0.5,
+          "replication_upper": 0.5,
+          "standard_deviation": 0.0
+        },
+        "threshold_group_male": {
+          "mean": 0.5,
+          "replication_lower": 0.5,
+          "replication_upper": 0.5,
+          "standard_deviation": 0.0
+        }
+      },
+      "false_negative_cost": 2.0,
+      "false_positive_cost": 1.0,
+      "missingness": "numeric_complete",
+      "policy": "baseline",
+      "replications": 5,
+      "subgroup_counts": {
+        "test_group_female": 5421,
+        "test_group_male": 10860,
+        "test_label_above_50k": 3846,
+        "test_total": 16281
+      }
+    },
+    {
+      "cohort": "provider_eligible",
+      "estimates": {
+        "accuracy": {
+          "mean": 0.793771881,
+          "replication_lower": 0.784810515,
+          "replication_upper": 0.802082182,
+          "standard_deviation": 0.007989798
+        },
+        "brier_score": {
+          "mean": 0.135116935,
+          "replication_lower": 0.135099327,
+          "replication_upper": 0.135131413,
+          "standard_deviation": 1.3868e-05
+        },
+        "demographic_parity_difference": {
+          "mean": 0.079164758,
+          "replication_lower": 0.029460279,
+          "replication_upper": 0.105343299,
+          "standard_deviation": 0.033782645
+        },
+        "equal_opportunity_difference": {
+          "mean": 0.047327906,
+          "replication_lower": 0.015713468,
+          "replication_upper": 0.100044767,
+          "standard_deviation": 0.034987806
+        },
+        "equalized_odds_difference": {
+          "mean": 0.049945131,
+          "replication_lower": 0.027490982,
+          "replication_upper": 0.100044767,
+          "standard_deviation": 0.032184971
+        },
+        "expected_calibration_error": {
+          "mean": 0.020043248,
+          "replication_lower": 0.019394476,
+          "replication_upper": 0.020880108,
+          "standard_deviation": 0.000635689
+        },
+        "expected_cost": {
+          "mean": 0.15787728,
+          "replication_lower": 0.154499109,
+          "replication_upper": 0.161639334,
+          "standard_deviation": 0.002802538
+        },
+        "threshold_group_female": {
+          "mean": 0.35,
+          "replication_lower": 0.3,
+          "replication_upper": 0.4,
+          "standard_deviation": 0.05
+        },
+        "threshold_group_male": {
+          "mean": 0.38,
+          "replication_lower": 0.35,
+          "replication_upper": 0.4,
+          "standard_deviation": 0.027386128
+        }
+      },
+      "false_negative_cost": 2.0,
+      "false_positive_cost": 1.0,
+      "missingness": "numeric_complete",
+      "policy": "group_threshold",
+      "replications": 5,
+      "subgroup_counts": {
+        "test_group_female": 5421,
+        "test_group_male": 10860,
+        "test_label_above_50k": 3846,
+        "test_total": 16281
+      }
+    },
+    {
+      "cohort": "provider_eligible",
+      "estimates": {
+        "accuracy": {
+          "mean": 0.793354217,
+          "replication_lower": 0.793077821,
+          "replication_upper": 0.793612186,
+          "standard_deviation": 0.000240251
+        },
+        "brier_score": {
+          "mean": 0.135063265,
+          "replication_lower": 0.135031093,
+          "replication_upper": 0.135088744,
+          "standard_deviation": 2.3382e-05
+        },
+        "demographic_parity_difference": {
+          "mean": 0.100782694,
+          "replication_lower": 0.09964704,
+          "replication_upper": 0.102093485,
+          "standard_deviation": 0.001044196
+        },
+        "equal_opportunity_difference": {
+          "mean": 0.004488402,
+          "replication_lower": 0.000533982,
+          "replication_upper": 0.006913443,
+          "standard_deviation": 0.002772551
+        },
+        "equalized_odds_difference": {
+          "mean": 0.021838303,
+          "replication_lower": 0.020842063,
+          "replication_upper": 0.023146747,
+          "standard_deviation": 0.00095293
+        },
+        "expected_calibration_error": {
+          "mean": 0.022957166,
+          "replication_lower": 0.022570072,
+          "replication_upper": 0.023182453,
+          "standard_deviation": 0.000262515
+        },
+        "expected_cost": {
+          "mean": 0.154179719,
+          "replication_lower": 0.153857257,
+          "replication_upper": 0.154477612,
+          "standard_deviation": 0.000244338
+        },
+        "threshold_group_female": {
+          "mean": 0.35,
+          "replication_lower": 0.35,
+          "replication_upper": 0.35,
+          "standard_deviation": 0.0
+        },
+        "threshold_group_male": {
+          "mean": 0.35,
+          "replication_lower": 0.35,
+          "replication_upper": 0.35,
+          "standard_deviation": 0.0
+        }
+      },
+      "false_negative_cost": 2.0,
+      "false_positive_cost": 1.0,
+      "missingness": "numeric_complete",
+      "policy": "reweighed_training",
+      "replications": 5,
+      "subgroup_counts": {
+        "test_group_female": 5421,
+        "test_group_male": 10860,
+        "test_label_above_50k": 3846,
+        "test_total": 16281
+      }
+    },
+    {
+      "cohort": "provider_eligible",
+      "estimates": {
+        "accuracy": {
+          "mean": 0.793280511,
+          "replication_lower": 0.792764572,
+          "replication_upper": 0.793685892,
+          "standard_deviation": 0.000476955
+        },
+        "brier_score": {
+          "mean": 0.135116935,
+          "replication_lower": 0.135099327,
+          "replication_upper": 0.135131413,
+          "standard_deviation": 1.3868e-05
+        },
+        "demographic_parity_difference": {
+          "mean": 0.105650687,
+          "replication_lower": 0.105098171,
+          "replication_upper": 0.106302169,
+          "standard_deviation": 0.000488853
+        },
+        "equal_opportunity_difference": {
+          "mean": 0.014244784,
+          "replication_lower": 0.010687752,
+          "replication_upper": 0.017061383,
+          "standard_deviation": 0.002608
+        },
+        "equalized_odds_difference": {
+          "mean": 0.02611516,
+          "replication_lower": 0.025579677,
+          "replication_upper": 0.026571603,
+          "standard_deviation": 0.000409023
+        },
+        "expected_calibration_error": {
+          "mean": 0.020043248,
+          "replication_lower": 0.019394476,
+          "replication_upper": 0.020880108,
+          "standard_deviation": 0.000635689
+        },
+        "expected_cost": {
+          "mean": 0.154345556,
+          "replication_lower": 0.154167434,
+          "replication_upper": 0.154668018,
+          "standard_deviation": 0.000230227
+        },
+        "threshold_group_female": {
+          "mean": 0.35,
+          "replication_lower": 0.35,
+          "replication_upper": 0.35,
+          "standard_deviation": 0.0
+        },
+        "threshold_group_male": {
+          "mean": 0.35,
+          "replication_lower": 0.35,
+          "replication_upper": 0.35,
+          "standard_deviation": 0.0
+        }
+      },
+      "false_negative_cost": 2.0,
+      "false_positive_cost": 1.0,
+      "missingness": "numeric_complete",
+      "policy": "source_cost_threshold",
+      "replications": 5,
+      "subgroup_counts": {
+        "test_group_female": 5421,
+        "test_group_male": 10860,
+        "test_label_above_50k": 3846,
+        "test_total": 16281
+      }
+    }
+  ],
+  "dataset": "UCI Adult / Census Income",
+  "label": "historical annual income above USD 50,000; not qualification or deservingness",
+  "policies": [
+    "baseline",
+    "source_cost_threshold",
+    "reweighed_training",
+    "group_threshold"
+  ],
+  "provider_extraction_year": 1994,
+  "schema_version": "1.2",
+  "seeds": [
+    200,
+    201,
+    202,
+    203,
+    204
+  ],
+  "sensitive_field": "provider-coded binary sex field; not identity truth",
+  "study_type": "observational_historical_reference"
+}

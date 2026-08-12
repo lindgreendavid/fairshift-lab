@@ -58,14 +58,14 @@ configuration -> structural generator -> source population -> baseline training
 - `tests/`: deterministic unit and integration tests
 - `site/`: accessible interactive research laboratory
 - `docs/`: research protocol, methodology, cards, and decisions
-- `reports/`: frozen shift and policy registries; transient `reports/generated/` outputs remain uncommitted
+- `reports/`: frozen synthetic, policy, and observational registries; transient outputs remain uncommitted
 - `.github/`: continuous integration, security analysis, and dependency maintenance
 
 Read [the v1 shift report](docs/research-report.md), [policy report](docs/policy-study-report.md), [policy protocol](docs/policy-study-protocol.md), [research protocol](docs/research-protocol.md), [methodology](docs/methodology.md), [Data Card](docs/data-card.md), [Model Card](docs/model-card.md), [accessibility statement](ACCESSIBILITY.md), and [architecture decision](docs/adr/0001-synthetic-first.md) before interpreting results.
 
 ## Limitations and responsible use
 
-This release uses synthetic data, one binary protected attribute, one baseline, and associational group metrics. It must not be used to make high-impact decisions, rank people, certify legal compliance, or infer real-world discrimination. Synthetic simplicity supports causal clarity but does not represent intersectionality or social context.
+The synthetic work uses one binary protected attribute and simplified structural assumptions. The separate v1.2 reference study uses historical observational records and provider-coded binary sex categories. Neither surface may be used to make high-impact decisions, rank people, certify legal compliance, or infer present-day discrimination.
 
 ## Release path
 
@@ -73,8 +73,9 @@ This release uses synthetic data, one binary protected attribute, one baseline, 
 - `v0.3.0`: source-calibrated baseline and formal threshold sensitivity analysis
 - `v1.0.0`: frozen experiment registry, internally verified research report, comprehensive accessibility work, and stable public laboratory
 - `v1.1.0`: declared error costs, mitigation benchmark, fairness–utility Pareto analysis, and reproducible Policy Studio exports
+- `v1.2.0`: governed historical reference-data validation with provenance, cohort and missingness sensitivity, and a strict synthetic/observational boundary
 
-Next: external validation on carefully governed reference datasets with dataset-specific construct, consent, provenance, and use-limit documentation. Synthetic results will remain visually and analytically separate from external evidence.
+Next: a survey-design-aware ACS PUMS protocol, followed by a synthetic robustness laboratory for unobserved groups, label noise, alternative models, and specification stress tests.
 
 See [CHANGELOG.md](CHANGELOG.md) for released changes and [CONTRIBUTING.md](CONTRIBUTING.md) for the quality contract.
 

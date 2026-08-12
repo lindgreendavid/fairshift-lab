@@ -62,3 +62,12 @@ Protected attributes and labels are synthetic abstractions. They do not encode t
 ## Policy benchmark in version 1.1.0
 
 Decision-policy selection changes the original leakage boundary, so the v1.1 extension has a separate prospective protocol: [`policy-study-protocol.md`](policy-study-protocol.md). It preserves an untouched target test set, distinguishes source-only policies from supervised target adaptation, declares error costs before comparison, and defines Pareto efficiency only relative to the finite benchmark. Results and hypothesis dispositions are reported in [`policy-study-report.md`](policy-study-report.md).
+
+## External reference study in version 1.2.0
+
+Observational validation has a separate pre-result inclusion gate, dataset card and protocol:
+[`external-dataset-gate.md`](external-dataset-gate.md),
+[`adult-dataset-card.md`](adult-dataset-card.md), and
+[`external-study-protocol.md`](external-study-protocol.md). It does not modify the synthetic
+causal claims or imply a deployment shift. The complete result is documented in
+[`external-study-report.md`](external-study-report.md).

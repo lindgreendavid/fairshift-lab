@@ -290,6 +290,30 @@ thead th { position: sticky; top: 0; background: var(--white); }
 .policy-boundary p { margin: 0; padding: 24px; background: var(--white); line-height: 1.55; }
 .policy-boundary p:last-child { background: #f3d8d1; }
 
+.external { background: #dce6e2; border-top: 10px solid var(--ink); border-bottom: 1px solid var(--ink); }
+.external-boundary { display: grid; grid-template-columns: .5fr 1.7fr .7fr; gap: 24px; align-items: start; padding: 24px; border: 1px solid var(--ink); background: #f3d8d1; }
+.external-boundary strong { font: 11px var(--font-geist-mono); text-transform: uppercase; }
+.external-boundary p { margin: 0; line-height: 1.55; }
+.external-boundary a, .external-links a { text-decoration: underline; text-underline-offset: 4px; font-weight: 700; }
+.external-controls { display: grid; grid-template-columns: repeat(3, 1fr); border: 1px solid var(--ink); border-top: 0; background: var(--white); }
+.external-controls label { display: grid; gap: 10px; padding: 20px; border-right: 1px solid var(--ink); }
+.external-controls label:last-child { border-right: 0; }
+.external-controls span { font: 10px var(--font-geist-mono); text-transform: uppercase; }
+.external-controls select { min-height: 48px; border: 1px solid var(--ink); background: var(--paper); padding: 10px; color: var(--ink); }
+.external-summary { display: grid; grid-template-columns: repeat(4, 1fr); border: 1px solid var(--ink); border-top: 0; background: var(--ink); color: var(--white); }
+.external-summary article { padding: 23px; border-right: 1px solid #52635b; }
+.external-summary article:last-child { border-right: 0; }
+.external-summary span, .external-summary strong, .external-summary small { display: block; }
+.external-summary span { min-height: 30px; color: #c7d2cd; font-size: 10px; text-transform: uppercase; }
+.external-summary strong { margin: 8px 0; font: 28px var(--font-geist-mono); }
+.external-summary small { color: var(--acid); line-height: 1.4; }
+.external-summary__warning { background: #342c27; }
+.external-reading { display: grid; grid-template-columns: .7fr 1.5fr; gap: 30px; padding: 24px; border: 1px solid var(--ink); border-top: 0; background: var(--acid); }
+.external-reading h3, .external-reading p { margin: 0; }
+.external-reading p { line-height: 1.55; }
+.external > .table-scroll { border: 1px solid var(--ink); border-top: 0; background: var(--white); }
+.external-links { display: flex; flex-wrap: wrap; gap: 24px; padding: 24px; border: 1px solid var(--ink); border-top: 0; background: var(--white); }
+
 footer { background: var(--coral); border-top: 1px solid var(--ink); padding: 34px 4vw; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
 footer > div { display: flex; align-items: center; gap: 10px; }
 footer p { font-size: 11px; }
@@ -322,6 +346,7 @@ footer a { font-size: 12px; text-decoration: underline; text-underline-offset: 4
   .policy-list > span { grid-column: 1 / -1; }
   .policy-metrics { grid-template-columns: repeat(2, 1fr); }
   .policy-metrics div { border-bottom: 1px solid #52635b; }
+  .external-summary { grid-template-columns: repeat(2, 1fr); }
 }
 
 @media (max-width: 720px) {
@@ -333,7 +358,8 @@ footer a { font-size: 12px; text-decoration: underline; text-underline-offset: 4
   .hero h1 { font-size: clamp(44px, 15vw, 57px); }
   .hero__principles { grid-template-columns: repeat(2, 1fr); }
   .section-heading { grid-template-columns: 1fr; gap: 24px; }
-  .scenario-tabs, .lab-grid, .equation-card, .interpretation-ladder, .calibration-strip, .decision-reading, .policy-controls, .policy-detail header, .policy-boundary { grid-template-columns: 1fr; }
+  .scenario-tabs, .lab-grid, .equation-card, .interpretation-ladder, .calibration-strip, .decision-reading, .policy-controls, .policy-detail header, .policy-boundary, .external-boundary, .external-controls, .external-summary, .external-reading { grid-template-columns: 1fr; }
+  .external-controls label, .external-summary article { border-right: 0; border-bottom: 1px solid var(--ink); }
   .scenario-tabs button { border-right: 0; border-bottom: 1px solid var(--ink); }
   .controls { border-right: 0; border-bottom: 1px solid var(--ink); }
   .metrics-grid, .metric-lens { grid-template-columns: 1fr; }

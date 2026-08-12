@@ -2,6 +2,18 @@
 
 All notable changes follow [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) and [Semantic Versioning](https://semver.org/).
 
+## [1.2.0] - 2026-08-12
+
+### Added
+
+- A pre-result external-dataset admission gate comparing UCI Adult, ACS PUMS, German Credit, and COMPAS-derived benchmarks.
+- A pinned, checksum-verifying Adult downloader, provenance manifest, dataset card, preregistered protocol, 48-cell sensitivity registry, and bounded report.
+- A visually separated External Evidence area with complete observational results and uncertainty-first interpretation.
+
+### Changed
+
+- Extended CI reproducibility checks, public metadata, accessibility documentation, roadmap, citation metadata, and continuation instructions for the observational evidence boundary.
+
 ## [1.1.0] - 2026-08-12
 
 ### Added
@@ -92,3 +104,4 @@ All notable changes follow [Keep a Changelog](https://keepachangelog.com/en/1.1.
 [1.0.0]: https://github.com/lindgreendavid/fairshift-lab/releases/tag/v1.0.0
 [1.0.1]: https://github.com/lindgreendavid/fairshift-lab/releases/tag/v1.0.1
 [1.1.0]: https://github.com/lindgreendavid/fairshift-lab/releases/tag/v1.1.0
+[1.2.0]: https://github.com/lindgreendavid/fairshift-lab/releases/tag/v1.2.0

@@ -28,6 +28,10 @@ test("server-renders the finished research laboratory", async () => {
   assert.match(html, /Declare the stakes/);
   assert.match(html, /No automatic best policy/);
   assert.match(html, /Export this scenario/);
+  assert.match(html, /External evidence/);
+  assert.match(html, /History is evidence/);
+  assert.match(html, /Uncertainty before ranking/);
+  assert.match(html, /Complete observational policy results/);
   assert.match(html, /One grid/);
   assert.match(html, /300 complete experiments/);
   assert.match(html, /Target reliability/);
@@ -68,14 +72,26 @@ test("ships accessible controls, research boundaries, and primary sources", asyn
   assert.match(page, /proceedings\.mlr\.press/);
   assert.match(page, /proceedings\.neurips\.cc/);
   assert.match(page, /airc\.nist\.gov/);
-  assert.match(layout, /Fairshift Lab — Transparent policy trade-offs under shift/);
-  assert.match(layout, /og-v1-1\.png/);
+  assert.match(layout, /Fairshift Lab — Synthetic experiments and governed external evidence/);
+  assert.match(layout, /og-v1-2\.png/);
   assert.doesNotMatch(packageJson, /react-loading-skeleton|drizzle/);
   try {
     assert.deepEqual(await readdir(new URL("app/_sites-preview", root)), []);
   } catch (error) {
     assert.equal(error.code, "ENOENT");
   }
+});
+
+test("ships the complete governed external registry", async () => {
+  const registry = JSON.parse(
+    await readFile(new URL("../reports/v1.2-external-study.json", root), "utf8"),
+  );
+  assert.equal(registry.schema_version, "1.2");
+  assert.equal(registry.study_type, "observational_historical_reference");
+  assert.equal(registry.cells.length, 48);
+  assert.deepEqual(registry.seeds, [200, 201, 202, 203, 204]);
+  assert.ok(registry.cells.every((cell) => cell.replications === 5));
+  assert.ok(registry.cells.every((cell) => cell.subgroup_counts.test_total > 0));
 });
 
 test("ships the complete frozen policy registry into the interactive release", async () => {
