@@ -71,3 +71,13 @@ Observational validation has a separate pre-result inclusion gate, dataset card 
 [`external-study-protocol.md`](external-study-protocol.md). It does not modify the synthetic
 causal claims or imply a deployment shift. The complete result is documented in
 [`external-study-report.md`](external-study-report.md).
+
+## Robustness stress study in version 1.3.0
+
+Specification-stress testing has its own preregistered protocol:
+[`robustness-protocol.md`](robustness-protocol.md). It stays entirely synthetic, adds six
+controlled stressors and a second inspectable model family, and defines which v1.0–v1.2
+conclusions each stressor is designed to test. It never shares an unlabeled chart, table, or
+scale with either the base synthetic experiments or the v1.2 external evidence. The complete
+result, including every falsification and preserved null finding, is documented in
+[`robustness-report.md`](robustness-report.md).

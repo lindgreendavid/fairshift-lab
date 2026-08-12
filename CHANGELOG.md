@@ -2,6 +2,20 @@
 
 All notable changes follow [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) and [Semantic Versioning](https://semver.org/).
 
+## [1.3.0] - 2026-08-12
+
+### Added
+
+- A preregistered synthetic specification-stress protocol covering six controlled stressors: symmetric label noise, group-conditional label noise, protected-field measurement error, an unobserved intersectional subgroup, sample-size stress, and structural misspecification.
+- A second inspectable model family, a deterministic depth-limited decision tree, compared against the existing logistic baseline with hyperparameters fixed before any stressed result was generated.
+- A frozen 60-cell robustness registry with typed missing/undefined semantics distinct from the existing zero-denominator convention, disjoint train/tuning/adaptation/test splits, and a CI byte-comparison check alongside the existing v1.0–v1.2 registries.
+- An accessible interactive Robustness Lab with stressor and magnitude controls, an uncertainty-and-limitations-first reading panel, non-color (shape and dash-pattern) model-family encoding, and complete data tables — visually and analytically separate from both the base synthetic experiments and the governed external evidence.
+- A bounded internal report recording each hypothesis disposition, including falsifications and a preserved confound in the unobserved-subgroup construction.
+
+### Changed
+
+- Extended the model card, data card, research protocol cross-references, accessibility statement, public metadata, and continuation instructions for the robustness-stress boundary.
+
 ## [1.2.0] - 2026-08-12
 
 ### Added
