@@ -104,16 +104,26 @@ control across every stressor family, mirroring `StudyConfig.magnitudes`).
 | --- | --- |
 | `symmetric_label_noise` | Flip each training/tuning label independently with probability `0.35 × magnitude`. |
 | `group_conditional_label_noise` | Flip `sensitive == 0` training/tuning labels with probability `0.05`; flip `sensitive == 1` labels with probability `0.05 + 0.40 × magnitude`. |
-| `protected_field_measurement_error` | Flip the *observed* `sensitive` field (used for model input and threshold selection) with probability `0.35 × magnitude`; the true field is retained separately for evaluation-only comparison. |
+| `protected_field_measurement_error` | Flip the *observed* `sensitive` field with probability `0.35 × magnitude` on every split, including test; it is used for model input and threshold selection, while the true field is retained separately for evaluation-only comparison. |
 | `unobserved_subgroup` | Add `-1.5 × magnitude` to the true logit for records with `subgroup == 1`. |
 | `sample_size_stress` | Training/tuning sample size shrinks from `2,000` at magnitude `0.00` to `60` at magnitude `1.00` (`2000, 800, 300, 120, 60` at magnitudes `0.00, 0.25, 0.50, 0.75, 1.00`); the test sample size is fixed at `2,000` throughout so degradation is attributable to training data, not evaluation noise. |
 | `structural_misspecification` | Add interaction coefficient `1.5 × magnitude` on `feature_one × sensitive` to the true logit; this term is never given to either model as an engineered feature. |
 
-Label noise and measurement error are applied **only to the training and tuning splits**,
-never to the test split, so degradation is attributable to what the model learned rather than
-to what it is evaluated against. This is a documented, deliberate scope boundary: it studies
-robustness of fitting and threshold selection to corrupted supervision, not robustness of
-measurement itself.
+**Label noise is applied only to the training and tuning splits**, never to the test split, so
+degradation is attributable to what the model learned rather than to what it is evaluated
+against; test labels are always the clean, true labels. This is a documented, deliberate scope
+boundary: it studies robustness of fitting and threshold selection to corrupted supervision,
+not robustness of the label-measurement process itself.
+
+**Protected-field measurement error is treated differently, because it is a persistent
+property of how the attribute is measured, not a one-time corruption of training
+supervision.** It is applied identically to the `sensitive` field on every split, including
+test: the model always receives whatever the noisy measurement process produces as its third
+input feature, matching what a real deployment would actually observe. The **true** `sensitive`
+value is retained separately on every split, including test, purely for evaluation — never as
+a model input and never for threshold or policy selection. This lets the registry report the
+same fairness gaps computed against the observed (noisy) grouping and against the true
+grouping side by side, which is the point of hypothesis 3.
 
 ## Disjoint samples
 
@@ -125,7 +135,7 @@ the v1.1 policy-study split design:
 | Training | `+0` | Fit the logistic and tree models under the active stressor. |
 | Tuning | `+1` | Select one global cost threshold per model under the active stressor. |
 | Adaptation | `+2` | Diagnostic only: estimate the realized flip rate, subgroup effect, or interaction magnitude actually present in this replication. Never used for fitting, calibration, or threshold selection. |
-| Test | `+3` | Evaluate once. Never stressed; always the clean, fully labeled population with true and observed protected attributes both retained. |
+| Test | `+3` | Evaluate once. Labels are always the clean, true labels. The protected attribute carries the same measurement-error process as training (see above) plus a separately retained true value; every other stressor leaves the test split unmodified. |
 
 ## Estimands and registry
 
