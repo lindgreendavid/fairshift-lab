@@ -42,6 +42,7 @@ test("ships accessible controls, research boundaries, and primary sources", asyn
   assert.match(page, /htmlFor="threshold"/);
   assert.match(page, /aria-live="polite"/);
   assert.match(page, /Source-fitted temperature/);
+  assert.match(page, /toFixed\(3\)/);
   assert.match(page, /Can You Trust Your Model’s Uncertainty/);
   assert.match(page, /Inherent Trade-Offs in Fair Risk Scores/);
   assert.match(page, /Unsupported leap/);

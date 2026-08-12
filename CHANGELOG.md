@@ -2,6 +2,12 @@
 
 All notable changes follow [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) and [Semantic Versioning](https://semver.org/).
 
+## [0.3.1] - 2026-08-12
+
+### Fixed
+
+- Stabilized generated chart coordinates to prevent server/client hydration warnings caused by sub-pixel floating-point serialization differences.
+
 ## [0.3.0] - 2026-08-12
 
 ### Added
@@ -47,3 +53,4 @@ All notable changes follow [Keep a Changelog](https://keepachangelog.com/en/1.1.
 [0.1.0]: https://github.com/lindgreendavid/fairshift-lab/releases/tag/v0.1.0
 [0.2.0]: https://github.com/lindgreendavid/fairshift-lab/releases/tag/v0.2.0
 [0.3.0]: https://github.com/lindgreendavid/fairshift-lab/releases/tag/v0.3.0
+[0.3.1]: https://github.com/lindgreendavid/fairshift-lab/releases/tag/v0.3.1
