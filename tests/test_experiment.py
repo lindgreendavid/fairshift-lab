@@ -18,6 +18,9 @@ def test_experiment_serializes_shift_kind() -> None:
     result = run_experiment(config).as_dict()
     assert result["config"]["target_shift"] == {"kind": "concept", "magnitude": 0.5}  # type: ignore[index]
     assert result["target_uncertainty"]["accuracy"]["resamples"] == 200  # type: ignore[index]
+    assert result["calibration"]["temperature"] > 0.0  # type: ignore[index,operator]
+    assert len(result["source_threshold_sensitivity"]) == 19  # type: ignore[arg-type]
+    assert len(result["target_threshold_sensitivity"]) == 19  # type: ignore[arg-type]
 
 
 def test_cli_prints_machine_readable_result(capsys: object) -> None:
@@ -28,6 +31,8 @@ def test_cli_prints_machine_readable_result(capsys: object) -> None:
                 "200",
                 "--seed",
                 "2",
+                "--decision-threshold",
+                "0.4",
                 "--shift",
                 "covariate",
                 "--magnitude",
@@ -36,10 +41,14 @@ def test_cli_prints_machine_readable_result(capsys: object) -> None:
                 "20",
                 "--confidence-level",
                 "0.9",
+                "--calibration-bins",
+                "5",
             ]
         )
         == 0
     )
     output = json.loads(capsys.readouterr().out)  # type: ignore[attr-defined]
     assert output["config"]["target_shift"]["kind"] == "covariate"
+    assert output["config"]["decision_threshold"] == 0.4
     assert output["target_uncertainty"]["accuracy"]["confidence_level"] == 0.9
+    assert len(output["calibration"]["target"]["calibrated"]["bins"]) <= 5

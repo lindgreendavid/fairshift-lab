@@ -22,6 +22,9 @@ test("server-renders the finished research laboratory", async () => {
   assert.match(html, /<title>Fairshift Lab/);
   assert.match(html, /Move the population/);
   assert.match(html, /Shift microscope/);
+  assert.match(html, /Decision landscape/);
+  assert.match(html, /Target reliability/);
+  assert.match(html, /Threshold sensitivity/);
   assert.match(html, /Scientific method/);
   assert.match(html, /Research trail/);
   assert.match(html, /Run the experiment/);
@@ -38,11 +41,15 @@ test("ships accessible controls, research boundaries, and primary sources", asyn
   assert.match(page, /htmlFor="magnitude"/);
   assert.match(page, /htmlFor="threshold"/);
   assert.match(page, /aria-live="polite"/);
+  assert.match(page, /Source-fitted temperature/);
+  assert.match(page, /Can You Trust Your Model’s Uncertainty/);
+  assert.match(page, /Inherent Trade-Offs in Fair Risk Scores/);
   assert.match(page, /Unsupported leap/);
   assert.match(page, /proceedings\.mlr\.press/);
   assert.match(page, /proceedings\.neurips\.cc/);
   assert.match(page, /airc\.nist\.gov/);
   assert.match(layout, /Fairshift Lab — Fairness under distribution shift/);
+  assert.match(layout, /og-v0\.3\.png/);
   assert.doesNotMatch(packageJson, /react-loading-skeleton|drizzle/);
   try {
     assert.deepEqual(await readdir(new URL("app/_sites-preview", root)), []);

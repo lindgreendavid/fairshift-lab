@@ -50,7 +50,12 @@ def roc_auc(labels: IntArray, probabilities: FloatArray) -> float:
 
 
 def evaluate(
-    labels: IntArray, probabilities: FloatArray, sensitive: IntArray, threshold: float
+    labels: IntArray,
+    probabilities: FloatArray,
+    sensitive: IntArray,
+    threshold: float,
+    *,
+    include_roc_auc: bool = True,
 ) -> dict[str, object]:
     predictions = (probabilities >= threshold).astype(np.int64)
     group_zero = group_rates(labels, predictions, sensitive, 0)
@@ -60,7 +65,7 @@ def evaluate(
     fpr_gap = abs(group_one.false_positive_rate - group_zero.false_positive_rate)
     return {
         "accuracy": float(np.mean(predictions == labels)),
-        "roc_auc": roc_auc(labels, probabilities),
+        "roc_auc": roc_auc(labels, probabilities) if include_roc_auc else 0.0,
         "demographic_parity_difference": dp,
         "equal_opportunity_difference": eo,
         "equalized_odds_difference": max(eo, fpr_gap),

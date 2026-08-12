@@ -40,6 +40,7 @@ class ExperimentConfig:
     iterations: int = 800
     bootstrap_samples: int = 200
     confidence_level: float = 0.95
+    calibration_bins: int = 10
     target_shift: ShiftConfig = ShiftConfig()
 
     def __post_init__(self) -> None:
@@ -55,3 +56,5 @@ class ExperimentConfig:
             raise ValueError("bootstrap samples must be at least 20")
         if not 0.5 <= self.confidence_level < 1.0:
             raise ValueError("confidence level must be between 0.5 and 1")
+        if not 2 <= self.calibration_bins <= 50:
+            raise ValueError("calibration bins must be between 2 and 50")

@@ -16,8 +16,10 @@ def build_parser() -> argparse.ArgumentParser:
     parser.add_argument("--magnitude", type=float, default=0.0)
     parser.add_argument("--samples", type=int, default=2_000)
     parser.add_argument("--seed", type=int, default=42)
+    parser.add_argument("--decision-threshold", type=float, default=0.5)
     parser.add_argument("--bootstrap-samples", type=int, default=200)
     parser.add_argument("--confidence-level", type=float, default=0.95)
+    parser.add_argument("--calibration-bins", type=int, default=10)
     return parser
 
 
@@ -28,8 +30,10 @@ def main(argv: Sequence[str] | None = None) -> int:
         ExperimentConfig(
             samples=args.samples,
             seed=args.seed,
+            decision_threshold=args.decision_threshold,
             bootstrap_samples=args.bootstrap_samples,
             confidence_level=args.confidence_level,
+            calibration_bins=args.calibration_bins,
             target_shift=shift,
         )
     )
