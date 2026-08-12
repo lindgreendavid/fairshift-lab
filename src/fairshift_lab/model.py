@@ -21,14 +21,26 @@ class LogisticBaseline:
     iterations: int = 800
     weights: FloatArray | None = None
 
-    def fit(self, features: FloatArray, labels: IntArray) -> LogisticBaseline:
+    def fit(
+        self,
+        features: FloatArray,
+        labels: IntArray,
+        sample_weights: FloatArray | None = None,
+    ) -> LogisticBaseline:
         design = np.column_stack((np.ones(features.shape[0]), features))
         weights = np.zeros(design.shape[1], dtype=np.float64)
+        if sample_weights is None:
+            sample_weights = np.ones(labels.size, dtype=np.float64)
+        if sample_weights.shape != labels.shape:
+            raise ValueError("sample weights must match labels")
+        if np.any(sample_weights < 0.0) or not np.any(sample_weights > 0.0):
+            raise ValueError("sample weights must be non-negative with positive total weight")
+        normalizer = float(np.sum(sample_weights))
         for _ in range(self.iterations):
             scores = np.einsum("ij,j->i", design, weights, optimize=True)
-            errors = _sigmoid(scores) - labels
+            errors = (_sigmoid(scores) - labels) * sample_weights
             gradient = np.einsum("ij,i->j", design, errors, optimize=True)
-            weights -= self.learning_rate * gradient / labels.size
+            weights -= self.learning_rate * gradient / normalizer
         self.weights = weights
         return self
 

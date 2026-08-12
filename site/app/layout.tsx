@@ -14,9 +14,9 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://fairshift-lab.lindgreendavid.chatgpt.site"),
-  title: "Fairshift Lab — Verified fairness-under-shift research",
+  title: "Fairshift Lab — Transparent policy trade-offs under shift",
   description:
-    "A verified, accessible research laboratory with a frozen 300-experiment report on calibration, decisions, performance, and group-fairness measurements under distribution shift.",
+    "An accessible research laboratory for declaring error costs, comparing mitigation policies, and inspecting fairness–utility Pareto frontiers under distribution shift.",
   applicationName: "Fairshift Lab",
   keywords: [
     "responsible AI",
@@ -28,18 +28,20 @@ export const metadata: Metadata = {
     "threshold sensitivity",
     "reproducible research",
     "web accessibility",
+    "decision policy",
+    "Pareto frontier",
   ],
   openGraph: {
     title: "Fairshift Lab",
     description:
-      "Move a population, trace every decision, and inspect the frozen 300-experiment report.",
+      "Declare the stakes, compare eight policies, and inspect every fairness–utility trade-off.",
     type: "website",
     images: [
       {
-        url: "/og-v1.png",
+        url: "/og-v1-1.png",
         width: 1672,
         height: 941,
-        alt: "Fairshift Lab — source and target distributions under shift",
+        alt: "Fairshift Lab Policy Studio — source and target shift above a policy Pareto field",
       },
     ],
   },
@@ -47,8 +49,8 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Fairshift Lab",
     description:
-      "Move a population, trace every decision, and inspect the frozen 300-experiment report.",
-    images: ["/og-v1.png"],
+      "Declare the stakes, compare eight policies, and inspect every fairness–utility trade-off.",
+    images: ["/og-v1-1.png"],
   },
   icons: {
     icon: "/favicon.svg",

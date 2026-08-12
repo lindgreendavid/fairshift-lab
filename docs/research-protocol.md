@@ -58,3 +58,7 @@ The report grid crosses three target interventions with magnitudes `0.00`, `0.25
 ## Ethics
 
 Protected attributes and labels are synthetic abstractions. They do not encode the lived meaning of demographic categories. The laboratory is intended for education, method development, and reproducibility—not compliance certification or automated decision-making.
+
+## Policy benchmark in version 1.1.0
+
+Decision-policy selection changes the original leakage boundary, so the v1.1 extension has a separate prospective protocol: [`policy-study-protocol.md`](policy-study-protocol.md). It preserves an untouched target test set, distinguishes source-only policies from supervised target adaptation, declares error costs before comparison, and defines Pareto efficiency only relative to the finite benchmark. Results and hypothesis dispositions are reported in [`policy-study-report.md`](policy-study-report.md).

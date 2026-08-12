@@ -2,6 +2,20 @@
 
 All notable changes follow [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) and [Semantic Versioning](https://semver.org/).
 
+## [1.1.0] - 2026-08-12
+
+### Added
+
+- A preregistered 20-seed benchmark of eight baseline, threshold, recalibration, reweighing, and group-threshold policies under three maximum-magnitude shifts and three error-cost declarations.
+- A frozen 72-cell policy registry with descriptive replication ranges and benchmark-relative Pareto status.
+- An accessible interactive Policy Studio with non-color frontier encoding, complete data tables, data-access disclosures, and deterministic JSON scenario export.
+- A dedicated policy-study protocol, internally verified report, expanded model card, and release continuation prompt for ClaudeAI.
+
+### Changed
+
+- Extended logistic baseline fitting with validated sample weights.
+- Updated public metadata, social preview, documentation, and CI reproducibility checks for v1.1.0.
+
 ## [1.0.1] - 2026-08-12
 
 ### Fixed
@@ -77,3 +91,4 @@ All notable changes follow [Keep a Changelog](https://keepachangelog.com/en/1.1.
 [0.3.1]: https://github.com/lindgreendavid/fairshift-lab/releases/tag/v0.3.1
 [1.0.0]: https://github.com/lindgreendavid/fairshift-lab/releases/tag/v1.0.0
 [1.0.1]: https://github.com/lindgreendavid/fairshift-lab/releases/tag/v1.0.1
+[1.1.0]: https://github.com/lindgreendavid/fairshift-lab/releases/tag/v1.1.0

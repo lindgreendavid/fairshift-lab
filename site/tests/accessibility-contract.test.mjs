@@ -96,3 +96,23 @@ test("ships recovery pages with direct, keyboard-operable actions", async () => 
   assert.match(errorPage, /Return to the laboratory/);
   assert.match(notFound, /Return to Fairshift Lab/);
 });
+
+test("keeps the Policy Studio operable and equivalent beyond the plot", async () => {
+  const [studio, styles] = await Promise.all([
+    source("app/policy-studio.tsx"),
+    source("app/globals.css"),
+  ]);
+  assert.match(studio, /<section className="policy" id="policy" aria-labelledby="policy-heading">/);
+  assert.match(studio, /aria-labelledby="policy-plot-title policy-plot-description"/);
+  assert.match(studio, /Diamonds[\s\S]*Pareto-efficient/);
+  assert.match(studio, /aria-label="Select a policy for detail"/);
+  assert.match(studio, /aria-pressed=/);
+  assert.match(studio, /aria-live="polite"/);
+  assert.match(studio, /<caption>/);
+  assert.match(studio, /Scrollable policy comparison data table/);
+  assert.match(studio, /Export this scenario/);
+  assert.match(studio, /not a recommendation/);
+  assert.match(styles, /\.shape-diamond/);
+  assert.match(styles, /\.shape-circle/);
+  assert.match(styles, /\.policy-controls button \{ min-height: 48px/);
+});
