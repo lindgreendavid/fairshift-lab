@@ -31,6 +31,20 @@ type Metrics = {
 
 type Interval = { lower: number; upper: number };
 
+type CalibrationBin = {
+  count: number;
+  meanProbability: number;
+  observedRate: number;
+};
+
+type CalibrationSummary = {
+  brier: number;
+  ece: number;
+  bins: CalibrationBin[];
+};
+
+type ThresholdPoint = Metrics & { threshold: number };
+
 const shiftCopy: Record<
   ShiftKind,
   { label: string; short: string; mechanism: string; fixed: string }
@@ -220,6 +234,69 @@ function evaluate(rows: Observation[], threshold: number, includeAuc = true): Me
   };
 }
 
+function applyTemperature(score: number, temperature: number) {
+  const clipped = Math.max(1e-12, Math.min(1 - 1e-12, score));
+  const logit = Math.log(clipped / (1 - clipped));
+  return sigmoid(logit / temperature);
+}
+
+function logLoss(rows: Observation[], temperature: number) {
+  return rows.reduce((total, row) => {
+    const probability = Math.max(1e-12, Math.min(1 - 1e-12, applyTemperature(row.score, temperature)));
+    return total - (row.label * Math.log(probability) + (1 - row.label) * Math.log(1 - probability));
+  }, 0) / rows.length;
+}
+
+function fitTemperature(rows: Observation[]) {
+  let bestTemperature = 1;
+  let bestLoss = Number.POSITIVE_INFINITY;
+  for (let index = 0; index < 151; index += 1) {
+    const temperature = Math.exp(Math.log(0.25) + (index / 150) * Math.log(16));
+    const loss = logLoss(rows, temperature);
+    if (loss < bestLoss) {
+      bestLoss = loss;
+      bestTemperature = temperature;
+    }
+  }
+  return bestTemperature;
+}
+
+function calibrate(rows: Observation[], temperature: number) {
+  return rows.map((row) => ({ ...row, score: applyTemperature(row.score, temperature) }));
+}
+
+function calibrationSummary(rows: Observation[], binCount = 10): CalibrationSummary {
+  const bins = Array.from({ length: binCount }, () => ({ count: 0, score: 0, labels: 0 }));
+  let brier = 0;
+  for (const row of rows) {
+    const index = Math.min(binCount - 1, Math.floor(row.score * binCount));
+    bins[index].count += 1;
+    bins[index].score += row.score;
+    bins[index].labels += row.label;
+    brier += (row.score - row.label) ** 2;
+  }
+  const populated = bins
+    .filter((bin) => bin.count)
+    .map((bin) => ({
+      count: bin.count,
+      meanProbability: bin.score / bin.count,
+      observedRate: bin.labels / bin.count,
+    }));
+  const ece = populated.reduce(
+    (total, bin) => total + (bin.count / rows.length) * Math.abs(bin.meanProbability - bin.observedRate),
+    0,
+  );
+  return { brier: brier / rows.length, ece, bins: populated };
+}
+
+function thresholdSweep(rows: Observation[]) {
+  const ranking = auc(rows);
+  return Array.from({ length: 19 }, (_, index) => {
+    const threshold = 0.05 * (index + 1);
+    return { threshold, ...evaluate(rows, threshold, false), auc: ranking } as ThresholdPoint;
+  });
+}
+
 function bootstrap(rows: Observation[], threshold: number, seed: number) {
   const random = mulberry32(seed);
   const group0 = rows.filter((row) => row.group === 0);
@@ -253,17 +330,34 @@ function runExperiment(
   samples: number,
   seed: number,
 ) {
-  const rawSource = generatePopulation(samples, seed, "none", 0);
-  const rawTarget = generatePopulation(samples, seed + 1, shift, magnitude);
-  const weights = fitLogistic(rawSource);
-  const source = scorePopulation(rawSource, weights);
-  const target = scorePopulation(rawTarget, weights);
+  const rawTraining = generatePopulation(samples, seed, "none", 0);
+  const rawCalibration = generatePopulation(samples, seed + 1, "none", 0);
+  const rawSource = generatePopulation(samples, seed + 2, "none", 0);
+  const rawTarget = generatePopulation(samples, seed + 3, shift, magnitude);
+  const weights = fitLogistic(rawTraining);
+  const calibrationScores = scorePopulation(rawCalibration, weights);
+  const temperature = fitTemperature(calibrationScores);
+  const sourceRawScores = scorePopulation(rawSource, weights);
+  const targetRawScores = scorePopulation(rawTarget, weights);
+  const source = calibrate(sourceRawScores, temperature);
+  const target = calibrate(targetRawScores, temperature);
   return {
     source,
     target,
     sourceMetrics: evaluate(source, threshold),
     targetMetrics: evaluate(target, threshold),
-    intervals: bootstrap(target, threshold, seed + 3),
+    intervals: bootstrap(target, threshold, seed + 5),
+    temperature,
+    calibration: {
+      sourceRaw: calibrationSummary(sourceRawScores),
+      source: calibrationSummary(source),
+      targetRaw: calibrationSummary(targetRawScores),
+      target: calibrationSummary(target),
+    },
+    sensitivity: {
+      source: thresholdSweep(source),
+      target: thresholdSweep(target),
+    },
   };
 }
 
@@ -319,6 +413,73 @@ function MetricCard({
   );
 }
 
+function chartPoints(points: { x: number; y: number }[]) {
+  return points.map((point) => `${36 + point.x * 528},${224 - point.y * 184}`).join(" ");
+}
+
+function ReliabilityChart({
+  raw,
+  calibrated,
+}: {
+  raw: CalibrationSummary;
+  calibrated: CalibrationSummary;
+}) {
+  return (
+    <div className="science-chart">
+      <div className="science-chart__title">
+        <div><span>Target reliability</span><strong>Predicted probability → observed rate</strong></div>
+        <div className="chart-legend"><span><i className="raw-dot" />Raw</span><span><i className="calibrated-dot" />Calibrated</span></div>
+      </div>
+      <svg viewBox="0 0 600 260" role="img" aria-label="Target reliability diagram comparing raw and source-calibrated probabilities">
+        <line className="chart-grid" x1="36" y1="224" x2="564" y2="224" />
+        <line className="chart-grid" x1="36" y1="224" x2="36" y2="40" />
+        <line className="chart-ideal" x1="36" y1="224" x2="564" y2="40" />
+        <polyline className="chart-line chart-line--raw" points={chartPoints(raw.bins.map((bin) => ({ x: bin.meanProbability, y: bin.observedRate })))} />
+        <polyline className="chart-line chart-line--calibrated" points={chartPoints(calibrated.bins.map((bin) => ({ x: bin.meanProbability, y: bin.observedRate })))} />
+        {calibrated.bins.map((bin, index) => (
+          <circle key={index} className="chart-point" cx={36 + bin.meanProbability * 528} cy={224 - bin.observedRate * 184} r="4" />
+        ))}
+        <text x="36" y="244">0</text><text x="550" y="244">1</text>
+        <text x="18" y="228">0</text><text x="18" y="44">1</text>
+      </svg>
+      <p>Closer to the dotted diagonal means predicted probabilities align more closely with observed frequencies in this sample.</p>
+    </div>
+  );
+}
+
+function ThresholdChart({
+  source,
+  target,
+  metric,
+  threshold,
+}: {
+  source: ThresholdPoint[];
+  target: ThresholdPoint[];
+  metric: MetricKey;
+  threshold: number;
+}) {
+  const metricPoints = (points: ThresholdPoint[]) =>
+    chartPoints(points.map((point) => ({ x: point.threshold, y: point[metric] })));
+  return (
+    <div className="science-chart">
+      <div className="science-chart__title">
+        <div><span>Threshold sensitivity</span><strong>{metricCopy[metric].label} across the decision curve</strong></div>
+        <div className="chart-legend"><span><i className="source-dot" />Source</span><span><i className="target-dot" />Target</span></div>
+      </div>
+      <svg viewBox="0 0 600 260" role="img" aria-label={`${metricCopy[metric].label} across source and target decision thresholds`}>
+        <line className="chart-grid" x1="36" y1="224" x2="564" y2="224" />
+        <line className="chart-grid" x1="36" y1="224" x2="36" y2="40" />
+        <line className="chart-threshold" x1={36 + threshold * 528} y1="40" x2={36 + threshold * 528} y2="224" />
+        <polyline className="chart-line chart-line--source" points={metricPoints(source)} />
+        <polyline className="chart-line chart-line--target" points={metricPoints(target)} />
+        <text x="36" y="244">0</text><text x="550" y="244">1</text>
+        <text x="18" y="228">0</text><text x="18" y="44">1</text>
+      </svg>
+      <p>The vertical marker is your current threshold. Select any metric card above to change the curve.</p>
+    </div>
+  );
+}
+
 export default function Home() {
   const [shift, setShift] = useState<ShiftKind>("covariate");
   const [magnitude, setMagnitude] = useState(0.45);
@@ -345,6 +506,7 @@ export default function Home() {
         </a>
         <div className="nav__links">
           <a href="#experiment">Experiment</a>
+          <a href="#decision">Decision curves</a>
           <a href="#method">Method</a>
           <a href="#evidence">Evidence</a>
           <a href="https://github.com/lindgreendavid/fairshift-lab">GitHub</a>
@@ -352,12 +514,12 @@ export default function Home() {
       </nav>
 
       <section className="hero" id="top">
-        <div className="eyebrow"><span>Interactive research release</span><span>v0.2.0</span></div>
-        <h1>Move the population.<br /><em>Watch fairness move.</em></h1>
+        <div className="eyebrow"><span>Interactive research release</span><span>v0.3.0</span></div>
+        <h1>Move the population.<br /><em>Trace every decision.</em></h1>
         <p className="hero__lead">
           A model can keep the same code and still behave differently after deployment.
           Change one data-generating mechanism, then inspect performance, group gaps, and
-          uncertainty together.
+          uncertainty, calibration, and the full decision curve together.
         </p>
         <div className="hero__actions">
           <a className="button button--primary" href="#experiment">Run the experiment</a>
@@ -365,8 +527,8 @@ export default function Home() {
         </div>
         <div className="hero__principles" aria-label="Research principles">
           <span>One controlled intervention</span>
-          <span>Reproducible seed</span>
-          <span>Uncertainty visible</span>
+          <span>Source-only calibration</span>
+          <span>Whole threshold curve</span>
           <span>Claims bounded</span>
         </div>
       </section>
@@ -439,7 +601,7 @@ export default function Home() {
             <div className="population-stats">
               <div><span>Target Group B share</span><strong>{Math.round(groupShare * 100)}%</strong></div>
               <div><span>Threshold</span><strong>{threshold.toFixed(2)}</strong></div>
-              <div><span>Independent target seed</span><strong>{seed + 1}</strong></div>
+              <div><span>Independent target seed</span><strong>{seed + 3}</strong></div>
             </div>
           </div>
         </div>
@@ -470,9 +632,57 @@ export default function Home() {
         </p>
       </section>
 
+      <section className="decision" id="decision">
+        <header className="section-heading">
+          <div><span className="section-index">02</span><p>Decision landscape</p></div>
+          <h2>A score is not<br />yet a decision.</h2>
+        </header>
+        <div className="calibration-strip">
+          <article>
+            <span>Source-fitted temperature</span>
+            <strong>{experiment.temperature.toFixed(2)}</strong>
+            <p>Chosen on an independent source calibration sample by minimum log loss.</p>
+          </article>
+          <article>
+            <span>Target Brier score</span>
+            <strong>{format(experiment.calibration.target.brier)}</strong>
+            <p>Mean squared probability error after source-only calibration. Lower is better.</p>
+          </article>
+          <article>
+            <span>Target ECE</span>
+            <strong>{format(experiment.calibration.target.ece)}</strong>
+            <p>Weighted bin gap; before calibration: {format(experiment.calibration.targetRaw.ece)}.</p>
+          </article>
+          <article className="calibration-strip__warning">
+            <span>Critical reading</span>
+            <strong>{experiment.calibration.target.ece <= experiment.calibration.targetRaw.ece ? "Improved here" : "Worsened here"}</strong>
+            <p>Source calibration is not a guarantee under shift. Inspect the target evidence.</p>
+          </article>
+        </div>
+        <div className="chart-grid-layout">
+          <ReliabilityChart raw={experiment.calibration.targetRaw} calibrated={experiment.calibration.target} />
+          <ThresholdChart
+            source={experiment.sensitivity.source}
+            target={experiment.sensitivity.target}
+            metric={selectedMetric}
+            threshold={threshold}
+          />
+        </div>
+        <div className="decision-reading">
+          <article><span>Calibration asks</span><h3>Do scores mean what they say?</h3><p>Among cases scored near 0.7, roughly 70% should be positive in a well-calibrated sample.</p></article>
+          <article><span>Thresholding asks</span><h3>Where does a probability become action?</h3><p>Moving the cutoff changes selections and error rates—even when ranking remains fixed.</p></article>
+          <article><span>Fairness asks</span><h3>Which differences matter here?</h3><p>Calibration and error-rate parity can conflict when groups have different outcome rates.</p></article>
+        </div>
+        <p className="uncertainty-note">
+          ECE depends on binning and is descriptive. Temperature scaling preserves score ranking,
+          so AUROC remains unchanged; it does not repair a shifted label mechanism. Target
+          reliability can only be evaluated once representative target labels are observed.
+        </p>
+      </section>
+
       <section className="method" id="method">
         <header className="section-heading section-heading--light">
-          <div><span className="section-index">02</span><p>Scientific method</p></div>
+          <div><span className="section-index">03</span><p>Scientific method</p></div>
           <h2>See exactly what<br />the experiment knows.</h2>
         </header>
         <div className="causal-chain" aria-label="Experimental causal chain">
@@ -480,12 +690,14 @@ export default function Home() {
           <i>→</i>
           <div><span>2</span><strong>Train once</strong><p>Fit logistic regression on source data only.</p></div>
           <i>→</i>
-          <div><span>3</span><strong>Intervene</strong><p>Change exactly one target mechanism.</p></div>
+          <div><span>3</span><strong>Calibrate</strong><p>Fit one temperature on a separate source holdout.</p></div>
           <i>→</i>
-          <div><span>4</span><strong>Audit</strong><p>Compare performance, gaps, and intervals.</p></div>
+          <div><span>4</span><strong>Intervene</strong><p>Change exactly one target mechanism.</p></div>
+          <i>→</i>
+          <div><span>5</span><strong>Audit</strong><p>Compare reliability, curves, gaps, and intervals.</p></div>
         </div>
         <div className="equation-card">
-          <div><span>Source structural equation</span><code>P(Y=1) = σ(−0.15 + 1.1X₁ − 0.7X₂ − 0.45A)</code></div>
+          <div><span>Source structural equation</span><code>P(Y=1) = σ(−0.15 + 1.1X₁ − 0.7X₂ − 0.45A)</code><code>pᶜ = σ(logit(p) / T)</code></div>
           <p>
             This equation is a transparent teaching mechanism—not a representation of any real
             demographic group. The protected attribute is synthetic and binary; intersectionality,
@@ -501,10 +713,19 @@ export default function Home() {
 
       <section className="evidence" id="evidence">
         <header className="section-heading">
-          <div><span className="section-index">03</span><p>Research trail</p></div>
+          <div><span className="section-index">04</span><p>Research trail</p></div>
           <h2>Built on arguments<br />you can inspect.</h2>
         </header>
         <div className="source-list">
+          <a href="https://proceedings.mlr.press/v70/guo17a.html" target="_blank" rel="noreferrer">
+            <span>ICML · 2017</span><strong>On Calibration of Modern Neural Networks</strong><p>Guo et al. evaluate post-hoc calibration and fit temperature scaling on held-out validation data.</p><b>↗</b>
+          </a>
+          <a href="https://proceedings.neurips.cc/paper_files/paper/2019/hash/8558cb408c1d76621371888657d2eb1d-Abstract.html" target="_blank" rel="noreferrer">
+            <span>NeurIPS · 2019</span><strong>Can You Trust Your Model’s Uncertainty?</strong><p>Ovadia et al. show why calibration must be re-evaluated under dataset shift.</p><b>↗</b>
+          </a>
+          <a href="https://arxiv.org/abs/1609.05807" target="_blank" rel="noreferrer">
+            <span>ITCS · 2017</span><strong>Inherent Trade-Offs in Fair Risk Scores</strong><p>Kleinberg, Mullainathan & Raghavan formalize incompatibilities among fairness conditions.</p><b>↗</b>
+          </a>
           <a href="https://proceedings.neurips.cc/paper_files/paper/2016/hash/6a9659feb1216f14f7384ba499518b38-Abstract.html" target="_blank" rel="noreferrer">
             <span>NeurIPS · 2016</span><strong>Equality of Opportunity in Supervised Learning</strong><p>Hardt, Price & Srebro formalize equal opportunity and equalized odds.</p><b>↗</b>
           </a>
