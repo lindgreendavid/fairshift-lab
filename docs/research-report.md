@@ -28,6 +28,9 @@ and an empirical 2.5th–97.5th percentile replication range. That range describ
 over the declared seeds; it is not a population confidence interval.
 
 The complete machine-readable registry is [`reports/v1-study.json`](../reports/v1-study.json).
+Published summary values are canonically rounded to nine decimal places so that the
+registry is byte-identical across supported operating systems; displayed report values use
+three decimals. The experiment calculations are not rounded before aggregation.
 Regenerate it with:
 
 ```bash

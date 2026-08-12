@@ -6,90 +6,90 @@
       "shift": "covariate",
       "source_to_target_change": {
         "accuracy": {
-          "mean": -0.0009000000000000064,
-          "replication_lower": -0.026725000000000023,
-          "replication_upper": 0.03257499999999997,
-          "standard_deviation": 0.017453396592972358
+          "mean": -0.0009,
+          "replication_lower": -0.026725,
+          "replication_upper": 0.032575,
+          "standard_deviation": 0.017453397
         },
         "brier_score": {
-          "mean": 0.00010082629742007854,
-          "replication_lower": -0.012242631934973715,
-          "replication_upper": 0.00996192802598683,
-          "standard_deviation": 0.007582905992440611
+          "mean": 0.000100826,
+          "replication_lower": -0.012242632,
+          "replication_upper": 0.009961928,
+          "standard_deviation": 0.007582906
         },
         "demographic_parity_difference": {
-          "mean": -0.006994557627131401,
-          "replication_lower": -0.09819664844712105,
-          "replication_upper": 0.05824186327697385,
-          "standard_deviation": 0.04942952637482599
+          "mean": -0.006994558,
+          "replication_lower": -0.098196648,
+          "replication_upper": 0.058241863,
+          "standard_deviation": 0.049429526
         },
         "equal_opportunity_difference": {
-          "mean": -0.013058572451357903,
-          "replication_lower": -0.09128317357034166,
-          "replication_upper": 0.04984321206306356,
-          "standard_deviation": 0.046488375928712564
+          "mean": -0.013058572,
+          "replication_lower": -0.091283174,
+          "replication_upper": 0.049843212,
+          "standard_deviation": 0.046488376
         },
         "equalized_odds_difference": {
-          "mean": -0.012081494649944869,
-          "replication_lower": -0.0914369891201647,
-          "replication_upper": 0.05344903793369612,
-          "standard_deviation": 0.047941128445585394
+          "mean": -0.012081495,
+          "replication_lower": -0.091436989,
+          "replication_upper": 0.053449038,
+          "standard_deviation": 0.047941128
         },
         "expected_calibration_error": {
-          "mean": -0.0026625336688931287,
-          "replication_lower": -0.021620018712068378,
-          "replication_upper": 0.02012903742487856,
-          "standard_deviation": 0.012110134155803292
+          "mean": -0.002662534,
+          "replication_lower": -0.021620019,
+          "replication_upper": 0.020129037,
+          "standard_deviation": 0.012110134
         },
         "roc_auc": {
-          "mean": -0.0007473859483409339,
-          "replication_lower": -0.027181045960618728,
-          "replication_upper": 0.028625851013802172,
-          "standard_deviation": 0.018360128408562396
+          "mean": -0.000747386,
+          "replication_lower": -0.027181046,
+          "replication_upper": 0.028625851,
+          "standard_deviation": 0.018360128
         }
       },
       "target": {
         "accuracy": {
-          "mean": 0.7104999999999999,
+          "mean": 0.7105,
           "replication_lower": 0.691375,
           "replication_upper": 0.727575,
-          "standard_deviation": 0.011339265733213122
+          "standard_deviation": 0.011339266
         },
         "brier_score": {
-          "mean": 0.189460841779538,
-          "replication_lower": 0.18360137670634422,
-          "replication_upper": 0.19832664084649484,
-          "standard_deviation": 0.004857866250640704
+          "mean": 0.189460842,
+          "replication_lower": 0.183601377,
+          "replication_upper": 0.198326641,
+          "standard_deviation": 0.004857866
         },
         "demographic_parity_difference": {
-          "mean": 0.045947783938422006,
-          "replication_lower": 0.0013490522299969595,
-          "replication_upper": 0.10682971849116114,
-          "standard_deviation": 0.03404888650767689
+          "mean": 0.045947784,
+          "replication_lower": 0.001349052,
+          "replication_upper": 0.106829718,
+          "standard_deviation": 0.034048887
         },
         "equal_opportunity_difference": {
-          "mean": 0.04926192030037978,
-          "replication_lower": 0.0011461357039187577,
-          "replication_upper": 0.1310983643233568,
-          "standard_deviation": 0.03690044301663835
+          "mean": 0.04926192,
+          "replication_lower": 0.001146136,
+          "replication_upper": 0.131098364,
+          "standard_deviation": 0.036900443
         },
         "equalized_odds_difference": {
-          "mean": 0.0592641350983785,
-          "replication_lower": 0.00588951036792016,
-          "replication_upper": 0.1310983643233568,
-          "standard_deviation": 0.037239018631274344
+          "mean": 0.059264135,
+          "replication_lower": 0.00588951,
+          "replication_upper": 0.131098364,
+          "standard_deviation": 0.037239019
         },
         "expected_calibration_error": {
-          "mean": 0.03029773983471252,
-          "replication_lower": 0.017777235273443635,
-          "replication_upper": 0.04766252036531013,
-          "standard_deviation": 0.009186882829527749
+          "mean": 0.03029774,
+          "replication_lower": 0.017777235,
+          "replication_upper": 0.04766252,
+          "standard_deviation": 0.009186883
         },
         "roc_auc": {
-          "mean": 0.7829256513947249,
-          "replication_lower": 0.7607060708045555,
-          "replication_upper": 0.7975563661777814,
-          "standard_deviation": 0.011858049753056323
+          "mean": 0.782925651,
+          "replication_lower": 0.760706071,
+          "replication_upper": 0.797556366,
+          "standard_deviation": 0.01185805
         }
       }
     },
@@ -99,90 +99,90 @@
       "shift": "covariate",
       "source_to_target_change": {
         "accuracy": {
-          "mean": 0.0020000000000000018,
-          "replication_lower": -0.029575000000000025,
-          "replication_upper": 0.04157499999999998,
-          "standard_deviation": 0.021892079798290907
+          "mean": 0.002,
+          "replication_lower": -0.029575,
+          "replication_upper": 0.041575,
+          "standard_deviation": 0.02189208
         },
         "brier_score": {
-          "mean": -0.0014276262362822312,
-          "replication_lower": -0.018205981361237775,
-          "replication_upper": 0.01249211448470021,
-          "standard_deviation": 0.009118195419702444
+          "mean": -0.001427626,
+          "replication_lower": -0.018205981,
+          "replication_upper": 0.012492114,
+          "standard_deviation": 0.009118195
         },
         "demographic_parity_difference": {
-          "mean": 0.006725163680928567,
-          "replication_lower": -0.09685100772278733,
-          "replication_upper": 0.11581062240363069,
-          "standard_deviation": 0.06387291445177067
+          "mean": 0.006725164,
+          "replication_lower": -0.096851008,
+          "replication_upper": 0.115810622,
+          "standard_deviation": 0.063872914
         },
         "equal_opportunity_difference": {
-          "mean": -0.019103394341449483,
-          "replication_lower": -0.09808165362578267,
-          "replication_upper": 0.06003286168587245,
-          "standard_deviation": 0.04706123945536039
+          "mean": -0.019103394,
+          "replication_lower": -0.098081654,
+          "replication_upper": 0.060032862,
+          "standard_deviation": 0.047061239
         },
         "equalized_odds_difference": {
-          "mean": -0.002703720258061838,
-          "replication_lower": -0.07920195438762838,
-          "replication_upper": 0.09372151289304416,
-          "standard_deviation": 0.05355355592725028
+          "mean": -0.00270372,
+          "replication_lower": -0.079201954,
+          "replication_upper": 0.093721513,
+          "standard_deviation": 0.053553556
         },
         "expected_calibration_error": {
-          "mean": 0.00014885763652108217,
-          "replication_lower": -0.02034175852308287,
-          "replication_upper": 0.019610285338064592,
-          "standard_deviation": 0.012970591652207703
+          "mean": 0.000148858,
+          "replication_lower": -0.020341759,
+          "replication_upper": 0.019610285,
+          "standard_deviation": 0.012970592
         },
         "roc_auc": {
-          "mean": 0.0012035509264866795,
-          "replication_lower": -0.028855107241433475,
-          "replication_upper": 0.035697207324169346,
-          "standard_deviation": 0.01998775514369006
+          "mean": 0.001203551,
+          "replication_lower": -0.028855107,
+          "replication_upper": 0.035697207,
+          "standard_deviation": 0.019987755
         }
       },
       "target": {
         "accuracy": {
-          "mean": 0.7133999999999999,
+          "mean": 0.7134,
           "replication_lower": 0.6869,
           "replication_upper": 0.738625,
-          "standard_deviation": 0.015052189908868132
+          "standard_deviation": 0.01505219
         },
         "brier_score": {
-          "mean": 0.18793238924583572,
-          "replication_lower": 0.17880275976481255,
-          "replication_upper": 0.19948919877638085,
-          "standard_deviation": 0.005746298451923447
+          "mean": 0.187932389,
+          "replication_lower": 0.17880276,
+          "replication_upper": 0.199489199,
+          "standard_deviation": 0.005746298
         },
         "demographic_parity_difference": {
-          "mean": 0.05966750524648199,
-          "replication_lower": 0.000613450439397889,
-          "replication_upper": 0.14799044282953894,
-          "standard_deviation": 0.051414942832037
+          "mean": 0.059667505,
+          "replication_lower": 0.00061345,
+          "replication_upper": 0.147990443,
+          "standard_deviation": 0.051414943
         },
         "equal_opportunity_difference": {
-          "mean": 0.0432170984102882,
-          "replication_lower": 0.0025122418203204853,
-          "replication_upper": 0.12067581809371615,
-          "standard_deviation": 0.03998646376588221
+          "mean": 0.043217098,
+          "replication_lower": 0.002512242,
+          "replication_upper": 0.120675818,
+          "standard_deviation": 0.039986464
         },
         "equalized_odds_difference": {
-          "mean": 0.06864190949026153,
-          "replication_lower": 0.00870773693806539,
-          "replication_upper": 0.1745712746199496,
-          "standard_deviation": 0.05308486054784509
+          "mean": 0.068641909,
+          "replication_lower": 0.008707737,
+          "replication_upper": 0.174571275,
+          "standard_deviation": 0.053084861
         },
         "expected_calibration_error": {
-          "mean": 0.03310913114012673,
-          "replication_lower": 0.020603183008407848,
-          "replication_upper": 0.0503502747878405,
-          "standard_deviation": 0.00846929520350229
+          "mean": 0.033109131,
+          "replication_lower": 0.020603183,
+          "replication_upper": 0.050350275,
+          "standard_deviation": 0.008469295
         },
         "roc_auc": {
-          "mean": 0.7848765882695525,
-          "replication_lower": 0.7570749634583238,
-          "replication_upper": 0.8055802962494835,
-          "standard_deviation": 0.01331516573200906
+          "mean": 0.784876588,
+          "replication_lower": 0.757074963,
+          "replication_upper": 0.805580296,
+          "standard_deviation": 0.013315166
         }
       }
     },
@@ -192,46 +192,46 @@
       "shift": "covariate",
       "source_to_target_change": {
         "accuracy": {
-          "mean": 0.01765000000000001,
-          "replication_lower": -0.013725000000000011,
-          "replication_upper": 0.05924999999999998,
-          "standard_deviation": 0.022676848848202234
+          "mean": 0.01765,
+          "replication_lower": -0.013725,
+          "replication_upper": 0.05925,
+          "standard_deviation": 0.022676849
         },
         "brier_score": {
-          "mean": -0.009851597436459896,
-          "replication_lower": -0.02792426178557372,
-          "replication_upper": 0.004534499492443617,
-          "standard_deviation": 0.010419810638175962
+          "mean": -0.009851597,
+          "replication_lower": -0.027924262,
+          "replication_upper": 0.004534499,
+          "standard_deviation": 0.010419811
         },
         "demographic_parity_difference": {
-          "mean": 0.07364930574747332,
-          "replication_lower": -0.024360314150170453,
-          "replication_upper": 0.19062966583570548,
-          "standard_deviation": 0.063199432903698
+          "mean": 0.073649306,
+          "replication_lower": -0.024360314,
+          "replication_upper": 0.190629666,
+          "standard_deviation": 0.063199433
         },
         "equal_opportunity_difference": {
-          "mean": 0.009866089668411682,
-          "replication_lower": -0.08982410257282424,
-          "replication_upper": 0.09255268622882927,
-          "standard_deviation": 0.05281450274153264
+          "mean": 0.00986609,
+          "replication_lower": -0.089824103,
+          "replication_upper": 0.092552686,
+          "standard_deviation": 0.052814503
         },
         "equalized_odds_difference": {
-          "mean": 0.05939215372149591,
-          "replication_lower": -0.04020201675549707,
-          "replication_upper": 0.18036070627513684,
-          "standard_deviation": 0.06565663686406367
+          "mean": 0.059392154,
+          "replication_lower": -0.040202017,
+          "replication_upper": 0.180360706,
+          "standard_deviation": 0.065656637
         },
         "expected_calibration_error": {
-          "mean": 0.001499246364221579,
-          "replication_lower": -0.020743551616806306,
-          "replication_upper": 0.021356832601616058,
-          "standard_deviation": 0.012993441342014607
+          "mean": 0.001499246,
+          "replication_lower": -0.020743552,
+          "replication_upper": 0.021356833,
+          "standard_deviation": 0.012993441
         },
         "roc_auc": {
-          "mean": 0.005247720849384263,
-          "replication_lower": -0.023584357192355954,
-          "replication_upper": 0.04557998977176172,
-          "standard_deviation": 0.02235791509501277
+          "mean": 0.005247721,
+          "replication_lower": -0.023584357,
+          "replication_upper": 0.04557999,
+          "standard_deviation": 0.022357915
         }
       },
       "target": {
@@ -239,43 +239,43 @@
           "mean": 0.72905,
           "replication_lower": 0.707475,
           "replication_upper": 0.7522,
-          "standard_deviation": 0.014229232327556513
+          "standard_deviation": 0.014229232
         },
         "brier_score": {
-          "mean": 0.17950841804565804,
-          "replication_lower": 0.16858191310907952,
-          "replication_upper": 0.18973322193958808,
-          "standard_deviation": 0.006615867157646518
+          "mean": 0.179508418,
+          "replication_lower": 0.168581913,
+          "replication_upper": 0.189733222,
+          "standard_deviation": 0.006615867
         },
         "demographic_parity_difference": {
-          "mean": 0.12659164731302672,
-          "replication_lower": 0.06841721259847659,
-          "replication_upper": 0.2296868499654283,
-          "standard_deviation": 0.05157218347302747
+          "mean": 0.126591647,
+          "replication_lower": 0.068417213,
+          "replication_upper": 0.22968685,
+          "standard_deviation": 0.051572183
         },
         "equal_opportunity_difference": {
-          "mean": 0.07218658242014937,
-          "replication_lower": 0.014514402461377607,
-          "replication_upper": 0.15950614328207105,
-          "standard_deviation": 0.042507066338881655
+          "mean": 0.072186582,
+          "replication_lower": 0.014514402,
+          "replication_upper": 0.159506143,
+          "standard_deviation": 0.042507066
         },
         "equalized_odds_difference": {
-          "mean": 0.1307377834698193,
-          "replication_lower": 0.059274310935812556,
-          "replication_upper": 0.25991124098670837,
-          "standard_deviation": 0.0651686050099374
+          "mean": 0.130737783,
+          "replication_lower": 0.059274311,
+          "replication_upper": 0.259911241,
+          "standard_deviation": 0.065168605
         },
         "expected_calibration_error": {
-          "mean": 0.03445951986782723,
-          "replication_lower": 0.01868309742089673,
-          "replication_upper": 0.05429113046789245,
-          "standard_deviation": 0.011062023444632542
+          "mean": 0.03445952,
+          "replication_lower": 0.018683097,
+          "replication_upper": 0.05429113,
+          "standard_deviation": 0.011062023
         },
         "roc_auc": {
-          "mean": 0.78892075819245,
-          "replication_lower": 0.7693416208116868,
-          "replication_upper": 0.8130661684016104,
-          "standard_deviation": 0.013602967734045632
+          "mean": 0.788920758,
+          "replication_lower": 0.769341621,
+          "replication_upper": 0.813066168,
+          "standard_deviation": 0.013602968
         }
       }
     },
@@ -285,90 +285,90 @@
       "shift": "covariate",
       "source_to_target_change": {
         "accuracy": {
-          "mean": 0.04400000000000003,
-          "replication_lower": 0.015125000000000013,
+          "mean": 0.044,
+          "replication_lower": 0.015125,
           "replication_upper": 0.07615,
-          "standard_deviation": 0.019957850321958136
+          "standard_deviation": 0.01995785
         },
         "brier_score": {
-          "mean": -0.024832792364378124,
-          "replication_lower": -0.043626499358883186,
-          "replication_upper": -0.012405730745658317,
-          "standard_deviation": 0.010403231526013502
+          "mean": -0.024832792,
+          "replication_lower": -0.043626499,
+          "replication_upper": -0.012405731,
+          "standard_deviation": 0.010403232
         },
         "demographic_parity_difference": {
-          "mean": 0.11364391696705982,
-          "replication_lower": 0.03239833202291081,
-          "replication_upper": 0.24234643330317523,
-          "standard_deviation": 0.0630253094870721
+          "mean": 0.113643917,
+          "replication_lower": 0.032398332,
+          "replication_upper": 0.242346433,
+          "standard_deviation": 0.063025309
         },
         "equal_opportunity_difference": {
-          "mean": 0.031954044337465556,
-          "replication_lower": -0.06221282139285595,
-          "replication_upper": 0.11495317761111047,
-          "standard_deviation": 0.0570519031722954
+          "mean": 0.031954044,
+          "replication_lower": -0.062212821,
+          "replication_upper": 0.114953178,
+          "standard_deviation": 0.057051903
         },
         "equalized_odds_difference": {
-          "mean": 0.12774922596978022,
-          "replication_lower": 0.014291990257613237,
-          "replication_upper": 0.28201398565661817,
-          "standard_deviation": 0.07855369623077824
+          "mean": 0.127749226,
+          "replication_lower": 0.01429199,
+          "replication_upper": 0.282013986,
+          "standard_deviation": 0.078553696
         },
         "expected_calibration_error": {
-          "mean": 0.0007793884352382014,
-          "replication_lower": -0.014666245832093494,
-          "replication_upper": 0.019011210223934136,
-          "standard_deviation": 0.009881868588724047
+          "mean": 0.000779388,
+          "replication_lower": -0.014666246,
+          "replication_upper": 0.01901121,
+          "standard_deviation": 0.009881869
         },
         "roc_auc": {
-          "mean": 0.012346660224641547,
-          "replication_lower": -0.017303774138409944,
-          "replication_upper": 0.06468515419487035,
-          "standard_deviation": 0.02618930270593132
+          "mean": 0.01234666,
+          "replication_lower": -0.017303774,
+          "replication_upper": 0.064685154,
+          "standard_deviation": 0.026189303
         }
       },
       "target": {
         "accuracy": {
-          "mean": 0.7554000000000001,
+          "mean": 0.7554,
           "replication_lower": 0.737425,
           "replication_upper": 0.7771,
-          "standard_deviation": 0.01337869476758517
+          "standard_deviation": 0.013378695
         },
         "brier_score": {
-          "mean": 0.16452722311773982,
-          "replication_lower": 0.1535688501964886,
-          "replication_upper": 0.17387499016613944,
-          "standard_deviation": 0.006958041183956663
+          "mean": 0.164527223,
+          "replication_lower": 0.15356885,
+          "replication_upper": 0.17387499,
+          "standard_deviation": 0.006958041
         },
         "demographic_parity_difference": {
-          "mean": 0.16658625853261322,
-          "replication_lower": 0.10986282243410417,
-          "replication_upper": 0.2760103035907746,
-          "standard_deviation": 0.05215034449047307
+          "mean": 0.166586259,
+          "replication_lower": 0.109862822,
+          "replication_upper": 0.276010304,
+          "standard_deviation": 0.052150344
         },
         "equal_opportunity_difference": {
-          "mean": 0.09427453708920323,
-          "replication_lower": 0.03617834989461004,
-          "replication_upper": 0.16032328368145118,
-          "standard_deviation": 0.041903782133807785
+          "mean": 0.094274537,
+          "replication_lower": 0.03617835,
+          "replication_upper": 0.160323284,
+          "standard_deviation": 0.041903782
         },
         "equalized_odds_difference": {
-          "mean": 0.1990948557181036,
-          "replication_lower": 0.0945562164038041,
-          "replication_upper": 0.3705028350117859,
-          "standard_deviation": 0.08439538695455608
+          "mean": 0.199094856,
+          "replication_lower": 0.094556216,
+          "replication_upper": 0.370502835,
+          "standard_deviation": 0.084395387
         },
         "expected_calibration_error": {
-          "mean": 0.03373966193884385,
-          "replication_lower": 0.019660707036751685,
-          "replication_upper": 0.05035611039752143,
-          "standard_deviation": 0.00925922222017126
+          "mean": 0.033739662,
+          "replication_lower": 0.019660707,
+          "replication_upper": 0.05035611,
+          "standard_deviation": 0.009259222
         },
         "roc_auc": {
-          "mean": 0.7960196975677074,
-          "replication_lower": 0.7690214574506735,
-          "replication_upper": 0.8291121701941229,
-          "standard_deviation": 0.018357487442830826
+          "mean": 0.796019698,
+          "replication_lower": 0.769021457,
+          "replication_upper": 0.82911217,
+          "standard_deviation": 0.018357487
         }
       }
     },
@@ -378,90 +378,90 @@
       "shift": "covariate",
       "source_to_target_change": {
         "accuracy": {
-          "mean": 0.07905000000000006,
-          "replication_lower": 0.05032500000000004,
-          "replication_upper": 0.11150000000000002,
-          "standard_deviation": 0.017623175530802438
+          "mean": 0.07905,
+          "replication_lower": 0.050325,
+          "replication_upper": 0.1115,
+          "standard_deviation": 0.017623176
         },
         "brier_score": {
-          "mean": -0.04433048454440679,
-          "replication_lower": -0.05946472983974921,
-          "replication_upper": -0.03128993788281426,
-          "standard_deviation": 0.009073612598923187
+          "mean": -0.044330485,
+          "replication_lower": -0.05946473,
+          "replication_upper": -0.031289938,
+          "standard_deviation": 0.009073613
         },
         "demographic_parity_difference": {
-          "mean": 0.12345849699683845,
-          "replication_lower": 0.03848400435858193,
-          "replication_upper": 0.23946576517768292,
-          "standard_deviation": 0.05644878976464715
+          "mean": 0.123458497,
+          "replication_lower": 0.038484004,
+          "replication_upper": 0.239465765,
+          "standard_deviation": 0.05644879
         },
         "equal_opportunity_difference": {
-          "mean": 0.03178232171669108,
-          "replication_lower": -0.05013849852864416,
-          "replication_upper": 0.10076154084196386,
-          "standard_deviation": 0.048269990424841355
+          "mean": 0.031782322,
+          "replication_lower": -0.050138499,
+          "replication_upper": 0.100761541,
+          "standard_deviation": 0.04826999
         },
         "equalized_odds_difference": {
-          "mean": 0.1857751966941778,
-          "replication_lower": 0.04959575288984965,
-          "replication_upper": 0.3261245951866496,
-          "standard_deviation": 0.07760198310276024
+          "mean": 0.185775197,
+          "replication_lower": 0.049595753,
+          "replication_upper": 0.326124595,
+          "standard_deviation": 0.077601983
         },
         "expected_calibration_error": {
-          "mean": -0.0022486019719508018,
-          "replication_lower": -0.019281725843207705,
-          "replication_upper": 0.016377202632560196,
-          "standard_deviation": 0.010093516145353837
+          "mean": -0.002248602,
+          "replication_lower": -0.019281726,
+          "replication_upper": 0.016377203,
+          "standard_deviation": 0.010093516
         },
         "roc_auc": {
-          "mean": 0.02357224160238936,
-          "replication_lower": -0.00753732179574639,
-          "replication_upper": 0.0618274625754898,
-          "standard_deviation": 0.023976339217406287
+          "mean": 0.023572242,
+          "replication_lower": -0.007537322,
+          "replication_upper": 0.061827463,
+          "standard_deviation": 0.023976339
         }
       },
       "target": {
         "accuracy": {
-          "mean": 0.7904500000000001,
+          "mean": 0.79045,
           "replication_lower": 0.774325,
           "replication_upper": 0.805,
-          "standard_deviation": 0.010282714161461261
+          "standard_deviation": 0.010282714
         },
         "brier_score": {
-          "mean": 0.14502953093771118,
-          "replication_lower": 0.13434089334113744,
-          "replication_upper": 0.15338033304443918,
-          "standard_deviation": 0.005914597321601417
+          "mean": 0.145029531,
+          "replication_lower": 0.134340893,
+          "replication_upper": 0.153380333,
+          "standard_deviation": 0.005914597
         },
         "demographic_parity_difference": {
-          "mean": 0.17640083856239186,
-          "replication_lower": 0.12409847338813712,
-          "replication_upper": 0.26379833044512274,
-          "standard_deviation": 0.04192244963352557
+          "mean": 0.176400839,
+          "replication_lower": 0.124098473,
+          "replication_upper": 0.26379833,
+          "standard_deviation": 0.04192245
         },
         "equal_opportunity_difference": {
-          "mean": 0.09410281446842875,
-          "replication_lower": 0.05490245597775719,
-          "replication_upper": 0.1503233977510711,
-          "standard_deviation": 0.03242313543568688
+          "mean": 0.094102814,
+          "replication_lower": 0.054902456,
+          "replication_upper": 0.150323398,
+          "standard_deviation": 0.032423135
         },
         "equalized_odds_difference": {
-          "mean": 0.2571208264425012,
-          "replication_lower": 0.1256030539882255,
-          "replication_upper": 0.3958212119882665,
-          "standard_deviation": 0.07484355661198498
+          "mean": 0.257120826,
+          "replication_lower": 0.125603054,
+          "replication_upper": 0.395821212,
+          "standard_deviation": 0.074843557
         },
         "expected_calibration_error": {
-          "mean": 0.030711671531654845,
-          "replication_lower": 0.018599199973443385,
-          "replication_upper": 0.042307202535953936,
-          "standard_deviation": 0.007497832073706065
+          "mean": 0.030711672,
+          "replication_lower": 0.0185992,
+          "replication_upper": 0.042307203,
+          "standard_deviation": 0.007497832
         },
         "roc_auc": {
-          "mean": 0.8072452789454552,
-          "replication_lower": 0.775060301161081,
-          "replication_upper": 0.8310724520509986,
-          "standard_deviation": 0.017010450372929177
+          "mean": 0.807245279,
+          "replication_lower": 0.775060301,
+          "replication_upper": 0.831072452,
+          "standard_deviation": 0.01701045
         }
       }
     },
@@ -471,90 +471,90 @@
       "shift": "concept",
       "source_to_target_change": {
         "accuracy": {
-          "mean": -0.0009000000000000064,
-          "replication_lower": -0.026725000000000023,
-          "replication_upper": 0.03257499999999997,
-          "standard_deviation": 0.017453396592972358
+          "mean": -0.0009,
+          "replication_lower": -0.026725,
+          "replication_upper": 0.032575,
+          "standard_deviation": 0.017453397
         },
         "brier_score": {
-          "mean": 0.00010082629742007854,
-          "replication_lower": -0.012242631934973715,
-          "replication_upper": 0.00996192802598683,
-          "standard_deviation": 0.007582905992440611
+          "mean": 0.000100826,
+          "replication_lower": -0.012242632,
+          "replication_upper": 0.009961928,
+          "standard_deviation": 0.007582906
         },
         "demographic_parity_difference": {
-          "mean": -0.006994557627131401,
-          "replication_lower": -0.09819664844712105,
-          "replication_upper": 0.05824186327697385,
-          "standard_deviation": 0.04942952637482599
+          "mean": -0.006994558,
+          "replication_lower": -0.098196648,
+          "replication_upper": 0.058241863,
+          "standard_deviation": 0.049429526
         },
         "equal_opportunity_difference": {
-          "mean": -0.013058572451357903,
-          "replication_lower": -0.09128317357034166,
-          "replication_upper": 0.04984321206306356,
-          "standard_deviation": 0.046488375928712564
+          "mean": -0.013058572,
+          "replication_lower": -0.091283174,
+          "replication_upper": 0.049843212,
+          "standard_deviation": 0.046488376
         },
         "equalized_odds_difference": {
-          "mean": -0.012081494649944869,
-          "replication_lower": -0.0914369891201647,
-          "replication_upper": 0.05344903793369612,
-          "standard_deviation": 0.047941128445585394
+          "mean": -0.012081495,
+          "replication_lower": -0.091436989,
+          "replication_upper": 0.053449038,
+          "standard_deviation": 0.047941128
         },
         "expected_calibration_error": {
-          "mean": -0.0026625336688931287,
-          "replication_lower": -0.021620018712068378,
-          "replication_upper": 0.02012903742487856,
-          "standard_deviation": 0.012110134155803292
+          "mean": -0.002662534,
+          "replication_lower": -0.021620019,
+          "replication_upper": 0.020129037,
+          "standard_deviation": 0.012110134
         },
         "roc_auc": {
-          "mean": -0.0007473859483409339,
-          "replication_lower": -0.027181045960618728,
-          "replication_upper": 0.028625851013802172,
-          "standard_deviation": 0.018360128408562396
+          "mean": -0.000747386,
+          "replication_lower": -0.027181046,
+          "replication_upper": 0.028625851,
+          "standard_deviation": 0.018360128
         }
       },
       "target": {
         "accuracy": {
-          "mean": 0.7104999999999999,
+          "mean": 0.7105,
           "replication_lower": 0.691375,
           "replication_upper": 0.727575,
-          "standard_deviation": 0.011339265733213122
+          "standard_deviation": 0.011339266
         },
         "brier_score": {
-          "mean": 0.189460841779538,
-          "replication_lower": 0.18360137670634422,
-          "replication_upper": 0.19832664084649484,
-          "standard_deviation": 0.004857866250640704
+          "mean": 0.189460842,
+          "replication_lower": 0.183601377,
+          "replication_upper": 0.198326641,
+          "standard_deviation": 0.004857866
         },
         "demographic_parity_difference": {
-          "mean": 0.045947783938422006,
-          "replication_lower": 0.0013490522299969595,
-          "replication_upper": 0.10682971849116114,
-          "standard_deviation": 0.03404888650767689
+          "mean": 0.045947784,
+          "replication_lower": 0.001349052,
+          "replication_upper": 0.106829718,
+          "standard_deviation": 0.034048887
         },
         "equal_opportunity_difference": {
-          "mean": 0.04926192030037978,
-          "replication_lower": 0.0011461357039187577,
-          "replication_upper": 0.1310983643233568,
-          "standard_deviation": 0.03690044301663835
+          "mean": 0.04926192,
+          "replication_lower": 0.001146136,
+          "replication_upper": 0.131098364,
+          "standard_deviation": 0.036900443
         },
         "equalized_odds_difference": {
-          "mean": 0.0592641350983785,
-          "replication_lower": 0.00588951036792016,
-          "replication_upper": 0.1310983643233568,
-          "standard_deviation": 0.037239018631274344
+          "mean": 0.059264135,
+          "replication_lower": 0.00588951,
+          "replication_upper": 0.131098364,
+          "standard_deviation": 0.037239019
         },
         "expected_calibration_error": {
-          "mean": 0.03029773983471252,
-          "replication_lower": 0.017777235273443635,
-          "replication_upper": 0.04766252036531013,
-          "standard_deviation": 0.009186882829527749
+          "mean": 0.03029774,
+          "replication_lower": 0.017777235,
+          "replication_upper": 0.04766252,
+          "standard_deviation": 0.009186883
         },
         "roc_auc": {
-          "mean": 0.7829256513947249,
-          "replication_lower": 0.7607060708045555,
-          "replication_upper": 0.7975563661777814,
-          "standard_deviation": 0.011858049753056323
+          "mean": 0.782925651,
+          "replication_lower": 0.760706071,
+          "replication_upper": 0.797556366,
+          "standard_deviation": 0.01185805
         }
       }
     },
@@ -564,46 +564,46 @@
       "shift": "concept",
       "source_to_target_change": {
         "accuracy": {
-          "mean": -0.04759999999999994,
-          "replication_lower": -0.08392499999999996,
-          "replication_upper": -0.011374999999999965,
-          "standard_deviation": 0.02116949145400174
+          "mean": -0.0476,
+          "replication_lower": -0.083925,
+          "replication_upper": -0.011375,
+          "standard_deviation": 0.021169491
         },
         "brier_score": {
-          "mean": 0.027087700256627878,
-          "replication_lower": 0.011599565765389652,
-          "replication_upper": 0.04161434085402118,
-          "standard_deviation": 0.008794322572434825
+          "mean": 0.0270877,
+          "replication_lower": 0.011599566,
+          "replication_upper": 0.041614341,
+          "standard_deviation": 0.008794323
         },
         "demographic_parity_difference": {
-          "mean": -0.006994557627131401,
-          "replication_lower": -0.09819664844712105,
-          "replication_upper": 0.05824186327697385,
-          "standard_deviation": 0.04942952637482599
+          "mean": -0.006994558,
+          "replication_lower": -0.098196648,
+          "replication_upper": 0.058241863,
+          "standard_deviation": 0.049429526
         },
         "equal_opportunity_difference": {
-          "mean": -0.014161970627411563,
-          "replication_lower": -0.10433990884717456,
-          "replication_upper": 0.07478640270199305,
-          "standard_deviation": 0.05559118682745627
+          "mean": -0.014161971,
+          "replication_lower": -0.104339909,
+          "replication_upper": 0.074786403,
+          "standard_deviation": 0.055591187
         },
         "equalized_odds_difference": {
-          "mean": -0.0005040845234477551,
-          "replication_lower": -0.09076418757055323,
-          "replication_upper": 0.07565618856069721,
-          "standard_deviation": 0.048535580753672536
+          "mean": -0.000504085,
+          "replication_lower": -0.090764188,
+          "replication_upper": 0.075656189,
+          "standard_deviation": 0.048535581
         },
         "expected_calibration_error": {
-          "mean": 0.027512508771134724,
-          "replication_lower": 0.0073294383196708885,
-          "replication_upper": 0.04788601235173896,
-          "standard_deviation": 0.012517462050459628
+          "mean": 0.027512509,
+          "replication_lower": 0.007329438,
+          "replication_upper": 0.047886012,
+          "standard_deviation": 0.012517462
         },
         "roc_auc": {
-          "mean": -0.06404187169086015,
-          "replication_lower": -0.09906916643513135,
-          "replication_upper": -0.027770517903524253,
-          "standard_deviation": 0.021684373118730994
+          "mean": -0.064041872,
+          "replication_lower": -0.099069166,
+          "replication_upper": -0.027770518,
+          "standard_deviation": 0.021684373
         }
       },
       "target": {
@@ -611,43 +611,43 @@
           "mean": 0.6638,
           "replication_lower": 0.633225,
           "replication_upper": 0.689775,
-          "standard_deviation": 0.017907951776853365
+          "standard_deviation": 0.017907952
         },
         "brier_score": {
-          "mean": 0.2164477157387458,
-          "replication_lower": 0.20487565666597946,
-          "replication_upper": 0.226545132316212,
-          "standard_deviation": 0.006826884671699889
+          "mean": 0.216447716,
+          "replication_lower": 0.204875657,
+          "replication_upper": 0.226545132,
+          "standard_deviation": 0.006826885
         },
         "demographic_parity_difference": {
-          "mean": 0.045947783938422006,
-          "replication_lower": 0.0013490522299969595,
-          "replication_upper": 0.10682971849116114,
-          "standard_deviation": 0.03404888650767689
+          "mean": 0.045947784,
+          "replication_lower": 0.001349052,
+          "replication_upper": 0.106829718,
+          "standard_deviation": 0.034048887
         },
         "equal_opportunity_difference": {
-          "mean": 0.04815852212432612,
-          "replication_lower": 0.004065334141915072,
-          "replication_upper": 0.12547825529297726,
-          "standard_deviation": 0.039004593985026564
+          "mean": 0.048158522,
+          "replication_lower": 0.004065334,
+          "replication_upper": 0.125478255,
+          "standard_deviation": 0.039004594
         },
         "equalized_odds_difference": {
-          "mean": 0.07084154522487561,
-          "replication_lower": 0.02174424653851101,
-          "replication_upper": 0.13788704162245016,
-          "standard_deviation": 0.03519223758097105
+          "mean": 0.070841545,
+          "replication_lower": 0.021744247,
+          "replication_upper": 0.137887042,
+          "standard_deviation": 0.035192238
         },
         "expected_calibration_error": {
-          "mean": 0.060472782274740365,
-          "replication_lower": 0.03986987014402675,
-          "replication_upper": 0.08147217730724907,
-          "standard_deviation": 0.013229192907889053
+          "mean": 0.060472782,
+          "replication_lower": 0.03986987,
+          "replication_upper": 0.081472177,
+          "standard_deviation": 0.013229193
         },
         "roc_auc": {
-          "mean": 0.7196311656522056,
-          "replication_lower": 0.6909200574880381,
-          "replication_upper": 0.745248550405231,
-          "standard_deviation": 0.01684041784382374
+          "mean": 0.719631166,
+          "replication_lower": 0.690920057,
+          "replication_upper": 0.74524855,
+          "standard_deviation": 0.016840418
         }
       }
     },
@@ -657,90 +657,90 @@
       "shift": "concept",
       "source_to_target_change": {
         "accuracy": {
-          "mean": -0.11510000000000001,
-          "replication_lower": -0.14797499999999997,
-          "replication_upper": -0.08202499999999999,
-          "standard_deviation": 0.018881625710560106
+          "mean": -0.1151,
+          "replication_lower": -0.147975,
+          "replication_upper": -0.082025,
+          "standard_deviation": 0.018881626
         },
         "brier_score": {
-          "mean": 0.06454734903421618,
-          "replication_lower": 0.053506541582639365,
-          "replication_upper": 0.0795702850060235,
-          "standard_deviation": 0.007760196519952819
+          "mean": 0.064547349,
+          "replication_lower": 0.053506542,
+          "replication_upper": 0.079570285,
+          "standard_deviation": 0.007760197
         },
         "demographic_parity_difference": {
-          "mean": -0.006994557627131401,
-          "replication_lower": -0.09819664844712105,
-          "replication_upper": 0.05824186327697385,
-          "standard_deviation": 0.04942952637482599
+          "mean": -0.006994558,
+          "replication_lower": -0.098196648,
+          "replication_upper": 0.058241863,
+          "standard_deviation": 0.049429526
         },
         "equal_opportunity_difference": {
-          "mean": -0.007494981864058878,
-          "replication_lower": -0.11196231361443118,
-          "replication_upper": 0.10786069759893274,
-          "standard_deviation": 0.06648885899811863
+          "mean": -0.007494982,
+          "replication_lower": -0.111962314,
+          "replication_upper": 0.107860698,
+          "standard_deviation": 0.066488859
         },
         "equalized_odds_difference": {
-          "mean": 0.01329401237644374,
-          "replication_lower": -0.07908846298707313,
-          "replication_upper": 0.0832330296407908,
-          "standard_deviation": 0.04987280675300058
+          "mean": 0.013294012,
+          "replication_lower": -0.079088463,
+          "replication_upper": 0.08323303,
+          "standard_deviation": 0.049872807
         },
         "expected_calibration_error": {
-          "mean": 0.08747872558752795,
-          "replication_lower": 0.06443172470647407,
-          "replication_upper": 0.12581101235173892,
-          "standard_deviation": 0.01707935431839836
+          "mean": 0.087478726,
+          "replication_lower": 0.064431725,
+          "replication_upper": 0.125811012,
+          "standard_deviation": 0.017079354
         },
         "roc_auc": {
-          "mean": -0.1511182118490459,
-          "replication_lower": -0.1923195828261047,
-          "replication_upper": -0.11738396073932379,
-          "standard_deviation": 0.020386120187378863
+          "mean": -0.151118212,
+          "replication_lower": -0.192319583,
+          "replication_upper": -0.117383961,
+          "standard_deviation": 0.02038612
         }
       },
       "target": {
         "accuracy": {
           "mean": 0.5963,
           "replication_lower": 0.566175,
-          "replication_upper": 0.6280749999999999,
-          "standard_deviation": 0.018405090828927002
+          "replication_upper": 0.628075,
+          "standard_deviation": 0.018405091
         },
         "brier_score": {
-          "mean": 0.2539073645163341,
-          "replication_lower": 0.2444462173734452,
-          "replication_upper": 0.2657502376914189,
-          "standard_deviation": 0.0063385939133840455
+          "mean": 0.253907365,
+          "replication_lower": 0.244446217,
+          "replication_upper": 0.265750238,
+          "standard_deviation": 0.006338594
         },
         "demographic_parity_difference": {
-          "mean": 0.045947783938422006,
-          "replication_lower": 0.0013490522299969595,
-          "replication_upper": 0.10682971849116114,
-          "standard_deviation": 0.03404888650767689
+          "mean": 0.045947784,
+          "replication_lower": 0.001349052,
+          "replication_upper": 0.106829718,
+          "standard_deviation": 0.034048887
         },
         "equal_opportunity_difference": {
-          "mean": 0.054825510887678806,
-          "replication_lower": 0.0026856879300383566,
-          "replication_upper": 0.15602534087702355,
-          "standard_deviation": 0.04980149148022291
+          "mean": 0.054825511,
+          "replication_lower": 0.002685688,
+          "replication_upper": 0.156025341,
+          "standard_deviation": 0.049801491
         },
         "equalized_odds_difference": {
-          "mean": 0.08463964212476713,
-          "replication_lower": 0.033310289169943365,
-          "replication_upper": 0.1657258271165896,
-          "standard_deviation": 0.042024259684082264
+          "mean": 0.084639642,
+          "replication_lower": 0.033310289,
+          "replication_upper": 0.165725827,
+          "standard_deviation": 0.04202426
         },
         "expected_calibration_error": {
-          "mean": 0.1204389990911336,
-          "replication_lower": 0.09836527530940178,
-          "replication_upper": 0.15741886908694333,
-          "standard_deviation": 0.016245207235352693
+          "mean": 0.120438999,
+          "replication_lower": 0.098365275,
+          "replication_upper": 0.157418869,
+          "standard_deviation": 0.016245207
         },
         "roc_auc": {
-          "mean": 0.6325548254940199,
-          "replication_lower": 0.6016486180764098,
-          "replication_upper": 0.6612500764585831,
-          "standard_deviation": 0.016281070570173545
+          "mean": 0.632554825,
+          "replication_lower": 0.601648618,
+          "replication_upper": 0.661250076,
+          "standard_deviation": 0.016281071
         }
       }
     },
@@ -750,46 +750,46 @@
       "shift": "concept",
       "source_to_target_change": {
         "accuracy": {
-          "mean": -0.18254999999999996,
-          "replication_lower": -0.21552499999999997,
-          "replication_upper": -0.13779999999999998,
-          "standard_deviation": 0.024803384743555514
+          "mean": -0.18255,
+          "replication_lower": -0.215525,
+          "replication_upper": -0.1378,
+          "standard_deviation": 0.024803385
         },
         "brier_score": {
-          "mean": 0.10575992677324102,
-          "replication_lower": 0.08429817685543864,
-          "replication_upper": 0.12684212447569918,
-          "standard_deviation": 0.01265301423076676
+          "mean": 0.105759927,
+          "replication_lower": 0.084298177,
+          "replication_upper": 0.126842124,
+          "standard_deviation": 0.012653014
         },
         "demographic_parity_difference": {
-          "mean": -0.006994557627131401,
-          "replication_lower": -0.09819664844712105,
-          "replication_upper": 0.05824186327697385,
-          "standard_deviation": 0.04942952637482599
+          "mean": -0.006994558,
+          "replication_lower": -0.098196648,
+          "replication_upper": 0.058241863,
+          "standard_deviation": 0.049429526
         },
         "equal_opportunity_difference": {
-          "mean": 0.002395041152911359,
-          "replication_lower": -0.07857896783400277,
-          "replication_upper": 0.10638775118722288,
-          "standard_deviation": 0.05962186637424601
+          "mean": 0.002395041,
+          "replication_lower": -0.078578968,
+          "replication_upper": 0.106387751,
+          "standard_deviation": 0.059621866
         },
         "equalized_odds_difference": {
-          "mean": 0.0008982133940621557,
-          "replication_lower": -0.08789484789692151,
-          "replication_upper": 0.070646737118728,
-          "standard_deviation": 0.049390873026930994
+          "mean": 0.000898213,
+          "replication_lower": -0.087894848,
+          "replication_upper": 0.070646737,
+          "standard_deviation": 0.049390873
         },
         "expected_calibration_error": {
-          "mean": 0.1527744511067715,
-          "replication_lower": 0.11808520226488267,
-          "replication_upper": 0.19923601235173896,
-          "standard_deviation": 0.024407821490908553
+          "mean": 0.152774451,
+          "replication_lower": 0.118085202,
+          "replication_upper": 0.199236012,
+          "standard_deviation": 0.024407821
         },
         "roc_auc": {
-          "mean": -0.24567008344608648,
-          "replication_lower": -0.28830723552903537,
-          "replication_upper": -0.19916860752096788,
-          "standard_deviation": 0.027368696089533167
+          "mean": -0.245670083,
+          "replication_lower": -0.288307236,
+          "replication_upper": -0.199168608,
+          "standard_deviation": 0.027368696
         }
       },
       "target": {
@@ -797,43 +797,43 @@
           "mean": 0.52885,
           "replication_lower": 0.49275,
           "replication_upper": 0.5643,
-          "standard_deviation": 0.021114412638115983
+          "standard_deviation": 0.021114413
         },
         "brier_score": {
-          "mean": 0.2951199422553589,
-          "replication_lower": 0.27758247554760096,
-          "replication_upper": 0.31636199624123384,
-          "standard_deviation": 0.01104562089197426
+          "mean": 0.295119942,
+          "replication_lower": 0.277582476,
+          "replication_upper": 0.316361996,
+          "standard_deviation": 0.011045621
         },
         "demographic_parity_difference": {
-          "mean": 0.045947783938422006,
-          "replication_lower": 0.0013490522299969595,
-          "replication_upper": 0.10682971849116114,
-          "standard_deviation": 0.03404888650767689
+          "mean": 0.045947784,
+          "replication_lower": 0.001349052,
+          "replication_upper": 0.106829718,
+          "standard_deviation": 0.034048887
         },
         "equal_opportunity_difference": {
-          "mean": 0.06471553390464904,
-          "replication_lower": 0.015556047718836712,
-          "replication_upper": 0.1302023700112855,
-          "standard_deviation": 0.03527451756394519
+          "mean": 0.064715534,
+          "replication_lower": 0.015556048,
+          "replication_upper": 0.13020237,
+          "standard_deviation": 0.035274518
         },
         "equalized_odds_difference": {
-          "mean": 0.07224384314238552,
-          "replication_lower": 0.019376756748111783,
-          "replication_upper": 0.13213489039591048,
-          "standard_deviation": 0.03906074341632634
+          "mean": 0.072243843,
+          "replication_lower": 0.019376757,
+          "replication_upper": 0.13213489,
+          "standard_deviation": 0.039060743
         },
         "expected_calibration_error": {
-          "mean": 0.18573472461037718,
-          "replication_lower": 0.1459072258782819,
-          "replication_upper": 0.22512766149897923,
-          "standard_deviation": 0.022765573086428573
+          "mean": 0.185734725,
+          "replication_lower": 0.145907226,
+          "replication_upper": 0.225127661,
+          "standard_deviation": 0.022765573
         },
         "roc_auc": {
-          "mean": 0.5380029538969793,
-          "replication_lower": 0.4972836473768906,
-          "replication_upper": 0.5711612583498631,
-          "standard_deviation": 0.02258110474352412
+          "mean": 0.538002954,
+          "replication_lower": 0.497283647,
+          "replication_upper": 0.571161258,
+          "standard_deviation": 0.022581105
         }
       }
     },
@@ -843,90 +843,90 @@
       "shift": "concept",
       "source_to_target_change": {
         "accuracy": {
-          "mean": -0.24584999999999999,
-          "replication_lower": -0.27999999999999997,
-          "replication_upper": -0.20832499999999998,
-          "standard_deviation": 0.02296513375578406
+          "mean": -0.24585,
+          "replication_lower": -0.28,
+          "replication_upper": -0.208325,
+          "standard_deviation": 0.022965134
         },
         "brier_score": {
-          "mean": 0.14367149855404657,
-          "replication_lower": 0.1215968612375024,
-          "replication_upper": 0.16481616122301831,
-          "standard_deviation": 0.011865565950277943
+          "mean": 0.143671499,
+          "replication_lower": 0.121596861,
+          "replication_upper": 0.164816161,
+          "standard_deviation": 0.011865566
         },
         "demographic_parity_difference": {
-          "mean": -0.006994557627131401,
-          "replication_lower": -0.09819664844712105,
-          "replication_upper": 0.05824186327697385,
-          "standard_deviation": 0.04942952637482599
+          "mean": -0.006994558,
+          "replication_lower": -0.098196648,
+          "replication_upper": 0.058241863,
+          "standard_deviation": 0.049429526
         },
         "equal_opportunity_difference": {
-          "mean": -0.00983971317617679,
-          "replication_lower": -0.09752317772275595,
-          "replication_upper": 0.08372323345052925,
-          "standard_deviation": 0.05799289558835272
+          "mean": -0.009839713,
+          "replication_lower": -0.097523178,
+          "replication_upper": 0.083723233,
+          "standard_deviation": 0.057992896
         },
         "equalized_odds_difference": {
-          "mean": -0.00968567036607206,
-          "replication_lower": -0.07051305233113467,
-          "replication_upper": 0.07198176713534808,
-          "standard_deviation": 0.0443481488817778
+          "mean": -0.00968567,
+          "replication_lower": -0.070513052,
+          "replication_upper": 0.071981767,
+          "standard_deviation": 0.044348149
         },
         "expected_calibration_error": {
-          "mean": 0.2142946936789861,
-          "replication_lower": 0.18171227139464635,
-          "replication_upper": 0.2569474240979593,
-          "standard_deviation": 0.02274575488138281
+          "mean": 0.214294694,
+          "replication_lower": 0.181712271,
+          "replication_upper": 0.256947424,
+          "standard_deviation": 0.022745755
         },
         "roc_auc": {
-          "mean": -0.3326579102562756,
-          "replication_lower": -0.36821887286636307,
-          "replication_upper": -0.29333317731827524,
-          "standard_deviation": 0.02262792055128175
+          "mean": -0.33265791,
+          "replication_lower": -0.368218873,
+          "replication_upper": -0.293333177,
+          "standard_deviation": 0.022627921
         }
       },
       "target": {
         "accuracy": {
-          "mean": 0.4655500000000001,
+          "mean": 0.46555,
           "replication_lower": 0.4338,
           "replication_upper": 0.498525,
-          "standard_deviation": 0.01984538922984909
+          "standard_deviation": 0.019845389
         },
         "brier_score": {
-          "mean": 0.3330315140361645,
-          "replication_lower": 0.31385897945836305,
-          "replication_upper": 0.3561173509872611,
-          "standard_deviation": 0.011471720918261792
+          "mean": 0.333031514,
+          "replication_lower": 0.313858979,
+          "replication_upper": 0.356117351,
+          "standard_deviation": 0.011471721
         },
         "demographic_parity_difference": {
-          "mean": 0.045947783938422006,
-          "replication_lower": 0.0013490522299969595,
-          "replication_upper": 0.10682971849116114,
-          "standard_deviation": 0.03404888650767689
+          "mean": 0.045947784,
+          "replication_lower": 0.001349052,
+          "replication_upper": 0.106829718,
+          "standard_deviation": 0.034048887
         },
         "equal_opportunity_difference": {
-          "mean": 0.052480779575560875,
-          "replication_lower": 0.005327380534874615,
-          "replication_upper": 0.10385732323232323,
-          "standard_deviation": 0.03451729624992695
+          "mean": 0.05248078,
+          "replication_lower": 0.005327381,
+          "replication_upper": 0.103857323,
+          "standard_deviation": 0.034517296
         },
         "equalized_odds_difference": {
-          "mean": 0.06165995938225131,
-          "replication_lower": 0.020000170305292726,
-          "replication_upper": 0.110928494786654,
-          "standard_deviation": 0.030649940279160605
+          "mean": 0.061659959,
+          "replication_lower": 0.02000017,
+          "replication_upper": 0.110928495,
+          "standard_deviation": 0.03064994
         },
         "expected_calibration_error": {
-          "mean": 0.2472549671825918,
-          "replication_lower": 0.21572365736323415,
-          "replication_upper": 0.2850613112248861,
-          "standard_deviation": 0.022185625166060572
+          "mean": 0.247254967,
+          "replication_lower": 0.215723657,
+          "replication_upper": 0.285061311,
+          "standard_deviation": 0.022185625
         },
         "roc_auc": {
-          "mean": 0.4510151270867902,
-          "replication_lower": 0.41844932608730984,
-          "replication_upper": 0.4832945160658252,
-          "standard_deviation": 0.01943942261939631
+          "mean": 0.451015127,
+          "replication_lower": 0.418449326,
+          "replication_upper": 0.483294516,
+          "standard_deviation": 0.019439423
         }
       }
     },
@@ -936,90 +936,90 @@
       "shift": "prevalence",
       "source_to_target_change": {
         "accuracy": {
-          "mean": -0.0009000000000000064,
-          "replication_lower": -0.026725000000000023,
-          "replication_upper": 0.03257499999999997,
-          "standard_deviation": 0.017453396592972358
+          "mean": -0.0009,
+          "replication_lower": -0.026725,
+          "replication_upper": 0.032575,
+          "standard_deviation": 0.017453397
         },
         "brier_score": {
-          "mean": 0.00010082629742007854,
-          "replication_lower": -0.012242631934973715,
-          "replication_upper": 0.00996192802598683,
-          "standard_deviation": 0.007582905992440611
+          "mean": 0.000100826,
+          "replication_lower": -0.012242632,
+          "replication_upper": 0.009961928,
+          "standard_deviation": 0.007582906
         },
         "demographic_parity_difference": {
-          "mean": -0.006994557627131401,
-          "replication_lower": -0.09819664844712105,
-          "replication_upper": 0.05824186327697385,
-          "standard_deviation": 0.04942952637482599
+          "mean": -0.006994558,
+          "replication_lower": -0.098196648,
+          "replication_upper": 0.058241863,
+          "standard_deviation": 0.049429526
         },
         "equal_opportunity_difference": {
-          "mean": -0.013058572451357903,
-          "replication_lower": -0.09128317357034166,
-          "replication_upper": 0.04984321206306356,
-          "standard_deviation": 0.046488375928712564
+          "mean": -0.013058572,
+          "replication_lower": -0.091283174,
+          "replication_upper": 0.049843212,
+          "standard_deviation": 0.046488376
         },
         "equalized_odds_difference": {
-          "mean": -0.012081494649944869,
-          "replication_lower": -0.0914369891201647,
-          "replication_upper": 0.05344903793369612,
-          "standard_deviation": 0.047941128445585394
+          "mean": -0.012081495,
+          "replication_lower": -0.091436989,
+          "replication_upper": 0.053449038,
+          "standard_deviation": 0.047941128
         },
         "expected_calibration_error": {
-          "mean": -0.0026625336688931287,
-          "replication_lower": -0.021620018712068378,
-          "replication_upper": 0.02012903742487856,
-          "standard_deviation": 0.012110134155803292
+          "mean": -0.002662534,
+          "replication_lower": -0.021620019,
+          "replication_upper": 0.020129037,
+          "standard_deviation": 0.012110134
         },
         "roc_auc": {
-          "mean": -0.0007473859483409339,
-          "replication_lower": -0.027181045960618728,
-          "replication_upper": 0.028625851013802172,
-          "standard_deviation": 0.018360128408562396
+          "mean": -0.000747386,
+          "replication_lower": -0.027181046,
+          "replication_upper": 0.028625851,
+          "standard_deviation": 0.018360128
         }
       },
       "target": {
         "accuracy": {
-          "mean": 0.7104999999999999,
+          "mean": 0.7105,
           "replication_lower": 0.691375,
           "replication_upper": 0.727575,
-          "standard_deviation": 0.011339265733213122
+          "standard_deviation": 0.011339266
         },
         "brier_score": {
-          "mean": 0.189460841779538,
-          "replication_lower": 0.18360137670634422,
-          "replication_upper": 0.19832664084649484,
-          "standard_deviation": 0.004857866250640704
+          "mean": 0.189460842,
+          "replication_lower": 0.183601377,
+          "replication_upper": 0.198326641,
+          "standard_deviation": 0.004857866
         },
         "demographic_parity_difference": {
-          "mean": 0.045947783938422006,
-          "replication_lower": 0.0013490522299969595,
-          "replication_upper": 0.10682971849116114,
-          "standard_deviation": 0.03404888650767689
+          "mean": 0.045947784,
+          "replication_lower": 0.001349052,
+          "replication_upper": 0.106829718,
+          "standard_deviation": 0.034048887
         },
         "equal_opportunity_difference": {
-          "mean": 0.04926192030037978,
-          "replication_lower": 0.0011461357039187577,
-          "replication_upper": 0.1310983643233568,
-          "standard_deviation": 0.03690044301663835
+          "mean": 0.04926192,
+          "replication_lower": 0.001146136,
+          "replication_upper": 0.131098364,
+          "standard_deviation": 0.036900443
         },
         "equalized_odds_difference": {
-          "mean": 0.0592641350983785,
-          "replication_lower": 0.00588951036792016,
-          "replication_upper": 0.1310983643233568,
-          "standard_deviation": 0.037239018631274344
+          "mean": 0.059264135,
+          "replication_lower": 0.00588951,
+          "replication_upper": 0.131098364,
+          "standard_deviation": 0.037239019
         },
         "expected_calibration_error": {
-          "mean": 0.03029773983471252,
-          "replication_lower": 0.017777235273443635,
-          "replication_upper": 0.04766252036531013,
-          "standard_deviation": 0.009186882829527749
+          "mean": 0.03029774,
+          "replication_lower": 0.017777235,
+          "replication_upper": 0.04766252,
+          "standard_deviation": 0.009186883
         },
         "roc_auc": {
-          "mean": 0.7829256513947249,
-          "replication_lower": 0.7607060708045555,
-          "replication_upper": 0.7975563661777814,
-          "standard_deviation": 0.011858049753056323
+          "mean": 0.782925651,
+          "replication_lower": 0.760706071,
+          "replication_upper": 0.797556366,
+          "standard_deviation": 0.01185805
         }
       }
     },
@@ -1029,46 +1029,46 @@
       "shift": "prevalence",
       "source_to_target_change": {
         "accuracy": {
-          "mean": 0.0018499999999999962,
-          "replication_lower": -0.025400000000000023,
-          "replication_upper": 0.02972499999999996,
-          "standard_deviation": 0.01679685120867349
+          "mean": 0.00185,
+          "replication_lower": -0.0254,
+          "replication_upper": 0.029725,
+          "standard_deviation": 0.016796851
         },
         "brier_score": {
-          "mean": -1.0847984507535157e-05,
-          "replication_lower": -0.01175877639888944,
-          "replication_upper": 0.010814593822184847,
-          "standard_deviation": 0.00759975845543976
+          "mean": -1.0848e-05,
+          "replication_lower": -0.011758776,
+          "replication_upper": 0.010814594,
+          "standard_deviation": 0.007599758
         },
         "demographic_parity_difference": {
-          "mean": -0.011297318763143988,
-          "replication_lower": -0.05763047496562401,
-          "replication_upper": 0.03098460402915172,
-          "standard_deviation": 0.025437793599947342
+          "mean": -0.011297319,
+          "replication_lower": -0.057630475,
+          "replication_upper": 0.030984604,
+          "standard_deviation": 0.025437794
         },
         "equal_opportunity_difference": {
-          "mean": -0.0183299168765498,
-          "replication_lower": -0.07434814663104057,
-          "replication_upper": 0.06308489460946022,
-          "standard_deviation": 0.041698813832664966
+          "mean": -0.018329917,
+          "replication_lower": -0.074348147,
+          "replication_upper": 0.063084895,
+          "standard_deviation": 0.041698814
         },
         "equalized_odds_difference": {
-          "mean": -0.006885821750706053,
-          "replication_lower": -0.06405625442684804,
-          "replication_upper": 0.05067659678661164,
-          "standard_deviation": 0.030909703345787236
+          "mean": -0.006885822,
+          "replication_lower": -0.064056254,
+          "replication_upper": 0.050676597,
+          "standard_deviation": 0.030909703
         },
         "expected_calibration_error": {
-          "mean": 0.00010382928104098466,
-          "replication_lower": -0.016214457192006558,
-          "replication_upper": 0.01840078092222511,
-          "standard_deviation": 0.01042332242105089
+          "mean": 0.000103829,
+          "replication_lower": -0.016214457,
+          "replication_upper": 0.018400781,
+          "standard_deviation": 0.010423322
         },
         "roc_auc": {
-          "mean": -0.0008345008282774014,
-          "replication_lower": -0.029834855423353995,
-          "replication_upper": 0.026763402323111182,
-          "standard_deviation": 0.01838067398195936
+          "mean": -0.000834501,
+          "replication_lower": -0.029834855,
+          "replication_upper": 0.026763402,
+          "standard_deviation": 0.018380674
         }
       },
       "target": {
@@ -1076,43 +1076,43 @@
           "mean": 0.71325,
           "replication_lower": 0.691425,
           "replication_upper": 0.730525,
-          "standard_deviation": 0.012251208318494881
+          "standard_deviation": 0.012251208
         },
         "brier_score": {
-          "mean": 0.1893491674976104,
-          "replication_lower": 0.18275410845058415,
-          "replication_upper": 0.20038868767539056,
-          "standard_deviation": 0.005356234825454702
+          "mean": 0.189349167,
+          "replication_lower": 0.182754108,
+          "replication_upper": 0.200388688,
+          "standard_deviation": 0.005356235
         },
         "demographic_parity_difference": {
-          "mean": 0.04164502280240943,
-          "replication_lower": 0.002283777517656094,
-          "replication_upper": 0.10807488392027022,
-          "standard_deviation": 0.03488291457822155
+          "mean": 0.041645023,
+          "replication_lower": 0.002283778,
+          "replication_upper": 0.108074884,
+          "standard_deviation": 0.034882915
         },
         "equal_opportunity_difference": {
-          "mean": 0.043990575875187884,
-          "replication_lower": 0.0064852435450250935,
-          "replication_upper": 0.08496654211484475,
-          "standard_deviation": 0.02614186910038961
+          "mean": 0.043990576,
+          "replication_lower": 0.006485244,
+          "replication_upper": 0.084966542,
+          "standard_deviation": 0.026141869
         },
         "equalized_odds_difference": {
-          "mean": 0.06445980799761732,
-          "replication_lower": 0.022086073193597792,
-          "replication_upper": 0.14152036519937117,
-          "standard_deviation": 0.03739985302169047
+          "mean": 0.064459808,
+          "replication_lower": 0.022086073,
+          "replication_upper": 0.141520365,
+          "standard_deviation": 0.037399853
         },
         "expected_calibration_error": {
-          "mean": 0.03306410278464662,
-          "replication_lower": 0.02268410735525268,
-          "replication_upper": 0.042957022072304236,
-          "standard_deviation": 0.006456066435057986
+          "mean": 0.033064103,
+          "replication_lower": 0.022684107,
+          "replication_upper": 0.042957022,
+          "standard_deviation": 0.006456066
         },
         "roc_auc": {
-          "mean": 0.7828385365147883,
-          "replication_lower": 0.7564683604877062,
-          "replication_upper": 0.7973577614592365,
-          "standard_deviation": 0.012928975295794278
+          "mean": 0.782838537,
+          "replication_lower": 0.75646836,
+          "replication_upper": 0.797357761,
+          "standard_deviation": 0.012928975
         }
       }
     },
@@ -1122,90 +1122,90 @@
       "shift": "prevalence",
       "source_to_target_change": {
         "accuracy": {
-          "mean": 0.001899999999999996,
-          "replication_lower": -0.026925000000000025,
-          "replication_upper": 0.03214999999999997,
-          "standard_deviation": 0.017383900597967083
+          "mean": 0.0019,
+          "replication_lower": -0.026925,
+          "replication_upper": 0.03215,
+          "standard_deviation": 0.017383901
         },
         "brier_score": {
-          "mean": -0.00013244553126255388,
-          "replication_lower": -0.012205552441899505,
-          "replication_upper": 0.010635450722970665,
-          "standard_deviation": 0.007636077012276933
+          "mean": -0.000132446,
+          "replication_lower": -0.012205552,
+          "replication_upper": 0.010635451,
+          "standard_deviation": 0.007636077
         },
         "demographic_parity_difference": {
-          "mean": -0.013589502872043946,
-          "replication_lower": -0.07144696332366528,
-          "replication_upper": 0.028527157176671595,
-          "standard_deviation": 0.029577167403990603
+          "mean": -0.013589503,
+          "replication_lower": -0.071446963,
+          "replication_upper": 0.028527157,
+          "standard_deviation": 0.029577167
         },
         "equal_opportunity_difference": {
-          "mean": -0.018343889119037414,
-          "replication_lower": -0.07848752204669815,
-          "replication_upper": 0.06668467050801007,
-          "standard_deviation": 0.045436139728811366
+          "mean": -0.018343889,
+          "replication_lower": -0.078487522,
+          "replication_upper": 0.066684671,
+          "standard_deviation": 0.04543614
         },
         "equalized_odds_difference": {
-          "mean": -0.00926491459572672,
-          "replication_lower": -0.07848752204669815,
-          "replication_upper": 0.031684604290235015,
-          "standard_deviation": 0.03535608029804963
+          "mean": -0.009264915,
+          "replication_lower": -0.078487522,
+          "replication_upper": 0.031684604,
+          "standard_deviation": 0.03535608
         },
         "expected_calibration_error": {
-          "mean": -0.0008710201468259479,
-          "replication_lower": -0.019172892406479337,
-          "replication_upper": 0.018459426976621562,
-          "standard_deviation": 0.011388785987574444
+          "mean": -0.00087102,
+          "replication_lower": -0.019172892,
+          "replication_upper": 0.018459427,
+          "standard_deviation": 0.011388786
         },
         "roc_auc": {
-          "mean": -0.0007641995550719038,
-          "replication_lower": -0.029356848113710796,
-          "replication_upper": 0.026978743867950385,
-          "standard_deviation": 0.018492331416680326
+          "mean": -0.0007642,
+          "replication_lower": -0.029356848,
+          "replication_upper": 0.026978744,
+          "standard_deviation": 0.018492331
         }
       },
       "target": {
         "accuracy": {
-          "mean": 0.7132999999999999,
+          "mean": 0.7133,
           "replication_lower": 0.691475,
           "replication_upper": 0.729525,
-          "standard_deviation": 0.012131299231847833
+          "standard_deviation": 0.012131299
         },
         "brier_score": {
-          "mean": 0.18922756995085543,
-          "replication_lower": 0.1825106938672027,
-          "replication_upper": 0.1995888372606541,
-          "standard_deviation": 0.005228550324506709
+          "mean": 0.18922757,
+          "replication_lower": 0.182510694,
+          "replication_upper": 0.199588837,
+          "standard_deviation": 0.00522855
         },
         "demographic_parity_difference": {
-          "mean": 0.039352838693509466,
-          "replication_lower": 0.004593682397900635,
-          "replication_upper": 0.11006754074439073,
-          "standard_deviation": 0.03258043676775302
+          "mean": 0.039352839,
+          "replication_lower": 0.004593682,
+          "replication_upper": 0.110067541,
+          "standard_deviation": 0.032580437
         },
         "equal_opportunity_difference": {
-          "mean": 0.04397660363270027,
-          "replication_lower": 0.00763884423228893,
-          "replication_upper": 0.09755861856626805,
-          "standard_deviation": 0.02786948689626859
+          "mean": 0.043976604,
+          "replication_lower": 0.007638844,
+          "replication_upper": 0.097558619,
+          "standard_deviation": 0.027869487
         },
         "equalized_odds_difference": {
-          "mean": 0.062080715152596645,
-          "replication_lower": 0.019607190966680007,
-          "replication_upper": 0.1269647368274943,
-          "standard_deviation": 0.035286133913202226
+          "mean": 0.062080715,
+          "replication_lower": 0.019607191,
+          "replication_upper": 0.126964737,
+          "standard_deviation": 0.035286134
         },
         "expected_calibration_error": {
-          "mean": 0.0320892533567797,
-          "replication_lower": 0.020692984713336412,
-          "replication_upper": 0.0432124461965796,
-          "standard_deviation": 0.0074821186844365615
+          "mean": 0.032089253,
+          "replication_lower": 0.020692985,
+          "replication_upper": 0.043212446,
+          "standard_deviation": 0.007482119
         },
         "roc_auc": {
-          "mean": 0.7829088377879938,
-          "replication_lower": 0.7582722914474912,
-          "replication_upper": 0.7974474459262388,
-          "standard_deviation": 0.012609600416952816
+          "mean": 0.782908838,
+          "replication_lower": 0.758272291,
+          "replication_upper": 0.797447446,
+          "standard_deviation": 0.0126096
         }
       }
     },
@@ -1215,46 +1215,46 @@
       "shift": "prevalence",
       "source_to_target_change": {
         "accuracy": {
-          "mean": 0.001749999999999996,
-          "replication_lower": -0.027450000000000023,
-          "replication_upper": 0.032624999999999967,
-          "standard_deviation": 0.017773057670175063
+          "mean": 0.00175,
+          "replication_lower": -0.02745,
+          "replication_upper": 0.032625,
+          "standard_deviation": 0.017773058
         },
         "brier_score": {
-          "mean": -0.00013420987820695897,
-          "replication_lower": -0.012100982022374644,
-          "replication_upper": 0.010760099714095415,
-          "standard_deviation": 0.007601378930481599
+          "mean": -0.00013421,
+          "replication_lower": -0.012100982,
+          "replication_upper": 0.0107601,
+          "standard_deviation": 0.007601379
         },
         "demographic_parity_difference": {
-          "mean": -0.016240561211447395,
-          "replication_lower": -0.08010146815846184,
-          "replication_upper": 0.015470671889258797,
-          "standard_deviation": 0.028373413956750797
+          "mean": -0.016240561,
+          "replication_lower": -0.080101468,
+          "replication_upper": 0.015470672,
+          "standard_deviation": 0.028373414
         },
         "equal_opportunity_difference": {
-          "mean": -0.026661459739391803,
-          "replication_lower": -0.10534710430662188,
-          "replication_upper": 0.05646513017479002,
-          "standard_deviation": 0.05321854249259422
+          "mean": -0.02666146,
+          "replication_lower": -0.105347104,
+          "replication_upper": 0.05646513,
+          "standard_deviation": 0.053218542
         },
         "equalized_odds_difference": {
-          "mean": -0.00360251176164528,
-          "replication_lower": -0.08798014446781802,
-          "replication_upper": 0.07084434401944749,
-          "standard_deviation": 0.04994577176831164
+          "mean": -0.003602512,
+          "replication_lower": -0.087980144,
+          "replication_upper": 0.070844344,
+          "standard_deviation": 0.049945772
         },
         "expected_calibration_error": {
-          "mean": -0.0017175497990272453,
-          "replication_lower": -0.020011511961343546,
-          "replication_upper": 0.01761669347589301,
-          "standard_deviation": 0.011136696371211247
+          "mean": -0.00171755,
+          "replication_lower": -0.020011512,
+          "replication_upper": 0.017616693,
+          "standard_deviation": 0.011136696
         },
         "roc_auc": {
-          "mean": -0.0008523313698880264,
-          "replication_lower": -0.029764468414322277,
-          "replication_upper": 0.02728086406980059,
-          "standard_deviation": 0.01858592277229762
+          "mean": -0.000852331,
+          "replication_lower": -0.029764468,
+          "replication_upper": 0.027280864,
+          "standard_deviation": 0.018585923
         }
       },
       "target": {
@@ -1262,43 +1262,43 @@
           "mean": 0.71315,
           "replication_lower": 0.6909,
           "replication_upper": 0.730525,
-          "standard_deviation": 0.012359845851534091
+          "standard_deviation": 0.012359846
         },
         "brier_score": {
-          "mean": 0.189225805603911,
-          "replication_lower": 0.18209591953869309,
-          "replication_upper": 0.19928136128973617,
-          "standard_deviation": 0.005225073300822592
+          "mean": 0.189225806,
+          "replication_lower": 0.18209592,
+          "replication_upper": 0.199281361,
+          "standard_deviation": 0.005225073
         },
         "demographic_parity_difference": {
-          "mean": 0.03670178035410602,
-          "replication_lower": 0.0018686584883771216,
-          "replication_upper": 0.08886634813643841,
-          "standard_deviation": 0.026976287237940103
+          "mean": 0.03670178,
+          "replication_lower": 0.001868658,
+          "replication_upper": 0.088866348,
+          "standard_deviation": 0.026976287
         },
         "equal_opportunity_difference": {
-          "mean": 0.03565903301234588,
-          "replication_lower": 0.0022178074450801776,
-          "replication_upper": 0.09815916541539828,
-          "standard_deviation": 0.03135299236042337
+          "mean": 0.035659033,
+          "replication_lower": 0.002217807,
+          "replication_upper": 0.098159165,
+          "standard_deviation": 0.031352992
         },
         "equalized_odds_difference": {
-          "mean": 0.06774311798667809,
-          "replication_lower": 0.0055266919322218624,
-          "replication_upper": 0.17200270898665218,
-          "standard_deviation": 0.04902528393376853
+          "mean": 0.067743118,
+          "replication_lower": 0.005526692,
+          "replication_upper": 0.172002709,
+          "standard_deviation": 0.049025284
         },
         "expected_calibration_error": {
-          "mean": 0.031242723704578406,
-          "replication_lower": 0.02117948722367729,
-          "replication_upper": 0.04062014361796593,
-          "standard_deviation": 0.005846331739026275
+          "mean": 0.031242724,
+          "replication_lower": 0.021179487,
+          "replication_upper": 0.040620144,
+          "standard_deviation": 0.005846332
         },
         "roc_auc": {
-          "mean": 0.7828207059731777,
-          "replication_lower": 0.7582255462979256,
-          "replication_upper": 0.7986004944250249,
-          "standard_deviation": 0.012716442766210619
+          "mean": 0.782820706,
+          "replication_lower": 0.758225546,
+          "replication_upper": 0.798600494,
+          "standard_deviation": 0.012716443
         }
       }
     },
@@ -1308,90 +1308,90 @@
       "shift": "prevalence",
       "source_to_target_change": {
         "accuracy": {
-          "mean": 0.001699999999999996,
-          "replication_lower": -0.028450000000000024,
-          "replication_upper": 0.032199999999999965,
-          "standard_deviation": 0.017853497372253228
+          "mean": 0.0017,
+          "replication_lower": -0.02845,
+          "replication_upper": 0.0322,
+          "standard_deviation": 0.017853497
         },
         "brier_score": {
-          "mean": -0.0001789319137631279,
-          "replication_lower": -0.011836445575198393,
-          "replication_upper": 0.010793500715457876,
-          "standard_deviation": 0.007533330893415623
+          "mean": -0.000178932,
+          "replication_lower": -0.011836446,
+          "replication_upper": 0.010793501,
+          "standard_deviation": 0.007533331
         },
         "demographic_parity_difference": {
-          "mean": -0.0018165989269722433,
-          "replication_lower": -0.07829163885062249,
-          "replication_upper": 0.07739629367018537,
-          "standard_deviation": 0.04450786168106129
+          "mean": -0.001816599,
+          "replication_lower": -0.078291639,
+          "replication_upper": 0.077396294,
+          "standard_deviation": 0.044507862
         },
         "equal_opportunity_difference": {
-          "mean": -0.011024555974176347,
-          "replication_lower": -0.06446220986522648,
-          "replication_upper": 0.0804054640975352,
-          "standard_deviation": 0.040321784314644955
+          "mean": -0.011024556,
+          "replication_lower": -0.06446221,
+          "replication_upper": 0.080405464,
+          "standard_deviation": 0.040321784
         },
         "equalized_odds_difference": {
-          "mean": 0.016020803756471472,
-          "replication_lower": -0.05631641335237249,
-          "replication_upper": 0.1215687804955847,
-          "standard_deviation": 0.05280121908239192
+          "mean": 0.016020804,
+          "replication_lower": -0.056316413,
+          "replication_upper": 0.12156878,
+          "standard_deviation": 0.052801219
         },
         "expected_calibration_error": {
-          "mean": -0.000221347700687167,
-          "replication_lower": -0.020393037229157075,
-          "replication_upper": 0.018769593973657336,
-          "standard_deviation": 0.01236181244400701
+          "mean": -0.000221348,
+          "replication_lower": -0.020393037,
+          "replication_upper": 0.018769594,
+          "standard_deviation": 0.012361812
         },
         "roc_auc": {
-          "mean": -0.0008066966998591773,
-          "replication_lower": -0.02982955682462014,
-          "replication_upper": 0.02748301820863982,
-          "standard_deviation": 0.018453464530732478
+          "mean": -0.000806697,
+          "replication_lower": -0.029829557,
+          "replication_upper": 0.027483018,
+          "standard_deviation": 0.018453465
         }
       },
       "target": {
         "accuracy": {
-          "mean": 0.7130999999999998,
+          "mean": 0.7131,
           "replication_lower": 0.690475,
           "replication_upper": 0.73105,
-          "standard_deviation": 0.012594485008589245
+          "standard_deviation": 0.012594485
         },
         "brier_score": {
-          "mean": 0.18918108356835478,
-          "replication_lower": 0.18256348117356855,
-          "replication_upper": 0.19914070695626834,
-          "standard_deviation": 0.005175408162784786
+          "mean": 0.189181084,
+          "replication_lower": 0.182563481,
+          "replication_upper": 0.199140707,
+          "standard_deviation": 0.005175408
         },
         "demographic_parity_difference": {
-          "mean": 0.051125742638581176,
-          "replication_lower": 0.002239036619307214,
-          "replication_upper": 0.1277816402946484,
-          "standard_deviation": 0.03763656968548247
+          "mean": 0.051125743,
+          "replication_lower": 0.002239037,
+          "replication_upper": 0.12778164,
+          "standard_deviation": 0.03763657
         },
         "equal_opportunity_difference": {
-          "mean": 0.05129593677756135,
-          "replication_lower": 0.001222545219638202,
-          "replication_upper": 0.1217245508151018,
-          "standard_deviation": 0.038772373188579776
+          "mean": 0.051295937,
+          "replication_lower": 0.001222545,
+          "replication_upper": 0.121724551,
+          "standard_deviation": 0.038772373
         },
         "equalized_odds_difference": {
-          "mean": 0.08736643350479484,
-          "replication_lower": 0.024834520239880028,
-          "replication_upper": 0.20449250635621571,
-          "standard_deviation": 0.05677669367768354
+          "mean": 0.087366434,
+          "replication_lower": 0.02483452,
+          "replication_upper": 0.204492506,
+          "standard_deviation": 0.056776694
         },
         "expected_calibration_error": {
-          "mean": 0.03273892580291848,
-          "replication_lower": 0.02025232495549651,
-          "replication_upper": 0.04254413127377312,
-          "standard_deviation": 0.006840548464209377
+          "mean": 0.032738926,
+          "replication_lower": 0.020252325,
+          "replication_upper": 0.042544131,
+          "standard_deviation": 0.006840548
         },
         "roc_auc": {
-          "mean": 0.7828663406432066,
-          "replication_lower": 0.7581912026070894,
-          "replication_upper": 0.7980184794185086,
-          "standard_deviation": 0.012539166295967664
+          "mean": 0.782866341,
+          "replication_lower": 0.758191203,
+          "replication_upper": 0.798018479,
+          "standard_deviation": 0.012539166
         }
       }
     }

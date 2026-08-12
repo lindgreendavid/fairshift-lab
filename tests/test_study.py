@@ -37,3 +37,12 @@ def test_study_is_reproducible_and_summarizes_changes() -> None:
     assert first.as_dict()["config"]["seeds"] == (7, 11)  # type: ignore[index]
     estimate = first.cells[-1].source_to_target_change["accuracy"]
     assert estimate.replication_lower <= estimate.mean <= estimate.replication_upper
+    assert all(
+        value == round(value, 9)
+        for value in (
+            estimate.mean,
+            estimate.standard_deviation,
+            estimate.replication_lower,
+            estimate.replication_upper,
+        )
+    )

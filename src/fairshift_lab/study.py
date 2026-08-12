@@ -18,6 +18,7 @@ REPORT_METRICS = (
     "brier_score",
     "expected_calibration_error",
 )
+REGISTRY_DECIMALS = 9
 
 
 @dataclass(frozen=True)
@@ -81,10 +82,10 @@ def _estimate(values: list[float]) -> StudyEstimate:
     array = np.asarray(values, dtype=np.float64)
     lower, upper = np.quantile(array, [0.025, 0.975])
     return StudyEstimate(
-        mean=float(np.mean(array)),
-        standard_deviation=float(np.std(array, ddof=1)),
-        replication_lower=float(lower),
-        replication_upper=float(upper),
+        mean=round(float(np.mean(array)), REGISTRY_DECIMALS),
+        standard_deviation=round(float(np.std(array, ddof=1)), REGISTRY_DECIMALS),
+        replication_lower=round(float(lower), REGISTRY_DECIMALS),
+        replication_upper=round(float(upper), REGISTRY_DECIMALS),
     )
 
 
