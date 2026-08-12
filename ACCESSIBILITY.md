@@ -17,6 +17,8 @@ interactive laboratory at https://fairshift-lab.lindgreendavid.chatgpt.site.
 - The Policy Studio pairs color with numbered labels and circle/diamond shapes, exposes
   every plotted value and replication range in a semantic table, and keeps policy selection
   in native buttons rather than making chart marks the only controls.
+- External Evidence uses a separately labeled observational region, puts limitations before
+  metrics, and provides every estimate and uncertainty range in a semantic table.
 - Polite announcements for updated result interpretation without moving focus.
 - Reflow down to a 320 CSS-pixel viewport and support for 200% text zoom without hiding
   navigation destinations.
@@ -37,6 +39,7 @@ assistive-technology combination.
   detail, but the full threshold table is intentionally long.
 - The policy comparison table is wide and therefore uses a labeled, keyboard-focusable
   horizontal scroll region at narrow widths.
+- The external registry table is also wide and uses the same labeled scroll pattern.
 - Mathematical notation is expressed as Unicode and plain text rather than MathML.
 - The interface and documentation are currently in English.
 

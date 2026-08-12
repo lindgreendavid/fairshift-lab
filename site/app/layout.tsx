@@ -14,9 +14,9 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://fairshift-lab.lindgreendavid.chatgpt.site"),
-  title: "Fairshift Lab — Transparent policy trade-offs under shift",
+  title: "Fairshift Lab — Synthetic experiments and governed external evidence",
   description:
-    "An accessible research laboratory for declaring error costs, comparing mitigation policies, and inspecting fairness–utility Pareto frontiers under distribution shift.",
+    "An accessible research laboratory separating synthetic distribution-shift experiments from governed historical observational evidence.",
   applicationName: "Fairshift Lab",
   keywords: [
     "responsible AI",
@@ -30,18 +30,20 @@ export const metadata: Metadata = {
     "web accessibility",
     "decision policy",
     "Pareto frontier",
+    "external validation",
+    "dataset governance",
   ],
   openGraph: {
     title: "Fairshift Lab",
     description:
-      "Declare the stakes, compare eight policies, and inspect every fairness–utility trade-off.",
+      "Move from controlled synthetic shifts to governed historical evidence without confusing either for the real world.",
     type: "website",
     images: [
       {
-        url: "/og-v1-1.png",
+        url: "/og-v1-2.png",
         width: 1672,
         height: 941,
-        alt: "Fairshift Lab Policy Studio — source and target shift above a policy Pareto field",
+        alt: "Fairshift Lab External Evidence — a clear boundary between synthetic and observational evidence",
       },
     ],
   },
@@ -49,8 +51,8 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Fairshift Lab",
     description:
-      "Declare the stakes, compare eight policies, and inspect every fairness–utility trade-off.",
-    images: ["/og-v1-1.png"],
+      "Controlled synthetic experiments, governed historical evidence, and no automatic best policy.",
+    images: ["/og-v1-2.png"],
   },
   icons: {
     icon: "/favicon.svg",

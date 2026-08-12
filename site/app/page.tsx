@@ -2,6 +2,7 @@
 
 import { useMemo, useState } from "react";
 
+import ExternalEvidence from "./external-evidence";
 import PolicyStudio from "./policy-studio";
 
 type ShiftKind = "covariate" | "concept" | "prevalence";
@@ -662,6 +663,7 @@ export default function Home() {
           <a href="#decision">Decision curves</a>
           <a href="#report">Report</a>
           <a href="#policy">Policy Studio</a>
+          <a href="#external">External evidence</a>
           <a href="#method">Method</a>
           <a href="#evidence">Evidence</a>
           <a href="https://github.com/lindgreendavid/fairshift-lab">GitHub</a>
@@ -669,7 +671,7 @@ export default function Home() {
       </nav>
 
       <section className="hero" id="top">
-        <div className="eyebrow"><span>Verified interactive research release</span><span>v1.1.0</span></div>
+        <div className="eyebrow"><span>Verified interactive research release</span><span>v1.2.0</span></div>
         <h1>Move the population.<br /><em>Trace every decision.</em></h1>
         <p className="hero__lead">
           A model can keep the same code and still behave differently after deployment.
@@ -677,11 +679,14 @@ export default function Home() {
           uncertainty, calibration, and the full decision curve together—then compare the
           live run with a frozen 300-experiment report—then compare eight transparent
           decision policies without hiding their costs or data requirements.
+          A separate external-evidence area then tests those ideas against a governed
+          historical reference table without calling it the real world.
         </p>
         <div className="hero__actions">
           <a className="button button--primary" href="#experiment">Run the experiment</a>
           <a className="button button--ghost" href="#report">Read the findings</a>
           <a className="button button--ghost" href="#policy">Open Policy Studio</a>
+          <a className="button button--ghost" href="#external">Inspect external evidence</a>
         </div>
         <div className="hero__principles" aria-label="Research principles">
           <span>One controlled intervention</span>
@@ -845,9 +850,11 @@ export default function Home() {
 
       <PolicyStudio />
 
+      <ExternalEvidence />
+
       <section className="method" id="method">
         <header className="section-heading section-heading--light">
-          <div><span className="section-index">05</span><p>Scientific method</p></div>
+          <div><span className="section-index">06</span><p>Scientific method</p></div>
           <h2>See exactly what<br />the experiment knows.</h2>
         </header>
         <div className="causal-chain" aria-label="Experimental causal chain">
@@ -878,7 +885,7 @@ export default function Home() {
 
       <section className="evidence" id="evidence">
         <header className="section-heading">
-          <div><span className="section-index">06</span><p>Research trail</p></div>
+          <div><span className="section-index">07</span><p>Research trail</p></div>
           <h2>Built on arguments<br />you can inspect.</h2>
         </header>
         <div className="source-list">
@@ -920,7 +927,7 @@ export default function Home() {
 
       <footer>
         <div><span className="brand__mark">F↗</span><strong>Fairshift Lab</strong></div>
-        <p>Research software by David Lindgreen · MIT License · No personal data</p>
+        <p>Research software by David Lindgreen · MIT License · No raw reference data redistributed</p>
         <div><a href="https://github.com/lindgreendavid/fairshift-lab">Source code</a><a href="https://github.com/lindgreendavid/fairshift-lab/blob/main/docs/research-protocol.md">Protocol</a><a href="https://github.com/lindgreendavid/fairshift-lab/blob/main/ACCESSIBILITY.md">Accessibility</a></div>
       </footer>
       </main>

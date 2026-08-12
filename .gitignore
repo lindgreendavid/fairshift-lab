@@ -13,6 +13,7 @@ build/
 !site/build/**
 dist/
 reports/generated/
+data/external/
 site/.next/
 site/.wrangler/
 site/dist/
