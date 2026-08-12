@@ -16,6 +16,7 @@ All notable changes follow [Keep a Changelog](https://keepachangelog.com/en/1.1.
 
 - Separated training, calibration, source evaluation, and target evaluation populations.
 - Published the interactive laboratory for unrestricted public access.
+- Updated the web runtime and build chain to patched React, Vite, Cloudflare, and Vinext releases; CI now audits production dependencies.
 - Upgraded package, site, and citation metadata to version 0.3.0.
 
 ## [0.2.0] - 2026-08-12
