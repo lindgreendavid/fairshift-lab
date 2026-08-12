@@ -16,6 +16,8 @@ def build_parser() -> argparse.ArgumentParser:
     parser.add_argument("--magnitude", type=float, default=0.0)
     parser.add_argument("--samples", type=int, default=2_000)
     parser.add_argument("--seed", type=int, default=42)
+    parser.add_argument("--bootstrap-samples", type=int, default=200)
+    parser.add_argument("--confidence-level", type=float, default=0.95)
     return parser
 
 
@@ -23,7 +25,13 @@ def main(argv: Sequence[str] | None = None) -> int:
     args = build_parser().parse_args(argv)
     shift = ShiftConfig(kind=ShiftKind(args.shift), magnitude=args.magnitude)
     result = run_experiment(
-        ExperimentConfig(samples=args.samples, seed=args.seed, target_shift=shift)
+        ExperimentConfig(
+            samples=args.samples,
+            seed=args.seed,
+            bootstrap_samples=args.bootstrap_samples,
+            confidence_level=args.confidence_level,
+            target_shift=shift,
+        )
     )
     print(json.dumps(result.as_dict(), indent=2, sort_keys=True))
     return 0
