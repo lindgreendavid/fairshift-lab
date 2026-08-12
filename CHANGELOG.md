@@ -2,6 +2,22 @@
 
 All notable changes follow [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) and [Semantic Versioning](https://semver.org/).
 
+## [0.3.0] - 2026-08-12
+
+### Added
+
+- Source-only temperature scaling fitted on an independent calibration population.
+- Brier score, expected calibration error, and populated reliability-diagram bins for raw and calibrated source and target scores.
+- Formal 19-point source and target threshold sweeps across performance and group-fairness measurements.
+- Interactive target reliability diagram and linked source-to-target decision curves.
+- Primary-source explanations of calibration under shift and incompatibilities among fairness criteria.
+
+### Changed
+
+- Separated training, calibration, source evaluation, and target evaluation populations.
+- Published the interactive laboratory for unrestricted public access.
+- Upgraded package, site, and citation metadata to version 0.3.0.
+
 ## [0.2.0] - 2026-08-12
 
 ### Added
@@ -29,3 +45,4 @@ All notable changes follow [Keep a Changelog](https://keepachangelog.com/en/1.1.
 
 [0.1.0]: https://github.com/lindgreendavid/fairshift-lab/releases/tag/v0.1.0
 [0.2.0]: https://github.com/lindgreendavid/fairshift-lab/releases/tag/v0.2.0
+[0.3.0]: https://github.com/lindgreendavid/fairshift-lab/releases/tag/v0.3.0

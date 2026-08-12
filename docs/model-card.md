@@ -2,7 +2,7 @@
 
 ## Model details
 
-Version 0.1.0 uses binary logistic regression with an intercept and three inputs. Full-batch gradient descent starts from zero weights and runs for a configured number of iterations. The decision threshold defaults to `0.5`.
+Version 0.3.0 uses binary logistic regression with an intercept and three inputs. Full-batch gradient descent starts from zero weights and runs for a configured number of iterations. A source-only scalar temperature is fitted on an independent holdout; the decision threshold defaults to `0.5`.
 
 ## Intended purpose
 
@@ -10,11 +10,11 @@ Provide a transparent reference model whose source-to-target behavior can be mea
 
 ## Evaluation
 
-The same fitted parameters and threshold are evaluated on independently sampled source and target populations. Performance and group metrics are reported together. Tests establish implementation behavior, not real-world validity.
+The same fitted parameters and temperature are evaluated on independently sampled source and target populations. Performance, group metrics, raw and calibrated reliability, bootstrap intervals, and a fixed threshold sweep are reported together. Tests establish implementation behavior, not real-world validity.
 
 ## Limitations
 
-No calibration analysis, hyperparameter selection, regularization, threshold optimization, or mitigation is included in v0.2.0. Percentile-bootstrap intervals cover selected test-sample metrics only and do not quantify model-selection or structural uncertainty. The protected attribute is used directly. Gradient descent has no convergence diagnostic.
+Temperature scaling is limited to a fixed scalar search and may fail under shift. Expected calibration error depends on binning. No hyperparameter selection, regularization, threshold optimization, decision-cost model, or mitigation is included in v0.3.0. Percentile-bootstrap intervals cover selected test-sample metrics only and do not quantify model-selection or structural uncertainty. The protected attribute is used directly. Gradient descent has no convergence diagnostic.
 
 ## Ethical considerations
 

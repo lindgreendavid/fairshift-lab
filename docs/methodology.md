@@ -20,6 +20,8 @@ Magnitude `m` lies in `[0,1]`. Intervention formulas are part of the public cont
 
 The baseline is binary logistic regression optimized by deterministic full-batch gradient descent. An explicit implementation keeps the educational release auditable. It is not optimized for large data and should be compared with a mature library implementation before substantive research use.
 
+Training, calibration, source evaluation, and target evaluation use independent populations. Version 0.3.0 fits one scalar temperature on the source calibration population by minimizing negative log likelihood over a deterministic log-spaced grid. For a raw probability `p`, the calibrated probability is `sigmoid(logit(p) / T)`. The same fitted temperature is applied unchanged to source and target evaluation scores.
+
 ## Metrics
 
 - Accuracy: fraction of correct thresholded predictions.
@@ -27,6 +29,10 @@ The baseline is binary logistic regression optimized by deterministic full-batch
 - Demographic-parity difference: absolute selection-rate gap.
 - Equal-opportunity difference: absolute true-positive-rate gap.
 - Equalized-odds difference: maximum of the absolute true-positive- and false-positive-rate gaps.
+- Brier score: mean squared error between probability and binary outcome.
+- Expected calibration error: sample-weighted absolute difference between mean probability and observed outcome rate in equal-width bins.
+
+The threshold-sensitivity output evaluates all performance and group measurements at 19 fixed cutoffs from `0.05` through `0.95`. It exposes how conclusions depend on the decision rule. It does not choose an operational threshold or encode the relative consequences of false positives and false negatives.
 
 Undefined conditional rates caused by an empty subgroup condition are reported as `0.0` in v0.1.0. Consumers must inspect group counts before substantive interpretation; a future release will add explicit uncertainty and missingness metadata.
 
@@ -48,3 +54,6 @@ The method is transparent and distribution-light, but percentile intervals can h
 - Barrainkua et al. (2024), *Uncertainty Matters*: uncertainty-aware joint comparison of performance and fairness. https://proceedings.mlr.press/v238/barrainkua24a.html
 - Agarwal et al. (2025), *Optimal Fair Learning Robust to Adversarial Distribution Shift*: robustness of fairness-constrained learning under malicious distribution noise. https://proceedings.mlr.press/v267/agarwal25b.html
 - NIST AI RMF 1.0, *AI Risks and Trustworthiness*: fairness is one socio-technical trustworthiness characteristic that must be balanced with validity, transparency, explainability, privacy, safety, and security. https://airc.nist.gov/airmf-resources/airmf/3-sec-characteristics/
+- Guo et al. (2017), *On Calibration of Modern Neural Networks*: held-out post-hoc calibration and temperature scaling. https://proceedings.mlr.press/v70/guo17a.html
+- Ovadia et al. (2019), *Can You Trust Your Model’s Uncertainty?*: empirical evaluation of predictive uncertainty and calibration under dataset shift. https://proceedings.neurips.cc/paper_files/paper/2019/hash/8558cb408c1d76621371888657d2eb1d-Abstract.html
+- Kleinberg, Mullainathan, and Raghavan (2017), *Inherent Trade-Offs in the Fair Determination of Risk Scores*: incompatibilities among statistical fairness conditions. https://arxiv.org/abs/1609.05807
