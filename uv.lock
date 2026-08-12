@@ -198,7 +198,7 @@ dev = [
 requires-dist = [
     { name = "build", marker = "extra == 'dev'", specifier = ">=1.2" },
     { name = "hatchling", marker = "extra == 'dev'", specifier = ">=1.27" },
-    { name = "mypy", marker = "extra == 'dev'", specifier = ">=1.13,<2" },
+    { name = "mypy", marker = "extra == 'dev'", specifier = ">=1.13,<3" },
     { name = "numpy", specifier = ">=1.26,<2.3" },
     { name = "pytest", marker = "extra == 'dev'", specifier = ">=8.3" },
     { name = "pytest-cov", marker = "extra == 'dev'", specifier = ">=6.0" },
