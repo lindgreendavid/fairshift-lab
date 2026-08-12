@@ -23,7 +23,7 @@ dependencies = ["numpy>=1.26,<2.3"]
 dev = [
   "build>=1.2",
   "hatchling>=1.27",
-  "mypy>=1.13,<2",
+  "mypy>=1.13,<3",
   "pytest>=8.3",
   "pytest-cov>=6.0",
   "ruff>=0.8",
