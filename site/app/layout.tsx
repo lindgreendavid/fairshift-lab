@@ -14,9 +14,9 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://fairshift-lab.lindgreendavid.chatgpt.site"),
-  title: "Fairshift Lab — Fairness under distribution shift",
+  title: "Fairshift Lab — Verified fairness-under-shift research",
   description:
-    "An interactive research laboratory for exploring how distribution shift changes calibration, threshold-sensitive decisions, performance, and group-fairness measurements.",
+    "A verified, accessible research laboratory with a frozen 300-experiment report on calibration, decisions, performance, and group-fairness measurements under distribution shift.",
   applicationName: "Fairshift Lab",
   keywords: [
     "responsible AI",
@@ -26,15 +26,17 @@ export const metadata: Metadata = {
     "uncertainty",
     "probability calibration",
     "threshold sensitivity",
+    "reproducible research",
+    "web accessibility",
   ],
   openGraph: {
     title: "Fairshift Lab",
     description:
-      "Move a population. Trace calibration and fairness across every decision threshold.",
+      "Move a population, trace every decision, and inspect the frozen 300-experiment report.",
     type: "website",
     images: [
       {
-        url: "/og-v0.3.png",
+        url: "/og-v1.png",
         width: 1672,
         height: 941,
         alt: "Fairshift Lab — source and target distributions under shift",
@@ -45,8 +47,8 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Fairshift Lab",
     description:
-      "Move a population. Trace calibration and fairness across every decision threshold.",
-    images: ["/og-v0.3.png"],
+      "Move a population, trace every decision, and inspect the frozen 300-experiment report.",
+    images: ["/og-v1.png"],
   },
   icons: {
     icon: "/favicon.svg",

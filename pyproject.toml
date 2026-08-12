@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "fairshift-lab"
-version = "0.3.1"
+version = "1.0.0"
 description = "A reproducible laboratory for auditing model fairness under distribution shift"
 readme = "README.md"
 requires-python = ">=3.10"
@@ -12,7 +12,7 @@ license = { file = "LICENSE" }
 authors = [{ name = "David Lindgreen" }]
 keywords = ["responsible-ai", "fairness", "distribution-shift", "data-science"]
 classifiers = [
-  "Development Status :: 3 - Alpha",
+  "Development Status :: 5 - Production/Stable",
   "Intended Audience :: Science/Research",
   "Programming Language :: Python :: 3",
   "Topic :: Scientific/Engineering :: Artificial Intelligence",

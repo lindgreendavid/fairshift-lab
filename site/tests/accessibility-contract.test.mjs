@@ -1,0 +1,65 @@
+import assert from "node:assert/strict";
+import { readFile } from "node:fs/promises";
+import test from "node:test";
+
+const root = new URL("../", import.meta.url);
+
+async function source(name) {
+  return readFile(new URL(name, root), "utf8");
+}
+
+test("keeps the WCAG 2.2-oriented keyboard and structure contract", async () => {
+  const [page, styles, layout] = await Promise.all([
+    source("app/page.tsx"),
+    source("app/globals.css"),
+    source("app/layout.tsx"),
+  ]);
+  assert.match(layout, /<html lang="en">/);
+  assert.match(page, /href="#main-content">Skip to main content/);
+  assert.match(page, /<main id="main-content">/);
+  assert.match(page, /<nav className="nav" aria-label="Primary navigation">/);
+  for (const id of ["magnitude", "threshold", "samples"]) {
+    assert.match(page, new RegExp(`htmlFor="${id}"`));
+    assert.match(page, new RegExp(`id="${id}"`));
+  }
+  assert.match(page, /<legend className="sr-only">Distribution shift mechanism<\/legend>/);
+  assert.match(page, /aria-pressed=/);
+  assert.match(page, /aria-live="polite"/);
+  assert.match(styles, /:focus-visible \{ outline: 3px solid/);
+  assert.match(styles, /\.nav__links a \{ display: inline-flex; min-height: 44px/);
+  assert.doesNotMatch(styles, /nav__links a:not\(:last-child\).*display: none/);
+});
+
+test("keeps equivalent text and data for every scientific visual", async () => {
+  const [page, styles] = await Promise.all([
+    source("app/page.tsx"),
+    source("app/globals.css"),
+  ]);
+  assert.match(page, /role="img" aria-label=\{`Feature X1 histogram/);
+  assert.equal((page.match(/<title id=/g) ?? []).length, 2);
+  assert.equal((page.match(/<desc id=/g) ?? []).length, 2);
+  assert.equal((page.match(/<caption>/g) ?? []).length, 2);
+  assert.match(page, /Read reliability data/);
+  assert.match(page, /Read threshold data/);
+  assert.match(styles, /chart-line--raw[^}]*stroke-dasharray/);
+  assert.match(styles, /chart-line--target[^}]*stroke-dasharray/);
+});
+
+test("keeps reflow, contrast preference, forced colors, and reduced motion", async () => {
+  const styles = await source("app/globals.css");
+  assert.match(styles, /@media \(max-width: 720px\)/);
+  assert.match(styles, /@media \(prefers-reduced-motion: reduce\)/);
+  assert.match(styles, /@media \(prefers-contrast: more\)/);
+  assert.match(styles, /@media \(forced-colors: active\)/);
+  assert.match(styles, /\.nav__links \{ max-width: calc\(100vw - 82px\); overflow-x: auto/);
+});
+
+test("ships recovery pages with direct, keyboard-operable actions", async () => {
+  const [errorPage, notFound] = await Promise.all([
+    source("app/error.tsx"),
+    source("app/not-found.tsx"),
+  ]);
+  assert.match(errorPage, /type="button" onClick=\{reset\}>Try again/);
+  assert.match(errorPage, /Return to the laboratory/);
+  assert.match(notFound, /Return to Fairshift Lab/);
+});

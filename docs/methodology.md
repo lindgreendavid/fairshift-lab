@@ -20,7 +20,7 @@ Magnitude `m` lies in `[0,1]`. Intervention formulas are part of the public cont
 
 The baseline is binary logistic regression optimized by deterministic full-batch gradient descent. An explicit implementation keeps the educational release auditable. It is not optimized for large data and should be compared with a mature library implementation before substantive research use.
 
-Training, calibration, source evaluation, and target evaluation use independent populations. Version 0.3.0 fits one scalar temperature on the source calibration population by minimizing negative log likelihood over a deterministic log-spaced grid. For a raw probability `p`, the calibrated probability is `sigmoid(logit(p) / T)`. The same fitted temperature is applied unchanged to source and target evaluation scores.
+Training, calibration, source evaluation, and target evaluation use independent populations. The package fits one scalar temperature on the source calibration population by minimizing negative log likelihood over a deterministic log-spaced grid. For a raw probability `p`, the calibrated probability is `sigmoid(logit(p) / T)`. The same fitted temperature is applied unchanged to source and target evaluation scores.
 
 ## Metrics
 
@@ -39,6 +39,8 @@ Undefined conditional rates caused by an empty subgroup condition are reported a
 ## Reproducibility
 
 Randomness is isolated in NumPy's generator and controlled by recorded seeds. CI tests supported Python versions, formatting, lint, typing, coverage, and package construction. Generated reports are excluded from version control so that every published result must declare how it was produced.
+
+The reviewed v1 registry is the explicit exception: `reports/v1-study.json` is committed as an immutable release artifact. `scripts/generate_study.py` regenerates it from the public package API. The registry contains 20 independent seeds for every intervention–magnitude cell and retains descriptive variation rather than only a grand mean.
 
 ## Bootstrap uncertainty
 

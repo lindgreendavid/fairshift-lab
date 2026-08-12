@@ -25,8 +25,10 @@ class LogisticBaseline:
         design = np.column_stack((np.ones(features.shape[0]), features))
         weights = np.zeros(design.shape[1], dtype=np.float64)
         for _ in range(self.iterations):
-            errors = _sigmoid(design @ weights) - labels
-            weights -= self.learning_rate * (design.T @ errors) / labels.size
+            scores = np.einsum("ij,j->i", design, weights, optimize=True)
+            errors = _sigmoid(scores) - labels
+            gradient = np.einsum("ij,i->j", design, errors, optimize=True)
+            weights -= self.learning_rate * gradient / labels.size
         self.weights = weights
         return self
 
@@ -34,7 +36,8 @@ class LogisticBaseline:
         if self.weights is None:
             raise RuntimeError("the model must be fitted before prediction")
         design = np.column_stack((np.ones(features.shape[0]), features))
-        return _sigmoid(design @ self.weights)
+        scores = np.einsum("ij,j->i", design, self.weights, optimize=True)
+        return _sigmoid(scores)
 
     def predict(self, features: FloatArray, threshold: float = 0.5) -> IntArray:
         return (self.predict_proba(features) >= threshold).astype(np.int64)

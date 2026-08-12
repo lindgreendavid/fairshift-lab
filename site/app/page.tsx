@@ -45,6 +45,66 @@ type CalibrationSummary = {
 
 type ThresholdPoint = Metrics & { threshold: number };
 
+type StudySummary = {
+  label: string;
+  finding: string;
+  accuracy: number;
+  accuracyChange: number;
+  auc: number;
+  aucChange: number;
+  dp: number;
+  dpChange: number;
+  eodds: number;
+  eoddsChange: number;
+  ece: number;
+  eceChange: number;
+};
+
+const studyResults: Record<ShiftKind, StudySummary> = {
+  covariate: {
+    label: "Covariate shift",
+    finding: "Aggregate accuracy improved while both displayed group gaps increased.",
+    accuracy: 0.790,
+    accuracyChange: 0.079,
+    auc: 0.807,
+    aucChange: 0.024,
+    dp: 0.176,
+    dpChange: 0.123,
+    eodds: 0.257,
+    eoddsChange: 0.186,
+    ece: 0.031,
+    eceChange: -0.002,
+  },
+  concept: {
+    label: "Concept shift",
+    finding: "The changed label mechanism produced the largest predictive and calibration failure.",
+    accuracy: 0.466,
+    accuracyChange: -0.246,
+    auc: 0.451,
+    aucChange: -0.333,
+    dp: 0.046,
+    dpChange: -0.007,
+    eodds: 0.062,
+    eoddsChange: -0.010,
+    ece: 0.247,
+    eceChange: 0.214,
+  },
+  prevalence: {
+    label: "Group prevalence shift",
+    finding: "Changing only the group mix left most conditional behavior comparatively stable.",
+    accuracy: 0.713,
+    accuracyChange: 0.002,
+    auc: 0.783,
+    aucChange: -0.001,
+    dp: 0.051,
+    dpChange: -0.002,
+    eodds: 0.087,
+    eoddsChange: 0.016,
+    ece: 0.033,
+    eceChange: -0.000,
+  },
+};
+
 const shiftCopy: Record<
   ShiftKind,
   { label: string; short: string; mechanism: string; fixed: string }
@@ -430,12 +490,14 @@ function ReliabilityChart({
   calibrated: CalibrationSummary;
 }) {
   return (
-    <div className="science-chart">
+    <figure className="science-chart">
       <div className="science-chart__title">
         <div><span>Target reliability</span><strong>Predicted probability → observed rate</strong></div>
         <div className="chart-legend"><span><i className="raw-dot" />Raw</span><span><i className="calibrated-dot" />Calibrated</span></div>
       </div>
-      <svg viewBox="0 0 600 260" role="img" aria-label="Target reliability diagram comparing raw and source-calibrated probabilities">
+      <svg viewBox="0 0 600 260" role="img" aria-labelledby="reliability-title reliability-description">
+        <title id="reliability-title">Target reliability diagram</title>
+        <desc id="reliability-description">Raw and source-calibrated predicted probabilities compared with observed outcome rates. The complete values follow in a table.</desc>
         <line className="chart-grid" x1="36" y1="224" x2="564" y2="224" />
         <line className="chart-grid" x1="36" y1="224" x2="36" y2="40" />
         <line className="chart-ideal" x1="36" y1="224" x2="564" y2="40" />
@@ -447,8 +509,26 @@ function ReliabilityChart({
         <text x="36" y="244">0</text><text x="550" y="244">1</text>
         <text x="18" y="228">0</text><text x="18" y="44">1</text>
       </svg>
-      <p>Closer to the dotted diagonal means predicted probabilities align more closely with observed frequencies in this sample.</p>
-    </div>
+      <figcaption>Closer to the dotted diagonal means predicted probabilities align more closely with observed frequencies in this sample.</figcaption>
+      <details className="data-alternative">
+        <summary>Read reliability data</summary>
+        {/* Keyboard focus makes the overflowing data region independently scrollable. */}
+        {/* eslint-disable-next-line jsx-a11y/no-noninteractive-tabindex */}
+        <div className="table-scroll" role="region" tabIndex={0} aria-label="Scrollable reliability data table">
+          <table>
+            <caption>Target reliability bins</caption>
+            <thead><tr><th scope="col">Series</th><th scope="col">Mean probability</th><th scope="col">Observed rate</th><th scope="col">Count</th></tr></thead>
+            <tbody>
+              {([['Raw', raw], ['Calibrated', calibrated]] as const).flatMap(([label, summary]) =>
+                summary.bins.map((bin, index) => (
+                  <tr key={`${label}-${index}`}><th scope="row">{label}</th><td>{format(bin.meanProbability)}</td><td>{format(bin.observedRate)}</td><td>{bin.count}</td></tr>
+                )),
+              )}
+            </tbody>
+          </table>
+        </div>
+      </details>
+    </figure>
   );
 }
 
@@ -466,12 +546,14 @@ function ThresholdChart({
   const metricPoints = (points: ThresholdPoint[]) =>
     chartPoints(points.map((point) => ({ x: point.threshold, y: point[metric] })));
   return (
-    <div className="science-chart">
+    <figure className="science-chart">
       <div className="science-chart__title">
         <div><span>Threshold sensitivity</span><strong>{metricCopy[metric].label} across the decision curve</strong></div>
         <div className="chart-legend"><span><i className="source-dot" />Source</span><span><i className="target-dot" />Target</span></div>
       </div>
-      <svg viewBox="0 0 600 260" role="img" aria-label={`${metricCopy[metric].label} across source and target decision thresholds`}>
+      <svg viewBox="0 0 600 260" role="img" aria-labelledby="threshold-title threshold-description">
+        <title id="threshold-title">{metricCopy[metric].label} threshold sensitivity</title>
+        <desc id="threshold-description">Source and target measurements across 19 decision thresholds. The active threshold is {threshold.toFixed(2)}. Complete values follow in a table.</desc>
         <line className="chart-grid" x1="36" y1="224" x2="564" y2="224" />
         <line className="chart-grid" x1="36" y1="224" x2="36" y2="40" />
         <line className="chart-threshold" x1={(36 + threshold * 528).toFixed(3)} y1="40" x2={(36 + threshold * 528).toFixed(3)} y2="224" />
@@ -480,8 +562,70 @@ function ThresholdChart({
         <text x="36" y="244">0</text><text x="550" y="244">1</text>
         <text x="18" y="228">0</text><text x="18" y="44">1</text>
       </svg>
-      <p>The vertical marker is your current threshold. Select any metric card above to change the curve.</p>
-    </div>
+      <figcaption>The vertical marker is your current threshold. Select any metric card above to change the curve.</figcaption>
+      <details className="data-alternative">
+        <summary>Read threshold data</summary>
+        {/* Keyboard focus makes the overflowing data region independently scrollable. */}
+        {/* eslint-disable-next-line jsx-a11y/no-noninteractive-tabindex */}
+        <div className="table-scroll" role="region" tabIndex={0} aria-label="Scrollable threshold data table">
+          <table>
+            <caption>{metricCopy[metric].label} by decision threshold</caption>
+            <thead><tr><th scope="col">Threshold</th><th scope="col">Source</th><th scope="col">Target</th></tr></thead>
+            <tbody>{source.map((point, index) => (
+              <tr key={point.threshold}><th scope="row">{point.threshold.toFixed(2)}</th><td>{format(point[metric])}</td><td>{format(target[index][metric])}</td></tr>
+            ))}</tbody>
+          </table>
+        </div>
+      </details>
+    </figure>
+  );
+}
+
+function StudyReport() {
+  const [selectedShift, setSelectedShift] = useState<ShiftKind>("concept");
+  const result = studyResults[selectedShift];
+  const columns = [
+    ["Accuracy", result.accuracy, result.accuracyChange],
+    ["AUROC", result.auc, result.aucChange],
+    ["DP gap", result.dp, result.dpChange],
+    ["Equalized-odds gap", result.eodds, result.eoddsChange],
+    ["ECE", result.ece, result.eceChange],
+  ] as const;
+  return (
+    <section className="report" id="report" aria-labelledby="report-heading">
+      <header className="section-heading">
+        <div><span className="section-index">03</span><p>Verified report</p></div>
+        <h2 id="report-heading">One grid.<br />No cherry-picking.</h2>
+      </header>
+      <div className="report-intro">
+        <p>Three interventions × five magnitudes × 20 independent seeds. The frozen registry contains 300 complete experiments and 1.2 million generated rows before resampling.</p>
+        <div><strong>20</strong><span>replications per cell</span></div>
+        <div><strong>0.50</strong><span>fixed decision threshold</span></div>
+      </div>
+      <div className="report-selector" role="group" aria-label="Select report intervention at maximum magnitude">
+        {(Object.keys(studyResults) as ShiftKind[]).map((kind) => (
+          <button type="button" key={kind} onClick={() => setSelectedShift(kind)} aria-pressed={selectedShift === kind}>
+            {studyResults[kind].label}
+          </button>
+        ))}
+      </div>
+      <article className="report-result" aria-live="polite" aria-atomic="true">
+        <div className="report-result__finding"><span>Magnitude 1.00 · descriptive result</span><h3>{result.finding}</h3></div>
+        <div className="report-metrics">
+          {columns.map(([label, target, change]) => (
+            <div key={label}><span>{label}</span><strong>{format(target)}</strong><small>{change >= 0 ? "+" : ""}{format(change)} from source</small></div>
+          ))}
+        </div>
+      </article>
+      <div className="report-boundary">
+        <p><strong>What the grid supports:</strong> different controlled mechanisms produce materially different combinations of predictive, calibration, and group-gap behavior inside this generator.</p>
+        <p><strong>What it cannot support:</strong> claims that a real system is fair, lawful, causally understood, or ready to decide about people.</p>
+      </div>
+      <div className="report-actions">
+        <a className="button button--primary" href="https://github.com/lindgreendavid/fairshift-lab/blob/main/docs/research-report.md">Read the full report</a>
+        <a className="button button--ghost" href="https://github.com/lindgreendavid/fairshift-lab/blob/main/reports/v1-study.json">Inspect the result registry</a>
+      </div>
+    </section>
   );
 }
 
@@ -503,7 +647,9 @@ export default function Home() {
   const selected = metricCopy[selectedMetric];
 
   return (
-    <main>
+    <>
+      <a className="skip-link" href="#main-content">Skip to main content</a>
+      <main id="main-content">
       <nav className="nav" aria-label="Primary navigation">
         <a className="brand" href="#top" aria-label="Fairshift Lab home">
           <span className="brand__mark">F↗</span>
@@ -512,6 +658,7 @@ export default function Home() {
         <div className="nav__links">
           <a href="#experiment">Experiment</a>
           <a href="#decision">Decision curves</a>
+          <a href="#report">Report</a>
           <a href="#method">Method</a>
           <a href="#evidence">Evidence</a>
           <a href="https://github.com/lindgreendavid/fairshift-lab">GitHub</a>
@@ -519,21 +666,23 @@ export default function Home() {
       </nav>
 
       <section className="hero" id="top">
-        <div className="eyebrow"><span>Interactive research release</span><span>v0.3.0</span></div>
+        <div className="eyebrow"><span>Verified interactive research release</span><span>v1.0.0</span></div>
         <h1>Move the population.<br /><em>Trace every decision.</em></h1>
         <p className="hero__lead">
           A model can keep the same code and still behave differently after deployment.
           Change one data-generating mechanism, then inspect performance, group gaps, and
-          uncertainty, calibration, and the full decision curve together.
+          uncertainty, calibration, and the full decision curve together—then compare the
+          live run with a frozen 300-experiment report.
         </p>
         <div className="hero__actions">
           <a className="button button--primary" href="#experiment">Run the experiment</a>
-          <a className="button button--ghost" href="#method">Read the protocol</a>
+          <a className="button button--ghost" href="#report">Read the findings</a>
         </div>
         <div className="hero__principles" aria-label="Research principles">
           <span>One controlled intervention</span>
           <span>Source-only calibration</span>
           <span>Whole threshold curve</span>
+          <span>20-seed replication grid</span>
           <span>Claims bounded</span>
         </div>
       </section>
@@ -544,7 +693,8 @@ export default function Home() {
           <h2>Change the mechanism,<br />not the story.</h2>
         </header>
 
-        <div className="scenario-tabs" role="group" aria-label="Distribution shift mechanism">
+        <fieldset className="scenario-tabs">
+          <legend className="sr-only">Distribution shift mechanism</legend>
           {(Object.keys(shiftCopy) as ShiftKind[]).map((kind) => (
             <button
               key={kind}
@@ -556,22 +706,22 @@ export default function Home() {
               <small>{shiftCopy[kind].short}</small>
             </button>
           ))}
-        </div>
+        </fieldset>
 
         <div className="lab-grid">
           <aside className="controls" aria-label="Experiment controls">
             <div className="control">
-              <label htmlFor="magnitude"><span>Shift magnitude</span><output>{Math.round(magnitude * 100)}%</output></label>
+              <label htmlFor="magnitude"><span>Shift magnitude</span><output htmlFor="magnitude">{Math.round(magnitude * 100)}%</output></label>
               <input id="magnitude" type="range" min="0" max="1" step="0.05" value={magnitude} onChange={(event) => setMagnitude(Number(event.target.value))} />
               <div className="range-labels"><span>Source-like</span><span>Severe</span></div>
             </div>
             <div className="control">
-              <label htmlFor="threshold"><span>Decision threshold</span><output>{threshold.toFixed(2)}</output></label>
+              <label htmlFor="threshold"><span>Decision threshold</span><output htmlFor="threshold">{threshold.toFixed(2)}</output></label>
               <input id="threshold" type="range" min="0.2" max="0.8" step="0.02" value={threshold} onChange={(event) => setThreshold(Number(event.target.value))} />
               <div className="range-labels"><span>More positives</span><span>Fewer positives</span></div>
             </div>
             <div className="control">
-              <label htmlFor="samples"><span>Sample size</span><output>n = {samples}</output></label>
+              <label htmlFor="samples"><span>Sample size</span><output htmlFor="samples">n = {samples}</output></label>
               <select id="samples" value={samples} onChange={(event) => setSamples(Number(event.target.value))}>
                 <option value="300">300 · fast</option>
                 <option value="600">600 · balanced</option>
@@ -580,7 +730,7 @@ export default function Home() {
             </div>
             <div className="seed-control">
               <div><span>Reproducible seed</span><strong>{seed}</strong></div>
-              <button onClick={() => setSeed((current) => current + 17)}>New sample</button>
+              <button type="button" onClick={() => setSeed((current) => current + 17)}>New sample</button>
             </div>
             <div className="mechanism-note">
               <span>Intervention</span>
@@ -594,11 +744,11 @@ export default function Home() {
               <div><span>Observed feature X₁</span><strong>Source → target</strong></div>
               <span className="live-chip"><i /> live simulation</span>
             </div>
-            <div className="histogram" aria-label="Comparison of source and target feature distributions">
+            <div className="histogram" role="img" aria-label={`Feature X1 histogram comparing source and target populations for ${shiftCopy[shift].label} at ${Math.round(magnitude * 100)} percent magnitude. Target Group B share is ${Math.round(groupShare * 100)} percent.`}>
               {sourceHistogram.map((height, index) => (
                 <div className="histogram__bin" key={index}>
-                  <span className="bar bar--source" style={{ height: `${height * 86}%` }} />
-                  <span className="bar bar--target" style={{ height: `${targetHistogram[index] * 86}%` }} />
+                  <span aria-hidden="true" className="bar bar--source" style={{ height: `${height * 86}%` }} />
+                  <span aria-hidden="true" className="bar bar--target" style={{ height: `${targetHistogram[index] * 86}%` }} />
                 </div>
               ))}
             </div>
@@ -611,7 +761,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="metrics-grid">
+        <div className="metrics-grid" aria-label="Select a metric to inspect">
           {(["accuracy", "auc", "dp", "eo", "eodds"] as MetricKey[]).map((metric) => (
             <MetricCard
               key={metric}
@@ -685,9 +835,11 @@ export default function Home() {
         </p>
       </section>
 
+      <StudyReport />
+
       <section className="method" id="method">
         <header className="section-heading section-heading--light">
-          <div><span className="section-index">03</span><p>Scientific method</p></div>
+          <div><span className="section-index">04</span><p>Scientific method</p></div>
           <h2>See exactly what<br />the experiment knows.</h2>
         </header>
         <div className="causal-chain" aria-label="Experimental causal chain">
@@ -718,7 +870,7 @@ export default function Home() {
 
       <section className="evidence" id="evidence">
         <header className="section-heading">
-          <div><span className="section-index">04</span><p>Research trail</p></div>
+          <div><span className="section-index">05</span><p>Research trail</p></div>
           <h2>Built on arguments<br />you can inspect.</h2>
         </header>
         <div className="source-list">
@@ -752,8 +904,9 @@ export default function Home() {
       <footer>
         <div><span className="brand__mark">F↗</span><strong>Fairshift Lab</strong></div>
         <p>Research software by David Lindgreen · MIT License · No personal data</p>
-        <div><a href="https://github.com/lindgreendavid/fairshift-lab">Source code</a><a href="https://github.com/lindgreendavid/fairshift-lab/blob/main/docs/research-protocol.md">Protocol</a></div>
+        <div><a href="https://github.com/lindgreendavid/fairshift-lab">Source code</a><a href="https://github.com/lindgreendavid/fairshift-lab/blob/main/docs/research-protocol.md">Protocol</a><a href="https://github.com/lindgreendavid/fairshift-lab/blob/main/ACCESSIBILITY.md">Accessibility</a></div>
       </footer>
-    </main>
+      </main>
+    </>
   );
 }
