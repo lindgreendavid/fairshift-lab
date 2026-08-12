@@ -9,6 +9,8 @@ __pycache__/
 .venv-codex/
 .uv-cache/
 build/
+!site/build/
+!site/build/**
 dist/
 reports/generated/
 site/.next/
