@@ -32,6 +32,10 @@ test("server-renders the finished research laboratory", async () => {
   assert.match(html, /History is evidence/);
   assert.match(html, /Uncertainty before ranking/);
   assert.match(html, /Complete observational policy results/);
+  assert.match(html, /Robustness Lab/);
+  assert.match(html, /Break the assumptions/);
+  assert.match(html, /Uncertainty and limitations come before the ranking/);
+  assert.match(html, /Synthetic stress-test boundary/);
   assert.match(html, /One grid/);
   assert.match(html, /300 complete experiments/);
   assert.match(html, /Target reliability/);
@@ -72,7 +76,7 @@ test("ships accessible controls, research boundaries, and primary sources", asyn
   assert.match(page, /proceedings\.mlr\.press/);
   assert.match(page, /proceedings\.neurips\.cc/);
   assert.match(page, /airc\.nist\.gov/);
-  assert.match(layout, /Fairshift Lab — Synthetic experiments and governed external evidence/);
+  assert.match(layout, /Fairshift Lab — Synthetic experiments, external evidence, and a robustness lab/);
   assert.match(layout, /og-v1-2\.png/);
   assert.doesNotMatch(packageJson, /react-loading-skeleton|drizzle/);
   try {
@@ -104,4 +108,27 @@ test("ships the complete frozen policy registry into the interactive release", a
   assert.deepEqual(registry.config.seeds, Array.from({ length: 20 }, (_, index) => index + 100));
   assert.ok(registry.cells.some((cell) => cell.pareto_efficient));
   assert.ok(registry.cells.every((cell) => cell.replications === 20));
+});
+
+test("ships the complete synthetic robustness-stress registry", async () => {
+  const registry = JSON.parse(
+    await readFile(new URL("../reports/v1.3-robustness-study.json", root), "utf8"),
+  );
+  assert.equal(registry.schema_version, "1.3");
+  assert.equal(registry.study_type, "synthetic_specification_stress");
+  assert.equal(registry.stressors.length, 6);
+  assert.equal(registry.model_families.length, 2);
+  assert.equal(registry.cells.length, registry.stressors.length * registry.magnitudes.length * registry.model_families.length);
+  assert.ok(registry.cells.every((cell) => cell.replications === registry.seeds.length));
+  assert.ok(
+    registry.cells.some((cell) =>
+      Object.values(cell.conditional_rates).some((rates) =>
+        Object.values(rates).some(
+          (estimate) => estimate.defined_replications < estimate.total_replications,
+        ),
+      ),
+    ),
+    "at least one cell must report an undefined replication for a disaggregated rate",
+  );
+  assert.match(registry.missing_semantics, /null/);
 });

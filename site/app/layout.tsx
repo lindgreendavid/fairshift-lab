@@ -14,9 +14,9 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://fairshift-lab.lindgreendavid.chatgpt.site"),
-  title: "Fairshift Lab — Synthetic experiments and governed external evidence",
+  title: "Fairshift Lab — Synthetic experiments, external evidence, and a robustness lab",
   description:
-    "An accessible research laboratory separating synthetic distribution-shift experiments from governed historical observational evidence.",
+    "An accessible research laboratory separating synthetic distribution-shift experiments, governed historical observational evidence, and a preregistered synthetic specification-stress study.",
   applicationName: "Fairshift Lab",
   keywords: [
     "responsible AI",
@@ -32,18 +32,21 @@ export const metadata: Metadata = {
     "Pareto frontier",
     "external validation",
     "dataset governance",
+    "robustness",
+    "label noise",
+    "specification stress",
   ],
   openGraph: {
     title: "Fairshift Lab",
     description:
-      "Move from controlled synthetic shifts to governed historical evidence without confusing either for the real world.",
+      "Move from controlled synthetic shifts to governed historical evidence to a preregistered synthetic robustness stress test—without confusing any of the three for the real world.",
     type: "website",
     images: [
       {
         url: "/og-v1-2.png",
         width: 1672,
         height: 941,
-        alt: "Fairshift Lab External Evidence — a clear boundary between synthetic and observational evidence",
+        alt: "Fairshift Lab — separated synthetic, observational, and robustness-stress evidence areas",
       },
     ],
   },
@@ -51,7 +54,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Fairshift Lab",
     description:
-      "Controlled synthetic experiments, governed historical evidence, and no automatic best policy.",
+      "Controlled synthetic experiments, governed historical evidence, a synthetic robustness lab, and no automatic best policy.",
     images: ["/og-v1-2.png"],
   },
   icons: {

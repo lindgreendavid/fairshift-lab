@@ -314,6 +314,67 @@ thead th { position: sticky; top: 0; background: var(--white); }
 .external > .table-scroll { border: 1px solid var(--ink); border-top: 0; background: var(--white); }
 .external-links { display: flex; flex-wrap: wrap; gap: 24px; padding: 24px; border: 1px solid var(--ink); border-top: 0; background: var(--white); }
 
+.robustness { background: #e6def2; border-top: 10px solid var(--ink); border-bottom: 1px solid var(--ink); }
+.robustness-boundary { display: grid; grid-template-columns: .5fr 1.7fr .7fr; gap: 24px; align-items: start; padding: 24px; border: 1px solid var(--ink); background: #d8c9ef; }
+.robustness-boundary strong { font: 11px var(--font-geist-mono); text-transform: uppercase; }
+.robustness-boundary p { margin: 0; line-height: 1.55; }
+.robustness-boundary a, .robustness-links a { text-decoration: underline; text-underline-offset: 4px; font-weight: 700; }
+.robustness-boundary--footnote { grid-template-columns: 1fr; border-top: 0; background: var(--white); }
+.robustness-controls { border: 1px solid var(--ink); border-top: 0; background: var(--white); }
+.robustness-controls fieldset { margin: 0; padding: 20px 22px; border: 0; }
+.robustness-controls legend { font: 11px var(--font-geist-mono); text-transform: uppercase; letter-spacing: .06em; padding: 0 0 13px; }
+.robustness-stressor-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--ink); border: 1px solid var(--ink); }
+.robustness-stressor-grid button { display: grid; gap: 6px; min-height: 66px; padding: 14px; border: 0; background: var(--white); color: var(--ink); text-align: left; cursor: pointer; }
+.robustness-stressor-grid button span { font-weight: 700; font-size: 13px; }
+.robustness-stressor-grid button small { color: var(--muted); font-size: 11px; line-height: 1.4; }
+.robustness-stressor-grid button[aria-pressed="true"] { background: var(--acid); box-shadow: inset 0 -4px 0 var(--ink); }
+.robustness-subcontrols { display: grid; grid-template-columns: repeat(3, 1fr); border: 1px solid var(--ink); border-top: 0; background: var(--white); }
+.robustness-subcontrols fieldset { margin: 0; padding: 20px 22px; border: 0; border-right: 1px solid var(--ink); min-width: 0; }
+.robustness-subcontrols fieldset:last-child { border-right: 0; }
+.robustness-subcontrols legend { font: 10px var(--font-geist-mono); text-transform: uppercase; letter-spacing: .06em; padding: 0 0 12px; }
+.robustness-subcontrols button { min-height: 44px; padding: 8px 12px; margin: 0 6px 6px 0; border: 1px solid var(--ink); background: transparent; color: var(--ink); cursor: pointer; font-size: 12px; }
+.robustness-subcontrols button[aria-pressed="true"] { background: var(--acid); box-shadow: inset 0 -3px 0 var(--ink); }
+.robustness-reading { padding: 24px; border: 1px solid var(--ink); border-top: 0; background: var(--acid); }
+.robustness-reading h3 { margin: 0 0 12px; }
+.robustness-reading p { margin: 0; line-height: 1.6; }
+.robustness-plot { min-width: 0; margin: 0; padding: 26px; border: 1px solid var(--ink); border-top: 0; background: var(--white); }
+.robustness-plot__heading { display: flex; justify-content: space-between; gap: 18px; align-items: flex-start; flex-wrap: wrap; }
+.robustness-plot__heading span, .robustness-plot__heading strong { display: block; }
+.robustness-plot__heading > div:first-child span { color: var(--muted); font: 10px var(--font-geist-mono); text-transform: uppercase; }
+.robustness-plot__heading > div:first-child strong { font-size: 20px; margin-top: 7px; }
+.robustness-shape-key { display: flex; flex-wrap: wrap; gap: 14px; font-size: 11px; }
+.robustness-shape-key span { display: flex; align-items: center; gap: 7px; }
+.robustness-shape-key i { display: inline-block; width: 12px; height: 12px; border: 2px solid var(--ink); }
+.shape-square { background: var(--white); }
+.shape-triangle { background: var(--white); clip-path: polygon(50% 0, 100% 100%, 0 100%); border-radius: 0; }
+.robustness-plot svg { display: block; width: 100%; height: auto; margin-top: 16px; overflow: visible; }
+.robustness-plot svg text { fill: var(--ink); font: 10px var(--font-geist-mono); }
+.robustness-plot__frame { fill: #f4effc; stroke: var(--ink); }
+.robustness-plot__grid { stroke: var(--line); stroke-width: 1; }
+.robustness-plot__axis { font-weight: 700 !important; }
+.robustness-whisker { stroke: currentColor; stroke-width: 1.5; }
+.robustness-line { fill: none; stroke: currentColor; stroke-width: 2; }
+.robustness-mark { color: var(--blue); }
+.robustness-mark rect, .robustness-mark polygon { fill: var(--white); stroke: currentColor; stroke-width: 3; }
+.robustness-mark--logistic_regression { color: var(--blue); }
+.robustness-mark--logistic_regression .robustness-line { stroke-dasharray: none; }
+.robustness-mark--shallow_decision_tree { color: #b33927; }
+.robustness-mark--shallow_decision_tree .robustness-line { stroke-dasharray: 3 5; }
+.robustness-plot figcaption { max-width: 690px; color: var(--muted); font-size: 11px; line-height: 1.5; margin-top: 8px; }
+.robustness-summary { display: grid; grid-template-columns: repeat(4, 1fr); border: 1px solid var(--ink); border-top: 0; background: var(--ink); color: var(--white); }
+.robustness-summary article { padding: 23px; border-right: 1px solid #52635b; }
+.robustness-summary article:last-child { border-right: 0; }
+.robustness-summary span, .robustness-summary strong, .robustness-summary small { display: block; }
+.robustness-summary span { min-height: 30px; color: #c7c2d2; font-size: 10px; text-transform: uppercase; }
+.robustness-summary strong { margin: 8px 0; font: 22px var(--font-geist-mono); }
+.robustness-summary small { color: var(--acid); line-height: 1.4; }
+.robustness-summary__warning { background: #342c27; }
+.robustness > .table-scroll { border: 1px solid var(--ink); border-top: 0; background: var(--white); }
+.robustness-data { border: 1px solid var(--ink); border-top: 0; background: var(--white); }
+.robustness-data summary { min-height: 52px; display: flex; align-items: center; cursor: pointer; padding: 13px 18px; font-weight: 700; }
+.robustness-data .table-scroll { border-top: 1px solid var(--ink); }
+.robustness-links { display: flex; flex-wrap: wrap; gap: 24px; padding: 24px; border: 1px solid var(--ink); border-top: 0; background: var(--white); }
+
 footer { background: var(--coral); border-top: 1px solid var(--ink); padding: 34px 4vw; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
 footer > div { display: flex; align-items: center; gap: 10px; }
 footer p { font-size: 11px; }
@@ -347,6 +408,10 @@ footer a { font-size: 12px; text-decoration: underline; text-underline-offset: 4
   .policy-metrics { grid-template-columns: repeat(2, 1fr); }
   .policy-metrics div { border-bottom: 1px solid #52635b; }
   .external-summary { grid-template-columns: repeat(2, 1fr); }
+  .robustness-stressor-grid { grid-template-columns: repeat(2, 1fr); }
+  .robustness-subcontrols { grid-template-columns: 1fr; }
+  .robustness-subcontrols fieldset { border-right: 0; border-bottom: 1px solid var(--ink); }
+  .robustness-summary { grid-template-columns: repeat(2, 1fr); }
 }
 
 @media (max-width: 720px) {
@@ -358,8 +423,8 @@ footer a { font-size: 12px; text-decoration: underline; text-underline-offset: 4
   .hero h1 { font-size: clamp(44px, 15vw, 57px); }
   .hero__principles { grid-template-columns: repeat(2, 1fr); }
   .section-heading { grid-template-columns: 1fr; gap: 24px; }
-  .scenario-tabs, .lab-grid, .equation-card, .interpretation-ladder, .calibration-strip, .decision-reading, .policy-controls, .policy-detail header, .policy-boundary, .external-boundary, .external-controls, .external-summary, .external-reading { grid-template-columns: 1fr; }
-  .external-controls label, .external-summary article { border-right: 0; border-bottom: 1px solid var(--ink); }
+  .scenario-tabs, .lab-grid, .equation-card, .interpretation-ladder, .calibration-strip, .decision-reading, .policy-controls, .policy-detail header, .policy-boundary, .external-boundary, .external-controls, .external-summary, .external-reading, .robustness-boundary, .robustness-stressor-grid { grid-template-columns: 1fr; }
+  .external-controls label, .external-summary article, .robustness-summary article { border-right: 0; border-bottom: 1px solid var(--ink); }
   .scenario-tabs button { border-right: 0; border-bottom: 1px solid var(--ink); }
   .controls { border-right: 0; border-bottom: 1px solid var(--ink); }
   .metrics-grid, .metric-lens { grid-template-columns: 1fr; }
