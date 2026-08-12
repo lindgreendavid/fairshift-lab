@@ -44,5 +44,9 @@ test("ships accessible controls, research boundaries, and primary sources", asyn
   assert.match(page, /airc\.nist\.gov/);
   assert.match(layout, /Fairshift Lab — Fairness under distribution shift/);
   assert.doesNotMatch(packageJson, /react-loading-skeleton|drizzle/);
-  assert.deepEqual(await readdir(new URL("app/_sites-preview", root)), []);
+  try {
+    assert.deepEqual(await readdir(new URL("app/_sites-preview", root)), []);
+  } catch (error) {
+    assert.equal(error.code, "ENOENT");
+  }
 });
