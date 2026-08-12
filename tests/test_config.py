@@ -28,6 +28,8 @@ def test_none_shift_rejects_nonzero_magnitude() -> None:
         ({"bootstrap_samples": 19}, "at least 20"),
         ({"confidence_level": 0.49}, "between 0.5 and 1"),
         ({"confidence_level": 1.0}, "between 0.5 and 1"),
+        ({"calibration_bins": 1}, "between 2 and 50"),
+        ({"calibration_bins": 51}, "between 2 and 50"),
     ],
 )
 def test_experiment_rejects_invalid_inputs(changes: dict[str, float], message: str) -> None:
