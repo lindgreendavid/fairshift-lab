@@ -1,5 +1,9 @@
 # Fairshift Lab
 
+<p><a href="https://github.com/lindgreendavid/lindgreendavid/tree/main/brand"><img src="https://raw.githubusercontent.com/lindgreendavid/lindgreendavid/main/brand/lab-notes-mark.svg" width="52" align="right" alt="Lab Notes research-cycle mark"></a></p>
+
+**Part of the [Lab Notes Research Portfolio](https://blog-interactive.lindgreendavid.workers.dev/)** · Responsible AI · Question → evidence → finding → boundary
+
 [![CI](https://github.com/lindgreendavid/fairshift-lab/actions/workflows/ci.yml/badge.svg)](https://github.com/lindgreendavid/fairshift-lab/actions/workflows/ci.yml)
 [![CodeQL](https://github.com/lindgreendavid/fairshift-lab/actions/workflows/codeql.yml/badge.svg)](https://github.com/lindgreendavid/fairshift-lab/actions/workflows/codeql.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
