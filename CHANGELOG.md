@@ -2,6 +2,15 @@
 
 All notable changes follow [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) and [Semantic Versioning](https://semver.org/).
 
+## [Unreleased]
+
+### Fixed
+
+- Hardened the transitive `image-size` parsers against malformed ICNS and ISO-BMFF input,
+  added executable security regression probes, and kept the production audit strict for every
+  other high-severity advisory.
+- Aligned the Cloudflare compatibility date with the version supported by the pinned runtime.
+
 ## [1.3.0] - 2026-08-12
 
 ### Added
