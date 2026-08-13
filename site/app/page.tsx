@@ -910,16 +910,16 @@ export default function Home() {
             <span>NeurIPS · 2016</span><strong>Equality of Opportunity in Supervised Learning</strong><p>Hardt, Price & Srebro formalize equal opportunity and equalized odds.</p><b>↗</b>
           </a>
           <a href="https://doi.org/10.1007/s10115-011-0463-8" target="_blank" rel="noreferrer">
-            <span>KAIS · 2012</span><strong>Data preprocessing without discrimination</strong><p>Kamiran & Calders develop reweighing and related preprocessing approaches for discrimination-aware classification.</p><b>↗</b>
+            <span>KAIS · 2012</span><strong>Data preprocessing techniques for classification without discrimination</strong><p>Kamiran & Calders develop reweighing and related preprocessing approaches for discrimination-aware classification.</p><b>↗</b>
           </a>
           <a href="https://jmlr.org/papers/v24/22-1511.html" target="_blank" rel="noreferrer">
             <span>JMLR · 2023</span><strong>The Measure and Mismeasure of Fairness</strong><p>Corbett-Davies et al. connect decision policy, utility, fairness criteria, and Pareto-dominated rules.</p><b>↗</b>
           </a>
           <a href="https://arxiv.org/abs/2104.01634" target="_blank" rel="noreferrer">
-            <span>Research · 2021</span><strong>Pareto Efficient Fairness</strong><p>Kamani et al. frame model loss and fairness criteria as a multi-objective frontier rather than one scalar answer.</p><b>↗</b>
+            <span>arXiv preprint · 2021</span><strong>Pareto Efficient Fairness in Supervised Learning: From Extraction to Tracing</strong><p>Kamani et al. frame model loss and fairness criteria as a multi-objective frontier rather than one scalar answer.</p><b>↗</b>
           </a>
           <a href="https://arxiv.org/abs/2206.00129" target="_blank" rel="noreferrer">
-            <span>FAccT · 2022</span><strong>Fairness Transferability Subject to Bounded Distribution Shift</strong><p>Chen et al. study when statistical fairness can transfer across shifted distributions.</p><b>↗</b>
+            <span>NeurIPS · 2022</span><strong>Fairness Transferability Subject to Bounded Distribution Shift</strong><p>Chen et al. study when statistical fairness can transfer across shifted distributions.</p><b>↗</b>
           </a>
           <a href="https://proceedings.mlr.press/v238/barrainkua24a.html" target="_blank" rel="noreferrer">
             <span>AISTATS · 2024</span><strong>Uncertainty Matters</strong><p>Barrainkua et al. show why uncertainty-aware fairness comparisons matter.</p><b>↗</b>
