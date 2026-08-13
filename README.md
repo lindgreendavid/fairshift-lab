@@ -13,6 +13,13 @@ Version `1.3.0` adds a Robustness Lab: a preregistered synthetic specification-s
 
 **[Open the public interactive laboratory](https://fairshift-lab.lindgreendavid.chatgpt.site)**
 
+## What this contributes
+
+- A working, publicly runnable instrument for a question that's usually only discussed in the abstract: does measured group fairness survive a change in the deployment population? This turns it into something you can manipulate and watch, not just read about.
+- Concrete, reproducible findings, not just a demo: a frozen 300-experiment registry (v1.0), a 72-cell policy-tradeoff registry showing which mitigation policies are Pareto-efficient under declared costs (v1.1), a governed observational comparison against real 1994 Census data with disclosed limitations (v1.2), and a 60-cell robustness registry with two disclosed hypothesis falsifications (v1.3) — see [`docs/robustness-report.md`](docs/robustness-report.md) for the honest surprises.
+- An interaction design that puts uncertainty and limitations before any ranking or classification is shown — a deliberate, tested choice, not an afterthought.
+- What it does **not** contribute: a certification that any real system is fair, a causal claim, or a policy recommendation. Every report says so explicitly.
+
 ## Why this project matters
 
 Fairness measured on an in-distribution test set is not a permanent property. Population composition, observed features, and label-generating mechanisms can change after deployment. Fairshift Lab makes those changes explicit and reproducible so that accuracy and fairness degradation can be studied together.
