@@ -17,6 +17,8 @@ Version `1.3.0` adds a Robustness Lab: a preregistered synthetic specification-s
 
 **[Open the public interactive laboratory](https://fairshift-lab.lindgreendavid.chatgpt.site)** · **[Read the plain-language write-up](https://blog-interactive.lindgreendavid.workers.dev/posts/fairshift-lab-robustness)**
 
+**Paper:** [Do Fairness Mitigations Beat Test-Set Noise? Person-Level Uncertainty for a Preregistered Policy Comparison on UCI Adult (PDF)](paper/paper.pdf) · [citation and status](paper/README.md) · [version history](history.md)
+
 ## What this contributes
 
 - A working, publicly runnable instrument for a question that's usually only discussed in the abstract: does measured group fairness survive a change in the deployment population? This turns it into something you can manipulate and watch, not just read about.

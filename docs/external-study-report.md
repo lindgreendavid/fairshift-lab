@@ -28,3 +28,15 @@ field does not represent gender diversity or identity truth.
 See the [inclusion gate](external-dataset-gate.md), [dataset card](adult-dataset-card.md),
 [preregistered protocol](external-study-protocol.md), and machine-readable
 `reports/v1.2-external-study.json` before using any value.
+
+## Post-release amendment (2026-10-09): test-set sampling uncertainty
+
+**POST-HOC, not preregistered.** The intervals above are replication ranges over five development
+splits; the 15,060-person test file was never resampled. `reports/post-release-external-audit.json` adds
+a paired person-level bootstrap (2,000 resamples) and a permutation noise floor for every cohort and split
+seed. The registered point estimates reproduce exactly. In the primary cohort the equalized-odds gaps are
+0.037 (baseline, 95% interval 0.010-0.080), 0.021 (reweighed) and 0.017 (group thresholds) against a
+no-association floor of 0.014, and in none of 60 paired baseline-minus-policy comparisons does the interval
+exclude zero. The wording that reweighed training and group thresholds "reduced the observed gap" describes
+this one test file and is not supported as a general statement at this sample size. Only the accuracy cost of
+group thresholds is resolved (18 of 20 cells). The confirmatory hypotheses stand. See `paper/paper.pdf`.

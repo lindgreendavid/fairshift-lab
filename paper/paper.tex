@@ -1,0 +1,108 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{booktabs}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{hyperref}
+\hypersetup{colorlinks=true,linkcolor=blue!50!black,urlcolor=blue!50!black,citecolor=blue!50!black}
+
+\title{Do Fairness Mitigations Beat Test-Set Noise?\\
+Person-Level Uncertainty for a Preregistered\\
+Policy Comparison on UCI Adult}
+\author{David Lindgreen}
+\date{October 9, 2026 \\[2pt] \small Version 0.1.0 \quad Preprint, not peer reviewed}
+
+\emergencystretch=3em
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Fairshift Lab compares four decision policies (a fixed threshold, a cost-selected threshold, reweighed training and group-specific
+thresholds) on the UCI Adult census-income benchmark~\cite{becker1996}, and reported that mitigation lowered the observed
+equalized-odds gap, for example from 0.037 to 0.017. Its uncertainty, however, covers only five random 80/20 splits of the
+development file; the held-out test file (15{,}060 people in the primary cohort) is never resampled, so the report cannot say
+whether a gap difference of this size is larger than the sampling noise of the test people themselves. We re-ran all four frozen
+registries (they reproduce exactly) and added a paired person-level bootstrap and a permutation noise floor. The equalized-odds
+gaps are imprecise (the baseline's 95\% interval is 0.010 to 0.080) and sit at about twice a no-association floor of 0.014; in none of
+60 paired comparisons across four cohort definitions and five split seeds does the interval for the baseline-minus-policy gap
+difference exclude zero. Only the accuracy cost of group thresholds is distinguishable from noise (18 of 20 cells). The preregistered
+conclusion that no policy is uniformly best is unaffected; statements that a mitigation ``reduced'' the gap are not supported at this
+test-set size.
+\end{abstract}
+
+\section{Question}
+Group-fairness measurements are estimates from a finite sample of people, and a difference of two such estimates has its own
+sampling error~\cite{besse2022}. Fairshift Lab's external study fixed its design before interpreting held-out results and reported the
+mean and the 2.5th--97.5th range of each metric across five development splits. That range describes how much the answer depends on
+which people were used for training and tuning. It does not describe how much it depends on which people were in the test file. Here
+we measure that second source of uncertainty.
+
+\section{Frozen study and reproduction}
+The study uses the provider-coded binary sex field, the five numeric features and the income label (above USD 50{,}000 in 1994, which is
+not a measure of merit or need). Policies are evaluated at false-negative cost 1 against false-positive cost 1; thresholds are chosen on a
+tuning split only. We re-ran the synthetic study, the policy study, the robustness study and the external study from the pinned
+sources: all four registries reproduce the committed files with no differences, and the new analysis recovers the frozen
+equalized-odds means exactly for every policy.
+
+\section{Post-hoc audit}
+For each of four cohort/missingness definitions and each of five split seeds we re-created the four policies' held-out decisions and drew
+2{,}000 bootstrap resamples of the test people, with the same resample applied to all policies so that differences are paired. We also
+computed a \emph{noise floor}: the mean equalized-odds difference after randomly permuting the protected attribute among test people
+500 times. Because the statistic is the larger of two absolute rate gaps, it is positive even when the attribute carries no information,
+and the floor shows how large that bias is. This analysis was not preregistered and all of it is reported.
+\begin{table}[h]
+\centering\small
+\begin{tabular}{lccc}
+\toprule
+Policy (primary cohort) & Equalized-odds gap & 95\% interval & Noise floor\\
+\midrule
+Baseline threshold 0.5 & 0.037 & 0.010 to 0.080 & 0.014\\
+Cost-selected threshold & 0.039 & 0.011 to 0.082 & 0.014\\
+Reweighed training & 0.021 & 0.004 to 0.063 & 0.014\\
+Group thresholds & 0.017 & 0.004 to 0.059 & 0.014\\
+\bottomrule
+\end{tabular}
+\caption{Complete-case provider-eligible cohort (15{,}060 test people), means over five split seeds.}
+\end{table}
+\begin{table}[h]
+\centering\small
+\begin{tabular}{lcc}
+\toprule
+Baseline minus policy & Accuracy & Equalized-odds gap\\
+\midrule
+Reweighed training & $-0.001$ ($-0.003$ to $+0.001$) & $+0.016$ ($-0.014$ to $+0.031$)\\
+Group thresholds & $+0.004$ ($+0.002$ to $+0.007$) & $+0.020$ ($-0.040$ to $+0.055$)\\
+\bottomrule
+\end{tabular}
+\caption{Paired differences with 95\% person-level bootstrap intervals (primary cohort, mean over seeds).}
+\end{table}
+Across all four cohorts and five seeds (60 paired comparisons of a mitigation with the baseline) the equalized-odds interval never
+excludes zero. Point estimates range from 0.69 to 3.4 times the noise floor, averaging about 2.0. The accuracy cost of group thresholds,
+by contrast, is small but resolved: the interval excludes zero in 18 of 20 cells.
+
+\section{Discussion}
+The registered point estimates are correct and unchanged; what changes is how strongly they can be read. With about 15{,}000 test
+people, and far fewer in the smaller group's positive class, a gap of 0.02 versus 0.04 cannot be told apart from
+resampling noise. The frozen hypotheses (no policy uniformly best; conclusions sensitive to cohort and missingness) concern rankings that
+vary, so they stand; the prose that mitigation ``reduced the observed gap'' should be read as describing this one test file.
+Fairness-mitigation comparisons on benchmarks of this size need person-level intervals, and any claim of reduction should be accompanied
+by the noise floor for the statistic used.
+
+\section{Limitations}
+The bootstrap treats the held-out people as the sampling unit and ignores training-set variation beyond the five split seeds; it describes
+an observational reference table, not a deployment population. Sex is a provider-coded binary field. The audit uses one cost setting
+(false-negative cost 1); other costs are in the frozen registry but were not resampled. Intervals are percentile bootstrap intervals
+without multiplicity adjustment.
+
+\section*{Reproducibility and AI assistance}
+Code, frozen registries, the audit and tests:\\
+\url{https://github.com/lindgreendavid/fairshift-lab}\\
+The analysis code, tests and drafts of this text were produced with substantial assistance from an AI system (Claude, Anthropic);
+the author is responsible for the content.
+
+\begin{thebibliography}{9}
+\bibitem{becker1996} B.~Becker and R.~Kohavi, Adult, UCI Machine Learning Repository (1996), doi:10.24432/C5XW20.
+\bibitem{besse2022} P.~Besse, E.~del Barrio, P.~Gordaliza, J.-M. Loubes, L.~Risser, A survey of bias in machine learning through
+the prism of statistical parity, \emph{Am. Stat.} \textbf{76}, 188--198 (2022).
+\end{thebibliography}
+\end{document}
