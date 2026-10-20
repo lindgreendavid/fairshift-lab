@@ -27,7 +27,7 @@ test("keeps the WCAG 2.2-oriented keyboard and structure contract", async () => 
     source("app/globals.css"),
     source("app/layout.tsx"),
   ]);
-  assert.match(layout, /<html lang="en">/);
+  assert.match(layout, /<html lang="en"/);
   assert.match(page, /href="#main-content">Skip to main content/);
   assert.match(page, /<main id="main-content">/);
   assert.match(page, /<nav className="nav" aria-label="Primary navigation">/);
@@ -38,7 +38,7 @@ test("keeps the WCAG 2.2-oriented keyboard and structure contract", async () => 
   assert.match(page, /<legend className="sr-only">Distribution shift mechanism<\/legend>/);
   assert.match(page, /aria-pressed=/);
   assert.match(page, /aria-live="polite"/);
-  assert.match(styles, /:focus-visible \{ outline: 3px solid/);
+  assert.match(styles, /:focus-visible \{ outline: 2px solid/);
   assert.match(styles, /\.nav__links a \{ display: inline-flex; min-height: 44px/);
   assert.doesNotMatch(styles, /nav__links a:not\(:last-child\).*display: none/);
 });
@@ -65,25 +65,34 @@ test("keeps reflow, contrast preference, forced colors, and reduced motion", asy
   assert.match(styles, /@media \(prefers-reduced-motion: reduce\)/);
   assert.match(styles, /@media \(prefers-contrast: more\)/);
   assert.match(styles, /@media \(forced-colors: active\)/);
-  assert.match(styles, /\.nav__links \{ max-width: calc\(100vw - 82px\); overflow-x: auto/);
+  assert.match(styles, /\.nav__links a:not\(\.nav__keep\) \{ display: none; \}/);
 });
 
-test("keeps normal-text palette combinations above WCAG AA contrast", async () => {
+test("keeps normal-text palette combinations above WCAG AA contrast in both themes", async () => {
   const styles = await source("app/globals.css");
-  const colors = Object.fromEntries(
-    [...styles.matchAll(/--([a-z]+): (#[0-9a-f]{6})/gi)].map((match) => [match[1], match[2]]),
-  );
-  for (const [foreground, background] of [
-    ["ink", "paper"],
-    ["muted", "paper"],
-    ["muted", "white"],
-    ["ink", "coral"],
-    ["blue", "paper"],
-  ]) {
-    assert.ok(
-      contrast(colors[foreground], colors[background]) >= 4.5,
-      `${foreground} on ${background} must meet 4.5:1`,
+  const read = (block) =>
+    Object.fromEntries(
+      [...block.matchAll(/--([a-z0-9-]+): (#[0-9a-f]{6})/gi)].map((match) => [match[1], match[2]]),
     );
+  const darkStart = styles.indexOf(':root[data-theme="dark"]');
+  const light = read(styles.slice(0, darkStart));
+  const dark = { ...light, ...read(styles.slice(darkStart, styles.indexOf("}", darkStart))) };
+  for (const [name, colors] of [["light", light], ["dark", dark]]) {
+    for (const [foreground, background] of [
+      ["ink", "ground"],
+      ["ink-2", "ground"],
+      ["ink-3", "ground"],
+      ["ink-3", "panel"],
+      ["ink-3", "tone"],
+      ["accent", "ground"],
+      ["on-ink", "ink"],
+      ["on-ink-2", "ink"],
+    ]) {
+      assert.ok(
+        contrast(colors[foreground], colors[background]) >= 4.5,
+        `${name}: ${foreground} on ${background} must meet 4.5:1`,
+      );
+    }
   }
 });
 
@@ -114,7 +123,7 @@ test("keeps the Policy Studio operable and equivalent beyond the plot", async ()
   assert.match(studio, /not a recommendation/);
   assert.match(styles, /\.shape-diamond/);
   assert.match(styles, /\.shape-circle/);
-  assert.match(styles, /\.policy-controls button \{ min-height: 48px/);
+  assert.match(styles, /\.policy-controls button \{ min-height: 44px/);
 });
 
 test("keeps the Robustness Lab uncertainty-first, non-color-coded, and boundary-separated", async () => {

@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useMemo, useState, useSyncExternalStore } from "react";
 
 import ExternalEvidence from "./external-evidence";
 import PolicyStudio from "./policy-studio";
@@ -598,7 +598,6 @@ function StudyReport() {
   return (
     <section className="report" id="report" aria-labelledby="report-heading">
       <header className="section-heading">
-        <div><span className="section-index">03</span><p>Verified report</p></div>
         <h2 id="report-heading">One grid.<br />No cherry-picking.</h2>
       </header>
       <div className="report-intro">
@@ -633,6 +632,39 @@ function StudyReport() {
   );
 }
 
+function subscribeToTheme(notify: () => void) {
+  const observer = new MutationObserver(notify);
+  observer.observe(document.documentElement, { attributes: true, attributeFilter: ["data-theme"] });
+  return () => observer.disconnect();
+}
+
+function ThemeToggle() {
+  const dark = useSyncExternalStore(
+    subscribeToTheme,
+    () => document.documentElement.dataset.theme === "dark",
+    () => false,
+  );
+  return (
+    <button
+      type="button"
+      className="theme-toggle"
+      aria-label={dark ? "Switch to light theme" : "Switch to dark theme"}
+      onClick={() => {
+        const next = dark ? "light" : "dark";
+        document.documentElement.dataset.theme = next;
+        try {
+          localStorage.setItem("theme", next);
+        } catch {
+          // storage unavailable: the choice lasts for this visit only
+        }
+      }}
+    >
+      <svg className="moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z" /></svg>
+      <svg className="sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4" /><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4" /></svg>
+    </button>
+  );
+}
+
 export default function Home() {
   const [shift, setShift] = useState<ShiftKind>("covariate");
   const [magnitude, setMagnitude] = useState(0.45);
@@ -655,58 +687,41 @@ export default function Home() {
       <a className="skip-link" href="#main-content">Skip to main content</a>
       <main id="main-content">
       <nav className="nav" aria-label="Primary navigation">
-        <a className="brand" href="#top" aria-label="Fairshift Lab home">
-          <span className="brand__mark">F↗</span>
-          <span>Fairshift Lab</span>
-        </a>
+        <a className="brand" href="#top" aria-label="Fairshift Lab home">Fairshift Lab</a>
         <div className="nav__links">
           <a href="#experiment">Experiment</a>
-          <a href="#decision">Decision curves</a>
           <a href="#report">Report</a>
           <a href="#policy">Policy Studio</a>
           <a href="#external">External evidence</a>
           <a href="#robustness">Robustness Lab</a>
           <a href="#method">Method</a>
-          <a href="#evidence">Evidence</a>
-          <a href="https://github.com/lindgreendavid/fairshift-lab">GitHub</a>
+          <a className="nav__keep" href="https://notes.lindgreendavid.com/">Lab Notes</a>
+          <a className="nav__keep" href="https://github.com/lindgreendavid/fairshift-lab">GitHub</a>
+          <ThemeToggle />
         </div>
       </nav>
 
       <section className="hero" id="top">
-        <div className="eyebrow"><span>Verified interactive research release</span><span>v1.3.0</span></div>
         <h1>Move the population.<br /><em>Trace every decision.</em></h1>
         <p className="hero__lead">
           A model can keep the same code and still behave differently after deployment.
-          Change one data-generating mechanism, then inspect performance, group gaps, and
-          uncertainty, calibration, and the full decision curve together—then compare the
-          live run with a frozen 300-experiment report—then compare eight transparent
-          decision policies without hiding their costs or data requirements.
-          A separate external-evidence area then tests those ideas against a governed
-          historical reference table without calling it the real world. A synthetic
-          Robustness Lab then stress-tests the whole apparatus—label noise, measurement
-          error, an unobserved subgroup, small samples, and misspecification—across two
-          inspectable model families.
+          Change one data-generating mechanism and watch accuracy, group gaps, calibration
+          and the full decision curve move together, then compare the live run with a
+          frozen 300-experiment report.
         </p>
         <div className="hero__actions">
           <a className="button button--primary" href="#experiment">Run the experiment</a>
           <a className="button button--ghost" href="#report">Read the findings</a>
-          <a className="button button--ghost" href="#policy">Open Policy Studio</a>
-          <a className="button button--ghost" href="#external">Inspect external evidence</a>
-          <a className="button button--ghost" href="#robustness">Open Robustness Lab</a>
+          <a className="button button--ghost" href="#external">See the limits of the evidence</a>
         </div>
-        <div className="hero__principles" aria-label="Research principles">
-          <span>One controlled intervention</span>
-          <span>Source-only calibration</span>
-          <span>Whole threshold curve</span>
-          <span>20-seed replication grid</span>
-          <span>Claims bounded</span>
-          <span>No automatic best policy</span>
-        </div>
+        <p className="hero__principles">
+          One controlled intervention. Source-only calibration. The whole threshold curve. A 20-seed
+          replication grid. Claims bounded. No automatic best policy.
+        </p>
       </section>
 
       <section className="lab" id="experiment">
         <header className="section-heading">
-          <div><span className="section-index">01</span><p>Shift microscope</p></div>
           <h2>Change the mechanism,<br />not the story.</h2>
         </header>
 
@@ -793,7 +808,7 @@ export default function Home() {
         </div>
 
         <article className="metric-lens" aria-live="polite">
-          <div><span className="section-index">Metric lens</span><h3>{selected.label}</h3></div>
+          <div><span>Metric lens</span><h3>{selected.label}</h3></div>
           <div><span>Question</span><p>{selected.question}</p></div>
           <div><span>What this run supports</span><p>{selected.interpretation}</p></div>
           <div className="metric-lens__caution"><span>Do not overclaim</span><p>{selected.caution}</p></div>
@@ -806,7 +821,6 @@ export default function Home() {
 
       <section className="decision" id="decision">
         <header className="section-heading">
-          <div><span className="section-index">02</span><p>Decision landscape</p></div>
           <h2>A score is not<br />yet a decision.</h2>
         </header>
         <div className="calibration-strip">
@@ -862,7 +876,6 @@ export default function Home() {
 
       <section className="method" id="method">
         <header className="section-heading section-heading--light">
-          <div><span className="section-index">07</span><p>Scientific method</p></div>
           <h2>See exactly what<br />the experiment knows.</h2>
         </header>
         <div className="causal-chain" aria-label="Experimental causal chain">
@@ -893,7 +906,6 @@ export default function Home() {
 
       <section className="evidence" id="evidence">
         <header className="section-heading">
-          <div><span className="section-index">08</span><p>Research trail</p></div>
           <h2>Built on arguments<br />you can inspect.</h2>
         </header>
         <div className="source-list">
@@ -934,9 +946,14 @@ export default function Home() {
       </section>
 
       <footer>
-        <div><span className="brand__mark">F↗</span><strong>Fairshift Lab</strong></div>
-        <p>Research software by David Lindgreen · MIT License · No raw reference data redistributed</p>
-        <div><a href="https://github.com/lindgreendavid/fairshift-lab">Source code</a><a href="https://github.com/lindgreendavid/fairshift-lab/blob/main/docs/research-protocol.md">Protocol</a><a href="https://github.com/lindgreendavid/fairshift-lab/blob/main/ACCESSIBILITY.md">Accessibility</a></div>
+        <div>
+          <a href="https://notes.lindgreendavid.com/">Lab Notes</a>
+          <a href="https://github.com/lindgreendavid/fairshift-lab">Source code</a>
+          <a href="https://github.com/lindgreendavid/fairshift-lab/blob/main/docs/research-protocol.md">Protocol</a>
+          <a href="https://github.com/lindgreendavid/fairshift-lab/blob/main/ACCESSIBILITY.md">Accessibility</a>
+        </div>
+        <p>Research software by David Lindgreen. MIT licence. No raw reference data redistributed. Designed and written with substantial assistance from an AI system (Claude, Anthropic); the author is responsible for the content. Geist typeface, SIL Open Font License.</p>
+        <span className="foot-name" aria-hidden="true">David Lindgreen</span>
       </footer>
       </main>
     </>

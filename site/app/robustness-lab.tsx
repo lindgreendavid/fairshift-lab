@@ -320,10 +320,6 @@ export default function RobustnessLab() {
   return (
     <section className="robustness" id="robustness" aria-labelledby="robustness-heading">
       <header className="section-heading">
-        <div>
-          <span className="section-index">06</span>
-          <p>Robustness Lab</p>
-        </div>
         <h2 id="robustness-heading">
           Break the assumptions.
           <br />

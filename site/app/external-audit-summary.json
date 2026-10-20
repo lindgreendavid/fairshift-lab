@@ -1,0 +1,195 @@
+{
+  "label": "POST-HOC (not preregistered): test-set sampling uncertainty, external study",
+  "false_negative_cost": 1.0,
+  "resamples": 2000,
+  "cohorts": [
+    {
+      "cohort": "provider_eligible",
+      "missingness": "complete_case",
+      "test_size": 15060,
+      "seeds": 5,
+      "policies": {
+        "baseline": {
+          "equalized_odds": 0.0371,
+          "lower": 0.0099,
+          "upper": 0.0798,
+          "noise_floor": 0.0139
+        },
+        "source_cost_threshold": {
+          "equalized_odds": 0.0389,
+          "lower": 0.0106,
+          "upper": 0.0819,
+          "noise_floor": 0.0139,
+          "gap_reduction": -0.0018,
+          "gap_reduction_lower": -0.0057,
+          "gap_reduction_upper": 0.0022,
+          "gap_intervals_excluding_zero": 0,
+          "accuracy_intervals_excluding_zero": 0
+        },
+        "reweighed_training": {
+          "equalized_odds": 0.021,
+          "lower": 0.0039,
+          "upper": 0.0631,
+          "noise_floor": 0.0145,
+          "gap_reduction": 0.0162,
+          "gap_reduction_lower": -0.0136,
+          "gap_reduction_upper": 0.0313,
+          "gap_intervals_excluding_zero": 0,
+          "accuracy_intervals_excluding_zero": 0
+        },
+        "group_threshold": {
+          "equalized_odds": 0.0167,
+          "lower": 0.0035,
+          "upper": 0.059,
+          "noise_floor": 0.0139,
+          "gap_reduction": 0.0204,
+          "gap_reduction_lower": -0.0396,
+          "gap_reduction_upper": 0.0554,
+          "gap_intervals_excluding_zero": 0,
+          "accuracy_intervals_excluding_zero": 5
+        }
+      }
+    },
+    {
+      "cohort": "provider_eligible",
+      "missingness": "numeric_complete",
+      "test_size": 16281,
+      "seeds": 5,
+      "policies": {
+        "baseline": {
+          "equalized_odds": 0.0299,
+          "lower": 0.0107,
+          "upper": 0.0729,
+          "noise_floor": 0.0134
+        },
+        "source_cost_threshold": {
+          "equalized_odds": 0.0331,
+          "lower": 0.0113,
+          "upper": 0.0765,
+          "noise_floor": 0.0141,
+          "gap_reduction": -0.0032,
+          "gap_reduction_lower": -0.0103,
+          "gap_reduction_upper": 0.0041,
+          "gap_intervals_excluding_zero": 0,
+          "accuracy_intervals_excluding_zero": 0
+        },
+        "reweighed_training": {
+          "equalized_odds": 0.0195,
+          "lower": 0.0053,
+          "upper": 0.0625,
+          "noise_floor": 0.0135,
+          "gap_reduction": 0.0104,
+          "gap_reduction_lower": -0.0115,
+          "gap_reduction_upper": 0.0261,
+          "gap_intervals_excluding_zero": 0,
+          "accuracy_intervals_excluding_zero": 0
+        },
+        "group_threshold": {
+          "equalized_odds": 0.0219,
+          "lower": 0.0041,
+          "upper": 0.0615,
+          "noise_floor": 0.0129,
+          "gap_reduction": 0.008,
+          "gap_reduction_lower": -0.0375,
+          "gap_reduction_upper": 0.0491,
+          "gap_intervals_excluding_zero": 0,
+          "accuracy_intervals_excluding_zero": 4
+        }
+      }
+    },
+    {
+      "cohort": "age_25_plus",
+      "missingness": "complete_case",
+      "test_size": 12621,
+      "seeds": 5,
+      "policies": {
+        "baseline": {
+          "equalized_odds": 0.0288,
+          "lower": 0.0058,
+          "upper": 0.0724,
+          "noise_floor": 0.0149
+        },
+        "source_cost_threshold": {
+          "equalized_odds": 0.0383,
+          "lower": 0.0076,
+          "upper": 0.0819,
+          "noise_floor": 0.0145,
+          "gap_reduction": -0.0095,
+          "gap_reduction_lower": -0.0253,
+          "gap_reduction_upper": 0.0099,
+          "gap_intervals_excluding_zero": 0,
+          "accuracy_intervals_excluding_zero": 0
+        },
+        "reweighed_training": {
+          "equalized_odds": 0.0238,
+          "lower": 0.0035,
+          "upper": 0.0678,
+          "noise_floor": 0.0157,
+          "gap_reduction": 0.005,
+          "gap_reduction_lower": -0.0184,
+          "gap_reduction_upper": 0.0235,
+          "gap_intervals_excluding_zero": 0,
+          "accuracy_intervals_excluding_zero": 0
+        },
+        "group_threshold": {
+          "equalized_odds": 0.0292,
+          "lower": 0.007,
+          "upper": 0.0712,
+          "noise_floor": 0.0135,
+          "gap_reduction": -0.0005,
+          "gap_reduction_lower": -0.0427,
+          "gap_reduction_upper": 0.0424,
+          "gap_intervals_excluding_zero": 0,
+          "accuracy_intervals_excluding_zero": 4
+        }
+      }
+    },
+    {
+      "cohort": "age_25_plus",
+      "missingness": "numeric_complete",
+      "test_size": 13419,
+      "seeds": 5,
+      "policies": {
+        "baseline": {
+          "equalized_odds": 0.0365,
+          "lower": 0.0104,
+          "upper": 0.0792,
+          "noise_floor": 0.0153
+        },
+        "source_cost_threshold": {
+          "equalized_odds": 0.0344,
+          "lower": 0.0097,
+          "upper": 0.077,
+          "noise_floor": 0.0148,
+          "gap_reduction": 0.0021,
+          "gap_reduction_lower": -0.006,
+          "gap_reduction_upper": 0.0101,
+          "gap_intervals_excluding_zero": 0,
+          "accuracy_intervals_excluding_zero": 0
+        },
+        "reweighed_training": {
+          "equalized_odds": 0.0169,
+          "lower": 0.0035,
+          "upper": 0.0601,
+          "noise_floor": 0.0143,
+          "gap_reduction": 0.0197,
+          "gap_reduction_lower": -0.0121,
+          "gap_reduction_upper": 0.0366,
+          "gap_intervals_excluding_zero": 0,
+          "accuracy_intervals_excluding_zero": 0
+        },
+        "group_threshold": {
+          "equalized_odds": 0.0277,
+          "lower": 0.007,
+          "upper": 0.0681,
+          "noise_floor": 0.014,
+          "gap_reduction": 0.0089,
+          "gap_reduction_lower": -0.0476,
+          "gap_reduction_upper": 0.0587,
+          "gap_intervals_excluding_zero": 0,
+          "accuracy_intervals_excluding_zero": 5
+        }
+      }
+    }
+  ]
+}

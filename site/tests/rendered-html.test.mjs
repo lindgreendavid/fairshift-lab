@@ -21,9 +21,9 @@ test("server-renders the finished research laboratory", async () => {
   const html = await response.text();
   assert.match(html, /<title>Fairshift Lab/);
   assert.match(html, /Move the population/);
-  assert.match(html, /Shift microscope/);
-  assert.match(html, /Decision landscape/);
-  assert.match(html, /Verified report/);
+  assert.match(html, /Change the mechanism/);
+  assert.match(html, /A score is not/);
+  assert.match(html, /No cherry-picking/);
   assert.match(html, /Policy Studio/);
   assert.match(html, /Declare the stakes/);
   assert.match(html, /No automatic best policy/);
@@ -40,8 +40,8 @@ test("server-renders the finished research laboratory", async () => {
   assert.match(html, /300 complete experiments/);
   assert.match(html, /Target reliability/);
   assert.match(html, /Threshold sensitivity/);
-  assert.match(html, /Scientific method/);
-  assert.match(html, /Research trail/);
+  assert.match(html, /See exactly what/);
+  assert.match(html, /Built on arguments/);
   assert.match(html, /Run the experiment/);
   assert.match(html, /Skip to main content/);
   assert.match(html, /Read reliability data/);

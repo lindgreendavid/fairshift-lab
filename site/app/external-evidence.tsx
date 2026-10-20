@@ -3,6 +3,7 @@
 import { useMemo, useState } from "react";
 
 import registry from "../../reports/v1.2-external-study.json";
+import auditSummary from "./external-audit-summary.json";
 
 type Estimate = {
   mean: number;
@@ -28,6 +29,27 @@ const labels: Record<string, string> = {
   group_threshold: "Group thresholds · λ=1",
 };
 
+type AuditPolicy = {
+  equalized_odds: number;
+  lower: number;
+  upper: number;
+  noise_floor: number;
+  gap_reduction?: number;
+  gap_reduction_lower?: number;
+  gap_reduction_upper?: number;
+  gap_intervals_excluding_zero?: number;
+  accuracy_intervals_excluding_zero?: number;
+};
+type AuditCohort = {
+  cohort: string;
+  missingness: string;
+  test_size: number;
+  seeds: number;
+  policies: Record<string, AuditPolicy>;
+};
+const auditCohorts = auditSummary.cohorts as AuditCohort[];
+const signed = (value: number) => `${value < 0 ? "−" : "+"}${Math.abs(value).toFixed(3)}`;
+
 const format = (value: number) => value.toFixed(3);
 const interval = (estimate: Estimate) =>
   `${format(estimate.mean)} · ${format(estimate.replication_lower)}–${format(estimate.replication_upper)}`;
@@ -47,11 +69,12 @@ export default function ExternalEvidence() {
     [cohort, missingness, cost],
   );
   const baseline = selected.find((cell) => cell.policy === "baseline") ?? selected[0];
+  const audit = auditCohorts.find((item) => item.cohort === cohort && item.missingness === missingness);
+  const mitigations = ["source_cost_threshold", "reweighed_training", "group_threshold"];
 
   return (
     <section className="external" id="external" aria-labelledby="external-heading">
       <header className="section-heading">
-        <div><span className="section-index">05</span><p>External evidence</p></div>
         <h2 id="external-heading">History is evidence.<br /><em>Not ground truth.</em></h2>
       </header>
 
@@ -132,6 +155,45 @@ export default function ExternalEvidence() {
           </tbody>
         </table>
       </div>
+
+      {audit && (
+        <div className="audit">
+          <div className="audit__lead">
+            <h3>Post-hoc check: are the gap differences bigger than test-set noise?</h3>
+            <p>
+              The ranges above only reflect how the development file was split. Resampling the {audit.test_size.toLocaleString("en-GB")} held-out
+              people shows how much the gaps move for a different draw of test people. In this cohort,{" "}
+              {mitigations.reduce((sum, key) => sum + (audit.policies[key].gap_intervals_excluding_zero ?? 0), 0) === 0
+                ? `none of the ${mitigations.length * audit.seeds} paired comparisons with the baseline separates from zero`
+                : `${mitigations.reduce((sum, key) => sum + (audit.policies[key].gap_intervals_excluding_zero ?? 0), 0)} of ${mitigations.length * audit.seeds} paired comparisons separate from zero`}.
+              Not preregistered; run at 1× false-negative cost only.
+            </p>
+          </div>
+          <div className="audit__table">
+            {/* eslint-disable-next-line jsx-a11y/no-noninteractive-tabindex */}
+            <div className="table-scroll" role="region" tabIndex={0} aria-label="Test-set uncertainty of the equalized-odds gap">
+              <table>
+                <caption>Equalized-odds gap with 95% person-level bootstrap interval, the gap expected with no group information, and the paired change from the baseline (mean over {audit.seeds} split seeds)</caption>
+                <thead><tr><th scope="col">Policy</th><th scope="col">Gap</th><th scope="col">95% interval</th><th scope="col">No-information floor</th><th scope="col">Baseline minus policy</th></tr></thead>
+                <tbody>
+                  {Object.keys(labels).map((key) => {
+                    const row = audit.policies[key];
+                    return (
+                      <tr key={key}>
+                        <th scope="row">{labels[key]}</th>
+                        <td>{format(row.equalized_odds)}</td>
+                        <td>{format(row.lower)}–{format(row.upper)}</td>
+                        <td>{format(row.noise_floor)}</td>
+                        <td>{row.gap_reduction === undefined ? "—" : `${signed(row.gap_reduction)} (${signed(row.gap_reduction_lower ?? 0)} to ${signed(row.gap_reduction_upper ?? 0)})`}</td>
+                      </tr>
+                    );
+                  })}
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      )}
 
       <div className="external-links">
         <a href="https://github.com/lindgreendavid/fairshift-lab/blob/main/docs/adult-dataset-card.md">Dataset card ↗</a>

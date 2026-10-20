@@ -211,7 +211,6 @@ export default function PolicyStudio() {
   return (
     <section className="policy" id="policy" aria-labelledby="policy-heading">
       <header className="section-heading">
-        <div><span className="section-index">04</span><p>Policy Studio</p></div>
         <h2 id="policy-heading">Declare the stakes.<br />See the trade-offs.</h2>
       </header>
       <p className="policy-intro">
