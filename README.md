@@ -15,7 +15,7 @@ A reproducible research laboratory for answering a narrow question:
 
 Version `1.3.0` adds a Robustness Lab: a preregistered synthetic specification-stress study comparing logistic regression against a shallow decision tree under six controlled stressors, including label noise, protected-field measurement error, an unobserved intersectional subgroup, sample-size stress, and structural misspecification. It builds on `1.1.0`'s Fairshift Policy Studio (a frozen 20-seed mitigation benchmark with explicit error-cost declarations and a fairness–utility Pareto explorer) and `1.2.0`'s governed external evidence from UCI Adult. It remains a research instrument—not evidence that fairness has been “solved,” and not evidence that either model family is more robust outside this synthetic generator.
 
-**[Open the public interactive laboratory](https://fairshift-lab.lindgreendavid.chatgpt.site)** · **[Read the plain-language write-up](https://blog-interactive.lindgreendavid.workers.dev/posts/fairshift-lab-robustness)**
+**[Open the public interactive laboratory](https://fairshift-lab-interactive.lindgreendavid.workers.dev)** · **[Read the plain-language write-up](https://blog-interactive.lindgreendavid.workers.dev/posts/fairshift-lab-robustness)**
 
 **Paper:** [Do Fairness Mitigations Beat Test-Set Noise? Person-Level Uncertainty for a Preregistered Policy Comparison on UCI Adult (PDF)](paper/paper.pdf) · [citation and status](paper/README.md) · [version history](history.md)
 
