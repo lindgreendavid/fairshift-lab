@@ -3,6 +3,7 @@ import { spawnSync } from "node:child_process";
 const patchedAdvisories = new Set([
   "GHSA-w3rx-r6r6-pgpr",
   "GHSA-5p2g-fcmc-qvqq",
+  "GHSA-vfj7-8cjw-p6xm",
 ]);
 
 const probe = String.raw`
