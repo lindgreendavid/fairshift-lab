@@ -27,11 +27,10 @@ def build(audit: dict) -> dict:  # type: ignore[type-arg]
                 ),
             }
             if policy != "baseline":
-                paired = [
-                    c["policies"][policy]["paired_difference_from_baseline"] for c in cells
-                ]
+                paired = [c["policies"][policy]["paired_difference_from_baseline"] for c in cells]
                 entry["gap_reduction"] = round(
-                    fmean(p["equalized_odds_difference"]["baseline_minus_policy"] for p in paired), 4
+                    fmean(p["equalized_odds_difference"]["baseline_minus_policy"] for p in paired),
+                    4,
                 )
                 entry["gap_reduction_lower"] = round(
                     fmean(p["equalized_odds_difference"]["interval_95"][0] for p in paired), 4
